@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', serif;
+    background-color: #f9f4e1;
+    color: #3a3a3a;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #4b3f35;
+    padding: 20px 0;
+    color: white;
+}
+
+.logo-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #d4af37;
+}
+
+.intro {
+    background-color: #665d50;
+    color: white;
+    padding: 100px;
+    text-align: center;
+    height: 700px;
+}
+
+.intro h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro .btn {
+    background-color: #d4af37;
+    color: #4b3f35;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.intro .btn:hover {
+    background-color: #b08a2b;
+}
+
+.periodos {
+    padding: 80px 0;
+    background-color: #f5ead4;
+    height: 700px;
+}
+
+.periodos h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+}
+
+.periodo-card {
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.periodo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.periodo-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.periodo-card h3 {
+    font-size: 24px;
+    margin-top: 15px;
+    color: #4b3f35;
+}
+
+.glossario {
+    background-color: #e6d5c0;
+    padding: 80px 0;
+    text-align: center;
+    height: 300px;
+}
+
+.glossario h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.glossario p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.glossario .btn {
+    background-color: #4b3f35;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.glossario .btn:hover {
+    background-color: #665d50;
+}
+
+.rodape {
+    background-color: #4b3f35;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-menu ul li a:hover {
+    color: #d4af37;
+}
