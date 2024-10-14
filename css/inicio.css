@@ -49,10 +49,15 @@ a {
     font-weight: bold;
 }
 
+/* Menu */
 .menu ul {
     list-style: none;
     display: flex;
     gap: 20px;
+}
+
+.menu ul li {
+    position: relative;
 }
 
 .menu ul li a {
@@ -60,6 +65,7 @@ a {
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
+    padding: 10px;
     transition: color 0.3s;
 }
 
@@ -67,12 +73,44 @@ a {
     color: #d4af37;
 }
 
+/* Dropdown */
+.dropdown-menu {
+    margin-top: 9px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4b3f35;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    border-radius: 5px;
+    width: 210px;
+}
+
+.dropdown-menu a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #665d50;
+    color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 .intro {
     background-color: #665d50;
     color: white;
     padding: 100px;
     text-align: center;
-    height: 700px;
+    height: 600px;
 }
 
 .intro h2 {
@@ -86,6 +124,7 @@ a {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    text-align: justify;
 }
 
 .intro .btn {
@@ -102,9 +141,11 @@ a {
     background-color: #b08a2b;
 }
 
+/* Segunda Section Períodos Históricos */
+
 .periodos {
     padding: 80px 0;
-    background-color: #f5ead4;
+    background-color: #e0cfc1;
     height: 700px;
 }
 
@@ -112,36 +153,167 @@ a {
     font-size: 36px;
     text-align: center;
     margin-bottom: 40px;
+    color: #4b3f35;
 }
 
-.cards {
+.periodos .cards {
     display: flex;
-    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .periodo-card {
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: white;
+    position: relative;
+    width: 300px;
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Overlay semi-transparente para garantir a legibilidade */
+.periodo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Camada semi-transparente */
+    border-radius: 10px;
+}
+
+.periodo-card h2, 
+.periodo-card p {
+    position: relative;
+    z-index: 2;
 }
 
 .periodo-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
-.periodo-card img {
-    width: 100%;
-    border-radius: 10px;
+.pre-historia {
+    background-image: url('../img/pintura-rupestre.webp'); 
+}
+.idade-antiga {
+    background-image: url('../img/piramide.webp');
+}
+.idade-media {
+    background-image: url('../img/idade-media.jpg');
+}
+.idade-moderna {
+    background-image: url('../img/idade-moderna.jpeg');
+}
+.idade-contemporanea {
+    background-image: url('../img/fabricas-idade-contemporane.jpg');
 }
 
 .periodo-card h3 {
-    font-size: 24px;
-    margin-top: 15px;
-    color: #4b3f35;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    position: relative;
 }
 
+
+.periodo-card:hover h3 {
+    color: #ffb700;
+}
+
+.periodo-card p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: whitesmoke;
+}
+
+/* Linha do tempo */
+
+.linha-do-tempo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+    position: relative;
+    padding: 30px 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.linha-horizontal {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    z-index: 1;
+}
+
+.linha-do-tempo .evento {
+    position: relative;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 15px;
+    margin-bottom: 40px;
+    z-index: 2;
+}
+
+.linha-do-tempo .evento .corda {
+    position: absolute;
+    top: -22px;
+    width: 3px;
+    height: 22px;
+    background-color: #4CAF50;
+}
+
+.linha-do-tempo .evento .circulo {
+    width: 20px;
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.linha-do-tempo .evento .data {
+    font-size: 1.0em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.linha-do-tempo .evento .titulo {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 750px) {
+    .linha-do-tempo {
+        flex-direction: column;
+    }
+}
+
+/* Glossário */
 .glossario {
-    background-color: #e6d5c0;
+    background-color: #f3e1d2;
     padding: 80px 0;
     text-align: center;
     height: 300px;
@@ -150,6 +322,7 @@ a {
 .glossario h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #4b3f35;
 }
 
 .glossario p {
@@ -158,20 +331,20 @@ a {
 }
 
 .glossario .btn {
-    background-color: #4b3f35;
+    background-color: #d4af37;
     color: white;
     padding: 12px 25px;
     font-size: 18px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: 0.3s;
 }
 
 .glossario .btn:hover {
-    background-color: #665d50;
+    background-color: #b08a2b;
 }
 
-.rodape {
+footer {
     background-color: #4b3f35;
     color: white;
     padding: 20px 0;

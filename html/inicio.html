@@ -20,7 +20,17 @@
             </div>
             <nav class="menu">
                 <ul>
-                    <li><a href="#periodos">Períodos Históricos</a></li>
+                    <li class="dropdown">
+                        <a href="">Períodos Históricos</a>
+        
+                        <div class="dropdown-menu">
+                            <a href="">Pré-História</a>
+                            <a href="">Idade Antiga</a>
+                            <a href="">Idade Média</a>
+                            <a href="">Idade Moderna</a>
+                            <a href="">Idade Contemporânea</a>
+                        </div>
+                    </li>
                     <li><a href="#glossario">Glossário</a></li>
                     <li><a href="#login">LOGIN</a></li>
                 </ul>
@@ -32,7 +42,7 @@
         <section class="intro">
             <div class="container">
                 <h2>Bem-vindo à Plataforma de História</h2>
-                <p>Explore os principais momentos da história humana e descubra como esses períodos moldaram o mundo em que vivemos. Cada era é marcada por eventos e avanços que definiram a trajetória da sociedade. Aqui, você encontrará recursos interativos, vídeos explicativos e links para leituras adicionais.</p>
+                <p>Explore os períodos mais importantes da história e descubra como esses momentos influenciaram o desenvolvimento da sociedade em que vivemos. Cada etapa da história oferece uma visão única sobre os acontecimentos e transformações que moldaram o mundo ao longo dos séculos. Aproveite os recursos interativos, vídeos educativos e leituras complementares desse site para aprofundar seu conhecimento sobre a história humana.</p>
                 <a href="#periodos" class="btn">Comece sua jornada histórica</a>
             </div>
         </section>
@@ -41,44 +51,84 @@
             <div class="container">
                 <h2>Períodos Históricos</h2>
                 <div class="cards">
-                    <div class="periodo-card">
+                    <div class="periodo-card pre-historia">
                         <a href="pre-historia.html">
-                            <img src="pre-historia.jpg" alt="Pré Historia">
                             <h3>Pré História</h3>
                             <p>Conheça os primeiros passos da humanidade, desde os hominídeos até o desenvolvimento da agricultura.</p>
                         </a>
                     </div>
-                    <div class="periodo-card">
+                    <div class="periodo-card idade-antiga">
                         <a href="idade-antiga.html">
-                            <img src="idade_antiga.jpg" alt="Idade Antiga">
                             <h3>Idade Antiga</h3>
                             <p>Explore as civilizações antigas, como a Mesopotâmia, Egito e Grécia, e seus legados.</p>
                         </a>
                     </div>
-                    <div class="periodo-card">
+                    <div class="periodo-card idade-media">
                         <a href="idade_media.html">
-                            <img src="idade_media.jpg" alt="Idade Média">
                             <h3>Idade Média</h3>
                             <p>Descubra a era medieval, marcada pelo feudalismo e pela influência da Igreja.</p>
                         </a>
                     </div>
-                    <div class="periodo-card">
+                    <div class="periodo-card idade-moderna">
                         <a href="idade_moderna.html">
-                            <img src="idade_moderna.jpg" alt="Idade Moderna">
                             <h3>Idade Moderna</h3>
                             <p>Analise os avanços nas ciências, a Revolução Industrial e as grandes descobertas.</p>
                         </a>
                     </div>
-                    <div class="periodo-card">
+                    <div class="periodo-card idade-contemporanea">
                         <a href="idade_contemporanea.html">
-                            <img src="idade_contemporanea.jpg" alt="Idade Contemporânea">
                             <h3>Idade Contemporânea</h3>
                             <p>Entenda os desafios do mundo atual, incluindo guerras, globalização e tecnologia.</p>
                         </a>
                     </div>
                 </div>
             </div>
+            <div class="linha-do-tempo">
+                <div class="linha-horizontal"></div>
+                <div class="evento">
+                    <div class="corda"></div>
+                    <div class="circulo"></div>
+                    <div class="descricao">
+                        <span class="titulo">Pré-História</span>
+                        <span class="data">2.500.000 a.C. - 4.000 a.C.</span>
+                    </div>
+                </div>
+                <div class="evento">
+                    <div class="corda"></div>
+                    <div class="circulo"></div>
+                    <div class="descricao">
+                        <span class="titulo">Idade Antiga</span>
+                        <span class="data">4.000 a.C. - 476 d.C.</span>
+                    </div>
+                </div>
+                <div class="evento">
+                    <div class="corda"></div>
+                    <div class="circulo"></div>
+                    <div class="descricao">
+                        <span class="titulo">Idade Média</span>
+                        <span class="data">476 d.C. - 1453</span>
+                    </div>
+                </div>
+                <div class="evento">
+                    <div class="corda"></div>
+                    <div class="circulo"></div>
+                    <div class="descricao">
+                        <span class="titulo">Idade Moderna</span>
+                        <span class="data">1453 - 1789</span>
+                    </div>
+                </div>
+                <div class="evento">
+                    <div class="corda"></div>
+                    <div class="circulo"></div>
+                    <div class="descricao">
+                        <span class="titulo">Idade Contemporânea</span>
+                        <span class="data">1789 - Atualidade</span>
+                    </div>
+                </div>
+            </div>  
+            
         </section>
+        
         
         <section class="glossario">
             <div class="container">
@@ -90,7 +140,7 @@
         </section>
         
     
-        <footer class="rodape" id="contato">
+        <footer>
             <div class="container">
                 <p>© 2024 SESI CAÇAPAVA e SENAI TAUBATÉ</p>
                 <p>Desenvolvido por: SOFTDEV</p>
