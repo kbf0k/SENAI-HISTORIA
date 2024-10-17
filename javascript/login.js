@@ -10,5 +10,5 @@ criar_conta.addEventListener('click', () => {
 
 voltar.addEventListener('click', () => {
     cadastrar.style.left = "900px"
-    login.style.left = "40px"
+    login.style.left = "30px"
 })

@@ -1,3 +1,13 @@
+<?php
+include_once('../conexao.php');
+session_start();
+
+if(!isset($_SESSION['nome_sessao'])){
+    header('Location: login.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="Pt-BR">
 <head>
@@ -32,16 +42,18 @@
                         </div>
                     </li>
                     <li><a href="#glossario">Glossário</a></li>
-                    <li><a href="../index.html">LOGIN</a></li>
+                    <li><a href="../index.php">LOGIN</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+        <?php ?>
         <section class="intro">
             <div class="container">
                 <h2>Bem-vindo à Plataforma de História</h2>
+                <h2> <?= $_SESSION['tipo_sessao'] ?> - <?=  $_SESSION['nome_sessao']?></h2>
                 <p>Explore os períodos mais importantes da história e descubra como esses momentos influenciaram o desenvolvimento da sociedade em que vivemos. Cada etapa da história oferece uma visão única sobre os acontecimentos e transformações que moldaram o mundo ao longo dos séculos. Aproveite os recursos interativos, vídeos educativos e leituras complementares desse site para aprofundar seu conhecimento sobre a história humana.</p>
                 <a href="#periodos" class="btn">Comece sua jornada histórica</a>
             </div>
