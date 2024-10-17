@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins";
 }
 
 main {
@@ -9,38 +12,185 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    font-family: "Poppins";
-    background: rgb(123, 148, 101);
-    background: radial-gradient(circle, rgba(123, 148, 101, 1) 0%, rgba(5, 31, 4, 1) 100%);
+    background: rgb(208, 194, 165);
+    background: radial-gradient(circle, rgba(208, 194, 165, 1) 0%, rgba(68, 60, 49, 1) 100%);
 }
 
-.login {
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
+#container {
+    height: 600px;
     width: 400px;
-    height: 500px;
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    animation: fade-in .8s ease-in-out;
 }
 
-p{
-    text-align: center;
-    font-size: 15px;
-}
-
-.form-info{
+#login {
+    position: absolute;
     display: flex;
     flex-direction: column;
+    transition: 0.5s;
+}
+
+#login img {
+    max-height: 170px;
+    margin: 0 auto;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#login img:hover {
+    filter: drop-shadow(5px 5px 3.5px rgb(128, 115, 92));
+    transform: scale(1.05);
+}
+
+#login h1 {
+    margin-bottom: 10px;
+    color: #3b3832;
+}
+
+#login label {
     margin-top: 15px;
+    color: #3b3832;
 }
 
-.form-info-lembrar{
-    margin: auto;
+#login input {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
 }
 
+#login input:hover {
+    border: 1px solid rgb(128, 115, 92);
+}
+
+#login #esqueci-senha {
+    font-size: 14px;
+    color: #3b3832;
+    margin-top: 5px;
+    font-weight: 550;
+    width: 117px;
+    transition: .3s;
+}
+
+#login #esqueci-senha:hover {
+    text-shadow: 0 0 1px rgb(128, 115, 92);
+}
+
+#login button {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-top: 25px;
+    background-color: rgb(128, 115, 92);
+    color: white;
+    transition: 0.3s;
+}
+
+#login button:hover {
+    transform: scale(1.02);
+}
+
+#login p {
+    margin-top: 25px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+#login #criar-conta {
+    position: relative;
+    color: #3b3832;
+    margin-left: 50px;
+    font-weight: 550;
+    transition: 0.5s;
+}
+
+#login #criar-conta:hover {
+    text-shadow: 0 0 1px rgb(128, 115, 92);
+}
+
+#cadastrar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 450px;
+    transition: .5s;
+}
+
+#cadastrar #voltar {
+    width: 20%;
+    padding: 2px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-top: 25px;
+    background-color: rgb(128, 115, 92);
+    color: white;
+    transition: 0.3s;
+}
+
+#cadastrar h1 {
+    margin-top: 15px;
+    color: #3b3832;
+}
+
+#cadastrar label {
+    margin-top: 8px;
+    color: #3b3832;
+}
+
+#cadastrar input {
+    padding: 7px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+#cadastrar input:hover {
+    border: 1px solid rgb(128, 115, 92);
+}
+
+#cadastrar button {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-top: 25px;
+    background-color: rgb(128, 115, 92);
+    color: white;
+    transition: 0.3s;
+}
+
+#cadastrar button:hover {
+    transform: scale(1.02);
+}
+
+#cadastrar p {
+    margin-top: 25px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+#login #criar-conta {
+    position: relative;
+    color: #3b3832;
+    margin-left: 50px;
+    font-weight: 550;
+    transition: 0.5s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

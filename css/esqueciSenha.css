@@ -1,5 +1,114 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(208, 194, 165);
+    background: radial-gradient(circle, rgba(208, 194, 165, 1) 0%, rgba(68, 60, 49, 1) 100%);
+}
+
+#container {
+    width: 400px;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    transition: 0.5s;
+    animation: fade-in .8s ease-in-out;
+}
+
+#redefinir-senha {
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+}
+
+#redefinir-senha #voltar {
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    width: 20%;
+    padding: 3px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-top: 25px;
+    background-color: rgb(128, 115, 92);
+    color: white;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+#redefinir-senha #voltar:hover {
+    transform: scale(1.02);
+}
+
+#redefinir-senha h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #3b3832;
+}
+
+#redefinir-senha p {
+    font-size: 12px;
+    text-align: center;
+}
+
+#redefinir-senha label {
+    margin-top: 15px;
+    color: #3b3832;
+}
+
+#redefinir-senha input {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+#redefinir-senha input:hover {
+    border: 1px solid rgb(128, 115, 92);
+}
+
+#redefinir-senha button {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-top: 25px;
+    background-color: rgb(128, 115, 92);
+    color: white;
+    transition: 0.3s;
+}
+
+#redefinir-senha button:hover {
+    transform: scale(1.02);
+}
+
+
+#redefinir-senha #criar-conta {
+    position: relative;
+    color: #3b3832;
+    margin-left: 50px;
+    font-weight: 550;
+    transition: 0.5s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
