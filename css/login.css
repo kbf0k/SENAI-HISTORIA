@@ -18,7 +18,7 @@ main {
 }
 
 #container {
-    height: 610px;
+    height: 625px;
     width: 400px;
     padding: 40px;
     background-color: white;
@@ -112,7 +112,7 @@ main {
 #login #criar-conta {
     position: relative;
     color: #3b3832;
-    margin-left: 50px;
+    margin-left: 75px;
     font-weight: 550;
     transition: 0.5s;
 }
@@ -189,14 +189,6 @@ main {
     margin-top: 25px;
     font-size: 14px;
     margin-bottom: 30px;
-}
-
-#login #criar-conta {
-    position: relative;
-    color: #3b3832;
-    margin-left: 50px;
-    font-weight: 550;
-    transition: 0.5s;
 }
 
 @keyframes fade-in {

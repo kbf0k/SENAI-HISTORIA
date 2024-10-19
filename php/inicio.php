@@ -1,26 +1,32 @@
 <?php
-include_once('../conexao.php');
+include_once('conexao.php');
 session_start();
 
 if(!isset($_SESSION['nome_sessao'])){
-    header('Location: login.php');
+    header('Location: index.php');
     exit();
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="Pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/inicio.css">
-    <script src="../javascript/inicio.js"></script>
     <title>Início</title>
+    <link rel="stylesheet" href="../css/inicio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="../javascript/inicio.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
 
 </head>
+
 <body>
     <header class="header">
         <div class="container logo-menu">
@@ -32,7 +38,7 @@ if(!isset($_SESSION['nome_sessao'])){
                 <ul>
                     <li class="dropdown">
                         <a href="">Períodos Históricos</a>
-        
+
                         <div class="dropdown-menu">
                             <a href="">Pré-História</a>
                             <a href="">Idade Antiga</a>
@@ -41,8 +47,22 @@ if(!isset($_SESSION['nome_sessao'])){
                             <a href="">Idade Contemporânea</a>
                         </div>
                     </li>
-                    <li><a href="#glossario">Glossário</a></li>
-                    <li><a href="../index.php">LOGIN</a></li>
+                    <li><a href="../html/glossario.html">Glossário</a></li>
+
+                    <?php if (isset($_SESSION['nome_sessao'])): ?>
+                    <div class="user-vector">
+                        <img id="logo-vector" src="../img/user-vector.png" alt="">
+                        <p>
+                            <?= $_SESSION['nome_sessao'] ?>
+                        </p>
+                        <p>
+                            <?=$_SESSION['tipo_sessao'] ?>
+                        </p>
+                    </div>
+                    <li><a id="logout">SAIR</a></li>
+                    <?php else: ?>
+                    <li><a href="index.php">LOGIN</a></li>
+                    <?php endif; ?>
                 </ul>
             </nav>
         </div>
@@ -53,12 +73,15 @@ if(!isset($_SESSION['nome_sessao'])){
         <section class="intro">
             <div class="container">
                 <h2>Bem-vindo à Plataforma de História</h2>
-                <h2> <?= $_SESSION['tipo_sessao'] ?> - <?=  $_SESSION['nome_sessao']?></h2>
-                <p>Explore os períodos mais importantes da história e descubra como esses momentos influenciaram o desenvolvimento da sociedade em que vivemos. Cada etapa da história oferece uma visão única sobre os acontecimentos e transformações que moldaram o mundo ao longo dos séculos. Aproveite os recursos interativos, vídeos educativos e leituras complementares desse site para aprofundar seu conhecimento sobre a história humana.</p>
+                <p>Explore os períodos mais importantes da história e descubra como esses momentos influenciaram o
+                    desenvolvimento da sociedade em que vivemos. Cada etapa da história oferece uma visão única sobre os
+                    acontecimentos e transformações que moldaram o mundo ao longo dos séculos. Aproveite os recursos
+                    interativos, vídeos educativos e leituras complementares desse site para aprofundar seu conhecimento
+                    sobre a história humana.</p>
                 <a href="#periodos" class="btn">Comece sua jornada histórica</a>
             </div>
         </section>
-        
+
         <section id="periodos" class="periodos">
             <div class="container">
                 <h2>Períodos Históricos</h2>
@@ -66,7 +89,8 @@ if(!isset($_SESSION['nome_sessao'])){
                     <div class="periodo-card pre-historia">
                         <a href="pre-historia.html">
                             <h3>Pré História</h3>
-                            <p>Conheça os primeiros passos da humanidade, desde os hominídeos até o desenvolvimento da agricultura.</p>
+                            <p>Conheça os primeiros passos da humanidade, desde os hominídeos até o desenvolvimento da
+                                agricultura.</p>
                         </a>
                     </div>
                     <div class="periodo-card idade-antiga">
@@ -137,21 +161,22 @@ if(!isset($_SESSION['nome_sessao'])){
                         <span class="data">1789 - Atualidade</span>
                     </div>
                 </div>
-            </div>  
-            
+            </div>
+
         </section>
-        
-        
+
+
         <section class="glossario">
             <div class="container">
                 <h2>Glossário Histórico</h2>
                 <p>Entenda melhor os principais conceitos e termos históricos com nosso glossário interativo.</p>
-                <p>Cada definição contém uma explicação detalhada e imagens ilustrativas. Aprofunde-se no conhecimento e explore cada termo.</p>
-                <a href="glossario.html" class="btn">Acessar Glossário</a>
+                <p>Cada definição contém uma explicação detalhada e imagens ilustrativas. Aprofunde-se no conhecimento e
+                    explore cada termo.</p>
+                <a href="../html/glossario.html" class="btn">Acessar Glossário</a>
             </div>
         </section>
-        
-    
+
+
         <footer>
             <div class="container">
                 <p>© 2024 SESI CAÇAPAVA e SENAI TAUBATÉ</p>
@@ -168,4 +193,5 @@ if(!isset($_SESSION['nome_sessao'])){
         </footer>
     </main>
 </body>
+
 </html>

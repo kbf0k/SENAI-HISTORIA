@@ -1,3 +1,35 @@
+<?php
+include_once('conexao.php');
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email_digitado = $_POST['email'];
+    $senha_digitado = md5($_POST['senha']);
+
+    $stmt = $conexao->prepare("SELECT * FROM usuarios WHERE email_usuario = ?");
+    $stmt->bind_param('s', $email_digitado);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+
+        $update = $conexao->prepare("UPDATE usuarios SET senha_usuario = ? WHERE email_usuario = ?");
+        $update->bind_param('ss', $senha_digitado, $email_digitado);
+
+        if ($update->execute()) {
+            header('Location: index.php');
+            exit();
+        } 
+        else {
+            echo 'Erro ao atualizar a senha';
+        }
+    } 
+    else {
+        echo 'Email não encontrado';
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +45,8 @@
 <body>
     <main>
         <div id="container">
-            <form action="" id="redefinir-senha">
-                <a id="voltar" href="../index.html">Voltar</a>
+            <form action="" method="POST" id="redefinir-senha">
+                <a id="voltar" href="../php/index.php">Voltar</a>
                 <h1>Redefinir senha</h1>
                 <p>Insira seu e-mail para validar sua identidade e proceder com a alteração da senha</p>
                 <label for="email">Email</label>
