@@ -17,6 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $stmt1->bind_param('sssss',$nome_cadastro_digitado,$sobrenome_cadastro_digitado,$tipo_cadastro_digitado,$email_cadastro_digitado,$senha_cadastro_digitado);
         $stmt1->execute();
         $result1 = $stmt1->get_result();
+        header('Location:index.php');
     }
 }
 
@@ -99,10 +100,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label for="email_cadastro">Email</label>
                 <input type="email" name="email_cadastro" id="email_cadastro" required placeholder="@email.com">
 
-                <label for="senha_cadastro">Criar Senha</label>
+                <label for="senha_cadastro">Criar Senha <p id="senha_mensagem"></p> </label>
                 <input type="password" name="senha_cadastro" id="senha_cadastro" required placeholder="******">
 
-                <label for="repetir_senha">Repetir Senha</label>
+                <label for="repetir_senha">Repetir Senha <h2 id="senha_mensagem2"></h2> </label> 
                 <input type="password" name="repetir_senha" id="repetir_senha" required placeholder="******">
 
                 <button type="submit">Criar Conta</button>

@@ -4,20 +4,21 @@ document.getElementById('logout').addEventListener('click', () => {
         text: "Você não poderá reverter isso!",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "green",
-        confirmButtonText: "Sim, Sair",
-        cancelButtonColor: "#d33",
         cancelButtonText: "Cancelar",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Sim, Sair",
+        confirmButtonColor: "#4b3f35",
+        backdrop: `rgba(0, 0, 0, 0.5)`
     }).then((result) => {
         if (result.isConfirmed) {
-            fetch('logout.php',{
+            fetch('logout.php', {
                 method: 'POST'
             })
-            .then(response =>{
-                if(response.ok){
-                    window.location.href ="index.php";
-                }
-            })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = "index.php";
+                    }
+                })
         }
     });
 });
