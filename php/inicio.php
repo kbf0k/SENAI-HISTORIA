@@ -44,7 +44,7 @@ if(!isset($_SESSION['nome_sessao'])){
                             <a href="">Idade Antiga</a>
                             <a href="">Idade Média</a>
                             <a href="">Idade Moderna</a>
-                            <a href="">Idade Contemporânea</a>
+                            <a href="../html/idade_contemporanea.html">Idade Contemporânea</a>
                         </div>
                     </li>
                     <li><a href="../html/glossario.html">Glossário</a></li>

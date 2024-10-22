@@ -113,6 +113,21 @@ a {
     display: block;
 }
 
+.user-vector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-vector #logo-vector{
+    max-width: 50px;
+}
+
+.user-vector p{
+    font-size: 12px;
+}
+
 .intro {
     background-color: #665d50;
     color: white;
@@ -149,116 +164,99 @@ a {
     background-color: #b08a2b;
 }
 
-/* Segunda Section Saiba Mais */
+/* Segunda Section*/
 
-.saiba-mais {
-    padding: 80px 0;
-    background-color: #e0cfc1;
-    height: 700px;
+.acontecimentos {
+    background-color: #7e7261;
+    padding: 80px;
+    color: white;
+    text-align: center;
 }
 
-.saiba-mais h2 {
+.acontecimentos h2 {
     font-size: 36px;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #4b3f35;
+    margin-bottom: 50px;
+    color: #d4af37;
 }
 
-
-/* Linha do tempo */
-
-.linha-do-tempo {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 50px;
-    position: relative;
-    padding: 30px 0;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+.itens-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
 }
 
-.linha-horizontal {
-    position: absolute;
-    top: 3px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #333;
-    z-index: 1;
-}
-
-.linha-do-tempo .evento {
-    position: relative;
-    width: 15%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f3f4f6;
+.item {
+    background-color: #4b3f35;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0 15px;
-    margin-bottom: 40px;
-    z-index: 2;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.linha-do-tempo .evento .corda {
-    position: absolute;
-    top: -22px;
-    width: 3px;
-    height: 22px;
-    background-color: #4CAF50;
-}
-
-.linha-do-tempo .evento .circulo {
-    width: 20px;
-    height: 20px;
-    background-color: #4CAF50;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.linha-do-tempo .evento .data {
-    font-size: 1.0em;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.linha-do-tempo .evento .titulo {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #4CAF50;
-    margin-bottom: 10px;
-}
-
-@media (max-width: 750px) {
-    .linha-do-tempo {
-        flex-direction: column;
-    }
-}
-
-/* Glossário */
-.glossario {
-    background-color: #f3e1d2;
-    padding: 80px 0;
-    text-align: center;
+.item img {
+    width: 100%;
     height: 300px;
 }
 
-.glossario h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #4b3f35;
+.item h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #d4af37;
 }
 
-.glossario p {
-    font-size: 18px;
-    margin-bottom: 20px;
+.item p {
+    font-size: 16px;
+    margin-top: 6px;
+    margin-bottom: 11px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.evento{
+    background-color: #e8e4d1; 
+    padding: 40px 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.evento h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #4b3f35;
+    text-align: center;
+}
+
+.evento p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+
+/* Informações no hover */
+.item .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.item:hover .info {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .glossario .btn {
