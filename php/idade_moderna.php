@@ -43,6 +43,7 @@ if(!isset($_SESSION['nome_sessao'])){
                         </div>
                     </li>
                     <li><a href="../html/glossario.html">Glossário</a></li>
+                    <li><a href="atividades.php">Atividades Complementares</a></li>
 
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
                     <div class="user-vector">
