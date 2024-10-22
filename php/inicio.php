@@ -16,11 +16,6 @@ if(!isset($_SESSION['nome_sessao'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início</title>
     <link rel="stylesheet" href="../css/inicio.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="../javascript/inicio.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 
@@ -41,13 +36,14 @@ if(!isset($_SESSION['nome_sessao'])){
 
                         <div class="dropdown-menu">
                             <a href="">Pré-História</a>
-                            <a href="">Idade Antiga</a>
-                            <a href="">Idade Média</a>
-                            <a href="">Idade Moderna</a>
-                            <a href="../html/idade_contemporanea.html">Idade Contemporânea</a>
+                            <a href="idade_antiga.php">Idade Antiga</a>
+                            <a href="idade_media.php">Idade Média</a>
+                            <a href="idade_moderna.php">Idade Moderna</a>
+                            <a href="idade_contemporanea.php">Idade Contemporânea</a>
                         </div>
                     </li>
                     <li><a href="../html/glossario.html">Glossário</a></li>
+                    <li><a href="atividades.php">Atividades Complementares</a></li>
 
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
                     <div class="user-vector">
@@ -87,32 +83,32 @@ if(!isset($_SESSION['nome_sessao'])){
                 <h2>Períodos Históricos</h2>
                 <div class="cards">
                     <div class="periodo-card pre-historia">
-                        <a href="pre-historia.html">
+                        <a href="pre_historia.php">
                             <h3>Pré História</h3>
                             <p>Conheça os primeiros passos da humanidade, desde os hominídeos até o desenvolvimento da
                                 agricultura.</p>
                         </a>
                     </div>
                     <div class="periodo-card idade-antiga">
-                        <a href="idade-antiga.html">
+                        <a href="idade_antiga.php">
                             <h3>Idade Antiga</h3>
                             <p>Explore as civilizações antigas, como a Mesopotâmia, Egito e Grécia, e seus legados.</p>
                         </a>
                     </div>
                     <div class="periodo-card idade-media">
-                        <a href="idade_media.html">
+                        <a href="idade_media.php">
                             <h3>Idade Média</h3>
                             <p>Descubra a era medieval, marcada pelo feudalismo e pela influência da Igreja.</p>
                         </a>
                     </div>
                     <div class="periodo-card idade-moderna">
-                        <a href="idade_moderna.html">
+                        <a href="idade_moderna.php">
                             <h3>Idade Moderna</h3>
                             <p>Analise os avanços nas ciências, a Revolução Industrial e as grandes descobertas.</p>
                         </a>
                     </div>
                     <div class="periodo-card idade-contemporanea">
-                        <a href="idade_contemporanea.html">
+                        <a href="idade_contemporanea.php">
                             <h3>Idade Contemporânea</h3>
                             <p>Entenda os desafios do mundo atual, incluindo guerras, globalização e tecnologia.</p>
                         </a>
