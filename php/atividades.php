@@ -1,3 +1,14 @@
+<?php
+include_once('conexao.php');
+session_start();
+
+if(!isset($_SESSION['nome_sessao'])){
+    header('Location: index.php');
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -23,23 +34,37 @@
             <nav class="menu">
                 <ul>
                     <li class="dropdown">
-                        <a href="#">Períodos Históricos</a>
+                        <a href="">Períodos Históricos</a>
+
                         <div class="dropdown-menu">
-                            <a href="#">Pré-História</a>
-                            <a href="#">Idade Antiga</a>
-                            <a href="#">Idade Média</a>
-                            <a href="#">Idade Moderna</a>
-                            <a href="#">Idade Contemporânea</a>
+                            <a href="">Pré-História</a>
+                            <a href="idade_antiga.php">Idade Antiga</a>
+                            <a href="idade_media.php">Idade Média</a>
+                            <a href="idade_moderna.php">Idade Moderna</a>
+                            <a href="idade_contemporanea.php">Idade Contemporânea</a>
                         </div>
                     </li>
-                    <li><a href="glossario.html">Glossário</a></li>
-                    <li><a href="atividades.html">Atividades Complementares</a></li>
-                    <li><a href="../php/index.php">LOGIN</a></li>
+                    <li><a href="../html/glossario.html">Glossário</a></li>
+                    <li><a href="atividades.php">Atividades Complementares</a></li>
+
+                    <?php if (isset($_SESSION['nome_sessao'])): ?>
+                    <div class="user-vector">
+                        <img id="logo-vector" src="../img/user-vector.png" alt="">
+                        <p>
+                            <?= $_SESSION['nome_sessao'] ?>
+                        </p>
+                        <p>
+                            <?=$_SESSION['tipo_sessao'] ?>
+                        </p>
+                    </div>
+                    <li><a id="logout">SAIR</a></li>
+                    <?php else: ?>
+                    <li><a href="index.php">LOGIN</a></li>
+                    <?php endif; ?>
                 </ul>
             </nav>
         </div>
     </header>
-
     <main>
         <section class="articles">
             <div id="pagetitle">
@@ -109,15 +134,46 @@
                 </article>
             </div>
         </section>
+        <section id="nossasatividades">
+            <!-- <h2>Nossas Atividades</h2> -->
+            <div>
+                <!-- <h3>Cruzadinhas</h3> -->
+                <div id="cruzadinhas">
+                    <figure>
+                        <img src="../img/prehistoriacuz.png" alt="Descrição da imagem">
+                        <figcaption>Cruzadinha Pré-História</figcaption>
+                      </figure>
+                      <figure>
+                        <img src="../img/idadeantigacruz.png" alt="Descrição da imagem">
+                        <figcaption>Cruzadinha Idade Antiga</figcaption>
+                      </figure>
+                      <figure>
+                        <img src="../img/idademediacruz.png" alt="Descrição da imagem">
+                        <figcaption>Cruzadinha Idade Média</figcaption>
+                      </figure>
+                      <figure>
+                        <img src="../img/idademodernacruz.png" alt="Descrição da imagem">
+                        <figcaption>Cruzadinha Idade Moderna</figcaption>
+                      </figure>
+                      <figure>
+                        <img src="../img/idadecontemporaneacruz.png" alt="Descrição da imagem" >
+                        <figcaption>Cruzadinha Idade Contemporânea</figcaption>
+                      </figure>
+                </div>
+                <img src="" alt="">
+            </div>
+        </section>
             <!-- Seção da Pré-História -->
             <section id="pre-historia" class="atividades-pdf">
                 <h2>Atividades da Pré-História</h2>
-                <img src="../img/prehistoriacuz.png" alt="Cruzadinha Pré-História" style="cursor: pointer;" onclick="mostrarOpcoes('pre-historia-options')">
-                <legend>Cruzadinha Pré-História</legend>
+                <div class="img-legend">
+                    <img src="../img/prehistoriacuz.png" alt="Cruzadinha Pré-História" style="cursor: pointer;" onclick="mostrarOpcoes('pre-historia-options')">
+                    <legend>Cruzadinha Pré-História</legend>
+                </div>
                 <div id="pre-historia-options" class="opcoes" style="display: none;">
                     <h3>Escolha uma opção:</h3>
                     <button onclick="window.open('https://interacty.me/projects/c066f4abff3a4b94')">Acessar Online</button>
-                    <button onclick="baixarPDF('../Cruzadinha - Pré-História.pdf', 'Cruzadinha - Pré-História')">Baixar PDF</button>
+                    <a href="../Cruzadinha - Pré-História.pdf" target="_blank">Baixar PDF</a>
                 </div>
             </section>
     
@@ -165,8 +221,7 @@
                     <h3>Escolha uma opção:</h3>
                     <button onclick="window.open('https://interacty.me/projects/22ad3bea92410e8e')">Acessar Online</button>
                     <button onclick="baixarPDF('../Cruzadinha - Idade Contemporânea.pdf', 'Cruzadinha - Idade Contemporânea.pdf')">Baixar PDF</button>
-                </div>
-            </section>
+                </div>            </section>
     </main>
 
     <footer>

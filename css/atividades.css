@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', serif;
     background-color: #f9f4e1;
     color: #3a3a3a;
     line-height: 1.6;
@@ -13,7 +16,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #28666e;
+    color: black;
 }
 
 .container {
@@ -26,6 +29,7 @@ a {
     background-color: #4b3f35;
     padding: 20px 0;
     color: white;
+    position: static;
 }
 
 .logo-menu {
@@ -41,7 +45,7 @@ a {
 
 .logo img {
     max-width: 150px;
-    margin-right: 10px;
+    margin: 0 auto;
     cursor: pointer;
     transition: .3s;
 }
@@ -56,10 +60,12 @@ a {
     font-weight: bold;
 }
 
+/* Menu */
 .menu ul {
     list-style: none;
-    display: flex;
     gap: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .menu ul li {
@@ -68,17 +74,22 @@ a {
 
 .menu ul li a {
     color: white;
+    text-decoration: none;
     font-weight: bold;
     font-size: 16px;
     padding: 10px;
     transition: color 0.3s;
 }
-
+.menu #logout{
+    cursor: pointer;
+}
 .menu ul li a:hover {
     color: #d4af37;
 }
 
+/* Dropdown */
 .dropdown-menu {
+    margin-top: 9px;
     position: absolute;
     top: 100%;
     left: 0;
@@ -92,6 +103,7 @@ a {
 .dropdown-menu a {
     color: #333;
     padding: 10px;
+    text-decoration: none;
     display: block;
     font-size: 14px;
     border-bottom: 1px solid #eee;
@@ -105,6 +117,21 @@ a {
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+.user-vector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-vector #logo-vector{
+    max-width: 50px;
+}
+
+.user-vector p{
+    font-size: 12px;
 }
 
 main {
@@ -198,6 +225,25 @@ article p {
 .read-more:hover {
     color: #d4af37;
 }
+#cruzadinhas {
+    display: flex;
+    justify-content: space-around; /* Distribui as figuras igualmente */
+    flex-wrap: wrap; /* Permite que as imagens quebrem de linha em telas menores */
+    gap: 10px; /* Espaçamento entre as figuras */
+    margin-top: 30px;
+  }
+  
+#cruzadinhas figure {
+    text-align: center;
+    width: 150px; /* Largura uniforme para as figuras */
+  }
+#cruzadinhas img{
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;    
+}
 .atividades-pdf{
     display: flex;
     flex-direction: column;
@@ -205,10 +251,9 @@ article p {
     margin-bottom: 20px;
 }
 #opcoes {
-    display: none; /* Oculta as opções inicialmente */
+    display: none; 
     margin-top: 20px;
 }
-
 .atividades-pdf button, .atividades-pdf a {
     padding: 10px 15px;
     margin: 5px;
@@ -220,20 +265,25 @@ article p {
     border-radius: 5px;
 }
 legend{
-    align-items:center ;
+    margin-top: 5px;
 }
 .atividades-pdf button:hover, .atividades-pdf button a:hover {
     background-color: #0056b3;
 }
+.atividades-pdf img {
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.atividades-pdf img:hover {
+    transform: scale(1.05); /* Aumenta levemente a imagem */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+}
 #pre-historia{
     margin-top: 20px;
-}
-#idade-contemporanea img{
-    height: 130px;
-}
-.atividades-pdf img{
-    width: 160px;
-    height: 200px;
 }
 footer {
     background-color: #4b3f35;
