@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -13,7 +14,10 @@ body {
 
 a {
     text-decoration: none;
-    color: black;
+}
+
+a p {
+    color: white;
 }
 
 .container {
@@ -62,6 +66,7 @@ a {
     list-style: none;
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .menu ul li {
@@ -137,7 +142,7 @@ a {
 }
 
 .intro h2 {
-    font-size: 42px;
+    font-size: 48px;
     margin-bottom: 20px;
 }
 
@@ -176,7 +181,7 @@ a {
 .acontecimentos h2 {
     font-size: 36px;
     margin-bottom: 50px;
-    color: #d4af37;
+    color: #e7be36;
 }
 
 .itens-grid {
@@ -216,25 +221,64 @@ a {
     cursor: pointer;
 }
 
-.evento{
-    background-color: #e8e4d1; 
-    padding: 40px 20px;
-    margin: 20px;
+#eventos {
+    background: linear-gradient(to bottom, #4b3f35, #8b5e3c); 
+    margin: 0;
+    padding: 50px 0;
+}
+ 
+
+.evento {
+    background-color: white;
+    padding: 40px;
+    margin: 100px auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+}
+
+.evento-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.evento img {
+    width: 40%;
+    border-radius: 10px;
+    margin-left: 20px;
+    transition: .5s ease-in-out;
+}
+
+.evento img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+
+}
+
+.evento-text {
+    width: 55%;
 }
 
 .evento h3 {
-    font-size: 28px;
+    font-size: 30px;
     margin-bottom: 15px;
     color: #4b3f35;
-    text-align: center;
+    text-align: left;
 }
 
 .evento p {
     font-size: 16px;
     line-height: 1.5;
     text-align: justify;
+    margin-top: 10px;
+}
+
+.evento strong{
+    color: #4b3f35;
+    font-size: 20px;
     margin-top: 10px;
 }
 
