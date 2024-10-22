@@ -1,0 +1,279 @@
+/* Resetando margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilizando o corpo da página */
+body {
+    font-family: 'Poppins', serif;
+    background-color: #f9f4e1;
+    color: #3a3a3a;
+    line-height: 1.6;
+}
+
+/* Container principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Estilizando o cabeçalho */
+.header {
+    background-color: #4b3f35;
+    padding: 20px 0;
+    color: white;
+}
+
+
+.logo-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 150px;
+    cursor: pointer;
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.logo img:hover {
+    filter: drop-shadow(5px 5px 3.5px rgb(128, 115, 92));
+    transform: scale(1.05);
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Menu */
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #d4af37;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    margin-top: 9px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4b3f35;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    border-radius: 5px;
+    width: 210px;
+}
+
+.dropdown-menu a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #665d50;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Títulos */
+h1 {
+    font-size: 69px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    margin: 40px 0 20px;
+    text-align: center;
+    color: #4b3f35;
+}
+
+/* Parágrafos */
+p {
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 19px;
+}
+
+#text-all {
+    text-align: justify;
+    font-size: 19px;
+    margin: 0 auto 50px;
+}
+
+/* Estilizando imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    transition: filter 0.3s;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+/* Estilizando o rodapé */
+footer {
+    background-color: #4b3f35;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-menu ul li a:hover {
+    color: #d4af37;
+}
+
+/* Estilizando botões */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Listas */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+ul li {
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    font-size: 18px;
+}
+
+/* Estilos da lista dropdown */
+.dropdown-list {
+    font-family: 'Poppins', serif;
+    background-color: #e0d3b8;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    font-size: 18px;
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.dropdown-list li {
+    margin-bottom: 10px;
+}
+
+.dropdown-btn {
+    background-color: #e0d3b8;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+.dropdown-btn:hover {
+    background-color: #d4af37;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f9f4e1;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.dropdown-content img{
+    border-color: black;
+    border: 2px solid black;
+    box-shadow: #333;
+}
+.dropdown-list li.active .dropdown-content {
+    display: block;
+}
+
+#lista ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#lista ul li {
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    font-size: 18px;
+}
