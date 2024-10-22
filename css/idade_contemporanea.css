@@ -86,6 +86,10 @@ a p {
     color: #d4af37;
 }
 
+.menu #logout{
+    cursor: pointer;
+}
+
 /* Dropdown */
 .dropdown-menu {
     margin-top: 9px;
