@@ -1,6 +1,6 @@
 <?php
 include_once('conexao.php');
-
+$mensagem = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email_digitado = $_POST['email'];
     $senha_digitado = md5($_POST['senha']);
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     } 
     else {
-        echo 'Email não encontrado';
+        $mensagem = 'Email não encontrado';
     }
 }
 ?>
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <a id="voltar" href="../php/index.php">Voltar</a>
                 <h1>Redefinir senha</h1>
                 <p>Insira seu e-mail para validar sua identidade e proceder com a alteração da senha</p>
-                <label for="email">Email</label>
+                <label for="email">Email <p style="color:red;"><?php echo $mensagem;?></p></label>
                 <input type="email" name="email" id="email" placeholder="@email.com">
 
                 <label for="senha">Senha</label>
