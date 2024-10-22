@@ -1,11 +1,12 @@
-/* Resetando margens e preenchimentos padrão */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-/* Estilizando o corpo da página */
 body {
     font-family: 'Poppins', serif;
     background-color: #f9f4e1;
@@ -13,21 +14,23 @@ body {
     line-height: 1.6;
 }
 
-/* Container principal */
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-
-/* Estilizando o cabeçalho */
 .header {
     background-color: #4b3f35;
     padding: 20px 0;
     color: white;
+    position: static;
 }
-
 
 .logo-menu {
     display: flex;
@@ -35,7 +38,6 @@ body {
     align-items: center;
 }
 
-/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -43,8 +45,9 @@ body {
 
 .logo img {
     max-width: 150px;
+    margin: 0 auto;
     cursor: pointer;
-    transition: filter 0.3s, transform 0.3s;
+    transition: .3s;
 }
 
 .logo img:hover {
@@ -60,8 +63,9 @@ body {
 /* Menu */
 .menu ul {
     list-style: none;
-    display: flex;
     gap: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .menu ul li {
@@ -76,7 +80,9 @@ body {
     padding: 10px;
     transition: color 0.3s;
 }
-
+.menu #logout{
+    cursor: pointer;
+}
 .menu ul li a:hover {
     color: #d4af37;
 }
@@ -101,15 +107,31 @@ body {
     display: block;
     font-size: 14px;
     border-bottom: 1px solid #eee;
-    transition: background-color 0.3s;
+    transition: 0.3s;
 }
 
 .dropdown-menu a:hover {
     background-color: #665d50;
+    color: white;
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+.user-vector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-vector #logo-vector{
+    max-width: 50px;
+}
+
+.user-vector p{
+    font-size: 12px;
 }
 
 /* Títulos */

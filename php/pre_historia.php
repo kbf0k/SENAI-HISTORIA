@@ -1,37 +1,64 @@
+<?php
+include_once('conexao.php');
+session_start();
+
+if(!isset($_SESSION['nome_sessao'])){
+    header('Location: index.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="Pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
     <link rel="stylesheet" href="../css/pre_historia.css">
     <script src="../javascript/pre_historia.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 
-    <title>Pré-História</title>
+
 </head>
+
 <body>
     <header class="header">
         <div class="container logo-menu">
             <div class="logo">
-                <img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo História">
+                <img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo">
                 <h1>História</h1>
             </div>
             <nav class="menu">
                 <ul>
                     <li class="dropdown">
-                        <a href="#">Períodos Históricos</a>
+                        <a href="">Períodos Históricos</a>
+
                         <div class="dropdown-menu">
-                            <a href="pre_historia.html">Pré-História</a>
-                            <a href="#">Idade Antiga</a>
-                            <a href="#">Idade Média</a>
-                            <a href="#">Idade Moderna</a>
-                            <a href="#">Idade Contemporânea</a>
+                            <a href="">Pré-História</a>
+                            <a href="idade_antiga.php">Idade Antiga</a>
+                            <a href="idade_media.php">Idade Média</a>
+                            <a href="idade_moderna.php">Idade Moderna</a>
+                            <a href="idade_contemporanea.php">Idade Contemporânea</a>
                         </div>
                     </li>
-                    <li><a href="#glossario">Glossário</a></li>
-                    <li><a href="../index.html">LOGIN</a></li>
+                    <li><a href="../html/glossario.html">Glossário</a></li>
+                    <li><a href="atividades.php">Atividades Complementares</a></li>
+
+                    <?php if (isset($_SESSION['nome_sessao'])): ?>
+                    <div class="user-vector">
+                        <img id="logo-vector" src="../img/user-vector.png" alt="">
+                        <p>
+                            <?= $_SESSION['nome_sessao'] ?>
+                        </p>
+                        <p>
+                            <?=$_SESSION['tipo_sessao'] ?>
+                        </p>
+                    </div>
+                    <li><a id="logout">SAIR</a></li>
+                    <?php else: ?>
+                    <li><a href="index.php">LOGIN</a></li>
+                    <?php endif; ?>
                 </ul>
             </nav>
         </div>
