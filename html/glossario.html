@@ -3,141 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 50px;
-    }
-
-    .search-bar {
-      display: flex;
-      align-items: center;
-      width: 50%;
-      margin-bottom: 10px;
-    }
-
-    .search-bar input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 25px;
-      font-size: 16px;
-      outline: none;
-      box-sizing: border-box;
-    }
-
-    .search-bar button {
-      background: none;
-      border: none;
-      margin-left: -35px;
-      cursor: pointer;
-    }
-
-    .search-bar button img {
-      width: 20px;
-      height: 20px;
-    }
-
-    .search-hint {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
-    .alphabet-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .alphabet-container a {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 30px;
-      height: 30px;
-      background-color: black;
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 50%;
-      transition: background-color 0.2s;
-    }
-
-    .alphabet-container a:hover {
-      background-color: #555;
-    }
-
-    .pagination {
-      display: flex;
-      list-style-type: none;
-      padding: 0;
-      margin-top: 50px;
-    }
-
-    .pagination a {
-      color: black;
-      padding: 8px 16px;
-      text-decoration: none;
-      border: 1px solid #ddd;
-      margin: 0 4px;
-      border-radius: 5px;
-    }
-
-    .pagination a.active {
-      background-color: #8B0000; /* Marrom escuro */
-      color: white;
-      border: 1px solid #8B0000;
-    }
-
-    .pagination a:hover:not(.active) {
-      background-color: #ddd;
-    }
-
-    .page-content {
-      margin-top: 20px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      width: 80%;
-      text-align: center;
-      border-radius: 5px;
-      background-color: #f9f9f9;
-    }
-
-    .page-1 {  } /* Amarelo */
-    .page-2 {  } /* Laranja */
-    .page-3 { background-color: #4caf50; color: white; } /* Verde */
-    .page-4 { border: 2px dashed #2196f3; } /* Borda azul */
-    .page-5 { font-style: italic; } /* Texto em itálico */
-    .page-6 { font-weight: bold; color: #8B0000; } /* Negrito marrom */
-    .page-7 { text-transform: uppercase; } /* Texto em maiúsculas */
-    .page-8 { background-color: #e0f7fa; } /* Azul claro */
-    .page-9 { color: #9c27b0; font-size: 1.2em; } /* Roxo maior */
-    .page-10 { background-image: linear-gradient(to right, #ff758c, #ff7eb3); } /* Gradiente */
-    .page-11 { border: 2px dotted #795548; } /* Borda pontilhada marrom */
-    .page-12 { background-color: #c8e6c9; font-family: "Courier New", Courier, monospace; } /* Verde claro e fonte monoespaçada */
-    .page-13 { font-family: "Georgia", serif; } /* Fonte serifada */
-    .page-14 { color: #e91e63; font-size: 1.4em; } /* Rosa e maior */
-    .page-15 { text-align: left; background-color: #eeeeee; } /* Alinhamento à esquerda */
-
-    .reload-button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      border: none;
-      background-color: #8B0000;
-      color: white;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    
-  </style>
+  <title>Busca por Letra</title>
+  <link rel="stylesheet" href="/css/glossario.css">
+  <script src="/javascript/glossario.js" defer></script>
 </head>
 <body>
 
@@ -152,154 +20,48 @@
 
   <div class="alphabet-container">
     <!-- Alfabeto de A a Z -->
-    <a href="#">A</a>
-    <a href="#">B</a>
-    <a href="#">C</a>
-    <a href="#">D</a>
-    <a href="#">E</a>
-    <a href="#">F</a>
-    <a href="#">G</a>
-    <a href="#">H</a>
-    <a href="#">I</a>
-    <a href="#">J</a>
-    <a href="#">K</a>
-    <a href="#">L</a>
-    <a href="#">M</a>
-    <a href="#">N</a>
-    <a href="#">O</a>
-    <a href="#">P</a>
-    <a href="#">Q</a>
-    <a href="#">R</a>
-    <a href="#">S</a>
-    <a href="#">T</a>
-    <a href="#">U</a>
-    <a href="#">V</a>
-    <a href="#">W</a>
-    <a href="#">X</a>
-    <a href="#">Y</a>
-    <a href="#">Z</a>
+    <a class="botaoABC" id="botaoA" href="#">A</a>
+    <a class="botaoABC" id="botaoB" href="#">B</a>
+    <a class="botaoABC" id="botaoC" href="#">C</a>
+    <a class="botaoABC" id="botaoD" href="#">D</a>
+    <a class="botaoABC" id="botaoE" href="#">E</a>
+    <a class="botaoABC" id="botaoF" href="#">F</a>
+    <a class="botaoABC" id="botaoG" href="#">G</a>
+    <a class="botaoABC" id="botaoH" href="#">H</a>
+    <a class="botaoABC" id="botaoI" href="#">I</a>
+    <a class="botaoABC" id="botaoJ" href="#">J</a>
+    <a class="botaoABC" id="botaoK" href="#">K</a>
+    <a class="botaoABC" id="botaoL" href="#">L</a>
+    <a class="botaoABC" id="botaoM" href="#">M</a>
+    <a class="botaoABC" id="botaoN" href="#">N</a>
+    <a class="botaoABC" id="botaoO" href="#">O</a>
+    <a class="botaoABC" id="botaoP" href="#">P</a>
+    <a class="botaoABC" id="botaoQ" href="#">Q</a>
+    <a class="botaoABC" id="botaoR" href="#">R</a>
+    <a class="botaoABC" id="botaoS" href="#">S</a>
+    <a class="botaoABC" id="botaoT" href="#">T</a>
+    <a class="botaoABC" id="botaoU" href="#">U</a>
+    <a class="botaoABC" id="botaoV" href="#">V</a>
+    <a class="botaoABC" id="botaoW" href="#">W</a>
+    <a class="botaoABC" id="botaoX" href="#">X</a>
+    <a class="botaoABC" id="botaoY" href="#">Y</a>
+    <a class="botaoABC" id="botaoZ" href="#">Z</a>
   </div>
 
   <div class="page-content" id="page-content">
     <!-- Conteúdo inicial da página 1 -->
   </div>
 
-  <div class="pagination">
+  <div class="pagination" id="navPags">
     <a href="#" data-page="1" id="inicio">&laquo; Início</a>
     <a href="#" data-page="prev" id="anterior">&lsaquo; Anterior</a>
     <!-- Botões de páginas serão gerados dinamicamente -->
     <a href="#" data-page="next" id="proximo">Próximo &rsaquo;</a>
+
     <a href="#" data-page="15" id="fim">Fim &raquo;</a>
   </div>
 
-  <script>
-    const pageContent = document.getElementById('page-content');
-    const paginationContainer = document.querySelector('.pagination');
-    const btnInicio = document.getElementById('inicio');
-    const btnFim = document.getElementById('fim');
-    const btnAnterior = document.getElementById('anterior');
-    const btnProximo = document.getElementById('proximo');
-    const totalPages = 15;
-    const maxVisiblePages = 10;
-    let currentPage = 1;
-
-    const pageContents = {
-      1: "<p><b>Absolutismo:</b> Sistema de governo em que o rei tem poder total sobre o Estado e a população.<br><br><b>Antigo Regime:</b> Organização social e política da Europa antes das Revoluções, baseada na monarquia, aristocracia e clero.<br><br><b>Aristocracia:</b> Classe social de nobres que detinha terras e poder político.<br><br><b>Assolutismo Monárquico:</b> Outra forma de se referir ao absolutismo, com o monarca exercendo controle absoluto.<br><br><b>Batalha de Hastings:</b> Conflito em 1066 na Inglaterra, que levou à conquista normanda do país.</p>",
-      2: "<p><b>Belle Époque:</b> Período de paz e progresso cultural na Europa, entre 1871 e 1914.<br><br><b>Bipolaridade:</b> Divisão do mundo em duas superpotências durante a Guerra Fria: EUA e União Soviética.<br><br><b>Bolchevismo:</b> Ideologia socialista radical que levou à Revolução Russa e à criação da União Soviética.<br><br><b>Bretton Woods:</b> Conferência que criou o sistema financeiro internacional após a Segunda Guerra Mundial.<br><br><b>Califado:</b> Estado islâmico liderado por um califa, que é visto como o sucessor de Maomé.</p>",
-      3: "<p>Página 3 com estilo verde</p><ul><li>Item 1</li><li>Item 2</li></ul>",
-      4: "<p>Página 4: Borda azul pontilhada</p>",
-      5: "<p>Página 5 com texto em itálico.</p>",
-      6: "<p>Página 6 em negrito com cor marrom escura.</p>",
-      7: "<p>Página 7: Todo o texto em maiúsculas</p>",
-      8: "<p>Página 8 com fundo azul claro.</p>",
-      9: "<p>Página 9 com cor roxa e texto grande.</p>",
-      10: "<p>Página 10 com gradiente de fundo.</p>",
-      11: "<p>Página 11 com borda pontilhada marrom.</p>",
-      12: "<p>Página 12: Fundo verde claro e fonte monoespaçada.</p>",
-      13: "<p>Página 13 usando fonte serifada.</p>",
-      14: "<p>Página 14 com cor rosa e fonte maior.</p>",
-      15: "<p>Página 15 alinhada à esquerda.</p>"
-    }
-
-    function updatePageContent(page) {
-      pageContent.innerHTML = pageContents[page] || "<p>Conteúdo não encontrado</p>";
-      pageContent.className = 'page-content'; // Reseta as classes para o estilo padrão
-      pageContent.classList.add(`page-${page}`);
-    }
-
-    function renderPageLinks(startPage) {
-      const pageLinks = Array.from(paginationContainer.children).filter(link => link !== btnInicio && link !== btnFim && link !== btnAnterior && link !== btnProximo);
-      pageLinks.forEach(link => link.remove());
-
-      let endPage = Math.min(startPage + maxVisiblePages - 1, totalPages);
-
-      for (let i = startPage; i <= endPage; i++) {
-        const pageLink = document.createElement('a');
-        pageLink.href = "#";
-        pageLink.textContent = i;
-        pageLink.dataset.page = i;
-        if (i === currentPage) {
-          pageLink.classList.add('active');
-        }
-        paginationContainer.insertBefore(pageLink, btnProximo);
-      }
-    }
-
-    paginationContainer.addEventListener('click', function(event) {
-      event.preventDefault();
-      const target = event.target;
-      if (target.tagName !== 'A') return;
-
-      let newPage = target.dataset.page;
-
-      if (newPage === 'prev') {
-        newPage = Math.max(1, currentPage - 1);
-      } else if (newPage === 'next') {
-        newPage = Math.min(totalPages, currentPage + 1);
-      } else if (newPage === '1') {
-        newPage = 1;
-      } else if (newPage === '15') {
-        newPage = 15;
-      } else {
-        newPage = parseInt(newPage);
-      }
-
-      if (newPage !== currentPage) {
-        currentPage = newPage;
-        updatePageContent(currentPage);
-        let startPage = Math.max(1, Math.min(currentPage - Math.floor(maxVisiblePages / 2), totalPages - maxVisiblePages + 1));
-        renderPageLinks(startPage);
-      }
-    });
-
-    renderPageLinks(1);
-    updatePageContent(1);
-
-    // Seus conteúdos por letra
-  const contentByLetter = {
-    A: "<p><b>Absolutismo:</b> Sistema de governo em que o rei tem poder total sobre o Estado e a população.<br><br><b>Antigo Regime:</b> Organização social e política da Europa antes das Revoluções, baseada na monarquia, aristocracia e clero.<br><br><b>Aristocracia:</b> Classe social de nobres que detinha terras e poder político.<br><br><b>Assolutismo Monárquico:</b> Outra forma de se referir ao absolutismo, com o monarca exercendo controle absoluto.<br><br></p>",
-    B: "<p><b>Batalha de Hastings:</b> Conflito em 1066 na Inglaterra, que levou à conquista normanda do país.<br><br><b>Belle Époque:</b> Período de paz e progresso cultural na Europa, entre 1871 e 1914.<br><br><b>Bipolaridade:</b> Divisão do mundo em duas superpotências durante a Guerra Fria: EUA e União Soviética.<br><br><b>Bolchevismo:</b> Ideologia socialista radical que levou à Revolução Russa e à criação da União Soviética.<br><br><b>Bretton Woods:</b> Conferência que criou o sistema financeiro internacional após a Segunda Guerra Mundial.<br><br></p>",
-    C: "<p><b>Califado:</b> Estado islâmico liderado por um califa, que é visto como o sucessor de Maomé.</p>"
-    // Adicione mais letras e conteúdos conforme necessário
-  };
-
-  // Função para atualizar o conteúdo com base na letra selecionada
-  function updateContentByLetter(letter) {
-    const content = contentByLetter[letter] || "<p>Não há conteúdo disponível para esta letra.</p>";
-    pageContent.innerHTML = content;
-  }
-
-  // Adiciona o evento de clique para cada letra do alfabeto
-  document.querySelectorAll('.alphabet-container a').forEach(link => {
-    link.addEventListener('click', function(event) {
-      event.preventDefault();
-      const letter = link.textContent;
-      updateContentByLetter(letter);
-    });
-  });
-
-
-  </script>
+  <div id="navLetras"></div>
 
 </body>
 </html>
