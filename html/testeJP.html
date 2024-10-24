@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setas para Seleção de Links</title>
+  <style>
+    a {
+      display: inline-block;
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .selected {
+      background-color: red;
+    }
+
+    .arrow {
+      display: inline-block;
+      background-color: gray;
+      color: white;
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#" class="botao">Link 1</a>
+  <a href="#" class="botao">Link 2</a>
+  <a href="#" class="botao">Link 3</a>
+
+  <div>
+    <span class="arrow" id="leftArrow">⬅️</span>
+    <span class="arrow" id="rightArrow">➡️</span>
+  </div>
+
+  <script>
+    const links = document.querySelectorAll('.botao');
+    let currentIndex = 0;
+
+    // Função para selecionar um link baseado no índice
+    function selectLink(index) {
+      // Remove a classe 'selected' de todos os links
+      links.forEach(link => link.classList.remove('selected'));
+
+      // Adiciona a classe 'selected' ao link correspondente ao índice
+      links[index].classList.add('selected');
+    }
+
+    // Selecionar o primeiro link por padrão
+    selectLink(currentIndex);
+
+    // Clique nos links para selecionar manualmente
+    links.forEach((link, index) => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        currentIndex = index; // Atualiza o índice atual
+        selectLink(currentIndex);
+      });
+    });
+
+    // Função para mover a seleção para a esquerda
+    document.getElementById('leftArrow').addEventListener('click', function() {
+      if (currentIndex > 0) {
+        currentIndex--; // Diminui o índice para ir à esquerda
+        selectLink(currentIndex);
+      }
+    });
+
+    // Função para mover a seleção para a direita
+    document.getElementById('rightArrow').addEventListener('click', function() {
+      if (currentIndex < links.length - 1) {
+        currentIndex++; // Aumenta o índice para ir à direita
+        selectLink(currentIndex);
+      }
+    });
+  </script>
+
+</body>
+</html>

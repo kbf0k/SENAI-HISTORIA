@@ -12,6 +12,9 @@ body {
     background-color: #f9f4e1;
     color: #3a3a3a;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a {
@@ -30,6 +33,7 @@ a {
     padding: 20px 0;
     color: white;
     position: static;
+    width: 100%;
 }
 
 .logo-menu {
@@ -147,6 +151,7 @@ a {
     align-items: center;
     width: 50%;
     margin-bottom: 10px;
+    margin-top: 50px;
   }
 
   .search-bar input[type="text"] {
@@ -204,11 +209,11 @@ a {
   }
 
   .alphabet-container .selected {
-    background-color: #8B0000;
+    background-color: #d4af37;
   }
 
   .alphabet-container .selected:hover {
-    background-color: #8B0000;
+    background-color: #d4af37;
   }
 
   .pagination {
@@ -222,15 +227,15 @@ a {
     color: black;
     padding: 8px 16px;
     text-decoration: none;
-    border: 1px solid #ddd;
+    border: 1px solid #665d50;
     margin: 0 4px;
     border-radius: 5px;
   }
 
   .pagination a.active {
-    background-color: #8B0000; /* Marrom escuro */
+    background-color: #d4af37; /* Marrom escuro */
     color: white;
-    border: 1px solid #8B0000;
+    border: 1px solid #665d50;
   }
 
   .pagination a:hover:not(.active) {
