@@ -27,7 +27,7 @@ a {
 
 .header {
     background-color: #4b3f35;
-    padding: 20px 0;
+    padding: 1px 0;
     color: white;
     position: static;
 }
@@ -218,21 +218,6 @@ button:focus {
 
 /* Listas */
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-ul li {
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: left;
-    font-size: 18px;
-}
-
 /* Estilos da lista dropdown */
 .dropdown-list {
     font-family: 'Poppins', serif;
@@ -269,7 +254,7 @@ ul li {
 
 .dropdown-content {
     display: none;
-    background-color: #f9f4e1;
+    background-color: #e0d3b8;
     padding: 10px;
     border-radius: 8px;
     margin-top: 5px;
@@ -290,6 +275,8 @@ ul li {
     padding: 0;
     max-width: 800px;
     margin: 0 auto;
+    background-color: #e0d3b8;
+    border-radius: 15px;
 }
 
 #lista ul li {

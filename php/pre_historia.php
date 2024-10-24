@@ -23,7 +23,7 @@ if(!isset($_SESSION['nome_sessao'])){
 </head>
 
 <body>
-    <header class="header">
+<header class="header">
         <div class="container logo-menu">
             <div class="logo">
                 <img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo">
@@ -35,7 +35,7 @@ if(!isset($_SESSION['nome_sessao'])){
                         <a href="">Períodos Históricos</a>
 
                         <div class="dropdown-menu">
-                            <a href="">Pré-História</a>
+                            <a href="pre_historia.php">Pré-História</a>
                             <a href="idade_antiga.php">Idade Antiga</a>
                             <a href="idade_media.php">Idade Média</a>
                             <a href="idade_moderna.php">Idade Moderna</a>
