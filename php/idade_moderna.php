@@ -23,7 +23,7 @@ if(!isset($_SESSION['nome_sessao'])){
 </head>
 
 <body>
-    <header class="header">
+<header class="header">
         <div class="container logo-menu">
             <div class="logo">
             <a href="inicio.php"><img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo"></a>

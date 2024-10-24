@@ -4,30 +4,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
-body {
-    font-family: 'Poppins', serif;
-    background-color: #f9f4e1;
-    color: #3a3a3a;
-    line-height: 1.6;
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+.content {
+    min-height: calc(100vh - 500px);
+    width: 100vh; 
+    padding: 20px;
 }
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .header {
     background-color: #4b3f35;
-    padding: 1px 0;
+    padding: 20px 0;
     color: white;
     position: static;
 }
@@ -133,7 +124,6 @@ a {
 .user-vector p{
     font-size: 12px;
 }
-
 /* Títulos */
 h1 {
     font-size: 69px;
@@ -149,21 +139,16 @@ h2 {
     color: #4b3f35;
 }
 
-/* Parágrafos */
-p {
-    margin-bottom: 20px;
+
+h4 {
+    font-size: 36px;
+    margin: 40px 0 20px;
     text-align: center;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 20px;
-    font-size: 19px;
+    color: #4b3f35;
 }
 
-#text-all {
-    text-align: justify;
-    font-size: 19px;
-    margin: 0 auto 50px;
-}
+/* Parágrafos */
+
 
 /* Estilizando imagens */
 img {
@@ -218,6 +203,29 @@ button:focus {
 
 /* Listas */
 
+#text-all {
+    text-align: justify;
+    font-size: 19px;
+    margin: 0 auto 50px;
+}
+
+#lista ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #e0d3b8;
+    border-radius: 15px;
+}
+
+#lista ul li {
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    font-size: 18px;
+}
+
 /* Estilos da lista dropdown */
 .dropdown-list {
     font-family: 'Poppins', serif;
@@ -270,19 +278,24 @@ button:focus {
     display: block;
 }
 
-#lista ul {
-    list-style-type: none;
-    padding: 0;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #e0d3b8;
-    border-radius: 15px;
+.art.pre_hist {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    transition: filter 0.3s;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-bottom: 10px;
 }
-
-#lista ul li {
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: left;
-    font-size: 18px;
+.curiosidades {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 40px;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Para permitir rolagem caso o conteúdo seja maior que a tela */
+    height: 200px; /* Defina a altura que você quer para a seção */
 }
