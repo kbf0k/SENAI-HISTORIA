@@ -65,9 +65,11 @@ if(!isset($_SESSION['nome_sessao'])){
     </header>
 
   <div class="search-bar">
-    <input type="text" placeholder="Que termo você procura?">
+    <form action="" method="post">
+        <input type="text" name="termo" id="barra-pesquisa" placeholder="Que termo você procura?">
+    </form>
     <button type="submit">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Icon-search-grey.svg" alt="Buscar">
+      <img id="botao-pesquisa" src="../img/lupa_glossario.png" alt="Buscar">
     </button>
   </div>
 
