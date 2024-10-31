@@ -21,66 +21,67 @@ if(!isset($_SESSION['nome_sessao'])){
 </head>
 
 <body>
-<header class="header">
-        <div class="container logo-menu">
-            <div class="logo">
-            <a href="inicio.php"><img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo"></a>
-            <h1>Idade Antiga</h1>
+    <header class="header">
+            <div class="container logo-menu">
+                <div class="logo">
+                    <a href="inicio.php"><img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo"></a>
+                    <h1>Idade Antiga</h1>
             </div>
-            <nav class="menu">
-                <ul>
-                    <li class="dropdown">
-                        <a href="">Períodos Históricos</a>
-
-                        <div class="dropdown-menu">
-                            <a href="pre_historia.php">Pré-História</a>
-                            <a href="idade_antiga.php">Idade Antiga</a>
-                            <a href="idade_media.php">Idade Média</a>
-                            <a href="idade_moderna.php">Idade Moderna</a>
-                            <a href="../html/idade_contemporanea.html">Idade Contemporânea</a>
+                <nav class="menu">
+                    <ul>
+                        <li class="dropdown">
+                            <a href="">Períodos Históricos</a>
+    
+                            <div class="dropdown-menu">
+                                <a href="pre_historia.php">Pré-História</a>
+                                <a href="idade_antiga.php">Idade Antiga</a>
+                                <a href="idade_media.php">Idade Média</a>
+                                <a href="idade_moderna.php">Idade Moderna</a>
+                                <a href="idade_contemporanea.php">Idade Contemporânea</a>
+                            </div>
+                        </li>
+                        <li><a href="glossario.php">Glossário</a></li>
+                        <li><a href="atividades.php">Atividades Complementares</a></li>
+    
+                        <?php if (isset($_SESSION['nome_sessao'])): ?>
+                        <div class="user-vector">
+                            <img id="logo-vector" src="../img/user-vector.png" alt="">
+                            <p>
+                                <?= $_SESSION['nome_sessao'] ?>
+                            </p>
+                            <p>
+                                <?=$_SESSION['tipo_sessao'] ?>
+                            </p>
                         </div>
-                    </li>
-                    <li><a href="glossario.php">Glossário</a></li>
-                    <li><a href="atividades.php">Atividades Complementares</a></li>
-
-                    <?php if (isset($_SESSION['nome_sessao'])): ?>
-                    <div class="user-vector">
-                        <img id="logo-vector" src="../img/user-vector.png" alt="Usuário">
-                        <p>
-                            <?= $_SESSION['nome_sessao'] ?>
-                        </p>
-                        <p>
-                            <?=$_SESSION['tipo_sessao'] ?>
-                        </p>
-                    </div>
-                    <li><a id="logout">SAIR</a></li>
-                    <?php else: ?>
-                    <li><a href="index.php">LOGIN</a></li>
-                    <?php endif; ?>
-                </ul>
-            </nav>
-        </div>
-    </header>
+                        <li><a id="logout">SAIR</a></li>
+                        <?php else: ?>
+                        <li><a href="index.php">LOGIN</a></li>
+                        <?php endif; ?>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
     <main>
-        <h1>Idade Antiga</h1>
-        <p id="intro">A Idade Antiga compreende o período que se inicia com o surgimento da escrita, por volta de 3.500 a.C., e vai até a queda do Império Romano do Ocidente, em 476 d.C.</p>
+        <img id="img-central" src="../img/civilizacoes-da-idade-antiga.jpg" alt="Civilizações da Idade Antiga">
+        <div class="conteudo">
+            <h1 class="page-title">Idade Antiga</h1>
+            <p id="intro">A Idade Antiga compreende o período que se inicia com o surgimento da escrita, por volta de 3.500 a.C., e vai até a queda do Império Romano do Ocidente, em 476 d.C.</p>
         
-        <div>
-            <img src="../img/idade-antiga-civilizacao.webp" alt="Civilizações da Idade Antiga">
-            <p id="division">A Idade Antiga abrange o florescimento de grandes civilizações, como Egito, Mesopotâmia, Grécia e Roma.</p>
+            
+            <p class="division">A Idade Antiga abrange o florescimento de grandes civilizações, como Egito, Mesopotâmia, Grécia e Roma.</p>
+            
+            <p class="overview">Na Idade Antiga, surgiram as primeiras cidades organizadas, impérios e estados centralizados, além das primeiras formas de governo, religião estruturada, escrita e avanços na ciência e nas artes. As principais civilizações desse período foram: Egito, Mesopotâmia, Grécia e Roma, cada uma delas com contribuições marcantes para a história humana.</p>
+            
+            <h2 class="civilizations-title">Civilizações da Idade Antiga</h2>
         </div>
-
-        <p id="overview">Na Idade Antiga, surgiram as primeiras cidades organizadas, impérios e estados centralizados, além das primeiras formas de governo, religião estruturada, escrita e avanços na ciência e nas artes. As principais civilizações desse período foram: Egito, Mesopotâmia, Grécia e Roma, cada uma delas com contribuições marcantes para a história humana.</p>
-
-        <h2>Civilizações da Idade Antiga</h2>
-        <div class="container">
-            <ul class="dropdown-list">
+        <div class="civilizations-container">
+            <ul class="civilizations-list">
                 <li>
-                    <button class="dropdown-btn">Egito</button>
-                    <div class="dropdown-content">
-                        <h2>Civilização Egípcia</h2>
-                        <p id="egito-desc">A civilização egípcia floresceu nas margens do rio Nilo, no nordeste da África, e teve seu apogeu entre 3.100 a.C. e 30 a.C., quando foi conquistada pelos romanos.</p>
+                    <button class="civilization-btn">Egito</button>
+                    <div class="civilization-content">
+                        <h2 class="civilization-name">Civilização Egípcia</h2>
+                        <p class="civilization-description">A civilização egípcia floresceu nas margens do rio Nilo...</p>
                         <h3>Principais Características:</h3>
                         <h4>Faraós:</h4>
                         <p>O Egito era governado por faraós, considerados deuses vivos, e a sociedade era altamente hierarquizada.</p>
@@ -94,14 +95,16 @@ if(!isset($_SESSION['nome_sessao'])){
                         
                         <h4>Religião:</h4>
                         <p>A religião egípcia era politeísta, com deuses como Rá, Ísis, Osíris e Anúbis. Acreditava-se na vida após a morte, e o processo de mumificação era crucial para garantir a vida eterna.</p>
+                    
                     </div>
                 </li>
+
                 <li>
-                    <button class="dropdown-btn">Mesopotâmia</button>
-                    <div class="dropdown-content">
-                        <h2>Civilização Mesopotâmica</h2>
-                        <p>A Mesopotâmia, localizada entre os rios Tigre e Eufrates (atual Iraque), foi o berço das primeiras civilizações da humanidade, como os sumérios, acádios, babilônios e assírios.</p>
-                        
+                    <button class="civilization-btn">Mesopotâmia</button>
+                    <div class="civilization-content">
+                        <h2 class="civilization-name">Civilização Mesopotâmica</h2>
+                        <p class="civilization-description">A Mesopotâmia, localizada entre os rios Tigre e Eufrates (atual Iraque), foi o berço das primeiras civilizações da humanidade, como os sumérios, acádios, babilônios e assírios.</p>
+                
                         <h3>Principais Características:</h3>
                         <h4>Escrita Cuneiforme:</h4>
                         <p>Os mesopotâmicos foram os primeiros a desenvolver um sistema de escrita, a cuneiforme, usada em tábuas de argila.</p>
@@ -115,14 +118,15 @@ if(!isset($_SESSION['nome_sessao'])){
 
                         <h4>Religião:</h4>
                         <p>A religião mesopotâmica era também politeísta, com deuses como Anu, Enlil e Marduk. As crenças eram fortemente associadas aos fenômenos naturais e à agricultura.</p>
+                    
                     </div>
                 </li>
                 <li>
-                    <button class="dropdown-btn">Grécia</button>
-                    <div class="dropdown-content">
-                        <h2>Civilização Grega</h2>
-                        <p>A civilização grega é conhecida por suas contribuições à filosofia, artes, política e ciência, florescendo entre os séculos VIII a.C. e IV a.C.</p>
-                        
+                    <button class="civilization-btn">Grécia</button>
+                    <div class="civilization-content">
+                        <h2 class="civilization-name">Civilização Grega</h2>
+                        <p class="civilization-description">A civilização grega é conhecida por suas contribuições à filosofia, artes, política e ciência, florescendo entre os séculos VIII a.C. e IV a.C.</p>
+                
                         <h3>Principais Características:</h3>
                         <h4>Democracia:</h4>
                         <p>Atenas foi o berço da democracia, um sistema de governo no qual os cidadãos participavam diretamente nas decisões políticas.</p>
@@ -139,11 +143,10 @@ if(!isset($_SESSION['nome_sessao'])){
                     </div>
                 </li>
                 <li>
-                    <button class="dropdown-btn">Roma</button>
-                    <div class="dropdown-content">
-                        <h2>Civilização Romana</h2>
-                        <p>O Império Romano foi um dos maiores e mais influentes impérios da história, com início no século VIII a.C. e duração até 476 d.C. no Ocidente.</p>
-                        
+                    <button class="civilization-btn">Roma</button>
+                    <div class="civilization-content">
+                        <h2 class="civilization-name">Civilização Romana</h2>
+                        <p class="civilization-description">O Império Romano foi um dos maiores e mais influentes impérios da história, com início no século VIII a.C. e duração até 476 d.C. no Ocidente.</p>
                         <h3>Principais Características:</h3>
                         <h4>República e Império:</h4>
                         <p>Roma começou como uma monarquia, tornou-se uma república em 509 a.C., e finalmente se transformou em império sob Augusto em 27 a.C.</p>
@@ -165,6 +168,20 @@ if(!isset($_SESSION['nome_sessao'])){
             </ul>
         </div>
     </main>
+    <footer>
+            <div class="container">
+                <p>© 2024 SESI CAÇAPAVA e SENAI TAUBATÉ</p>
+                <p>Desenvolvido por: SOFTDEV</p>
+                <nav class="footer-menu">
+                    <ul>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Ajuda</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
 </body>
 
 </html>

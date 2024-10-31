@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    font-family: Arial, sans-serif;
+body {
+    font-family: 'Poppins', serif;
+    background-color: #f9f4e1;
+    color: #3a3a3a;
+    line-height: 1.6;
 }
 
-.content {
-    min-height: calc(100vh - 500px);
-    width: 100vh; 
-    padding: 20px;
+a {
+    text-decoration: none;
+    color: black;
 }
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .header {
     background-color: #4b3f35;
     padding: 20px 0;
@@ -124,23 +131,17 @@ body, html {
 .user-vector p{
     font-size: 12px;
 }
+
+
 /* Títulos */
-h1 {
+main h1 {
     font-size: 69px;
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
 }
 
-h2 {
-    font-size: 36px;
-    margin: 40px 0 20px;
-    text-align: center;
-    color: #4b3f35;
-}
-
-
-h4 {
+main h2 {
     font-size: 36px;
     margin: 40px 0 20px;
     text-align: center;
@@ -148,10 +149,23 @@ h4 {
 }
 
 /* Parágrafos */
+main p {
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 19px;
+}
 
+#text-all {
+    text-align: justify;
+    font-size: 19px;
+    margin: 0 auto 50px;
+}
 
 /* Estilizando imagens */
-img {
+main img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -159,35 +173,6 @@ img {
     transition: filter 0.3s;
     object-fit: cover;
     border-radius: 50px;
-}
-
-/* Estilizando o rodapé */
-footer {
-    background-color: #4b3f35;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer p {
-    margin-bottom: 10px;
-}
-
-.footer-menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.footer-menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.footer-menu ul li a:hover {
-    color: #d4af37;
 }
 
 /* Estilizando botões */
@@ -199,31 +184,6 @@ button {
 
 button:focus {
     outline: none;
-}
-
-/* Listas */
-
-#text-all {
-    text-align: justify;
-    font-size: 19px;
-    margin: 0 auto 50px;
-}
-
-#lista ul {
-    list-style-type: none;
-    padding: 0;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #e0d3b8;
-    border-radius: 15px;
-}
-
-#lista ul li {
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: left;
-    font-size: 18px;
 }
 
 /* Estilos da lista dropdown */
@@ -262,7 +222,7 @@ button:focus {
 
 .dropdown-content {
     display: none;
-    background-color: #e0d3b8;
+    background-color: #f9f4e1;
     padding: 10px;
     border-radius: 8px;
     margin-top: 5px;
@@ -278,24 +238,45 @@ button:focus {
     display: block;
 }
 
-.art.pre_hist {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    transition: filter 0.3s;
-    object-fit: cover;
-    border-radius: 50px;
+#lista ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#lista ul li {
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #4b3f35;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
     margin-bottom: 10px;
 }
-.curiosidades {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f4f4f4;
-    padding: 40px;
-    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; /* Para permitir rolagem caso o conteúdo seja maior que a tela */
-    height: 200px; /* Defina a altura que você quer para a seção */
+
+.footer-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-menu ul li a:hover {
+    color: #d4af37;
 }
