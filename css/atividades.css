@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 * {
     margin: 0;
@@ -80,9 +80,11 @@ a {
     padding: 10px;
     transition: color 0.3s;
 }
-.menu #logout{
+
+.menu #logout {
     cursor: pointer;
 }
+
 .menu ul li a:hover {
     color: #d4af37;
 }
@@ -119,18 +121,18 @@ a {
     display: block;
 }
 
-.user-vector{
+.user-vector {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.user-vector #logo-vector{
+.user-vector #logo-vector {
     max-width: 50px;
 }
 
-.user-vector p{
+.user-vector p {
     font-size: 12px;
 }
 
@@ -219,58 +221,40 @@ article p {
     font-weight: bold;
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid #eee; 
+    border-top: 1px solid #eee;
 }
 
 .read-more:hover {
     color: #d4af37;
 }
+
+#atividadestitulo {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 20px;
+}
+
 #cruzadinhas {
     display: flex;
-    justify-content: space-around; /* Distribui as figuras igualmente */
-    flex-wrap: wrap; /* Permite que as imagens quebrem de linha em telas menores */
-    gap: 10px; /* Espaçamento entre as figuras */
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    gap: 10px;
     margin-top: 30px;
-  }
-  
+}
+#caca-palavras{
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
+
 #cruzadinhas figure {
     text-align: center;
     width: 150px; /* Largura uniforme para as figuras */
-  }
-#cruzadinhas img{
-    width: 150px;
-    height: 200px;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;    
 }
-.atividades-pdf{
-    display: flex;
-    flex-direction: column;
-    margin-left: 27px;
-    margin-bottom: 20px;
-}
-#opcoes {
-    display: none; 
-    margin-top: 20px;
-}
-.atividades-pdf button, .atividades-pdf a {
-    padding: 10px 15px;
-    margin: 5px;
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 5px;
-}
-legend{
-    margin-top: 5px;
-}
-.atividades-pdf button:hover, .atividades-pdf button a:hover {
-    background-color: #0056b3;
-}
-.atividades-pdf img {
+
+#cruzadinhas img {
     width: 150px;
     height: 200px;
     border-radius: 10px;
@@ -278,18 +262,127 @@ legend{
     cursor: pointer;
 }
 
-.atividades-pdf img:hover {
-    transform: scale(1.05); /* Aumenta levemente a imagem */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+.atividades-pdf {
+    display: flex;
+    flex-direction: column;
+    margin-left: 27px;
+    margin-bottom: 20px;
 }
-#pre-historia{
+
+#opcoes {
+    display: none;
     margin-top: 20px;
 }
+
+.atividades-pdf button,
+.atividades-pdf a {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    background-color: #d7cd42;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+legend {
+    margin-top: 5px;
+}
+
+.atividades-pdf button:hover,
+.atividades-pdf a:hover {
+    background-color: #f3f39f;
+}
+
+/* Estilos para a seção Pré-História */
+#pre-historia {
+    margin-top: 20px;
+}
+
+.img-legend {
+    position: relative;
+    width: 150px; /* Largura da imagem */
+}
+
+.img-container {
+    position: relative;
+    width: 150px; 
+    height: 200px; 
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imagem {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: opacity 0.3s ease; 
+    cursor: pointer; 
+}
+
+.img-container:hover .imagem {
+    opacity: 0.2; 
+}
+legend{
+    text-align: center;
+}
+.opcoes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.img-container:hover .opcoes {
+    opacity: 1; 
+}
+
+.opcoes h3 {
+    color: #3a3a3a; 
+    font-size: 16px; 
+    margin-bottom: 10px; 
+}
+.opcoes button,
+.opcoes a {
+    padding: 0px 15px;
+    margin: 5px;
+    border: none;
+    background-color: #d4af37;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.opcoes a {
+    display: inline-block;
+}
+
+.opcoes button:hover,
+.opcoes a:hover {
+    background-color: #b97604;
+}
+
 footer {
     background-color: #4b3f35;
     color: white;
     padding: 20px 0;
     text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
 }
 
 .footer-menu ul {
@@ -301,15 +394,10 @@ footer {
 
 .footer-menu ul li a {
     color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .footer-menu ul li a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .menu ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+    color: #d4af37;
 }
