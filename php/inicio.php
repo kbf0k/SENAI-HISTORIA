@@ -165,10 +165,10 @@ if(!isset($_SESSION['nome_sessao'])){
         <section class="glossario">
             <div class="container">
                 <h2>Glossário Histórico</h2>
-                <p>Entenda melhor os principais conceitos e termos históricos com nosso glossário interativo.</p>
-                <p>Cada definição contém uma explicação detalhada e imagens ilustrativas. Aprofunde-se no conhecimento e
+                <p>Entenda os principais conceitos e termos históricos com nosso glossário interativo.</p>
+                <p>Cada definição contém uma explicação breve de fácil entendimento. Aprofunde-se no conhecimento e
                     explore cada termo.</p>
-                <a href="../html/glossario.html" class="btn">Acessar Glossário</a>
+                <a href="../php/glossario.php" class="btn">Acessar Glossário</a>
             </div>
         </section>
 
