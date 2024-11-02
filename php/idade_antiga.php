@@ -66,12 +66,10 @@ if(!isset($_SESSION['nome_sessao'])){
         <img id="img-central" src="../img/civilizacoes-da-idade-antiga.jpg" alt="Civilizações da Idade Antiga">
         <div class="conteudo">
             <h1 class="page-title">Idade Antiga</h1>
-            <p id="intro">A Idade Antiga compreende o período que se inicia com o surgimento da escrita, por volta de 3.500 a.C., e vai até a queda do Império Romano do Ocidente, em 476 d.C.</p>
-        
+            <p>A Idade Antiga compreende o período que se inicia com o surgimento da escrita, por volta de 3.500 a.C., e vai até a queda do Império Romano do Ocidente, em 476 d.C.</p>
             
-            <p class="division">A Idade Antiga abrange o florescimento de grandes civilizações, como Egito, Mesopotâmia, Grécia e Roma.</p>
-            
-            <p class="overview">Na Idade Antiga, surgiram as primeiras cidades organizadas, impérios e estados centralizados, além das primeiras formas de governo, religião estruturada, escrita e avanços na ciência e nas artes. As principais civilizações desse período foram: Egito, Mesopotâmia, Grécia e Roma, cada uma delas com contribuições marcantes para a história humana.</p>
+            <p>Na Idade Antiga, surgiram as primeiras cidades organizadas, impérios e estados centralizados, além das primeiras formas de governo, religião estruturada, escrita e avanços na ciência e nas artes.</p>
+            <p>As principais civilizações desse período foram: Egito, Mesopotâmia, Persas, Grécia e Roma, cada uma delas com contribuições marcantes para a história humana.</p>
             
         </div>
 
@@ -81,7 +79,7 @@ if(!isset($_SESSION['nome_sessao'])){
             <ul class="civilizations-list">
                 <li>
                     <button class="civilization-btn">Egito</button>
-                    <div class="civilization-content">
+                    <div class="civilization-content" style="display: none;">
                         <h2 class="civilization-name">Civilização Egípcia</h2>
                         <p class="civilization-description">A civilização egípcia floresceu nas margens do rio Nilo...</p>
                         <h3>Principais Características:</h3>
@@ -93,7 +91,7 @@ if(!isset($_SESSION['nome_sessao'])){
 
                         <h4>Escrita Hieroglífica:</h4>
                         <p>O Egito desenvolveu uma escrita complexa, conhecida como hieroglífica, usada em templos, túmulos e documentos administrativos.</p>
-                        <img src="../img/egito-piramides.webp" alt="Pirâmides do Egito">
+                        <img src="../img/piramide.webp" alt="Pirâmides do Egito">
                         
                         <h4>Religião:</h4>
                         <p>A religião egípcia era politeísta, com deuses como Rá, Ísis, Osíris e Anúbis. Acreditava-se na vida após a morte, e o processo de mumificação era crucial para garantir a vida eterna.</p>
@@ -103,14 +101,14 @@ if(!isset($_SESSION['nome_sessao'])){
 
                 <li>
                     <button class="civilization-btn">Mesopotâmia</button>
-                    <div class="civilization-content">
+                    <div class="civilization-content" style="display: none;">
                         <h2 class="civilization-name">Civilização Mesopotâmica</h2>
                         <p class="civilization-description">A Mesopotâmia, localizada entre os rios Tigre e Eufrates (atual Iraque), foi o berço das primeiras civilizações da humanidade, como os sumérios, acádios, babilônios e assírios.</p>
                 
                         <h3>Principais Características:</h3>
                         <h4>Escrita Cuneiforme:</h4>
                         <p>Os mesopotâmicos foram os primeiros a desenvolver um sistema de escrita, a cuneiforme, usada em tábuas de argila.</p>
-                        <img src="../img/mesopotamia-escrita.webp" alt="Escrita Cuneiforme da Mesopotâmia">
+                        <img src="../img/escrita-cuneiforme.jpg" alt="Escrita Cuneiforme da Mesopotâmia">
                         
                         <h4>Conquistas Científicas:</h4>
                         <p>Desenvolveram avanços na astronomia, matemática (sistema sexagesimal) e criaram o Código de Hamurábi, um dos primeiros códigos de leis escritos da história.</p>
@@ -123,16 +121,39 @@ if(!isset($_SESSION['nome_sessao'])){
                     
                     </div>
                 </li>
+                <li><button class="civilization-btn">Persa</button>
+                    <div class="civilization-content" style="display: none;">
+                        <h2 class="civilization-name">Civilização Persa</h2>
+                        <p class="civilization-description">O Império Persa, fundado por Ciro, o Grande, foi um dos maiores e mais influentes impérios da Antiguidade, abrangendo vastas regiões da Ásia, África e Europa.</p>
+                        <h3>Principais Características:</h3>
+                    
+                        <h4>Império Aquemênida:</h4>
+                        <p>O Império Aquemênida (550–330 a.C.) foi o primeiro grande império persa, conhecido por sua administração eficiente e política de tolerância com os povos conquistados.</p>
+                        <img src="../img/5milpersas.jpg" alt="Império Persa">
+                    
+                        <h4>Estrutura Administrativa:</h4>
+                        <p>O império foi dividido em províncias chamadas satrapias, cada uma administrada por um sátrapa que era responsável perante o imperador.</p>
+                    
+                        <h4>Conquistas Científicas e Tecnológicas:</h4>
+                        <p>Os persas contribuíram para a astronomia, medicina e arquitetura. Criaram sistemas avançados de irrigação e desenvolveram uma rede de estradas e correios.</p>
+                    
+                        <h4>Religião:</h4>
+                        <p>A religião persa antiga era baseada no Zoroastrismo, uma das religiões monoteístas mais antigas do mundo, com conceitos de dualidade entre o bem e o mal.</p>
+                    
+                        <h4>Cultura e Arquitetura:</h4>
+                        <p>A cultura persa valorizava grandiosas construções, como o palácio de Persépolis, e desenvolveu uma arte rica em detalhes e simbolismo.</p>
+                    </div>                
+                </li>
                 <li>
                     <button class="civilization-btn">Grécia</button>
-                    <div class="civilization-content">
+                    <div class="civilization-content" style="display: none;">
                         <h2 class="civilization-name">Civilização Grega</h2>
                         <p class="civilization-description">A civilização grega é conhecida por suas contribuições à filosofia, artes, política e ciência, florescendo entre os séculos VIII a.C. e IV a.C.</p>
                 
                         <h3>Principais Características:</h3>
                         <h4>Democracia:</h4>
                         <p>Atenas foi o berço da democracia, um sistema de governo no qual os cidadãos participavam diretamente nas decisões políticas.</p>
-                        <img src="../img/grecia-templo.webp" alt="Templo Grego">
+                        <img src="../img/templo-grego.jpeg" alt="Templo Grego">
                         
                         <h4>Filosofia e Ciência:</h4>
                         <p>Pensadores como Sócrates, Platão e Aristóteles revolucionaram o pensamento ocidental com suas ideias filosóficas. Na ciência, matemáticos como Pitágoras e Euclides fizeram descobertas fundamentais.</p>
@@ -146,13 +167,13 @@ if(!isset($_SESSION['nome_sessao'])){
                 </li>
                 <li>
                     <button class="civilization-btn">Roma</button>
-                    <div class="civilization-content">
+                    <div class="civilization-content" style="display: none;">
                         <h2 class="civilization-name">Civilização Romana</h2>
                         <p class="civilization-description">O Império Romano foi um dos maiores e mais influentes impérios da história, com início no século VIII a.C. e duração até 476 d.C. no Ocidente.</p>
                         <h3>Principais Características:</h3>
                         <h4>República e Império:</h4>
                         <p>Roma começou como uma monarquia, tornou-se uma república em 509 a.C., e finalmente se transformou em império sob Augusto em 27 a.C.</p>
-                        <img src="../img/roma-coliseu.webp" alt="Coliseu Romano">
+                        <img src="../img/coliseu.jpg" alt="Coliseu Romano">
                         
                         <h4>Direito Romano:</h4>
                         <p>Os romanos desenvolveram um sofisticado sistema jurídico, que formou a base do direito ocidental moderno.</p>

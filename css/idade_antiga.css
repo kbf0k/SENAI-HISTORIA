@@ -19,10 +19,6 @@ a {
     color: black;
 }
 
-p {
-    max-width: 750px;
-}
-
 .container {
     width: 90%;
     max-width: 1200px;
@@ -158,77 +154,78 @@ p {
     display: none;
 }
 
-.civilization-content {
-    display: none;
-    padding: 10px;
-}
-
 .civilization-content h2 {
-    font-size: 28px;
+    font-size: 30px;
     color: #4b3f35;
     margin-bottom: 15px;
 }
 
 .civilization-content h3 {
-    font-size: 22px;
+    font-size: 26px;
     color: #333;
     margin-bottom: 10px;
 }
 
 .civilization-content h4 {
-    font-size: 18px;
+    font-size: 22px;
     color: #333;
     margin-bottom: 8px;
 }
 
 .civilization-content p {
-    font-size: 16px;
-    color: #666;
+    font-size: 18px;
     line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
     margin-bottom: 10px;
 }
 
 .civilization-content img {
-    max-width: 100%;
-    height: auto;
+    width: 600px;
+    height: 450px;
     border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .civilization-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    background-color: #665d50;
-    color: white;
-    padding: 15px;
-    text-align: left;
-    border: none;
+    background: #6b5645;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px;
     cursor: pointer;
     font-size: 20px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.civilization-btn:hover {
-    background-color: #4b3f35;
-}
-.civilization-btn.active + .civilization-content {
-    display: block;
-}
-.civilization-btn:focus {
-    outline: none;
-}
-.civilization-btn::after {
-    content: '\25BC'; /* Seta para baixo */
-    font-size: 16px;
-    transition: transform 0.3s ease;
+    font-weight: bold;
+    position: relative;
 }
 
-.civilization-btn .active::after {
-    transform: rotate(180deg); /* Seta para cima */
+.civilization-btn:hover {
+    color: #ffdd57;
 }
+
+.civilization-btn::after  {
+    content: "+";
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.civilization-btn.active::after {
+    content: "-";
+}
+
+.civilization-content {
+    padding: 50px;
+    margin: 50px 100px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
 
 
 footer {
