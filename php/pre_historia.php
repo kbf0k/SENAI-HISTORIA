@@ -173,10 +173,19 @@ if(!isset($_SESSION['nome_sessao'])){
                 <li>Pedra de cimento: Pedra firme e durável, utilizada em construções primitivas.</li>
             </ul>
         </div>
+
+
         
-        <h2>Fonte de Informações</h2>
-        <p>Fonte: <a href="https://www.britannica.com/event/Ancient-Egypt">Britannica</a></p>
-        <p>Agradecimentos a: <a href="https://www.britannica.com/biography/Alexander-the-Great">Alexander the Great</a></p>
+        <div class="artigos">
+    <h2>Artigos Relacionados</h2>
+    <ul>
+        <li><a href="../php/idade_antiga.php">Idade Antiga</a></li>
+        <li><a href="../php/idade_contemporanea.php">Idade Contemporânea</a></li>
+        <li><a href="../php/idade_media.php">Idade Média</a></li>
+        <li><a href="../php/idade_moderna.php">Idade Moderna</a></li>
+    </ul>
+</div>
+
     </main>
 
     <footer>

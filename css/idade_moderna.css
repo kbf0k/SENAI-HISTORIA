@@ -132,3 +132,65 @@ a {
 .user-vector p{
     font-size: 12px;
 }
+
+/* Conteúdo Principal */
+main {
+    padding: 40px 0;
+    background-color: #f9f4e1;
+    color: #3a3a3a;
+}
+
+.intro-section, .features-section, .notable-events {
+    margin-bottom: 40px;
+}
+
+.intro-section h2,
+.features-section h2,
+.notable-events h2 {
+    font-size: 24px;
+    color: #4b3f35;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 5px;
+}
+
+.intro-section p,
+.features-section ul,
+.notable-events .event {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #3a3a3a;
+}
+
+/* Lista de características */
+.features-section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.features-section ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.features-section ul li strong {
+    color: #4b3f35;
+}
+
+/* Eventos Notáveis */
+.notable-events .event {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.notable-events .event h3 {
+    font-size: 20px;
+    color: #4b3f35;
+    margin-bottom: 5px;
+}
+
+.notable-events .event p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #3a3a3a;
+}

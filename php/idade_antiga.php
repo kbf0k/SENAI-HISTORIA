@@ -73,8 +73,10 @@ if(!isset($_SESSION['nome_sessao'])){
             
             <p class="overview">Na Idade Antiga, surgiram as primeiras cidades organizadas, impérios e estados centralizados, além das primeiras formas de governo, religião estruturada, escrita e avanços na ciência e nas artes. As principais civilizações desse período foram: Egito, Mesopotâmia, Grécia e Roma, cada uma delas com contribuições marcantes para a história humana.</p>
             
-            <h2 class="civilizations-title">Civilizações da Idade Antiga</h2>
         </div>
+
+        <h2 class="civilizations-title">Civilizações da Idade Antiga</h2>
+        
         <div class="civilizations-container">
             <ul class="civilizations-list">
                 <li>
