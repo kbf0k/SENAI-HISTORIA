@@ -156,6 +156,7 @@ a {
 
   .search-bar form {
     width: 100%;
+    display: flex;
   }
 
   .search-bar input[type="text"] {
@@ -171,14 +172,14 @@ a {
   .search-bar button {
     background: none;
     border: none;
-    margin-left: -35px;
+    margin-left: -40px;
+    margin-top: 5px;
+    cursor: pointer;
   }
 
   .search-bar button img {
     width: 35px;
     height: 35px;
-    cursor: default;
-    margin-top: 5px;
   }
 
   .search-hint {
@@ -277,4 +278,37 @@ a {
     display: flex;
     flex-direction: row;
     gap: 10px;
+  }
+
+
+
+
+  #sugestoes {
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ddd;
+    max-width: 300px;
+    position: absolute;
+    z-index: 10;
+    background: white;
+    display: none; /* Oculto por padrão */
+  }
+  .sugestao {
+    padding: 8px;
+    cursor: pointer;
+  }
+  .sugestao:hover {
+    background-color: #f0f0f0;
+  }
+
+
+  .highlighted {
+    background-color: #e0e0e0; /* Cor para o item destacado */
+  }
+
+  #naoEncontrado {
+    color: red;
+    font-size: 18px;
+    display: none; /* Oculto por padrão */
+    margin-top: 10px;
   }

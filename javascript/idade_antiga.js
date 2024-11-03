@@ -25,8 +25,18 @@ document.getElementById('logout').addEventListener('click', () => {
 
 document.querySelectorAll('.civilization-btn').forEach(button => {
     button.addEventListener('click', () => {
-        button.classList.toggle('active');
         const content = button.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        const isVisible = content.style.display === 'block';
+
+        document.querySelectorAll('.civilization-content').forEach(div => div.style.display = 'none');
+        document.querySelectorAll('.civilization-btn').forEach(btn => btn.classList.remove('active'));
+
+        if (!isVisible) {
+            content.style.display = 'block';
+            button.classList.add('active');
+        } else {
+            content.style.display = 'none';
+        }
     });
 });
+
