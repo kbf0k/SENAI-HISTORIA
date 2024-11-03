@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra de Pesquisa de Times de Futebol</title>
+  <style>
+    #searchBar {
+      padding: 8px;
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    #searchButton {
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #teamList {
+      list-style: none;
+      padding: 0;
+    }
+    .team {
+      padding: 8px;
+      border: 1px solid #ddd;
+      margin: 4px 0;
+      font-size: 18px;
+    }
+    #suggestions {
+      list-style: none;
+      padding: 0;
+      border: 1px solid #ddd;
+      max-width: 300px;
+      position: absolute;
+      z-index: 10;
+      background: white;
+      display: none; /* Oculto por padrão */
+    }
+    .suggestion {
+      padding: 8px;
+      cursor: pointer;
+    }
+    .suggestion:hover {
+      background-color: #f0f0f0;
+    }
+    .highlighted {
+      background-color: #e0e0e0; /* Cor para o item destacado */
+    }
+    #noResults {
+      color: red;
+      font-size: 18px;
+      display: none; /* Oculto por padrão */
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pesquisa de Times de Futebol</h1>
+  <input type="text" id="searchBar" placeholder="Digite o nome do time">
+  <button id="searchButton">Buscar</button>
+
+  <ul id="suggestions"></ul>
+
+  <ul id="teamList">
+    <li class="team"><b>Palmeiras:</b> São Paulo</li>
+    <li class="team"><b>São Paulo:</b> São Paulo</li>
+    <li class="team"><b>Santos:</b> São Paulo</li>
+    <li class="team"><b>Corinthians:</b> São Paulo</li>
+    <li class="team"><b>Bragantino:</b> São Paulo</li>
+    <li class="team"><b>São Bernardo:</b> São Paulo</li>
+    <li class="team"><b>Mirassol:</b> São Paulo</li>
+    <li class="team"><b>Botafogo SP:</b> São Paulo</li>
+    <li class="team"><b>Novorizontino:</b> São Paulo</li>
+    <li class="team"><b>Ponte Preta:</b> São Paulo</li>
+    <li class="team"><b>Portuguesa:</b> São Paulo</li>
+    <li class="team"><b>Noroeste:</b> São Paulo</li>
+    <li class="team"><b>Velo Clube:</b> São Paulo</li>
+  </ul>
+
+  <p id="noResults">Nenhum time encontrado.</p>
+
+  <script>
+    const searchBar = document.getElementById('searchBar');
+    const searchButton = document.getElementById('searchButton');
+    const teams = document.querySelectorAll('.team');
+    const suggestionsList = document.getElementById('suggestions');
+    const noResults = document.getElementById('noResults');
+    let highlightedIndex = -1; // Índice do item destacado
+
+    // Função para mostrar sugestões
+    function showSuggestions() {
+      const searchTerm = searchBar.value.toLowerCase();
+      suggestionsList.innerHTML = ''; // Limpa sugestões anteriores
+      let foundSuggestion = false; // Variável para rastrear se alguma sugestão foi encontrada
+
+      teams.forEach((team, index) => {
+        const teamName = team.querySelector('b').textContent.toLowerCase().replace(':', '');
+        if (teamName.includes(searchTerm) && searchTerm) {
+          const suggestionItem = document.createElement('li');
+          suggestionItem.textContent = team.querySelector('b').textContent.replace(':', ''); // Remove ":" aqui
+          suggestionItem.classList.add('suggestion');
+          suggestionItem.onclick = () => {
+            searchBar.value = suggestionItem.textContent; // Define o valor da barra de pesquisa com a sugestão
+            searchTeams(); // Chama a função de busca
+            suggestionsList.style.display = 'none'; // Oculta sugestões
+          };
+          suggestionItem.dataset.index = index; // Armazena o índice
+          suggestionsList.appendChild(suggestionItem);
+          foundSuggestion = true; // Sugestão encontrada
+        }
+      });
+
+      // Exibir ou ocultar a lista de sugestões
+      suggestionsList.style.display = foundSuggestion ? 'block' : 'none';
+      highlightedIndex = -1; // Reseta o índice destacado
+    }
+
+    // Função de pesquisa
+    function searchTeams() {
+      const searchTerm = searchBar.value.toLowerCase();
+      let found = false; // Variável para rastrear se algum time foi encontrado
+
+      teams.forEach(team => {
+        const teamName = team.querySelector('b').textContent.toLowerCase().replace(':', '');
+        if (teamName.includes(searchTerm)) {
+          team.style.display = 'block';
+          found = true; // Time encontrado
+        } else {
+          team.style.display = 'none';
+        }
+      });
+
+      // Exibir ou ocultar a mensagem "Nenhum time encontrado"
+      noResults.style.display = found ? 'none' : 'block';
+
+      // Oculta as sugestões após a pesquisa
+      suggestionsList.style.display = 'none';
+    }
+
+    // Função para destacar a sugestão
+    function highlightSuggestion(index) {
+      const suggestions = document.querySelectorAll('.suggestion');
+      suggestions.forEach((suggestion, i) => {
+        suggestion.classList.toggle('highlighted', i === index); // Aplica a classe "highlighted" apenas ao item destacado
+      });
+    }
+
+    // Acionar a pesquisa ao clicar no botão
+    searchButton.addEventListener('click', searchTeams);
+
+    // Acionar sugestões enquanto digita
+    searchBar.addEventListener('input', showSuggestions);
+
+    // Acionar a pesquisa ao pressionar "Enter"
+    searchBar.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        searchTeams();
+      }
+    });
+
+    // Navegar pelas sugestões com as teclas de seta
+    searchBar.addEventListener('keydown', (e) => {
+      const suggestions = document.querySelectorAll('.suggestion');
+      if (e.key === 'ArrowDown') {
+        highlightedIndex = (highlightedIndex + 1) % suggestions.length; // Incrementa o índice
+        highlightSuggestion(highlightedIndex);
+        e.preventDefault(); // Impede o comportamento padrão
+      } else if (e.key === 'ArrowUp') {
+        highlightedIndex = (highlightedIndex - 1 + suggestions.length) % suggestions.length; // Decrementa o índice
+        highlightSuggestion(highlightedIndex);
+        e.preventDefault(); // Impede o comportamento padrão
+      } else if (e.key === 'Enter' && highlightedIndex >= 0) {
+        // Realiza a pesquisa com a sugestão destacada
+        searchBar.value = suggestions[highlightedIndex].textContent; // Atualiza o valor da barra de pesquisa
+        searchTeams();
+      }
+    });
+  </script>
+
+</body>
+</html>
