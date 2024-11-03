@@ -35,14 +35,14 @@ if(!isset($_SESSION['nome_sessao'])){
                         <a href="">Períodos Históricos</a>
 
                         <div class="dropdown-menu">
-                            <a href="">Pré-História</a>
+                            <a href="pre_historia.php">Pré-História</a>
                             <a href="idade_antiga.php">Idade Antiga</a>
                             <a href="idade_media.php">Idade Média</a>
                             <a href="idade_moderna.php">Idade Moderna</a>
-                            <a href="../html/idade_contemporanea.html">Idade Contemporânea</a>
+                            <a href="idade_contemporanea.php">Idade Contemporânea</a>
                         </div>
                     </li>
-                    <li><a href="../html/glossario.html">Glossário</a></li>
+                    <li><a href="glossario.php">Glossário</a></li>
                     <li><a href="atividades.php">Atividades Complementares</a></li>
 
                     <?php if (isset($_SESSION['nome_sessao'])): ?>

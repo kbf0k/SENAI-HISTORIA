@@ -39,7 +39,7 @@ if(!isset($_SESSION['nome_sessao'])){
                             <a href="idade_antiga.php">Idade Antiga</a>
                             <a href="idade_media.php">Idade Média</a>
                             <a href="idade_moderna.php">Idade Moderna</a>
-                            <a href="../html/idade_contemporanea.html">Idade Contemporânea</a>
+                            <a href="idade_contemporanea.php">Idade Contemporânea</a>
                         </div>
                     </li>
                     <li><a href="glossario.php">Glossário</a></li>

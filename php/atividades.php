@@ -9,6 +9,7 @@ if (!isset($_SESSION['nome_sessao'])) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,19 +21,20 @@ if (!isset($_SESSION['nome_sessao'])) {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <title>Atividades Complementares</title>
 </head>
+
 <body>
     <header class="header">
         <div class="container logo-menu">
             <div class="logo">
-                <img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo">
-                <h1>História</h1>
+                <a href="inicio.php"><img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo"></a>
+                <h1>Idade Média</h1>
             </div>
             <nav class="menu">
                 <ul>
                     <li class="dropdown">
                         <a href="#">Períodos Históricos</a>
                         <div class="dropdown-menu">
-                            <a href="#">Pré-História</a>
+                            <a href="pre_historia.php">Pré-História</a>
                             <a href="idade_antiga.php">Idade Antiga</a>
                             <a href="idade_media.php">Idade Média</a>
                             <a href="idade_moderna.php">Idade Moderna</a>
@@ -46,7 +48,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                         <div class="user-vector">
                             <img id="logo-vector" src="../img/user-vector.png" alt="">
                             <p><?= $_SESSION['nome_sessao'] ?></p>
-                            <p><?=$_SESSION['tipo_sessao'] ?></p>
+                            <p><?= $_SESSION['tipo_sessao'] ?></p>
                         </div>
                         <li><a id="logout">SAIR</a></li>
                     <?php else: ?>
@@ -161,18 +163,18 @@ if (!isset($_SESSION['nome_sessao'])) {
                     </div>
                     <legend>Cruzadinha Idade Média</legend>
                 </div>
-                 <div class="img-legend">
+                <div class="img-legend">
                     <div class="img-container">
-                         <img src="../img/idademodernacruz.png" alt="Cruzadinha Idade Moderna" class="imagem">
-                         <div class="opcoes">
-                             <button onclick="window.open('https://interacty.me/projects/8827cef2cb99b65e')">Acessar Online</button>
-                             <a href="../Cruzadinha - Idade Moderna.pdf" download>Baixar PDF</a>
-                         </div>
+                        <img src="../img/idademodernacruz.png" alt="Cruzadinha Idade Moderna" class="imagem">
+                        <div class="opcoes">
+                            <button onclick="window.open('https://interacty.me/projects/8827cef2cb99b65e')">Acessar Online</button>
+                            <a href="../Cruzadinha - Idade Moderna.pdf" download>Baixar PDF</a>
+                        </div>
                     </div>
                     <legend>Cruzadinha Idade Moderna</legend>
                 </div>
                 <div class="img-legend">
-                   <div class="img-container">
+                    <div class="img-container">
                         <img src="../img/idadecontemporaneacruz.png" alt="Cruzadinha Idade Contemporânea" class="imagem">
                         <div class="opcoes">
                             <button onclick="window.open('https://interacty.me/projects/22ad3bea92410e8e')">Acessar Online</button>
@@ -180,145 +182,146 @@ if (!isset($_SESSION['nome_sessao'])) {
                         </div>
                     </div>
                     <legend>Cruzadinha Idade Contemporânea</legend>
-                </div>  
-            </div> 
+                </div>
+            </div>
             <div id="caca-palavras">
                 <div class="img-legend">
                     <div class="img-container">
-                    <img src="../img/Imagem Pré História.png" alt="Cruzadinha Pré-História" class="imagem">
+                        <img src="../img/Imagem Pré História.png" alt="Cruzadinha Pré-História" class="imagem">
                         <div class="opcoes">
-                        <a href="../pdfs/Caça Palavras - Pré-História.pdf" download>Baixar PDF</a>
+                            <a href="../pdfs/Caça Palavras - Pré-História.pdf" download>Baixar PDF</a>
                         </div>
                     </div>
                     <legend>Caça Palavras Pré-História</legend>
                 </div>
                 <div class="img-legend">
                     <div class="img-container">
-                    <img src="../img/Imagem Idade Antiga.png" alt="" class="imagem">
+                        <img src="../img/Imagem Idade Antiga.png" alt="" class="imagem">
                         <div class="opcoes">
-                        <a href="../pdfs/Caça Palavras - Idade Antiga.pdf" download>Baixar PDF</a>
+                            <a href="../pdfs/Caça Palavras - Idade Antiga.pdf" download>Baixar PDF</a>
                         </div>
                     </div>
                     <legend>Caça Palavras Idade Antiga</legend>
                 </div>
                 <div class="img-legend">
                     <div class="img-container">
-                    <img src="../img/Imagem Idade Média.png" alt="" class="imagem">
+                        <img src="../img/Imagem Idade Média.png" alt="" class="imagem">
                         <div class="opcoes">
-                        <a href="../pdfs/Caça Palavras - Idade Média.pdf" download>Baixar PDF</a>
+                            <a href="../pdfs/Caça Palavras - Idade Média.pdf" download>Baixar PDF</a>
                         </div>
                     </div>
                     <legend>Caça Palavras Idade Média</legend>
                 </div>
-                 <div class="img-legend">
+                <div class="img-legend">
                     <div class="img-container">
-                    <img src="../img/Imagem Idade Moderna.png" alt="" class="imagem">
-                    <div class="opcoes">
-                    <a href="../pdfs/Caça Palavras - Idade Moderna.pdf" download>Baixar PDF</a>
-                    </div>
+                        <img src="../img/Imagem Idade Moderna.png" alt="" class="imagem">
+                        <div class="opcoes">
+                            <a href="../pdfs/Caça Palavras - Idade Moderna.pdf" download>Baixar PDF</a>
+                        </div>
                     </div>
                     <legend>Caça Palavras Idade Moderna</legend>
                 </div>
                 <div class="img-legend">
-                   <div class="img-container">
-                   <img src="../img/Imagem Contêmporanea.png" alt="Cruzadinha Pré-História" class="imagem">
-                   <div class="opcoes">
-                   <a href="../pdfs/Caça Palavras - Idade Contemporânea.pdf" download>Baixar PDF</a>
-                   </div>
+                    <div class="img-container">
+                        <img src="../img/Imagem Contêmporanea.png" alt="Cruzadinha Pré-História" class="imagem">
+                        <div class="opcoes">
+                            <a href="../pdfs/Caça Palavras - Idade Contemporânea.pdf" download>Baixar PDF</a>
+                        </div>
                     </div>
                     <legend>Caça Palavras Idade Contemporânea</legend>
-                </div>  
-            </div>      
+                </div>
+            </div>
         </section>
-            <!-- Seção da Pré-História -->
-<section id="pre-historia" class="atividades-pdf">
-    <h2>Atividades da Pré-História</h2>
-    <div class="img-legend">
-        <div class="img-container">
-            <img src="../img/prehistoriacuz.png" alt="Cruzadinha Pré-História" class="imagem">
-            <div class="opcoes">
+        <!-- Seção da Pré-História -->
+        <section id="pre-historia" class="atividades-pdf">
+            <h2>Atividades da Pré-História</h2>
+            <div class="img-legend">
+                <div class="img-container">
+                    <img src="../img/prehistoriacuz.png" alt="Cruzadinha Pré-História" class="imagem">
+                    <div class="opcoes">
 
-                <button onclick="window.open('https://interacty.me/projects/c066f4abff3a4b94')">Acessar Online</button>
-                <a href="../Cruzadinha - Pré-História.pdf" download>Baixar PDF</a>
+                        <button onclick="window.open('https://interacty.me/projects/c066f4abff3a4b94')">Acessar Online</button>
+                        <a href="../Cruzadinha - Pré-História.pdf" download>Baixar PDF</a>
+                    </div>
+                </div>
+                <legend>Cruzadinha Pré-História</legend>
             </div>
-        </div>
-        <legend>Cruzadinha Pré-História</legend>
-    </div>
-</section>
-          <!-- Seção da Idade Antiga -->
-<section id="idade-antiga" class="atividades-pdf">
-    <h2>Atividades da Idade Antiga</h2>
-    <div class="img-legend">
-        <div class="img-container">
-            <img src="../img/idadeantigacruz.png" alt="Cruzadinha Idade Antiga" class="imagem">
-            <div class="opcoes">
-                <button onclick="window.open('https://interacty.me/projects/3c4560a86c201a66')">Acessar Online</button>
-                <a href="../Cruzadinha - Idade Antiga.pdf" download>Baixar PDF</a>
+        </section>
+        <!-- Seção da Idade Antiga -->
+        <section id="idade-antiga" class="atividades-pdf">
+            <h2>Atividades da Idade Antiga</h2>
+            <div class="img-legend">
+                <div class="img-container">
+                    <img src="../img/idadeantigacruz.png" alt="Cruzadinha Idade Antiga" class="imagem">
+                    <div class="opcoes">
+                        <button onclick="window.open('https://interacty.me/projects/3c4560a86c201a66')">Acessar Online</button>
+                        <a href="../Cruzadinha - Idade Antiga.pdf" download>Baixar PDF</a>
+                    </div>
+                </div>
+                <legend>Cruzadinha Idade Antiga</legend>
             </div>
-        </div>
-        <legend>Cruzadinha Idade Antiga</legend>
-    </div>
-</section>
-
-
-<!-- Seção da Idade Média -->
-<section id="idade-media" class="atividades-pdf">
-    <h2>Atividades da Idade Média</h2>
-    <div class="img-legend">
-        <div class="img-container">
-            <img src="../img/idademediacruz.png" alt="Cruzadinha Idade Média" class="imagem">
-            <div class="opcoes">
-                <button onclick="window.open('https://interacty.me/projects/61804cf72d599d6a')">Acessar Online</button>
-                <a href="../Cruzadinha - Idade Média.pdf" download>Baixar PDF</a>
-            </div>
-        </div>
-        <legend>Cruzadinha Idade Média</legend>
-    </div>
-</section>
+        </section>
 
 
-<!-- Seção da Idade Moderna -->
-<section id="idade-moderna" class="atividades-pdf">
-    <h2>Atividades da Idade Moderna</h2>
-    <div class="img-legend">
-        <div class="img-container">
-            <img src="../img/idademodernacruz.png" alt="Cruzadinha Idade Moderna" class="imagem">
-            <div class="opcoes">
-                <button onclick="window.open('https://interacty.me/projects/8827cef2cb99b65e')">Acessar Online</button>
-                <a href="../Cruzadinha - Idade Moderna.pdf" download>Baixar PDF</a>
+        <!-- Seção da Idade Média -->
+        <section id="idade-media" class="atividades-pdf">
+            <h2>Atividades da Idade Média</h2>
+            <div class="img-legend">
+                <div class="img-container">
+                    <img src="../img/idademediacruz.png" alt="Cruzadinha Idade Média" class="imagem">
+                    <div class="opcoes">
+                        <button onclick="window.open('https://interacty.me/projects/61804cf72d599d6a')">Acessar Online</button>
+                        <a href="../Cruzadinha - Idade Média.pdf" download>Baixar PDF</a>
+                    </div>
+                </div>
+                <legend>Cruzadinha Idade Média</legend>
             </div>
-        </div>
-        <legend>Cruzadinha Idade Moderna</legend>
-    </div>
-</section>
-<!-- Seção da Idade Contemporânea -->
-<section id="idade-contemporanea" class="atividades-pdf">
-    <h2>Atividades da Idade Contemporânea</h2>
-    <div class="img-legend">
-        <div class="img-container">
-        <img src="../img/idadecontemporaneacruz.png" alt="" class="imagem">
-        <div class="opcoes">
-                <button onclick="window.open('https://interacty.me/projects/22ad3bea92410e8e')">Acessar Online</button>
-                <a href="../Cruzadinha - Idade Contemporânea.pdf" download>Baixar PDF</a>
+        </section>
+
+
+        <!-- Seção da Idade Moderna -->
+        <section id="idade-moderna" class="atividades-pdf">
+            <h2>Atividades da Idade Moderna</h2>
+            <div class="img-legend">
+                <div class="img-container">
+                    <img src="../img/idademodernacruz.png" alt="Cruzadinha Idade Moderna" class="imagem">
+                    <div class="opcoes">
+                        <button onclick="window.open('https://interacty.me/projects/8827cef2cb99b65e')">Acessar Online</button>
+                        <a href="../Cruzadinha - Idade Moderna.pdf" download>Baixar PDF</a>
+                    </div>
+                </div>
+                <legend>Cruzadinha Idade Moderna</legend>
             </div>
-        </div>
-        <legend>Cruzadinha Idade Contemporânea</legend>
-    </div>
-</section>
+        </section>
+        <!-- Seção da Idade Contemporânea -->
+        <section id="idade-contemporanea" class="atividades-pdf">
+            <h2>Atividades da Idade Contemporânea</h2>
+            <div class="img-legend">
+                <div class="img-container">
+                    <img src="../img/idadecontemporaneacruz.png" alt="" class="imagem">
+                    <div class="opcoes">
+                        <button onclick="window.open('https://interacty.me/projects/22ad3bea92410e8e')">Acessar Online</button>
+                        <a href="../Cruzadinha - Idade Contemporânea.pdf" download>Baixar PDF</a>
+                    </div>
+                </div>
+                <legend>Cruzadinha Idade Contemporânea</legend>
+            </div>
+        </section>
     </main>
     <footer>
-            <div class="container">
-                <p>© 2024 SESI CAÇAPAVA e SENAI TAUBATÉ</p>
-                <p>Desenvolvido por: SOFTDEV</p>
-                <nav class="footer-menu">
-                    <ul>
-                        <li><a href="#">Termos de Uso</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Ajuda</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </footer>
+        <div class="container">
+            <p>© 2024 SESI CAÇAPAVA e SENAI TAUBATÉ</p>
+            <p>Desenvolvido por: SOFTDEV</p>
+            <nav class="footer-menu">
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
+
 </html>
