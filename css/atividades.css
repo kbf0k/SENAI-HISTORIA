@@ -238,17 +238,26 @@ article p {
     display: flex;
     justify-content: space-around; 
     flex-wrap: wrap;
-    gap: 10px;
     margin-top: 30px;
 }
 #caca-palavras{
     display: flex;
     justify-content: space-around; 
     flex-wrap: wrap;
-    gap: 10px;
     margin-top: 30px;
 }
-
+#jogos-memoria{
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+#quiz-section{
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
 #cruzadinhas figure {
     text-align: center;
     width: 150px; /* Largura uniforme para as figuras */
@@ -276,7 +285,6 @@ article p {
 
 .atividades-pdf button,
 .atividades-pdf a {
-    padding: 10px 15px;
     margin: 5px;
     border: none;
     background-color: #d7cd42;
@@ -391,13 +399,11 @@ footer {
     justify-content: center;
     gap: 20px;
 }
-
 .footer-menu ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-
 .footer-menu ul li a:hover {
     color: #d4af37;
 }
