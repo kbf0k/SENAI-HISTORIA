@@ -117,50 +117,77 @@ if(!isset($_SESSION['nome_sessao'])){
             </div>
             <div class="linha-do-tempo">
                 <div class="linha-horizontal"></div>
-                <div class="evento">
-                    <div class="corda"></div>
-                    <div class="circulo"></div>
-                    <div class="descricao">
-                        <span class="titulo">Pré-História</span>
-                        <span class="data">2.500.000 a.C. - 4.000 a.C.</span>
+                <div class="eventos">
+
+                    <div class="evento">
+                        <div class="corda"></div>
+                        <div class="circulo"></div>
+                        <div class="descricao">
+                            <span class="titulo">Pré-História</span>
+                            <span class="data">2.500.000 a.C. - 4.000 a.C.</span>
+                        </div>
                     </div>
-                </div>
-                <div class="evento">
-                    <div class="corda"></div>
-                    <div class="circulo"></div>
-                    <div class="descricao">
-                        <span class="titulo">Idade Antiga</span>
-                        <span class="data">4.000 a.C. - 476 d.C.</span>
+                    <div class="evento">
+                        <div class="corda"></div>
+                        <div class="circulo"></div>
+                        <div class="descricao">
+                            <span class="titulo">Idade Antiga</span>
+                            <span class="data">4.000 a.C. - 476 d.C.</span>
+                        </div>
                     </div>
-                </div>
-                <div class="evento">
-                    <div class="corda"></div>
-                    <div class="circulo"></div>
-                    <div class="descricao">
-                        <span class="titulo">Idade Média</span>
-                        <span class="data">476 d.C. - 1453</span>
+                    <div class="evento">
+                        <div class="corda"></div>
+                        <div class="circulo"></div>
+                        <div class="descricao">
+                            <span class="titulo">Idade Média</span>
+                            <span class="data">476 d.C. - 1453</span>
+                        </div>
                     </div>
-                </div>
-                <div class="evento">
-                    <div class="corda"></div>
-                    <div class="circulo"></div>
-                    <div class="descricao">
-                        <span class="titulo">Idade Moderna</span>
-                        <span class="data">1453 - 1789</span>
+                    <div class="evento">
+                        <div class="corda"></div>
+                        <div class="circulo"></div>
+                        <div class="descricao">
+                            <span class="titulo">Idade Moderna</span>
+                            <span class="data">1453 - 1789</span>
+                        </div>
                     </div>
-                </div>
-                <div class="evento">
-                    <div class="corda"></div>
-                    <div class="circulo"></div>
-                    <div class="descricao">
-                        <span class="titulo">Idade Contemporânea</span>
-                        <span class="data">1789 - Atualidade</span>
+                    <div class="evento">
+                        <div class="corda"></div>
+                        <div class="circulo"></div>
+                        <div class="descricao">
+                            <span class="titulo">Idade Contemporânea</span>
+                            <span class="data">1789 - Atualidade</span>
+                        </div>
                     </div>
                 </div>
             </div>
-
+            
         </section>
-
+        
+        <section class="atividades">
+            <div class="container">
+                <h2>Atividades de Prática em História</h2>
+                <p>Desenvolva suas habilidades em história com atividades interativas e desafiadoras!</p>
+                <p>Explore opções para testar seu conhecimento e fixar conteúdos de forma divertida.</p>
+                
+                <div class="atividades-conteudo">
+                    <div class="atividade questionarios">
+                        <h3>Questionários</h3>
+                        <p>Desafie-se com perguntas sobre temas históricos. Esses questionários abrangem desde a Pré-História até a Idade Contemporânea.</p>
+                    </div>
+                    <div class="atividade atividades-dinamicas">
+                        <h3>Atividades Dinâmicas</h3>
+                        <p>Divirta-se com atividades como caça-palavras e cruzadinhas temáticas, projetadas para reforçar o aprendizado histórico de forma interativa.</p>
+                    </div>
+                    <div class="atividade jogo-da-memoria">
+                        <h3>Jogo da Memória</h3>
+                        <p>Teste sua memória e associe personagens, eventos e datas importantes com nosso jogo da memória histórico!</p>
+                    </div>
+                </div>
+                
+                <a href="../php/atividades.php" class="btn">Ver Atividades</a>
+            </div>
+        </section>
 
         <section class="glossario">
             <div class="container">
@@ -171,6 +198,9 @@ if(!isset($_SESSION['nome_sessao'])){
                 <a href="../php/glossario.php" class="btn">Acessar Glossário</a>
             </div>
         </section>
+
+
+
 
 
         <footer>
