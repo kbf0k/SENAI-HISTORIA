@@ -233,107 +233,67 @@ article p {
     margin: 30px 0;
     font-size: 20px;
 }
-
-#cruzadinhas {
+.atividades_news{
     display: flex;
-    justify-content: space-around; 
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-#caca-palavras{
-    display: flex;
-    justify-content: space-around; 
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-#jogos-memoria{
-    display: flex;
-    justify-content: space-around; 
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-#quiz-section{
-    display: flex;
-    justify-content: space-around; 
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-#cruzadinhas figure {
-    text-align: center;
-    width: 150px; /* Largura uniforme para as figuras */
-}
-
-#cruzadinhas img {
-    width: 150px;
-    height: 200px;
+    gap: 15px;
     border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 85%;
+    margin: 15px auto;
+    background: rgb(249, 238, 218);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
-
-.atividades-pdf {
+.atividades_title {
+    flex: 1;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
-    margin-left: 27px;
-    margin-bottom: 20px;
+    justify-content: center; /* Centraliza o texto verticalmente */
+    text-align: left;
+    padding-right:10px; /* Distância do texto para a margem direita */
+}
+.atividades_title h3 {
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-bottom: 5px;
 }
 
-#opcoes {
-    display: none;
-    margin-top: 20px;
+.atividades_title p {
+    font-size: 1em;
+    line-height: 1.6;
 }
 
-.atividades-pdf button,
-.atividades-pdf a {
-    margin: 5px;
+.linha-separadora {
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
     border: none;
-    background-color: #d7cd42;
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 5px;
-}
+    margin-bottom: 7px;
 
-legend {
-    margin-top: 5px;
 }
+.conteudo-atividades {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: flex-start; /* Alinea as imagens à esquerda */
 
-.atividades-pdf button:hover,
-.atividades-pdf a:hover {
-    background-color: #f3f39f;
 }
-
-/* Estilos para a seção Pré-História */
-#pre-historia {
-    margin-top: 20px;
-}
-
 .img-legend {
-    position: relative;
-    width: 150px; /* Largura da imagem */
+    width: 145px;
+    text-align: center;
+    margin-top: 25px;
 }
 
 .img-container {
     position: relative;
-    width: 150px; 
-    height: 200px; 
-    overflow: hidden;
-    border-radius: 10px;
 }
 
 .imagem {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    transition: opacity 0.3s ease; 
-    cursor: pointer; 
-}
-
-.img-container:hover .imagem {
-    opacity: 0.2; 
-}
-legend{
-    text-align: center;
+    width: 120px;
+    height: auto;
+    border-radius: 5px; 
 }
 .opcoes {
     position: absolute;
@@ -350,7 +310,9 @@ legend{
 .img-container:hover .opcoes {
     opacity: 1; 
 }
-
+.img-container:hover .imagem {
+    opacity: 0.2; 
+}
 .opcoes h3 {
     color: #3a3a3a; 
     font-size: 16px; 
