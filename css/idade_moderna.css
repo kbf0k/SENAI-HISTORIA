@@ -1,16 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Base */
 body {
     font-family: 'Poppins', serif;
     background-color: #f9f4e1;
     color: #3a3a3a;
     line-height: 1.6;
+}
+
+main {
+    padding: 40px 0;
+    background-color: #f9f4e1;
 }
 
 a {
@@ -24,11 +31,11 @@ a {
     margin: 0 auto;
 }
 
+/* Header */
 .header {
     background-color: #4b3f35;
     padding: 20px 0;
     color: white;
-    position: static;
 }
 
 .logo-menu {
@@ -44,7 +51,6 @@ a {
 
 .logo img {
     max-width: 150px;
-    margin: 0 auto;
     cursor: pointer;
     transition: .3s;
 }
@@ -62,8 +68,8 @@ a {
 /* Menu */
 .menu ul {
     list-style: none;
-    gap: 20px;
     display: flex;
+    gap: 20px;
     align-items: center;
 }
 
@@ -73,36 +79,36 @@ a {
 
 .menu ul li a {
     color: white;
-    text-decoration: none;
     font-weight: bold;
     font-size: 16px;
     padding: 10px;
     transition: color 0.3s;
 }
-.menu #logout{
+
+.menu #logout {
     cursor: pointer;
 }
+
 .menu ul li a:hover {
     color: #d4af37;
 }
 
 /* Dropdown */
 .dropdown-menu {
-    margin-top: 9px;
     position: absolute;
     top: 100%;
     left: 0;
+    width: 210px;
+    margin-top: 9px;
     background-color: #4b3f35;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     display: none;
     border-radius: 5px;
-    width: 210px;
 }
 
 .dropdown-menu a {
     color: #333;
     padding: 10px;
-    text-decoration: none;
     display: block;
     font-size: 14px;
     border-bottom: 1px solid #eee;
@@ -118,37 +124,73 @@ a {
     display: block;
 }
 
-.user-vector{
+/* User Vector */
+.user-vector {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
 
-.user-vector #logo-vector{
+.user-vector #logo-vector {
     max-width: 50px;
 }
 
-.user-vector p{
+.user-vector p {
     font-size: 12px;
 }
 
-/* Conteúdo Principal */
-main {
-    padding: 40px 0;
-    background-color: #f9f4e1;
-    color: #3a3a3a;
-}
+/* Main Content */
+
 
 .intro-section, .features-section, .notable-events {
     margin-bottom: 40px;
 }
 
+.intro-section {
+    background-image: url('../img/idade-moderna.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Para que o texto seja legível sobre a imagem */
+    position: relative; /* Necessário para posicionamento do overlay */
+    text-align: center; /* Centraliza o texto */
+}
+
+.intro-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semitransparente */
+    z-index: 1; /* Garante que o overlay fique atrás do texto */
+}
+
+.intro-section h2,
+.intro-section p {
+    position: relative;
+    z-index: 2; /* Coloca o texto acima do overlay */
+    padding: 20px; /* Ajuste conforme necessário */
+    
+}
+
+.intro-section h2 {
+    color: #ffdd57;
+    margin-left: 20px;
+}
+
+
 .intro-section h2,
 .features-section h2,
 .notable-events h2 {
     font-size: 24px;
-    color: #4b3f35;
+    color: #ffdd57;
     margin-bottom: 15px;
     border-bottom: 2px solid #d4af37;
     padding-bottom: 5px;
@@ -159,10 +201,8 @@ main {
 .notable-events .event {
     font-size: 16px;
     line-height: 1.8;
-    color: #3a3a3a;
 }
 
-/* Lista de características */
 .features-section ul {
     list-style: none;
     padding-left: 20px;
@@ -177,7 +217,7 @@ main {
     color: #4b3f35;
 }
 
-/* Eventos Notáveis */
+/* Notable Events */
 .notable-events .event {
     padding: 15px 0;
     border-bottom: 1px solid #ccc;
@@ -192,5 +232,73 @@ main {
 .notable-events .event p {
     font-size: 15px;
     line-height: 1.6;
-    color: #3a3a3a;
+}
+
+
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f4e1;
+}
+
+/* Linha central da linha do tempo */
+.timeline {
+    position: relative;
+    width: 4px;
+    background-color: #333;
+    margin: 0 40px;
+    border-radius: 2px;
+}
+
+/* Estilizando cada evento */
+.event {
+    position: relative;
+    padding: 15px;
+    margin-bottom: 40px;
+    text-align: left;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+/* Ponto de cada evento */
+.event-dot {
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-color: #0077cc;
+    border-radius: 50%;
+}
+
+/* Conteúdo do evento */
+.event-content {
+    display: none;
+    background-color: #0077cc;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-left: 30px;
+}
+
+/* Título do evento */
+.event h3 {
+    font-size: 18px;
+    color: #0077cc;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+/* Exibe conteúdo ao passar o mouse */
+.event:hover .event-content {
+    display: block;
+}
+
+/* Efeito hover para o evento */
+.event:hover {
+    transform: scale(1.05);
 }

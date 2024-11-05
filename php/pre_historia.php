@@ -24,8 +24,8 @@ if(!isset($_SESSION['nome_sessao'])){
 <header class="header">
         <div class="container logo-menu">
             <div class="logo">
-            <a href="inicio.php"><img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo"></a>
-            <h1>Pré História</h1>
+                <a href="inicio.php"><img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo"></a>
+                <h1>História</h1>
             </div>
             <nav class="menu">
                 <ul>
@@ -173,18 +173,6 @@ if(!isset($_SESSION['nome_sessao'])){
                 <li>Pedra de cimento: Pedra firme e durável, utilizada em construções primitivas.</li>
             </ul>
         </div>
-
-
-        
-        <div class="artigos">
-    <h2>Artigos Relacionados</h2>
-    <ul>
-        <li><a href="../php/idade_antiga.php">Idade Antiga</a></li>
-        <li><a href="../php/idade_contemporanea.php">Idade Contemporânea</a></li>
-        <li><a href="../php/idade_media.php">Idade Média</a></li>
-        <li><a href="../php/idade_moderna.php">Idade Moderna</a></li>
-    </ul>
-</div>
 
     </main>
 

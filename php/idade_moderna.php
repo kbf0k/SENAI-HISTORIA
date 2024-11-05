@@ -2,7 +2,7 @@
 include_once('conexao.php');
 session_start();
 
-if(!isset($_SESSION['nome_sessao'])){
+if (!isset($_SESSION['nome_sessao'])) {
     header('Location: index.php');
     exit();
 }
@@ -14,20 +14,21 @@ if(!isset($_SESSION['nome_sessao'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/idade_moderna.css">
-    <script src="../javascript/idade_moderna.js" defer></script>
+    <link rel="stylesheet" href="../css/idade_media.css">
+    <script src="../javascript/idade_media.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="https://kit.fontawesome.com/6e028b1004.js" crossorigin="anonymous" defer></script>
 
 </head>
-<title>Idade Moderna</title>
+<title>Idade Média</title>
 </head>
 
 <body>
-<header class="header">
+    <header class="header">
         <div class="container logo-menu">
             <div class="logo">
-            <a href="inicio.php"><img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo"></a>
-            <h1>Idade Moderna</h1>
+                <a href="inicio.php"><img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo"></a>
+                <h1>Idade Média</h1>
             </div>
             <nav class="menu">
                 <ul>
@@ -46,62 +47,198 @@ if(!isset($_SESSION['nome_sessao'])){
                     <li><a href="atividades.php">Atividades Complementares</a></li>
 
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
-                    <div class="user-vector">
-                        <img id="logo-vector" src="../img/user-vector.png" alt="">
-                        <p>
-                            <?= $_SESSION['nome_sessao'] ?>
-                        </p>
-                        <p>
-                            <?=$_SESSION['tipo_sessao'] ?>
-                        </p>
-                    </div>
-                    <li><a id="logout">SAIR</a></li>
+                        <div class="user-vector">
+                            <img id="logo-vector" src="../img/user-vector.png" alt="">
+                            <p>
+                                <?= $_SESSION['nome_sessao'] ?>
+                            </p>
+                            <p>
+                                <?= $_SESSION['tipo_sessao'] ?>
+                            </p>
+                        </div>
+                        <li><a id="logout">SAIR</a></li>
                     <?php else: ?>
-                    <li><a href="index.php">LOGIN</a></li>
+                        <li><a href="index.php">LOGIN</a></li>
                     <?php endif; ?>
                 </ul>
             </nav>
         </div>
     </header>
-    <main class="container">
-        <section class="intro-section">
-            <h2>Introdução à Idade Moderna</h2>
-            <p>A Idade Moderna é o período da história que vai do século XV ao XVIII. Este período é marcado por
-                grandes transformações culturais, sociais, políticas e econômicas, como a Reforma Protestante,
-                o Renascimento, as Grandes Navegações e a Revolução Científica.</p>
-        </section>
-
-        <section class="features-section">
-            <h2>Principais Características</h2>
-            <ul>
-                <li><strong>Renascimento:</strong> Movimento cultural que valorizava o resgate da Antiguidade Clássica,
-                    trazendo mudanças na arte, ciência e pensamento.</li>
-                <li><strong>Reforma Protestante:</strong> Movimento religioso que desafiou a Igreja Católica, liderado
-                    por figuras como Martinho Lutero.</li>
-                <li><strong>Expansão Marítima:</strong> Descoberta de novas terras, como a América, pelos europeus,
-                    impulsionando o comércio e a colonização.</li>
-                <li><strong>Revolução Científica:</strong> Desenvolvimento do método científico e avanços com pensadores
-                    como Galileu e Newton.</li>
-                <li><strong>Formação dos Estados Nacionais:</strong> Consolidação de Estados centralizados e o início
-                    do declínio do feudalismo.</li>
-            </ul>
-        </section>
-
-        <section class="notable-events">
-            <h2>Eventos Notáveis da Idade Moderna</h2>
-            <div class="event">
-                <h3>Descobrimento da América (1492)</h3>
-                <p>A chegada de Cristóvão Colombo ao continente americano marcou o início de uma nova era para a Europa
-                    e o mundo, com profundas consequências culturais, sociais e econômicas.</p>
+    <main>
+        <section id="introducao">
+            <div class="video">
+                <video src="../video/videobackgroundIdadeMedia.mp4" autoplay loop muted></video>
             </div>
-            <div class="event">
-                <h3>Revolução Industrial (século XVIII)</h3>
-                <p>A Revolução Industrial transformou profundamente a economia e a sociedade, marcando a transição
-                    para uma produção mecanizada e o crescimento das cidades industriais.</p>
+            <div class="titulo">
+                <h1>IDADE MODERNA</h1>
+                <p>Maiores segredos e feitos dessa época</p>
+                <a href="#caracteristicas"><button id="saiba-mais">Saiba Mais</button></a>
+            </div>
+        </section>
+
+        <section id="caracteristicas">
+        <h1 id="titulo-caracteristicas">PRINCIPAIS CARACTERÍSTICAS</h1>
+            <div class="carrossel-container">
+                <div class="carrossel">
+                    <div class="item">
+                        <img src="../img/feudalismo.png" alt="">
+                        <div class="conteudo">
+                            <h1>Descobrimentos Marítimos</h1>
+                            <p>Durante os séculos XV e XVI, Portugal e Espanha lideraram grandes expedições marítimas, explorando novos continentes e rotas comerciais. Esse período foi marcado pela colonização de terras recém-descobertas e pelo intercâmbio de culturas e produtos entre Europa, África, Américas e Ásia. As grandes navegações expandiram o conhecimento geográfico e iniciaram uma era de globalização comercial.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../img/cruzadas.png" alt="">
+                        <div class="conteudo">
+                            <h1>Cruzadas</h1>
+                            <p>As Cruzadas foram expedições militares promovidas pela Igreja Católica entre os séculos XI e XIII, com o objetivo inicial de reconquistar Jerusalém e a Terra Santa, que estavam sob domínio muçulmano. No entanto, as motivações das Cruzadas iam além da religiosidade e incluíam interesses políticos, econômicos e sociais. As Cruzadas envolveram principalmente a Europa Ocidental e o Oriente Médio e tiveram grandes repercussões na sociedade medieval. A principal motivação das Cruzadas era recuperar lugares sagrados para o cristianismo, como Jerusalém, que era considerada o centro espiritual para os cristãos.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../img/inquisição.png" alt="">
+                        <div class="conteudo">
+                            <h1>Iniquisição</h1>
+                            <p>A Inquisição foi uma instituição criada pela Igreja Católica na Idade Média com o objetivo de combater heresias e preservar a ortodoxia da fé cristã. Ela foi estabelecida oficialmente em 1231 pelo Papa Gregório IX, mas suas origens datam do século XII, quando começaram a surgir movimentos considerados heréticos pela Igreja, como os cátaros e os valdenses. A Inquisição se tornou famosa pelo uso de julgamentos, interrogatórios e punições para identificar e punir os chamados "hereges" — pessoas que defendiam ideias contrárias às doutrinas oficiais da Igreja. </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../img/peste-negra.png" alt="">
+                        <div class="conteudo">
+                            <h1>Peste Negra</h1>
+                            <p>A Peste Negra (ou Peste Bubônica) foi uma pandemia devastadora que assolou a Europa, Ásia e o norte da África no século XIV, entre os anos de 1347 e 1351. Ela foi uma das epidemias mais letais da história, causando a morte de aproximadamente 75 a 200 milhões de pessoas, ou cerca de um terço da população europeia da época. A forma mais comum, caracterizada por inchaços dolorosos (bubões) nas axilas, virilha e pescoço, febre alta, dores no corpo e fraqueza. A taxa de mortalidade dessa forma era alta. Acredita-se que a peste tenha começado na Ásia Central, possivelmente na região da Mongólia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="controladores">
+                    <button class="setas" onclick="move(-1)" id="prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                    <button class="setas" onclick="move(1)" id="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <a href="#linhaTempo"><button id="saiba-mais">Saiba Mais</button></a>
+        </section>
+        <section id="linhaTempo">
+            <div class="titulo-linhaTempo">
+                <h1>LINHA DO TEMPO</h1>
+                <hr>
+                <p>Principais Eventos</p>
+            </div>
+            <div class="timeline">
+                <ul>
+                    <li>
+                        <div class="content">
+                            <h3>Descobrimento da América</h3>
+                            <p>Em 1492, Cristóvão Colombo chega ao continente americano, marcando o início da colonização das Américas e uma nova era de contato entre diferentes partes do mundo.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Ano 1492</h4>
+                        </div>
+                        <div class="img-direita">
+                            <img src="../img/descobrimento_america.png" alt="Descobrimento da América">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Reforma Protestante</h3>
+                            <p>Em 1517, Martinho Lutero desafia a Igreja Católica, iniciando a Reforma Protestante e provocando mudanças religiosas e políticas significativas na Europa.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Ano 1517</h4>
+                        </div>
+                        <div class="img-esquerda">
+                            <img src="../img/reforma_protestante.png" alt="Reforma Protestante">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Renascimento Cultural</h3>
+                            <p>Movimento cultural que resgata valores da Antiguidade Clássica e promove avanços nas artes, ciências e filosofia entre os séculos XIV e XVI.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Séculos XIV - XVI</h4>
+                        </div>
+                        <div class="img-direita">
+                            <img src="../img/renascimento_cultural.png" alt="Renascimento Cultural">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Expansão Marítima e Grandes Navegações</h3>
+                            <p>Portugal e Espanha exploram novas rotas marítimas, impulsionando o comércio, a colonização e o intercâmbio cultural.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Séculos XV - XVI</h4>
+                        </div>
+                        <div class="img-esquerda">
+                            <img src="../img/expansao_maritima.png" alt="Expansão Marítima">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Revolução Científica</h3>
+                            <p>A partir do século XVII, o método científico se consolida, com pensadores como Galileu, Kepler e Newton realizando descobertas fundamentais.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Século XVII</h4>
+                        </div>
+                        <div class="img-direita">
+                            <img src="../img/revolucao_cientifica.png" alt="Revolução Científica">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Formação dos Estados Nacionais</h3>
+                            <p>A centralização de poder nas monarquias fortalece o surgimento dos Estados Nacionais modernos na Europa.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Séculos XV - XVI</h4>
+                        </div>
+                        <div class="img-esquerda">
+                            <img src="../img/estados_nacionais.png" alt="Formação dos Estados Nacionais">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Iluminismo</h3>
+                            <p>Movimento intelectual que valoriza a razão, os direitos individuais e as ideias de liberdade, influenciando revoluções futuras.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Século XVIII</h4>
+                        </div>
+                        <div class="img-direita">
+                            <img src="../img/iluminismo.png" alt="Iluminismo">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Revolução Francesa</h3>
+                            <p>A Revolução Francesa marca o fim da Idade Moderna, iniciando um novo período com transformações políticas e sociais profundas.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Ano 1789</h4>
+                        </div>
+                        <div class="img-esquerda">
+                            <img src="../img/revolucao_francesa.png" alt="Revolução Francesa">
+                        </div>
+                    </li>
+                </ul>
+            </div>
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="container">
+            <p>© 2024 SESI CAÇAPAVA e SENAI TAUBATÉ</p>
+            <p>Desenvolvido por: SOFTDEV</p>
+            <nav class="footer-menu">
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
 
 </html>

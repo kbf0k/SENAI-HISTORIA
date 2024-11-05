@@ -22,3 +22,25 @@ document.getElementById('logout').addEventListener('click', () => {
         }
     });
 });
+
+//carrossel 
+let currentIndex = 0;
+
+function scrollCarousel(direction) {
+    const carousel = document.querySelector('.carousel');
+    const totalEvents = document.querySelectorAll('.event').length;
+
+    // Atualiza o índice atual baseado na direção do scroll
+    currentIndex += direction;
+
+    // Restringe o índice para o número total de eventos
+    if (currentIndex < 0) {
+        currentIndex = totalEvents - 1; // Vai para o último evento
+    } else if (currentIndex >= totalEvents) {
+        currentIndex = 0; // Volta para o primeiro evento
+    }
+
+    // Move o carrossel para o evento atual
+    const offset = -currentIndex * 100; // 100% de largura do evento
+    carousel.style.transform = `translateX(${offset}%)`;
+}
