@@ -6,6 +6,10 @@ if(!isset($_SESSION['nome_sessao'])){
     header('Location: index.php');
     exit();
 }
+
+$sql = "SELECT * FROM glossario ORDER BY titulo_glossario ASC LIMIT 5"; 
+$result = $conexao->query($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -77,8 +81,8 @@ if(!isset($_SESSION['nome_sessao'])){
 
   <div class="alphabet-container">
     <!-- Alfabeto de A a Z -->
-    <a class="botaoABC" id="botaoA" href="#">A</a>
-    <a class="botaoABC" id="botaoB" href="#">B</a>
+    <a class="botaoABC" id="botaoA" href="A">A</a>
+    <a class="botaoABC" id="botaoB" href="B">B</a>
     <a class="botaoABC" id="botaoC" href="#">C</a>
     <a class="botaoABC" id="botaoD" href="#">D</a>
     <a class="botaoABC" id="botaoE" href="#">E</a>
@@ -106,7 +110,14 @@ if(!isset($_SESSION['nome_sessao'])){
   </div>
 
   <div class="page-content" id="page-content">
-    <!-- Conteúdo inicial da página 1 -->
+    <?php
+    if ($result -> num_rows > 0) {
+        while ($linha = $result->fetch_assoc()) {
+            echo"<p class='conceitos'><b>" . $linha['titulo_glossario']. ":</b> ". $linha['descricao_glossario']. "<br>";
+        }
+    }
+    
+    ?>
   </div>
 
   <div class="pagination" id="navPags">
