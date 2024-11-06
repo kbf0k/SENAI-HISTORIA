@@ -81,32 +81,32 @@ $result = $conexao->query($sql);
 
   <div class="alphabet-container">
     <!-- Alfabeto de A a Z -->
-    <a class="botaoABC" id="botaoA" href="A">A</a>
-    <a class="botaoABC" id="botaoB" href="B">B</a>
-    <a class="botaoABC" id="botaoC" href="#">C</a>
-    <a class="botaoABC" id="botaoD" href="#">D</a>
-    <a class="botaoABC" id="botaoE" href="#">E</a>
-    <a class="botaoABC" id="botaoF" href="#">F</a>
-    <a class="botaoABC" id="botaoG" href="#">G</a>
-    <a class="botaoABC" id="botaoH" href="#">H</a>
-    <a class="botaoABC" id="botaoI" href="#">I</a>
-    <a class="botaoABC" id="botaoJ" href="#">J</a>
-    <a class="botaoABC" id="botaoK" href="#">K</a>
-    <a class="botaoABC" id="botaoL" href="#">L</a>
-    <a class="botaoABC" id="botaoM" href="#">M</a>
-    <a class="botaoABC" id="botaoN" href="#">N</a>
-    <a class="botaoABC" id="botaoO" href="#">O</a>
-    <a class="botaoABC" id="botaoP" href="#">P</a>
-    <a class="botaoABC" id="botaoQ" href="#">Q</a>
-    <a class="botaoABC" id="botaoR" href="#">R</a>
-    <a class="botaoABC" id="botaoS" href="#">S</a>
-    <a class="botaoABC" id="botaoT" href="#">T</a>
-    <a class="botaoABC" id="botaoU" href="#">U</a>
-    <a class="botaoABC" id="botaoV" href="#">V</a>
-    <a class="botaoABC" id="botaoW" href="#">W</a>
-    <a class="botaoABC" id="botaoX" href="#">X</a>
-    <a class="botaoABC" id="botaoY" href="#">Y</a>
-    <a class="botaoABC" id="botaoZ" href="#">Z</a>
+    <a class="botaoABC" id="botaoA" href="#" onclick="carregarGlossario('A')">A</a>
+    <a class="botaoABC" id="botaoB" href="#" onclick="carregarGlossario('B')">B</a>
+    <a class="botaoABC" id="botaoC" href="#" onclick="carregarGlossario('C')">C</a>
+    <a class="botaoABC" id="botaoD" href="#" onclick="carregarGlossario('D')">D</a>
+    <a class="botaoABC" id="botaoE" href="#" onclick="carregarGlossario('E')">E</a>
+    <a class="botaoABC" id="botaoF" href="#" onclick="carregarGlossario('F')">F</a>
+    <a class="botaoABC" id="botaoG" href="#" onclick="carregarGlossario('G')">G</a>
+    <a class="botaoABC" id="botaoH" href="#" onclick="carregarGlossario('H')">H</a>
+    <a class="botaoABC" id="botaoI" href="#" onclick="carregarGlossario('I')">I</a>
+    <a class="botaoABC" id="botaoJ" href="#" onclick="carregarGlossario('J')">J</a>
+    <a class="botaoABC" id="botaoK" href="#" onclick="carregarGlossario('K')">K</a>
+    <a class="botaoABC" id="botaoL" href="#" onclick="carregarGlossario('L')">L</a>
+    <a class="botaoABC" id="botaoM" href="#" onclick="carregarGlossario('M')">M</a>
+    <a class="botaoABC" id="botaoN" href="#" onclick="carregarGlossario('N')">N</a>
+    <a class="botaoABC" id="botaoO" href="#" onclick="carregarGlossario('O')">O</a>
+    <a class="botaoABC" id="botaoP" href="#" onclick="carregarGlossario('P')">P</a>
+    <a class="botaoABC" id="botaoQ" href="#" onclick="carregarGlossario('Q')">Q</a>
+    <a class="botaoABC" id="botaoR" href="#" onclick="carregarGlossario('R')">R</a>
+    <a class="botaoABC" id="botaoS" href="#" onclick="carregarGlossario('S')">S</a>
+    <a class="botaoABC" id="botaoT" href="#" onclick="carregarGlossario('T')">T</a>
+    <a class="botaoABC" id="botaoU" href="#" onclick="carregarGlossario('U')">U</a>
+    <a class="botaoABC" id="botaoV" href="#" onclick="carregarGlossario('V')">V</a>
+    <a class="botaoABC" id="botaoW" href="#" onclick="carregarGlossario('W')">W</a>
+    <a class="botaoABC" id="botaoX" href="#" onclick="carregarGlossario('X')">X</a>
+    <a class="botaoABC" id="botaoY" href="#" onclick="carregarGlossario('Y')">Y</a>
+    <a class="botaoABC" id="botaoZ" href="#" onclick="carregarGlossario('Z')">Z</a>
   </div>
 
   <div class="page-content" id="page-content">

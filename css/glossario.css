@@ -214,13 +214,13 @@ a {
     background-color: #555;
   }
 
-  .alphabet-container .selected {
+  /* .alphabet-container .selected {
     background-color: #d4af37;
   }
 
   .alphabet-container .selected:hover {
     background-color: #d4af37;
-  }
+  } */
 
   .pagination {
     display: flex;
@@ -238,15 +238,15 @@ a {
     border-radius: 5px;
   }
 
-  .pagination a.active {
+  /* .pagination a.active {
     background-color: #d4af37; /* Marrom escuro */
-    color: white;
+    /* color: white;
     border: 1px solid #665d50;
   }
 
   .pagination a:hover:not(.active) {
     background-color: #ddd;
-  }
+  } */
 
   .page-content {
     margin-top: 20px;
@@ -312,3 +312,11 @@ a {
     display: none; /* Oculto por padrão */
     margin-top: 10px;
   }
+
+
+
+
+  .alphabet-container a.ativo {
+    background-color: #d4af37;
+    color: white;
+}
