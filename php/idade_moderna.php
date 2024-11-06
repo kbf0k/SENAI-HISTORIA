@@ -81,17 +81,19 @@ if (!isset($_SESSION['nome_sessao'])) {
             <div class="carrossel-container">
                 <div class="carrossel">
                     <div class="item">
-                        <img src="../img/feudalismo.png" alt="">
+                        <img src="../img/descobrimento.webp" alt="">
                         <div class="conteudo">
                             <h1>Descobrimentos Marítimos</h1>
                             <p>Durante os séculos XV e XVI, Portugal e Espanha lideraram grandes expedições marítimas, explorando novos continentes e rotas comerciais. Esse período foi marcado pela colonização de terras recém-descobertas e pelo intercâmbio de culturas e produtos entre Europa, África, Américas e Ásia. As grandes navegações expandiram o conhecimento geográfico e iniciaram uma era de globalização comercial.</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../img/cruzadas.png" alt="">
+                        <img src="../img/absolutismo.webp" alt="">
                         <div class="conteudo">
-                            <h1>Cruzadas</h1>
-                            <p>As Cruzadas foram expedições militares promovidas pela Igreja Católica entre os séculos XI e XIII, com o objetivo inicial de reconquistar Jerusalém e a Terra Santa, que estavam sob domínio muçulmano. No entanto, as motivações das Cruzadas iam além da religiosidade e incluíam interesses políticos, econômicos e sociais. As Cruzadas envolveram principalmente a Europa Ocidental e o Oriente Médio e tiveram grandes repercussões na sociedade medieval. A principal motivação das Cruzadas era recuperar lugares sagrados para o cristianismo, como Jerusalém, que era considerada o centro espiritual para os cristãos.</p>
+                            <h1>Absolutismo</h1>
+                            <p>O Absolutismo foi o sistema político e administrativo dos países europeus nos séculos XVI ao XVIII.
+                                Nele, o soberano centralizava todos os poderes do Estado em suas mãos, sem prestar contas à sociedade.
+                                A fim de controlar as revoltas camponesas, parte da nobreza apoia que o rei seja mais poderoso. Igualmente, o monarca recebe auxílio da burguesia, pois a centralização significava a padronização das políticas fiscais e monetárias.
                         </div>
                     </div>
                     <div class="item">
@@ -99,13 +101,6 @@ if (!isset($_SESSION['nome_sessao'])) {
                         <div class="conteudo">
                             <h1>Iniquisição</h1>
                             <p>A Inquisição foi uma instituição criada pela Igreja Católica na Idade Média com o objetivo de combater heresias e preservar a ortodoxia da fé cristã. Ela foi estabelecida oficialmente em 1231 pelo Papa Gregório IX, mas suas origens datam do século XII, quando começaram a surgir movimentos considerados heréticos pela Igreja, como os cátaros e os valdenses. A Inquisição se tornou famosa pelo uso de julgamentos, interrogatórios e punições para identificar e punir os chamados "hereges" — pessoas que defendiam ideias contrárias às doutrinas oficiais da Igreja. </p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../img/peste-negra.png" alt="">
-                        <div class="conteudo">
-                            <h1>Peste Negra</h1>
-                            <p>A Peste Negra (ou Peste Bubônica) foi uma pandemia devastadora que assolou a Europa, Ásia e o norte da África no século XIV, entre os anos de 1347 e 1351. Ela foi uma das epidemias mais letais da história, causando a morte de aproximadamente 75 a 200 milhões de pessoas, ou cerca de um terço da população europeia da época. A forma mais comum, caracterizada por inchaços dolorosos (bubões) nas axilas, virilha e pescoço, febre alta, dores no corpo e fraqueza. A taxa de mortalidade dessa forma era alta. Acredita-se que a peste tenha começado na Ásia Central, possivelmente na região da Mongólia.</p>
                         </div>
                     </div>
                 </div>
@@ -133,7 +128,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                             <h4>Ano 1492</h4>
                         </div>
                         <div class="img-direita">
-                            <img src="../img/descobrimento_america.png" alt="Descobrimento da América">
+                            <img src="../img/descobrimento.webp" alt="Descobrimento da América">
                         </div>
                     </li>
                     <li>
@@ -145,7 +140,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                             <h4>Ano 1517</h4>
                         </div>
                         <div class="img-esquerda">
-                            <img src="../img/reforma_protestante.png" alt="Reforma Protestante">
+                            <img src="../img/reformapt.jfif" alt="Reforma Protestante">
                         </div>
                     </li>
                     <li>
@@ -157,7 +152,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                             <h4>Séculos XIV - XVI</h4>
                         </div>
                         <div class="img-direita">
-                            <img src="../img/renascimento_cultural.png" alt="Renascimento Cultural">
+                            <img src="../img/renascimento.jfif" alt="Renascimento Cultural">
                         </div>
                     </li>
                     <li>
@@ -169,7 +164,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                             <h4>Séculos XV - XVI</h4>
                         </div>
                         <div class="img-esquerda">
-                            <img src="../img/expansao_maritima.png" alt="Expansão Marítima">
+                            <img src="../img/expansao_maritima.jfif" alt="Expansão Marítima">
                         </div>
                     </li>
                     <li>
@@ -181,7 +176,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                             <h4>Século XVII</h4>
                         </div>
                         <div class="img-direita">
-                            <img src="../img/revolucao_cientifica.png" alt="Revolução Científica">
+                            <img src="../img/revolucao_cientifica.jpg" alt="Revolução Científica">
                         </div>
                     </li>
                     <li>
@@ -193,7 +188,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                             <h4>Séculos XV - XVI</h4>
                         </div>
                         <div class="img-esquerda">
-                            <img src="../img/estados_nacionais.png" alt="Formação dos Estados Nacionais">
+                            <img src="../img/estados_nacionais.jfif" alt="Formação dos Estados Nacionais">
                         </div>
                     </li>
                     <li>
@@ -205,7 +200,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                             <h4>Século XVIII</h4>
                         </div>
                         <div class="img-direita">
-                            <img src="../img/iluminismo.png" alt="Iluminismo">
+                            <img src="../img/iluminismo.jfif" alt="Iluminismo">
                         </div>
                     </li>
                     <li>
@@ -217,7 +212,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                             <h4>Ano 1789</h4>
                         </div>
                         <div class="img-esquerda">
-                            <img src="../img/revolucao_francesa.png" alt="Revolução Francesa">
+                            <img src="../img/revolucao_francesa.jpg" alt="Revolução Francesa">
                         </div>
                     </li>
                 </ul>
