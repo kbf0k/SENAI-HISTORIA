@@ -15,6 +15,7 @@ if (!isset($_SESSION['nome_sessao'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/idade_media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script src="../javascript/idade_media.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <script src="https://kit.fontawesome.com/6e028b1004.js" crossorigin="anonymous" defer></script>
@@ -31,7 +32,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                 <h1>Idade Média</h1>
             </div>
             <nav class="menu">
-                <ul>
+                <ul class="nav-list">
                     <li class="dropdown">
                         <a href="">Períodos Históricos</a>
 
@@ -61,6 +62,46 @@ if (!isset($_SESSION['nome_sessao'])) {
                         <li><a href="index.php">LOGIN</a></li>
                     <?php endif; ?>
                 </ul>
+
+
+
+                <div class="mobile-menu" id="mobileMenu">
+                    <button class="close" id="closeButton"><i class="fas fa-times"></i></button>
+                    <ul class="nav-links-mobile">
+                        <li class="dropdown">
+                            <a href="">Períodos Históricos</a>
+                            <div class="dropdown-menu">
+                                <a href="pre_historia.php">Pré-História</a>
+                                <a href="idade_antiga.php">Idade Antiga</a>
+                                <a href="idade_media.php">Idade Média</a>
+                                <a href="idade_moderna.php">Idade Moderna</a>
+                                <a href="idade_contemporanea.php">Idade Contemporânea</a>
+                            </div>
+                        </li>
+                        <li><a href="glossario.php">Glossário</a></li>
+                        <li><a href="atividades.php">Atividades Complementares</a></li>
+
+                        <?php if (isset($_SESSION['nome_sessao'])): ?>
+                            <div class="user-vector">
+                                <img id="logo-vector" src="../img/user-vector.png" alt="">
+                                <p>
+                                    <?= $_SESSION['nome_sessao'] ?>
+                                </p>
+                                <p>
+                                    <?= $_SESSION['tipo_sessao'] ?>
+                                </p>
+                            </div>
+                            <li><a id="logout">SAIR</a></li>
+                        <?php else: ?>
+                            <li><a href="index.php">LOGIN</a></li>
+                        <?php endif; ?>
+                    </ul>
+                </div>
+                <button class="hamburguer" id="hamburguerButton"><i class="fas fa-bars"></i></button>
+
+
+
+
             </nav>
         </div>
     </header>
