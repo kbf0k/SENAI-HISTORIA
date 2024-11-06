@@ -27,7 +27,7 @@ a {
 
 .header {
     background-color: #4b3f35;
-    padding: 20px 0;
+    padding: 15px 0;
     color: white;
     position: static;
 }
@@ -41,10 +41,11 @@ a {
 .logo {
     display: flex;
     align-items: center;
+    margin-left: -70px;
 }
 
 .logo img {
-    max-width: 150px;
+    max-width: 170px;
     margin: 0 auto;
     cursor: pointer;
     transition: .3s;
@@ -56,15 +57,20 @@ a {
 }
 
 .logo h1 {
-    font-size: 28px;
     font-weight: bold;
+    font-size: 26px;
+    margin-left: 15px;
 }
 
 /* Menu */
+.menu {
+    margin-right: -110px;
+}
+
 .menu ul {
     list-style: none;
-    gap: 20px;
     display: flex;
+    gap: 20px;
     align-items: center;
 }
 
@@ -81,12 +87,12 @@ a {
     transition: color 0.3s;
 }
 
-.menu #logout {
-    cursor: pointer;
-}
-
 .menu ul li a:hover {
     color: #d4af37;
+}
+
+.menu #logout{
+    cursor: pointer;
 }
 
 /* Dropdown */
@@ -121,18 +127,18 @@ a {
     display: block;
 }
 
-.user-vector {
+.user-vector{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.user-vector #logo-vector {
+.user-vector #logo-vector{
     max-width: 50px;
 }
 
-.user-vector p {
+.user-vector p{
     font-size: 12px;
 }
 
@@ -285,6 +291,9 @@ article p {
     text-align: center;
     margin-top: 25px;
 }
+.img-legend figcaption{
+    font-weight: bold;
+}
 
 .img-container {
     position: relative;
@@ -343,7 +352,53 @@ article p {
 .opcoes a:hover {
     background-color: #b97604;
 }
+.atividades_pdf {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 70%;
+    margin: 15px auto;
+    background: rgb(245, 231, 205);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+}
 
+.atividades_pdf h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    position: relative;
+    grid-column: span 4; 
+}
+
+.atividades_pdf h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 2px;
+    background: #333;
+    margin: 5px auto 0;
+}
+
+.atividades_pdf .img-legend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.atividades_pdf .imagem {
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.atividades_pdf .img-legend figcaption {
+    font-weight: bold;
+    margin-top: 10px;
+}
 footer {
     background-color: #4b3f35;
     color: white;
@@ -361,11 +416,105 @@ footer {
     justify-content: center;
     gap: 20px;
 }
+
 .footer-menu ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
+
 .footer-menu ul li a:hover {
     color: #d4af37;
+}
+/* Tablet */
+@media (max-width: 768px) {
+    .logo-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .article-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .atividades_news {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .conteudo-atividades {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .atividades_pdf {
+        grid-template-columns: 1fr 1fr;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 120px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    article {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .atividades_news {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .img-legend {
+        width: 100%;
+    }
+
+    .atividades_pdf {
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
