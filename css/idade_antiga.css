@@ -80,6 +80,7 @@ a {
     padding: 10px;
     transition: color 0.3s;
     position: relative;
+    cursor: pointer;
 }
 
 .menu ul li a:hover,
