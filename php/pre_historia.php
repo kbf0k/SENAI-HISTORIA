@@ -14,7 +14,7 @@ if(!isset($_SESSION['nome_sessao'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
+    <title>Pré-História</title>
     <link rel="stylesheet" href="../css/pre_historia.css">
     <script src="../javascript/pre_historia.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
@@ -142,7 +142,7 @@ if(!isset($_SESSION['nome_sessao'])){
                 <section id="guerras" class="evento grandes-guerras">
                     <div class="evento-conteudo">
                         <div class="evento-text">
-                            <h3>Paleolítico</h3>
+                            <h3>Neolílítico</h3>
                             <p>O período Neolítico, ou Idade da Pedra Polida, ocorreu entre aproximadamente 8.000 a.C. e 3.000 a.C. Esse período marcou grandes transformações na vida humana, como a adoção da agricultura, a domesticação de animais e o surgimento das primeiras aldeias permanentes. A utilização da pedra polida para fabricar ferramentas mais duráveis foi uma inovação que contribuiu para o desenvolvimento dessas atividades.</p>
 
 <p>As principais características do Neolítico incluem:</p>
