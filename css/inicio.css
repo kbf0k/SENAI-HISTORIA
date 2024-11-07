@@ -87,6 +87,9 @@ a {
 .menu #logout {
     cursor: pointer;
 }
+#mobile-header {
+    display: none;
+}
 
 /* Dropdown */
 .dropdown-menu {
@@ -122,20 +125,178 @@ a {
 }
 
 /* User Vector */
-.user-vector {
+.header .user-vector {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.user-vector #logo-vector {
+.header .user-vector #logo-vector {
     max-width: 50px;
 }
 
-.user-vector p {
+.header .user-vector p {
     font-size: 12px;
 }
+
+
+@media (max-width: 768px) {
+    /* MENU MOBILE */
+    .header {
+        display: none;
+    }
+    #mobile-logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    #mobile-header {
+        box-sizing: border-box;
+        height: 70px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #4b3f35;
+        color: #fff;
+    }
+    
+    #btn-mobile {
+        display: none;
+    }
+    
+    /* Estilo para alinhar nome e tipo ao lado da imagem */
+    .user-options {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .user-options a {
+        color: #fff;        
+    }
+
+    .user-vector {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem; /* Espaço entre a imagem e o texto */
+    }
+    
+    .user-vector #logo-vector {
+        max-width: 50px;
+        border-radius: 50%; /* Se desejar uma imagem circular */
+    }
+    
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    .user-info p {
+        margin: 0;
+        font-size: 12px;
+    }
+    
+    
+    .logo {
+        max-width: 150px;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: .3s;
+    }
+    
+    #mobile-menu {
+        display: flex;
+        list-style: none;
+        gap: 0.5rem;
+        text-align: center;
+        justify-content: center;
+    }
+    /* Estilos para esconder e mostrar o menu em mobile */
+    #mobile-menu {
+        display: none;
+    }
+    
+    #nav.active #mobile-menu {
+        display: block;
+        background-color: #4b3f35;
+    }
+    
+    
+    #mobile-menu a {
+        display: block;
+        padding: 0.5rem;
+        color: #fff;
+    }
+    
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+        color: #fff;
+    }
+
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    #nav.active #hamburger {
+        border: #ffffff;
+    }
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    #mobile-menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0;
+        background: #e7e7e7;
+        transition: 0.6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #mobile-menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #mobile-menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    }
+}
+
+
 
 /* Seção de Introdução */
 .intro {
@@ -618,20 +779,6 @@ a {
     .container {
         width: 100%;
         padding: 0 20px;
-    }
-
-    .logo-menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo img {
-        max-width: 120px;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        gap: 10px;
     }
 
     .intro {
