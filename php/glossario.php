@@ -2,13 +2,24 @@
 include_once('conexao.php');
 session_start();
 
+
+
 if(!isset($_SESSION['nome_sessao'])){
     header('Location: index.php');
     exit();
 }
 
-$sql = "SELECT * FROM glossario ORDER BY titulo_glossario ASC LIMIT 5"; 
-$result = $conexao->query($sql);
+// $sql = "SELECT * FROM glossario ORDER BY titulo_glossario ASC LIMIT 5"; 
+// $result = $conexao->query($sql);
+
+
+
+if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
+    $modal_visible = true;  // Exibe o modal para administradores
+} else {
+    $modal_visible = false;  // Não exibe o modal para outros tipos de usuário
+}
+
 
 ?>
 
@@ -59,7 +70,7 @@ $result = $conexao->query($sql);
                             <?=$_SESSION['tipo_sessao'] ?>
                         </p>
                     </div>
-                    <li><a id="logout">SAIR</a></li>
+                    <li><a href="index.php" id="logout">SAIR</a></li>
                     <?php else: ?>
                     <li><a href="index.php">LOGIN</a></li>
                     <?php endif; ?>
@@ -111,23 +122,95 @@ $result = $conexao->query($sql);
 
   <div class="page-content" id="page-content">
     <?php
-    if ($result -> num_rows > 0) {
-        while ($linha = $result->fetch_assoc()) {
-            echo"<p class='conceitos'><b>" . $linha['titulo_glossario']. ":</b> ". $linha['descricao_glossario']. "<br>";
-        }
-    }
+    $sql = "SELECT id_glossario, titulo_glossario, descricao_glossario FROM glossario ORDER BY titulo_glossario ASC LIMIT 5";
+    $result = $conexao->query($sql);
+
+    // if ($result->num_rows > 0) {
+    //     // Exibe os conceitos
+    //     while($row = $result->fetch_assoc()) {
+    //         echo "<div class='conceito-item'>";
+    //         echo "<p>" . $row['titulo_glossario'] . "</p>";
+    //         // Verifica se o usuário é administrador antes de mostrar o botão de excluir
+    //         if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
+    //             echo "<a href='excluir_conceito.php?id=" . $row['id_glossario'] . "' class='botao-excluir'>Excluir</a>";
+    //         }
+    //         echo "</div>";
+    //     }
+    // } else {
+    //     echo "Nenhum conceito encontrado!";
+    // }
+
+    // if ($result -> num_rows > 0) {
+    //     while ($linha = $result->fetch_assoc()) {
+    //         echo"<p class='conceitos'><b>" . $linha['titulo_glossario']. ":</b> ". $linha['descricao_glossario']. "<br>";
+
+    //         // Verificar se o usuário é administrador para exibir o botão de excluir
+    //     if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
+    //         echo "<a href='excluir_conceito.php?id=" . $linha['id_glossario'] . "' class='botao-excluir'>Excluir</a>";
+    //     }
+
+    //     }
+    // }
     
     ?>
   </div>
-
+<!-- 
   <div class="pagination" id="navPags">
     <a href="#" data-page="1" id="inicio">&laquo; Início</a>
-    <a href="#" data-page="prev" id="anterior">&lsaquo; Anterior</a>
+    <a href="#" data-page="prev" id="anterior">&lsaquo; Anterior</a> -->
     <!-- Botões de páginas serão gerados dinamicamente -->
-    <a href="#" data-page="next" id="proximo">Próximo &rsaquo;</a>
+    <!-- <a href="#" data-page="next" id="proximo">Próximo &rsaquo;</a> -->
 
-    <a href="#" data-page="15" id="fim">Fim &raquo;</a>
+    <!-- <a href="#" data-page="15" id="fim">Fim &raquo;</a>
+  </div> -->
+
+  <?php
+// Verifique se o tipo de usuário é administrador
+if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
+    // Exibe o botão apenas para administradores
+    echo '<button id="abrirModal" class="botao-inserir">Inserir Novo Conceito</button>';
+}
+?>
+
+<?php if ($modal_visible): ?>
+<!-- Modal para inserir novo conceito -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="fechar">&times;</span>
+    <h2>Inserir Novo Conceito</h2>
+    <form id="formNovoConceito" action="inserir_conceito.php" method="POST">
+      <label for="termo">Nome do Termo:</label>
+      <input type="text" id="termo" name="termo" required>
+
+      <label for="definicao">Definição:</label>
+      <textarea id="definicao" name="definicao" rows="4" required></textarea>
+
+      <button type="submit" class="botao-salvar">Salvar Conceito</button>
+    </form>
   </div>
+</div>
+<?php endif; ?>
+
+<!-- Modal de Edição -->
+ <div id="vsfd">
+<div id="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="fechar">&times;</span>
+        <h2>Editar Conceito</h2>
+        <form id="formEditarConceito" method="POST" action="editar_conceito.php">
+            <input type="hidden" id="id_glossario" name="id_glossario">
+            <label for="termo">Termo:</label>
+            <input type="text" id="termo" name="termo" required>
+            <label for="definicao">Definição:</label>
+            <textarea id="definicao" name="definicao" required></textarea>
+            <button type="submit">Salvar Alterações</button>
+        </form>
+    </div>
+</div>
+</div>
+
+
+
 
   <div id="navLetras"></div>
 
