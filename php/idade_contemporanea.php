@@ -7,24 +7,24 @@ if(!isset($_SESSION['nome_sessao'])){
     exit();
 }
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/idade_contemporanea.css">
-    <script src="../javascript/idade_contemporanea.js" defer></script>
+    <title>Pré-História</title>
+    <link rel="stylesheet" href="../css/pre_historia.css">
+    <script src="../javascript/pre_historia.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <title>Idade Contemporânea</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 <header class="header">
         <div class="container logo-menu">
             <div class="logo">
-            <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
+                <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
             </div>
             <nav class="menu">
                 <ul>
@@ -60,15 +60,18 @@ if(!isset($_SESSION['nome_sessao'])){
             </nav>
         </div>
     </header>
+
     <main>
-        <section class="intro">
-            <div class="container">
-                <h2>Idade Contemporânea</h2>
-                <p>A Idade Contemporânea iniciou em 1789 com a Revolução Francesa, marcada por mudanças políticas, econômicas e sociais. A Revolução Industrial transformou a produção e urbanização, 
-                    enquanto ideais de liberdade e democracia se disseminavam. As Guerras Mundiais foram conflitos que redefiniram fronteiras e estabeleceram novas potências, a Guerra Fria dividiu o 
-                    mundo em dois blocos: socialismo e capitaliismo, e avanços tecnológicos e batalhas pelos direitos civis que persistem até hoje também foram alguns dos acontecimentos.</p>
-                <a href="#acontecimentos" class="btn">Saiba mais</a>
+    <section id="introducao">
+            <div class="video">
+                <video src="../video/videobackgroundIdadeMedia.mp4" autoplay loop muted></video>
             </div>
+            <div class="titulo">
+                <h1>IDADE CONTEMPORÂNEA</h1>
+                <p>A Idade Marcada por rápidas transformações tecnológicas, sociais e culturais </p>
+                <a href="#acontecimentos"><button id="saiba-mais">Saiba Mais</button></a>
+            </div>
+        </section>
         </section>
         <section id="acontecimentos" class="acontecimentos">
                 <div class="container">
