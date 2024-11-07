@@ -69,28 +69,21 @@ if (!isset($_SESSION['nome_sessao'])) {
 
 
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section team">
-                <h3>Equipe Desenvolvedora</h3>
-                <h3>SOFTDEV</h3>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a></li>
-                    <li><a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">João Gustavo Mota Ramos</a></li>
-                    <li><a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">João Pedro da Cunha Machado</a></li>
-                    <li><a href="https://www.linkedin.com/in/murilo-silva-0377322b7/" target="_blank">Murilo Henrique Souza Silva</a></li>
-                    <li><a href="https://www.linkedin.com/in/yago-moraes-6a09b3326/" target="_blank">Yago Roberto Gomes Moraes</a></li>
-                </ul>
-            </div>
-            <div class="footer-section links">
-                <h3>Links Úteis</h3>
-                <ul>
-                    <li><a href="termosDeUso.php">Termos de Uso</a></li>
-                    <li><a href="politica_privacidade.php">Política de Privacidade</a></li>
-                    <li><a href="ajuda.php">Ajuda</a></li>
-                    <li><a href="faq.php">FAQ</a></li>
-                </ul>
-            </div>
-        </div>
+        <h3>Equipe Desenvolvedora SOFTDEV</h3>
+        <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a>
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">João Gustavo Mota Ramos</a>
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">João Pedro da Cunha Machado</a>
+        <a href="https://www.linkedin.com/in/murilo-silva-0377322b7/" target="_blank">Murilo Henrique Souza Silva</a>
+        <a href="https://www.linkedin.com/in/yago-moraes-6a09b3326/" target="_blank">Yago Roberto Gomes Moraes</a>
+
+        <h3 id="link">Links Úteis</h3>
+
+        <a href="termosDeUso.php">Termos de Uso</a></li>
+        <a href="politica_privacidade.php">Política de Privacidade</a></li>
+        <a href="ajuda.php">Ajuda</a></li>
+        <a href="faq.php">FAQ</a></li>
+
+
         <div class="footer-bottom">
             <p>&copy; 2024 História em Foco. Todos os direitos reservados.</p>
         </div>

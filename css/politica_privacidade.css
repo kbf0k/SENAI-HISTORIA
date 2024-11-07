@@ -167,54 +167,30 @@ main {
     color: #666;
 }
 
-/* Footer */
+
 .footer {
     background-color: #4b3f35;
-    color: white;
     padding: 30px 20px;
     font-family: Arial, sans-serif;
+    text-align: center;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+.footer h3 {
+    color: #f9f4e1;
 }
 
-.footer-section {
-    flex: 1 1 200px;
-    min-width: 250px;
-    margin-bottom: 20px;
-}
-
-.footer-section h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.footer-section p,
-.footer-section li {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 8px;
-}
-
-.footer-section ul li a {
+.footer a {
     color: white;
-    text-decoration: none;
-    transition: color 0.3s;
+    transition: .3s ease-in-out;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.footer-section ul li a:hover {
+.footer #link {
+    margin-top: 10px;
+}
+
+.footer a:hover {
     color: #d4af37;
 }
 
@@ -222,12 +198,8 @@ main {
     text-align: center;
     margin-top: 20px;
     font-size: 18px;
-}
-
-.footer img {
-    width: 280px;
-    height: 90px;
-    margin-bottom: 20px;
+    color: #f9f4e1;
+    ;
 }
 
 @media (max-width: 768px) {
@@ -306,107 +278,5 @@ main {
     .menu ul {
         flex-direction: column;
         gap: 10px;
-    }
-
-    .intro {
-        height: auto;
-        padding: 60px 20px;
-    }
-
-    .intro h2 {
-        font-size: 28px;
-    }
-
-    .intro p {
-        font-size: 16px;
-    }
-
-    .periodos .cards {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .periodo-card {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .linha-do-tempo .eventos {
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-    }
-
-    .linha-horizontal {
-        display: none;
-    }
-
-    .evento {
-        width: 350px!important;
-        height: 170px;
-        padding: 20px;
-    }
-
-    .atividades-conteudo {
-        flex-direction: column;
-    }
-
-    .atividade {
-        max-width: 100%;
-    }
-
-    .glossario {
-        padding: 40px 20px;
-    }
-
-    .glossario h2 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .intro {
-        height: auto;
-        padding: 80px 20px;
-    }
-    .intro h2 {
-        font-size: 32px;
-    }
-    .intro p {
-        font-size: 18px;
-    }
-
-    .periodos .cards {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-    .periodo-card {
-        width: 500px;
-    }
-    .periodo-card h3 {
-        font-size: 1em;
-    }
-    .periodo-card p {
-        font-size: 13px;
-    }
-
-    .linha-do-tempo .eventos {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-    .evento {
-        width: 350px!important;
-        height: 170px;
-        padding: 20px;
-    }
-
-    h2 {
-        font-size: 30px;
     }
 }
