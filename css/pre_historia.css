@@ -124,7 +124,19 @@ a {
     max-width: 50px;
 }
 
-.user-vector p{
+/* User Vector */
+.user-vector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-vector #logo-vector {
+    max-width: 50px;
+}
+
+.user-vector p {
     font-size: 12px;
 }
 
