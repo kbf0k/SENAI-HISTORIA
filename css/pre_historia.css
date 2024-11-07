@@ -139,6 +139,7 @@ a {
 .intro h2 {
     font-size: 48px;
     margin-bottom: 20px;
+    text-shadow: 3px 6px rgba(0, 0, 0, 0.5);
 }
 
 .intro p {
@@ -178,6 +179,7 @@ a {
     font-size: 36px;
     margin-bottom: 50px;
     color: #e7be36;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .itens-grid {
