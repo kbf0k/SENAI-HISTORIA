@@ -17,12 +17,10 @@ body {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
-a p {
-    color: white;
-}
-
+/* Containers e layouts */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -45,11 +43,10 @@ a p {
 .logo {
     display: flex;
     align-items: center;
-    margin-left: -70px;
 }
 
 .logo img {
-    max-width: 150px;
+    max-width: 180px;
     margin: 0 auto;
     cursor: pointer;
     transition: .3s;
@@ -60,19 +57,12 @@ a p {
     transform: scale(1.05);
 }
 
-.logo h1 {
-    font-weight: bold;
-}
 
 /* Menu */
-.menu {
-    margin-right: -110px;
-}
-
 .menu ul {
     list-style: none;
-    display: flex;
     gap: 20px;
+    display: flex;
     align-items: center;
 }
 
@@ -87,29 +77,13 @@ a p {
     font-size: 16px;
     padding: 10px;
     transition: color 0.3s;
+    position: relative;
 }
 
-.menu ul li a:hover {
+.menu ul li a:hover,
+.menu #logout:hover {
     color: #d4af37;
 }
-
-.menu #logout{
-    cursor: pointer;
-}
-
-/* Dropdown */
-.dropdown-menu {
-    margin-top: 9px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #4b3f35;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    display: none;
-    border-radius: 5px;
-    width: 210px;
-}
-
 .dropdown-menu a {
     color: #333;
     padding: 10px;
@@ -128,6 +102,7 @@ a p {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+
 
 .user-vector{
     display: flex;
@@ -164,6 +139,7 @@ a p {
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
+
 }
 
 .intro .btn {
@@ -225,6 +201,7 @@ a p {
     margin-bottom: 11px;
     margin-left: 12px;
     margin-right: 12px;
+    color: white;
 }
 
 .item:hover {
@@ -329,51 +306,25 @@ a p {
 }
 .footer {
     background-color: #4b3f35;
-    color: white;
     padding: 30px 20px;
     font-family: Arial, sans-serif;
+    text-align: center;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+.footer h3{
+    color: #f9f4e1;
 }
 
-.footer-section {
-    flex: 1 1 200px;
-    min-width: 250px;
-    margin-bottom: 20px;
-}
-
-.footer-section h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.footer-section p,
-.footer-section li {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 8px;
-}
-
-.footer-section ul li a {
+.footer a{
     color: white;
-    text-decoration: none;
-    transition: color 0.3s;
+    transition: .3s ease-in-out;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-
-.footer-section ul li a:hover {
+.footer #link{
+    margin-top: 10px;
+}
+.footer a:hover{
     color: #d4af37;
 }
 
@@ -381,13 +332,9 @@ a p {
     text-align: center;
     margin-top: 20px;
     font-size: 18px;
+    color: #f9f4e1;;
 }
 
-.footer img {
-    width: 280px;
-    height: 90px;
-    margin-bottom: 20px;
-}
 
 @media (max-width: 768px) {
     .footer-container {
@@ -444,147 +391,165 @@ a p {
         font-size: 18px;
     }
 }
-@media (max-width: 480px) {
-    .logo img {
-        max-width: 100px;
-        margin-left: 0;
+
+/* RESPONSIVIDADE GERAL */
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
     }
-    
+
+    .logo-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 120px;
+    }
+
     .menu ul {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .intro {
-        padding: 30px 20px;
         height: auto;
+        padding: 60px 20px;
     }
 
     .intro h2 {
-        font-size: 32px;
-    }
-
-    .intro p {
-        font-size: 14px;
-    }
-
-    .acontecimentos h2 {
-        font-size: 24px;
-    }
-
-    .item h3 {
-        font-size: 18px;
-    }
-
-    .evento img {
-        width: 100%;
-    }
-    
-    .evento h3 {
-        font-size: 24px;
-    }
-    
-    .footer img {
-        width: 200px;
-        height: 70px;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-    .container {
-        width: 100%;
-    }
-
-    .intro h2 {
-        font-size: 36px;
+        font-size: 28px;
     }
 
     .intro p {
         font-size: 16px;
     }
-
-    .acontecimentos h2 {
-        font-size: 28px;
+    .acontecimentos {
+        padding: 40px;
     }
 
     .itens-grid {
         grid-template-columns: 1fr;
     }
 
+    .item {
+        margin: 10px 0;
+    }
+
+    .item img {
+        height: 200px;
+    }
+
+    .evento-conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .evento img {
         width: 100%;
         margin-left: 0;
     }
 
-    .footer img {
-        width: 240px;
-        height: 80px;
+    .evento-text {
+        width: 100%;
+    }
+
+    .evento h3 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .evento p {
+        font-size: 14px;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .menu ul {
-        gap: 15px;
-    }
-    
-    .intro h2 {
-        font-size: 42px;
+    .acontecimentos {
+        padding: 60px 30px;
     }
 
-    .intro p {
-        font-size: 17px;
+    .itens-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    .item {
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .item img {
+        height: 220px;
+        border-radius: 8px;
+    }
+    .item h3 {
+        font-size: 22px;
+        margin-top: 15px;
+        color: #e7be36;
+    }
+    .item p {
+        font-size: 14px;
+        margin: 10px;
     }
 
-    .acontecimentos h2 {
-        font-size: 32px;
+    .evento {
+        padding: 40px;
+        max-width: 80%;
     }
-
     .evento img {
-        width: 45%;
-        margin-left: 10px;
+        width: 100%;
+        margin-left: 0;
+    }
+    .evento-text {
+        width: 100%;
+    }
+    .evento h3 {
+        font-size: 26px;
+        text-align: left;
+        color: #4b3f35;
+        margin-bottom: 15px;
+    }
+    .evento p {
+        font-size: 18px;
+        line-height: 1.6;
+        padding: 0;
+        margin: 8px 0;
+    }
+    .evento strong {
+        font-size: 18px;
+        color: #4b3f35;
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1200px) {
-    .container {
-        width: 95%;
-    }
-    
-    .menu ul {
-        gap: 18px;
-    }
-    
-    .intro h2 {
-        font-size: 46px;
+
+/* Acima de 1024px (desktops e telas grandes) */
+@media (min-width: 1025px) {
+    .acontecimentos {
+        padding: 80px;
     }
 
-    .intro p {
-        font-size: 18px;
+    .item img {
+        height: 300px;
     }
 
-    .evento img {
-        width: 50%;
-    }
-}
-
-@media (min-width: 1201px) {
-    .container {
-        max-width: 1200px;
-    }
-
-    .menu ul {
-        gap: 20px;
-    }
-
-    .intro h2 {
-        font-size: 48px;
-    }
-
-    .intro p {
-        font-size: 18px;
-    }
 
     .evento img {
         width: 40%;
+        margin-left: 20px;
+    }
+
+    .evento-text {
+        width: 55%;
+    }
+
+    .evento h3 {
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .evento p {
+        font-size: 16px;
     }
 }
