@@ -17,7 +17,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $stmt1->bind_param('sssss',$nome_cadastro_digitado,$sobrenome_cadastro_digitado,$tipo_cadastro_digitado,$email_cadastro_digitado,$senha_cadastro_digitado);
         $stmt1->execute();
         $result1 = $stmt1->get_result();
-        header('Location:index.php');
+        echo '<script>
+        alert("Usuário cadastrado com sucesso");
+        setTimeout(function(){
+            window.location.href = "index.php";
+        }, 1000);
+      </script>';
     }
 }
 

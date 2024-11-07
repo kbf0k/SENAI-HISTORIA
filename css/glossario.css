@@ -434,7 +434,7 @@ a {
 
 
 
-#vsfd #modal {
+#modalEditar #modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -447,7 +447,7 @@ a {
   background-color: rgba(0,0,0,0.4);
 }
 
-#vsfd .modal-content {
+#modalEditar .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
@@ -455,15 +455,15 @@ a {
   width: 80%;
 }
 
-#vsfd .fechar {
+#modalEditar .fechar {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-#vsfd .fechar:hover,
-#vsfd .fechar:focus {
+#modalEditar .fechar:hover,
+#modalEditar .fechar:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -715,3 +715,4 @@ a {
   font-size: 18px;
   color: #f9f4e1;;
 }
+

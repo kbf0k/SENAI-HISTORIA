@@ -249,7 +249,7 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
 <?php endif; ?>
 
 <!-- Modal de Edição -->
- <div id="vsfd">
+ <div id="modalEditar">
 <div id="modal" style="display: none;">
     <div class="modal-content">
         <span class="fechar">&times;</span>

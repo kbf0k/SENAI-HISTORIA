@@ -173,6 +173,7 @@ a {
 .intro .container {
     position: relative;
     z-index: 1;
+    margin-top: -120px;
 }
 
 .intro .container h2 {
@@ -607,6 +608,13 @@ a {
 /* RESPONSIVIDADE GERAL */
 
 @media (max-width: 768px) {
+    
+    .intro .container {
+        position: relative;
+        z-index: 1;
+        margin-top: 0 !important;
+    }
+
     .container {
         width: 100%;
         padding: 0 20px;
