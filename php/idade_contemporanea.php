@@ -13,7 +13,7 @@ if(!isset($_SESSION['nome_sessao'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/idade_contemporanea.css">
-    <script src="../javascript/idade_contemporanea" defer></script>
+    <script src="../javascript/idade_contemporanea.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <title>Idade Contemporânea</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,6 @@ if(!isset($_SESSION['nome_sessao'])){
         <div class="container logo-menu">
             <div class="logo">
             <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
-
             </div>
             <nav class="menu">
                 <ul>
@@ -68,10 +67,10 @@ if(!isset($_SESSION['nome_sessao'])){
                 <p>A Idade Contemporânea iniciou em 1789 com a Revolução Francesa, marcada por mudanças políticas, econômicas e sociais. A Revolução Industrial transformou a produção e urbanização, 
                     enquanto ideais de liberdade e democracia se disseminavam. As Guerras Mundiais foram conflitos que redefiniram fronteiras e estabeleceram novas potências, a Guerra Fria dividiu o 
                     mundo em dois blocos: socialismo e capitaliismo, e avanços tecnológicos e batalhas pelos direitos civis que persistem até hoje também foram alguns dos acontecimentos.</p>
-                    <a href="#acontecimentos" class="btn">Saiba mais</a>
-                </div>
-            </section>
-            <section id="acontecimentos" class="acontecimentos">
+                <a href="#acontecimentos" class="btn">Saiba mais</a>
+            </div>
+        </section>
+        <section id="acontecimentos" class="acontecimentos">
                 <div class="container">
                     <h2>Acontecimentos Marcantes da Idade Contemporânea</h2>
                     <div class="itens-grid">
@@ -169,35 +168,21 @@ if(!isset($_SESSION['nome_sessao'])){
         
     </main>
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section contact-info">
-                <h3>Contato</h3>
-                <p><strong>SESI Caçapava:</strong> (12) 1234-5678</p>
-                <img src="../img/logo-sesi.png" class="logo-footer" alt="">
-                <p><strong>SENAI Taubaté:</strong> (12) 8765-4321</p>
-                <img src="../img/logo-senai.png" class="logo-footer" alt="">
-            </div>
-            <div class="footer-section team">
-                <h3>Equipe Desenvolvedora</h3>
-                <h3>SOFTDEV</h3>
-                <ul>
-                    <li><a href="">Kaique Bernardes Ferreira</a></li>
-                    <li><a href="">João Gustavo Mota Ramos</a></li>
-                    <li><a href="">João Pedro da Cunha Machado</a></li>
-                    <li><a href="">Murilo Henrique Souza Silva</a></li>
-                    <li><a href="">Yago Roberto Gomes Moraes</a></li>
-                </ul>
-            </div>
-            <div class="footer-section links">
-                <h3>Links Úteis</h3>
-                <ul>
-                    <li><a href="termos_de_uso.php">Termos de Uso</a></li>
-                    <li><a href="politica_privacidade.php">Política de Privacidade</a></li>
-                    <li><a href="ajuda.php">Ajuda</a></li>
-                    <li><a href="faq.php">FAQ</a></li>
-                </ul>
-            </div>
-        </div>
+        <h3>Equipe Desenvolvedora SOFTDEV</h3>
+        <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a>
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">João Gustavo Mota Ramos</a>
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">João Pedro da Cunha Machado</a>
+        <a href="https://www.linkedin.com/in/murilo-silva-0377322b7/" target="_blank">Murilo Henrique Souza Silva</a>
+        <a href="https://www.linkedin.com/in/yago-moraes-6a09b3326/" target="_blank">Yago Roberto Gomes Moraes</a>
+
+        <h3 id="link">Links Úteis</h3>
+
+        <a href="termosDeUso.php">Termos de Uso</a></li>
+        <a href="politica_privacidade.php">Política de Privacidade</a></li>
+        <a href="ajuda.php">Ajuda</a></li>
+        <a href="faq.php">FAQ</a></li>
+
+
         <div class="footer-bottom">
             <p>&copy; 2024 História em Foco. Todos os direitos reservados.</p>
         </div>

@@ -88,32 +88,38 @@ if(!isset($_SESSION['nome_sessao'])){
                     <div class="periodo-card animated animated-cards">
                         <a href="pre_historia.php">
                             <h3>Pré História</h3>
-                            <p>Conheça os primeiros passos da humanidade, desde os hominídeos até o desenvolvimento da
+                            <p>Conheça os primeiros passos da humanidade, desde os hominídeos até o desenvolvimento da 
                                 agricultura.</p>
+                            <img src="../img/pintura-rupestre.webp" alt="Banner Pré História" class="banner-img">
                         </a>
                     </div>
                     <div class="periodo-card animated animated-cards">
                         <a href="idade_antiga.php">
                             <h3>Idade Antiga</h3>
-                            <p>Explore as civilizações antigas, como a Mesopotâmia, Egito e Grécia, e seus legados.</p>
+                            <p>Explore as civilizações antigas, como a Mesopotâmia, Egito e Grécia. Foi quando o ser humano 
+                                desenvolveu a primeira forma de escrita.</p>
+                            <img src="../img/piramide.webp" alt="" class="banner-img">
                         </a>
                     </div>
                     <div class="periodo-card animated animated-cards">
                         <a href="idade_media.php">
                             <h3>Idade Média</h3>
-                            <p>Descubra a era medieval, marcada pelo feudalismo e pela influência da Igreja.</p>
+                            <p>Descubra a era medieval, marcada pelo feudalismo e pela influência da Igreja. Ela é divida em dois períodos: a Alta e a Baixa Idade Média.</p>
+                            <img src="../img/idade-media.jpg" alt="" class="banner-img">
                         </a>
                     </div>
                     <div class="periodo-card animated animated-cards">
                         <a href="idade_moderna.php">
                             <h3>Idade Moderna</h3>
-                            <p>Analise os avanços nas ciências, a Revolução Industrial e as grandes descobertas.</p>
+                            <p>Analise os avanços nas ciências, a Revolução Industrial e as grandes descobertas. Caracterizou-se por uma fase de grandes transformações.</p>
+                            <img src="../img/idade-moderna.jpeg" alt="" class="banner-img">
                         </a>
                     </div>
                     <div class="periodo-card animated animated-cards">
                         <a href="idade_contemporanea.php">
                             <h3>Idade Contemporânea</h3>
-                            <p>Entenda os desafios do mundo atual, incluindo guerras, globalização e tecnologia.</p>
+                            <p>Entenda os desafios do mundo atual, incluindo guerras, transformações, globalização e tecnologia.</p>
+                            <img src="../img/fabricas-idade-contemporane.jpg" alt="" class="banner-cont-img">
                         </a>
                     </div>
                 </div>
@@ -122,7 +128,7 @@ if(!isset($_SESSION['nome_sessao'])){
                 <div class="linha-horizontal"></div>
                 <div class="eventos">
 
-                    <div class="evento animated">
+                    <div class="evento">
                         <div class="corda"></div>
                         <div class="circulo"></div>
                         <div class="descricao">
@@ -130,7 +136,7 @@ if(!isset($_SESSION['nome_sessao'])){
                             <span class="data">2.500.000 a.C. - 4.000 a.C.</span>
                         </div>
                     </div>
-                    <div class="evento animated">
+                    <div class="evento animated animated-evento">
                         <div class="corda"></div>
                         <div class="circulo"></div>
                         <div class="descricao">
@@ -138,7 +144,7 @@ if(!isset($_SESSION['nome_sessao'])){
                             <span class="data">4.000 a.C. - 476 d.C.</span>
                         </div>
                     </div>
-                    <div class="evento animated">
+                    <div class="evento animated animated-evento">
                         <div class="corda"></div>
                         <div class="circulo"></div>
                         <div class="descricao">
@@ -146,7 +152,7 @@ if(!isset($_SESSION['nome_sessao'])){
                             <span class="data">476 d.C. - 1453</span>
                         </div>
                     </div>
-                    <div class="evento animated">
+                    <div class="evento animated animated-evento">
                         <div class="corda"></div>
                         <div class="circulo"></div>
                         <div class="descricao">
@@ -154,7 +160,7 @@ if(!isset($_SESSION['nome_sessao'])){
                             <span class="data">1453 - 1789</span>
                         </div>
                     </div>
-                    <div class="evento animated">
+                    <div class="evento animated animated-evento">
                         <div class="corda"></div>
                         <div class="circulo"></div>
                         <div class="descricao">
@@ -204,36 +210,22 @@ if(!isset($_SESSION['nome_sessao'])){
     </main>
             
 
-        <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section contact-info">
-                <h3>Contato</h3>
-                <p><strong>SESI Caçapava:</strong> (12) 1234-5678</p>
-                <img src="../img/logo-sesi.png" class="logo-footer" alt="">
-                <p><strong>SENAI Taubaté:</strong> (12) 8765-4321</p>
-                <img src="../img/logo-senai.png" class="logo-footer" alt="">
-            </div>
-            <div class="footer-section team">
-                <h3>Equipe Desenvolvedora</h3>
-                <h3>SOFTDEV</h3>
-                <ul>
-                    <li><a href="">Kaique Bernardes Ferreira</a></li>
-                    <li><a href="">João Gustavo Mota Ramos</a></li>
-                    <li><a href="">João Pedro da Cunha Machado</a></li>
-                    <li><a href="">Murilo Henrique Souza Silva</a></li>
-                    <li><a href="">Yago Roberto Gomes Moraes</a></li>
-                </ul>
-            </div>
-            <div class="footer-section links">
-                <h3>Links Úteis</h3>
-                <ul>
-                    <li><a href="termos_de_uso.php">Termos de Uso</a></li>
-                    <li><a href="politica_privacidade.php">Política de Privacidade</a></li>
-                    <li><a href="ajuda.php">Ajuda</a></li>
-                    <li><a href="faq.php">FAQ</a></li>
-                </ul>
-            </div>
-        </div>
+    <footer class="footer">
+        <h3>Equipe Desenvolvedora SOFTDEV</h3>
+        <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a>
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">João Gustavo Mota Ramos</a>
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">João Pedro da Cunha Machado</a>
+        <a href="https://www.linkedin.com/in/murilo-silva-0377322b7/" target="_blank">Murilo Henrique Souza Silva</a>
+        <a href="https://www.linkedin.com/in/yago-moraes-6a09b3326/" target="_blank">Yago Roberto Gomes Moraes</a>
+
+        <h3 id="link">Links Úteis</h3>
+
+        <a href="termosDeUso.php">Termos de Uso</a></li>
+        <a href="politica_privacidade.php">Política de Privacidade</a></li>
+        <a href="ajuda.php">Ajuda</a></li>
+        <a href="faq.php">FAQ</a></li>
+
+
         <div class="footer-bottom">
             <p>&copy; 2024 História em Foco. Todos os direitos reservados.</p>
         </div>
