@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -14,7 +17,10 @@ body {
 
 a {
     text-decoration: none;
-    color: black;
+}
+
+a p {
+    color: white;
 }
 
 .container {
@@ -39,6 +45,7 @@ a {
 .logo {
     display: flex;
     align-items: center;
+    margin-left: -70px;
 }
 
 .logo img {
@@ -54,15 +61,18 @@ a {
 }
 
 .logo h1 {
-    font-size: 28px;
     font-weight: bold;
 }
 
 /* Menu */
+.menu {
+    margin-right: -110px;
+}
+
 .menu ul {
     list-style: none;
-    gap: 20px;
     display: flex;
+    gap: 20px;
     align-items: center;
 }
 
@@ -78,11 +88,13 @@ a {
     padding: 10px;
     transition: color 0.3s;
 }
-.menu #logout{
-    cursor: pointer;
-}
+
 .menu ul li a:hover {
     color: #d4af37;
+}
+
+.menu #logout{
+    cursor: pointer;
 }
 
 /* Dropdown */
@@ -132,154 +144,447 @@ a {
     font-size: 12px;
 }
 
-
-/* Títulos */
-main h1 {
-    font-size: 69px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.intro {
+    background-color: #665d50;
+    color: white;
+    padding: 50px;
     text-align: center;
+    height: 600px;
 }
 
-main h2 {
-    font-size: 36px;
-    margin: 40px 0 20px;
-    text-align: center;
-    color: #4b3f35;
+.intro h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-/* Parágrafos */
-main p {
-    margin-bottom: 20px;
-    text-align: center;
-    line-height: 1.6;
+.intro p {
+    font-size: 18px;
+    margin-bottom: 30px;
     max-width: 800px;
-    margin: 0 auto;
-    font-size: 19px;
-}
-
-#text-all {
+    margin-left: auto;
+    margin-right: auto;
     text-align: justify;
-    font-size: 19px;
-    margin: 0 auto 50px;
 }
 
-/* Estilizando imagens */
-main img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    transition: filter 0.3s;
-    object-fit: cover;
-    border-radius: 50px;
-}
-
-/* Estilizando botões */
-button {
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-button:focus {
-    outline: none;
-}
-
-/* Estilos da lista dropdown */
-.dropdown-list {
-    font-family: 'Poppins', serif;
-    background-color: #e0d3b8;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: left;
+.intro .btn {
+    background-color: #d4af37;
+    color: #4b3f35;
+    padding: 15px 30px;
     font-size: 18px;
-    list-style-type: none;
-    padding: 0;
-    max-width: 800px;
-    margin: 0 auto;
-}
-.dropdown-list li {
-    margin-bottom: 10px;
-}
-
-.dropdown-btn {
-    background-color: #e0d3b8;
-    border: none;
-    border-radius: 8px;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    width: 100%;
-    text-align: left;
+    border-radius: 5px;
+    text-decoration: none;
     transition: background-color 0.3s;
 }
 
-.dropdown-btn:hover {
-    background-color: #d4af37;
+.intro .btn:hover {
+    background-color: #b08a2b;
 }
 
-.dropdown-content {
-    display: none;
-    background-color: #e0d3b8;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 5px;
-    font-size: 16px;
-}
+/* Segunda Section*/
 
-.dropdown-content img{
-    border-color: black;
-    border: 2px solid black;
-    box-shadow: #333;
-}
-.dropdown-list li.active .dropdown-content {
-    display: block;
-}
-
-#lista ul {
-    list-style-type: none;
-    padding: 0;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-#lista ul li {
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: left;
-    font-size: 18px;
-}
-
-
-/* footer */
-
-footer {
-    background-color: #4b3f35;
+.acontecimentos {
+    background-color: #7e7261;
+    padding: 80px;
     color: white;
-    padding: 20px 0;
     text-align: center;
 }
 
-.footer p {
+.acontecimentos h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #e7be36;
+}
+
+.itens-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.item {
+    background-color: #4b3f35;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+}
+
+.item h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #d4af37;
+}
+
+.item p {
+    font-size: 16px;
+    margin-top: 6px;
+    margin-bottom: 11px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#eventos {
+    background: linear-gradient(to bottom, #4b3f35, #8b5e3c); 
+    margin: 0;
+    padding: 50px 0;
+}
+ 
+
+.evento {
+    background-color: white;
+    padding: 40px;
+    margin: 100px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+}
+
+.evento-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.evento img {
+    width: 40%;
+    border-radius: 10px;
+    margin-left: 20px;
+    transition: .5s ease-in-out;
+}
+
+.evento img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+
+}
+
+.evento-text {
+    width: 55%;
+}
+
+.evento h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #4b3f35;
+    text-align: left;
+}
+
+.evento p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.evento strong{
+    color: #4b3f35;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+/* Informações no hover */
+.item .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.item:hover .info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.glossario .btn {
+    background-color: #d4af37;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.glossario .btn:hover {
+    background-color: #b08a2b;
+}
+.footer {
+    background-color: #4b3f35;
+    color: white;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section li {
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
-.footer-menu ul {
+.footer-section ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    padding: 0;
 }
 
-.footer-menu ul li a {
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.footer-menu ul li a:hover {
+.footer-section ul li a:hover {
     color: #d4af37;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.footer img {
+    width: 280px;
+    height: 90px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer-container {
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .footer-section h3 {
+        font-size: 16px;
+    }
+
+    .footer-section p,
+    .footer-section li {
+        font-size: 15px;
+    }
+
+    .footer-bottom {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .footer-container {
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .footer-section h3 {
+        font-size: 18px;
+    }
+
+    .footer-section p,
+    .footer-section li {
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        font-size: 18px;
+    }
+}
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 100px;
+        margin-left: 0;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .intro {
+        padding: 30px 20px;
+        height: auto;
+    }
+
+    .intro h2 {
+        font-size: 32px;
+    }
+
+    .intro p {
+        font-size: 14px;
+    }
+
+    .acontecimentos h2 {
+        font-size: 24px;
+    }
+
+    .item h3 {
+        font-size: 18px;
+    }
+
+    .evento img {
+        width: 100%;
+    }
+    
+    .evento h3 {
+        font-size: 24px;
+    }
+    
+    .footer img {
+        width: 200px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .intro h2 {
+        font-size: 36px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    .acontecimentos h2 {
+        font-size: 28px;
+    }
+
+    .itens-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .evento img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .footer img {
+        width: 240px;
+        height: 80px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu ul {
+        gap: 15px;
+    }
+    
+    .intro h2 {
+        font-size: 42px;
+    }
+
+    .intro p {
+        font-size: 17px;
+    }
+
+    .acontecimentos h2 {
+        font-size: 32px;
+    }
+
+    .evento img {
+        width: 45%;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .container {
+        width: 95%;
+    }
+    
+    .menu ul {
+        gap: 18px;
+    }
+    
+    .intro h2 {
+        font-size: 46px;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+
+    .evento img {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1201px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .menu ul {
+        gap: 20px;
+    }
+
+    .intro h2 {
+        font-size: 48px;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+
+    .evento img {
+        width: 40%;
+    }
 }

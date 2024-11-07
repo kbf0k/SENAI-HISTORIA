@@ -25,7 +25,7 @@ if(!isset($_SESSION['nome_sessao'])){
         <div class="container logo-menu">
             <div class="logo">
                 <a href="inicio.php"><img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo"></a>
-                <h1>História</h1>
+                <h1>Pré-História</h1>
             </div>
             <nav class="menu">
                 <ul>
@@ -63,131 +63,138 @@ if(!isset($_SESSION['nome_sessao'])){
     </header>
 
     <main>
-        <h1>Pré-História</h1>
-        <p>A Pré-História é um período que acompanha o surgimento e o desenvolvimento da humanidade antes que fosse criada a primeira forma de escrita, no quarto milênio a.C.</p>
+    <section class="intro">
+            <div class="container">
+                <h2>Pré-História</h2>
+                <p>A pré-história é o período da história humana que precede o surgimento da escrita e abrange desde o aparecimento dos primeiros hominídeos, cerca de 2,5 milhões de anos atrás, até o advento das primeiras civilizações. Esse período é dividido em três fases principais: a Idade da Pedra (Paleolítico, Mesolítico e Neolítico), a Idade dos Metais e o início das primeiras sociedades urbanas. Durante a pré-história, os seres humanos passaram por diversas transformações, como o desenvolvimento de ferramentas, a domesticação de animais, a invenção da agricultura e a criação das primeiras formas de arte e cultura.</p>
+                    <a href="#acontecimentos" class="btn">Saiba mais</a>
+                </div>
+    </section>
+    <section id="acontecimentos" class="acontecimentos">
+                <div class="container">
+                    <h2>Fatos Marcantes da Pré História</h2>
+                    <div class="itens-grid">
+                        <a>
+                            <div class="item">
+                            <img src="../img/pintura-rupestre.webp" alt="Pintura Rupestre" >                                
+                            <h3>Arte Rupestre</h3>
+                                <p>Pinturas e gravuras encontradas em cavernas e abrigos rochosos em todo o mundo fornecem informações sobre as crenças, rituais e modos de vida dos povos pré-históricos.</p>
+                            </div>
+                        </a>
+                        <a>
+                            <div class="item">
+                            <img src="../img/evolucaohumana.webp" alt="evolucaohumana" >
+                                <h3>Evolução Humana</h3>
+                                <p>A transição do Australopithecus para o Homo Sapiens trouxe grandes mudanças no comportamento humano, como a melhora do racíocinio,a linguagem e a fabricação de ferramentas.</p>
+                            </div>
+                        </a>
+                        <a>
+                            <div class="item">
+                            <img src="../img/ferramentas.jpg" alt="ferramentas" >                                <h3>Desenvolvimento de Ferramentas</h3>
+                                <p>Desde os primeiros instrumentos de pedra lascada no Paleolítico até as ferramentas polidas do Neolítico, a evolução tecnológica foi crucial para a sobrevivência e o progresso dos seres humanos.</p>
+                            </div>
+                        </a>
+                        <a href="#guerra-fria">
+                            <div class="item">
+                            <img src="../img/aldeias.jpg" alt="aldeias" >                                
+                            <h3>Primeiras Aldeias</h3>
+                                <p>Início da vida comunitária e da organização social mais complexa. A sedentarização levou ao desenvolvimento de estruturas sociais hierárquicas, ao trabalho e à construção de moradias permanentes.</p>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <div id="eventos">
+                <section id="rev-francesa" class="evento revolucao-francesa">
+                    <div class="evento-conteudo">
+                        <div class="evento-text">
+                            <h3>Paleolítico</h3>
+                            <p>O período Paleolítico, também conhecido como Idade da Pedra Lascada, se estende de aproximadamente 2,5 milhões de anos atrás até cerca de 10.000 a.C. Esse longo período marcou o desenvolvimento das primeiras ferramentas de pedra e o surgimento do fogo, que foram essenciais para a sobrevivência dos primeiros seres humanos. O Paleolítico se caracteriza pelo modo de vida baseado na caça, pesca e coleta de alimentos.</p>
+
+<p>As principais características do Paleolítico incluem:</p>
+
+<p><strong>Ferramentas Simples:</strong> Os primeiros hominídeos usavam pedras lascadas para fabricar instrumentos de caça e defesa, evoluindo lentamente suas habilidades manuais.</p>
+<p><strong>Domínio do Fogo:</strong> A capacidade de controlar o fogo foi um marco que trouxe aquecimento, proteção contra animais e a possibilidade de cozinhar alimentos, melhorando a dieta e a saúde.</p>
+<p><strong>Vida em Pequenos Grupos:</strong> As pessoas viviam em pequenos grupos nômades, deslocando-se em busca de alimentos e abrigos, o que ajudou no desenvolvimento das primeiras organizações sociais.</p>
+<p>Esse período da pré-história também é marcado pelo surgimento de expressões artísticas, como pinturas rupestres e esculturas primitivas, que refletem os pensamentos e crenças dos povos da época.</p>
+
+                        </div>
+                        <img src="../img/paleolitico.webp" alt="aldeias" >
+                        </div>
+                </section>
+                
+                <section id="rev-industrial" class="evento revolucao-industrial">
+                    <div class="evento-conteudo">
+                    <img src="../img/mesolitico.webp" alt="aldeias">
+                    <div class="evento-text">
+                            <h3>Mesolítico</h3>
+                            <p>O período Mesolítico, ou Idade da Pedra Média, ocorreu aproximadamente entre 10.000 a.C. e 8.000 a.C., após o Paleolítico e antes do Neolítico. Esse período marcou uma transição importante entre o modo de vida nômade dos caçadores-coletores e o início da sedentarização. Com o fim da última Era Glacial, novas técnicas de caça e pesca surgiram, adaptando-se às mudanças climáticas e ecológicas.</p>
+<p>As principais características do Mesolítico incluem:</p>
+<p><strong>Ferramentas Mais Complexas:</strong> Houve uma evolução nas ferramentas, com a produção de micrólitos — pequenas lâminas de pedra — que eram usadas para confeccionar utensílios mais precisos e leves, como arpões e anzóis.</p>
+<p><strong>Domesticação Inicial:</strong> Embora ainda fossem nômades, os grupos começaram a domesticar alguns animais menores e desenvolver técnicas rudimentares de plantio, preparando o caminho para a agricultura no Neolítico.</p>
+<p><strong>Estabelecimento de Aldeias Temporárias:</strong> O clima mais ameno permitiu a formação de aldeias temporárias próximas a rios e lagos, onde a pesca e a coleta de alimentos foram otimizadas.</p>
+<p>Essas inovações tecnológicas e sociais do Mesolítico estabeleceram as bases para as sociedades agrícolas e sedentárias do período Neolítico, promovendo a adaptação humana a um ambiente em transformação.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="guerras" class="evento grandes-guerras">
+                    <div class="evento-conteudo">
+                        <div class="evento-text">
+                            <h3>Paleolítico</h3>
+                            <p>O período Neolítico, ou Idade da Pedra Polida, ocorreu entre aproximadamente 8.000 a.C. e 3.000 a.C. Esse período marcou grandes transformações na vida humana, como a adoção da agricultura, a domesticação de animais e o surgimento das primeiras aldeias permanentes. A utilização da pedra polida para fabricar ferramentas mais duráveis foi uma inovação que contribuiu para o desenvolvimento dessas atividades.</p>
+
+<p>As principais características do Neolítico incluem:</p>
+<p><strong>Revolução Agrícola:</strong> O cultivo de plantas como trigo e cevada permitiu que os grupos humanos produzissem seu próprio alimento, garantindo maior segurança alimentar e independência da caça.</p>
+<p><strong>Domesticação de Animais:</strong> Animais como ovelhas, cabras e gado foram domesticados, proporcionando leite, carne e couro, além de auxiliarem no trabalho agrícola.</p>
+<p><strong>Ferramentas de Pedra Polida:</strong> A técnica de polir pedras tornou as ferramentas mais eficientes e duráveis, facilitando tarefas agrícolas, como o corte de árvores e a preparação do solo para o plantio.</p>
+<p><strong>Vilas Permanentes:</strong> Com a agricultura, surgiram as primeiras aldeias estáveis, como Çatalhöyük, na Turquia, onde as pessoas começaram a construir moradias e organizar comunidades complexas.</p>
+<p>O período Neolítico trouxe avanços tecnológicos, sociais e culturais que permitiram o surgimento das primeiras civilizações, estabelecendo as bases para a vida urbana e a organização das sociedades.</p>
+                        </div>
+                        <img src="../img/neleoloiticos.jpg" alt="aldeias" >                        
+                    </div>
+                </section>
+                
+              
+            </div>
         
-        <div>
-            <img src="../img/cacadores-pre-historicos.webp" alt="Mamute na Pré-História">
-            <p>A Pré-História é dividida entre os períodos Paleolítico, Mesolítico e Neolítico.</p>
-        </div>
+      
 
-        <p id="text-all">A Pré-História é como conhecemos o período que acompanha a evolução humana a partir do momento que os hominídeos começaram a usar ferramentas de pedra. Encerrou-se com o surgimento da escrita, que aconteceu entre 3.500 a.C. e 3.000 a.C. A Pré-História é, basicamente, dividida entre Paleolítico, Mesolítico (período intermediário) e Neolítico. Nesses períodos, acompanhamos o desenvolvimento dos hominídeos com a elaboração de novas ferramentas, além do surgimento do Homo sapiens sapiens, há cerca de 300 mil anos.</p>
-
-        <h2>Períodos da Pré-História</h2>
-        <div class="container">
-            <ul class="dropdown-list">
-                <li>
-                    <button class="dropdown-btn">Paleolítico</button>
-                    <div class="dropdown-content">
-                        <h2>O Período Paleolítico</h2>
-                        <p>O Paleolítico, também conhecido como Idade da Pedra Lascada, é o período mais longo da Pré-História, começando há cerca de 2,5 milhões de anos e terminando por volta de 10.000 a.C.</p>
-                        
-                        <h3>Principais Características:</h3>
-                        <h4>Ferramentas:</h4>
-                        <p>As primeiras ferramentas humanas eram feitas de pedra lascada, usadas principalmente para caça e corte.</p>
-
-                        <h4>Economia de Subsistência:</h4>
-                        <p>A sobrevivência dependia da caça, pesca e coleta de frutos silvestres. Os humanos eram nômades, movendo-se conforme a disponibilidade de recursos.</p>
-
-                        <h4>Organização Social:</h4>
-                        <p>As pessoas viviam em pequenos grupos familiares ou tribos. Não havia propriedade privada, e a partilha de recursos era comum.</p>
-
-                        <h4>Fogo:</h4>
-                        <p>Uma das maiores descobertas desse período foi o controle do fogo, o que trouxe grandes avanços na segurança, culinária e aquecimento.</p>
-                        <img src="../img/paleolitico.webp" alt="">
-                        <h3>Cultura e Arte:</h3>
-                        <h4>Arte Rupestre:</h4>
-                        <p>As primeiras manifestações artísticas surgiram durante o Paleolítico, com pinturas em cavernas retratando animais e cenas de caça.</p>
-
-                        <h4>Religião e Rituais:</h4>
-                        <p>Existem indícios de rituais funerários, sugerindo que os humanos paleolíticos tinham crenças espirituais relacionadas à vida e à morte.</p>
-                        
-                        <h3>Curiosidade:</h3>
-                        <h4>Domínio do Fogo:</h4>
-                        <p>Além de proteger contra predadores, o uso do fogo ajudou no desenvolvimento da linguagem, pois as pessoas se reuniam ao redor da fogueira para interagir e se comunicar.</p>
-                        
-                    </div>
-                </li>
-                
-                <li>
-                    <button class="dropdown-btn">Mesolítico</button>
-                    <div class="dropdown-content">
-                        <h2>O Período Mesolítico</h2>
-                        <p>O Mesolítico, ou Idade da Pedra Média, foi o período de transição entre o Paleolítico e o Neolítico, ocorrendo aproximadamente entre 10.000 a.C. e 6.000 a.C., dependendo da região.</p>
-                        
-                        <h3>Principais Características:</h3>
-                        <h4>Mudanças Climáticas:</h4>
-                        <p>O fim da última Era Glacial provocou alterações no ambiente, influenciando a fauna e a flora, e demandando adaptações nos modos de vida humanos.</p>
-                        <img src="../img/mesolitico.webp" alt="">
-                        <h4>Ferramentas:</h4>
-                        <p>Ferramentas de pedra se tornaram mais refinadas, com a invenção do arco e flecha, além de anzóis de osso para a pesca.</p>
-
-                        <h4>Modo de Vida:</h4>
-                        <p>Embora ainda fossem caçadores-coletores, os humanos começaram a desenvolver assentamentos temporários, aproveitando a abundância de recursos naturais.</p>
-
-                        <h3>Transição para o Sedentarismo:</h3>
-                        <p>Este período marca o início de uma transição lenta para o sedentarismo, com o aumento da dependência da coleta e da domesticação de animais.</p>
-                    </div>
-                </li>
-
-                <li>
-                    <button class="dropdown-btn">Neolítico</button>
-                    <div class="dropdown-content">
-                        <h2>O Período Neolítico</h2>
-                        <p>O Neolítico, ou Idade da Pedra Polida, é o período que marca uma mudança radical na história da humanidade, ocorrendo entre 6.000 a.C. e 3.000 a.C., aproximadamente, dependendo da região.</p>
-                        
-                        <h3>Principais Características:</h3>
-                        <h4>Ferramentas de Pedra Polida:</h4>
-                        <p>Durante o Neolítico, as ferramentas de pedra se tornaram mais sofisticadas, com superfícies mais lisas e afiadas, sendo utilizadas em atividades agrícolas e de construção.</p>
-                
-                        <h4>Revolução Agrícola:</h4>
-                        <p>Uma das maiores mudanças desse período foi o desenvolvimento da agricultura e a domesticação de animais. Isso permitiu que os humanos abandonassem o nomadismo e se estabelecessem em comunidades sedentárias.</p>
-                        
-                        <h4>Sociedade:</h4>
-                        <p>Com a fixação em locais permanentes, as aldeias começaram a surgir, formando as primeiras comunidades organizadas. A divisão de trabalho se tornou mais complexa, e o conceito de propriedade privada emergiu.</p>
-                        <img src="../img/neleoloiticos.jpg" alt="">
-                        <h3>Avanços Tecnológicos e Culturais:</h3>
-                        <h4>Cerâmica:</h4>
-                        <p>Durante o Neolítico, a fabricação de cerâmica se desenvolveu, permitindo o armazenamento de alimentos e água de forma mais eficiente.</p>
-                        
-                        <h4>Arquitetura:</h4>
-                        <p>Os humanos neolíticos começaram a construir casas permanentes de madeira, barro e pedra, além de estruturas comunitárias, como celeiros e muralhas de proteção.</p>
-                        
-                        <h4>Religião e Cultura:</h4>
-                        <p>Surgiram práticas religiosas e rituais mais elaborados, com o desenvolvimento de monumentos como dólmens e menires, indicando uma conexão espiritual com a terra e a natureza.</p>
-                        
-                        <h3>Curiosidade:</h3>
-                        <h4>Stonehenge:</h4>
-                        <p>O monumento de Stonehenge, na Inglaterra, é um exemplo icônico de construção do período Neolítico, utilizado possivelmente para rituais religiosos e astronômicos.</p>
-                    </div>
-                </li>                
-            </ul>
-        </div>
-
-        <h2>Ferramentas de Pedra</h2>
-        <div id="lista">
-            <ul>
-                <li>Pedra forte: Utilizada para quebrar materiais, com técnicas de mineração rudimentares.</li>
-                <li>Pedra rica em minerais: Pedra contendo grande volume de minerais, usada em diferentes ferramentas.</li>
-                <li>Pedra sólida: Pedra resistente usada para cortar e perfurar.</li>
-                <li>Pedra de cimento: Pedra firme e durável, utilizada em construções primitivas.</li>
-            </ul>
-        </div>
 
     </main>
-
-    <footer>
-        <div class="container">
-            <p>© 2024 SESI CAÇAPAVA e SENAI TAUBATÉ</p>
-            <p>Desenvolvido por: SOFTDEV</p>
-            <nav class="footer-menu">
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h3>Contato</h3>
+                <p><strong>SESI Caçapava:</strong> (12) 1234-5678</p>
+                <img src="../img/logo-sesi.png" class="logo-footer" alt="">
+                <p><strong>SENAI Taubaté:</strong> (12) 8765-4321</p>
+                <img src="../img/logo-senai.png" class="logo-footer" alt="">
+            </div>
+            <div class="footer-section team">
+                <h3>Equipe Desenvolvedora</h3>
+                <h3>SOFTDEV</h3>
                 <ul>
-                    <li><a href="#">Termos de Uso</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
-                    <li><a href="#">Ajuda</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="">Kaique Bernardes Ferreira</a></li>
+                    <li><a href="">João Gustavo Mota Ramos</a></li>
+                    <li><a href="">João Pedro da Cunha Machado</a></li>
+                    <li><a href="">Murilo Henrique Souza Silva</a></li>
+                    <li><a href="">Yago Roberto Gomes Moraes</a></li>
                 </ul>
-            </nav>
+            </div>
+            <div class="footer-section links">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="termos_de_uso.php">Termos de Uso</a></li>
+                    <li><a href="politica_privacidade.php">Política de Privacidade</a></li>
+                    <li><a href="ajuda.php">Ajuda</a></li>
+                    <li><a href="faq.php">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 História em Foco. Todos os direitos reservados.</p>
         </div>
     </footer>
 </body>
