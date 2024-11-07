@@ -84,6 +84,24 @@ a {
 .menu #logout:hover {
     color: #d4af37;
 }
+.menu #logout {
+    cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    margin-top: 9px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4b3f35;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    border-radius: 5px;
+    width: 210px;
+    z-index: 3;
+}
+
 .dropdown-menu a {
     color: #333;
     padding: 10px;
@@ -102,15 +120,6 @@ a {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
-
-
-.user-vector{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .user-vector #logo-vector{
     max-width: 50px;
 }
