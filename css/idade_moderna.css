@@ -136,11 +136,9 @@ a {
     font-size: 12px;
 }
 
-
 /* Carrossel transformado em lista */
 #caracteristicas {
-
-    color: white; /* Texto em branco */
+    color: white;
     padding: 40px 0;
     text-align: center;
 }
@@ -148,7 +146,7 @@ a {
 #titulo-caracteristicas {
     font-size: 2.5em;
     margin-bottom: 30px;
-    color: #ecf0f1; /* Cor clara para o título */
+    color: #ecf0f1;
     text-transform: uppercase;
 }
 
@@ -166,7 +164,7 @@ a {
 .item-caracteristica {
     display: flex;
     flex-direction: column;
-    background-color: #34495e; /* Cor do fundo das seções */
+    background-color: #34495e;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -185,24 +183,15 @@ a {
 .item-caracteristica p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: white
+    color: white;
 }
 
 .item-caracteristica .detalhes {
-    text-align: center; /* Texto centralizado no item */
+    text-align: center;
     padding: 10px;
 }
 
-/* Estilo para as imagens, caso necessárias */
-.lista-item img {
-    max-width: 150px;  /* Ajusta o tamanho máximo da imagem */
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-
-/* Linha do Tempo */
+/* Timeline */
 .timeline {
     padding: 20px 0;
 }
@@ -217,104 +206,156 @@ a {
 }
 
 /* Footer */
-footer {
+.footer {
     background-color: #4b3f35;
     color: white;
-    padding: 15px 0;
-    text-align: center;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
 }
 
-footer nav ul {
+.footer-container {
     display: flex;
-    gap: 15px;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-footer nav ul li a {
+.footer-section {
+    flex: 1 1 200px;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
     color: #d4af37;
-    font-size: 14px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.footer img {
+    width: 280px;
+    height: 90px;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
     .logo-menu {
         flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 
     .menu ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
 
-    .intro-section, .features-section, .notable-events {
-        padding: 10px;
+    .container, .footer-container {
+        width: 100%;
     }
 
     .timeline {
-        margin: 0 10px;
+        padding: 10px;
     }
 
-    .event {
-        width: 100%;
+    .item-caracteristica {
+        max-width: 90%;
     }
 
-    .dropdown-menu {
-        width: 100%;
+    .footer-bottom {
+        font-size: 16px;
     }
 }
 
-@media (max-width: 480px) {
+/* Dispositivos Pequenos (Smartphones) */
+@media (max-width: 768px) {
+    /* Header adjustments */
     .logo img {
-        max-width: 80px;
-    }
-
-    .logo h1 {
-        font-size: 18px;
+        max-width: 70px;
     }
 
     .menu ul {
-        gap: 8px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* Características section adjustments */
+    #titulo-caracteristicas {
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    .item-caracteristica {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    /* Footer adjustments */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footer-section {
+        margin-bottom: 15px;
+    }
+
+    .footer img {
+        max-width: 220px;
+    }
+
+    .footer-bottom {
+        font-size: 15px;
+    }
+}
+
+/* Dispositivos Extra Pequenos (Celulares Pequenos) */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.2em;
+        text-align: center;
     }
 
     .user-vector #logo-vector {
         max-width: 30px;
     }
 
-    .intro-section {
-        height: 200px;
-    }
-
-    footer nav ul {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .carrossel {
-        gap: 10px;
-    }
-    
-    .item {
-        min-width: 250px;
-    }
-}
-/* Responsividade */
-@media (max-width: 768px) {
-    .item-caracteristica {
-        padding: 20px 10px;
-    }
-
-    .item-caracteristica h1 {
+    #titulo-caracteristicas {
         font-size: 1.5em;
-    }
-
-    .item-caracteristica p {
-        font-size: 1.1em;
-    }
-}
-
-@media (max-width: 480px) {
-    .item-caracteristica {
-        padding: 15px;
+        text-align: center;
     }
 
     .item-caracteristica h1 {
@@ -323,5 +364,23 @@ footer nav ul li a {
 
     .item-caracteristica p {
         font-size: 1em;
+    }
+
+    .footer img {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .footer-bottom {
+        font-size: 14px;
+    }
+    
+    /* Timeline adjustments */
+    .timeline ul li {
+        padding: 10px;
+    }
+
+    .timeline .img-direita, .timeline .img-esquerda {
+        width: 100%;
     }
 }
