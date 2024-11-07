@@ -177,8 +177,7 @@ a p {
     background-color: #b08a2b;
 }
 
-/* Segunda Section*/
-
+/* Configurações gerais */
 .acontecimentos {
     background-color: #7e7261;
     padding: 80px;
@@ -190,8 +189,10 @@ a p {
     font-size: 36px;
     margin-bottom: 50px;
     color: #e7be36;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
 }
 
+/* Grid de itens */
 .itens-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -218,10 +219,7 @@ a p {
 
 .item p {
     font-size: 16px;
-    margin-top: 6px;
-    margin-bottom: 11px;
-    margin-left: 12px;
-    margin-right: 12px;
+    margin: 10px 12px;
 }
 
 .item:hover {
@@ -229,13 +227,14 @@ a p {
     cursor: pointer;
 }
 
+/* Configuração de fundo para eventos */
 #eventos {
     background: linear-gradient(to bottom, #4b3f35, #8b5e3c); 
     margin: 0;
     padding: 50px 0;
 }
- 
 
+/* Estilo de cada evento */
 .evento {
     background-color: white;
     padding: 40px;
@@ -263,7 +262,6 @@ a p {
     transform: scale(1.05);
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-
 }
 
 .evento-text {
@@ -284,71 +282,289 @@ a p {
     margin-top: 10px;
 }
 
-.evento strong{
+.evento strong {
     color: #4b3f35;
     font-size: 20px;
     margin-top: 10px;
 }
 
-
-/* Informações no hover */
-.item .info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    transform: translateY(100%);
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    opacity: 0;
-}
-
-.item:hover .info {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.glossario .btn {
-    background-color: #d4af37;
-    color: white;
-    padding: 12px 25px;
-    font-size: 18px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.glossario .btn:hover {
-    background-color: #b08a2b;
-}
-
-footer {
+/* Footer */
+.footer {
     background-color: #4b3f35;
     color: white;
-    padding: 20px 0;
-    text-align: center;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
 }
 
-.footer p {
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section li {
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
-.footer-menu ul {
+.footer-section ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    padding: 0;
 }
 
-.footer-menu ul li a {
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.footer-menu ul li a:hover {
+.footer-section ul li a:hover {
     color: #d4af37;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.footer img {
+    width: 280px;
+    height: 90px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer-container {
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .footer-section h3 {
+        font-size: 16px;
+    }
+
+    .footer-section p,
+    .footer-section li {
+        font-size: 15px;
+    }
+
+    .footer-bottom {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .footer-container {
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .footer-section h3 {
+        font-size: 18px;
+    }
+
+    .footer-section p,
+    .footer-section li {
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        font-size: 18px;
+    }
+}
+
+/* RESPONSIVIDADE GERAL */
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .logo-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 120px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .intro {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .intro h2 {
+        font-size: 28px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+    .acontecimentos {
+        padding: 40px;
+    }
+
+    .itens-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item {
+        margin: 10px 0;
+    }
+
+    .item img {
+        height: 200px;
+    }
+
+    .evento-conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .evento img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .evento-text {
+        width: 100%;
+    }
+
+    .evento h3 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .evento p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .acontecimentos {
+        padding: 60px 30px;
+    }
+
+    .itens-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    .item {
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .item img {
+        height: 220px;
+        border-radius: 8px;
+    }
+    .item h3 {
+        font-size: 22px;
+        margin-top: 15px;
+        color: #e7be36;
+    }
+    .item p {
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    .evento {
+        padding: 40px;
+        max-width: 80%;
+    }
+    .evento img {
+        width: 100%;
+        margin-left: 0;
+    }
+    .evento-text {
+        width: 100%;
+    }
+    .evento h3 {
+        font-size: 26px;
+        text-align: left;
+        color: #4b3f35;
+        margin-bottom: 15px;
+    }
+    .evento p {
+        font-size: 18px;
+        line-height: 1.6;
+        padding: 0;
+        margin: 8px 0;
+    }
+    .evento strong {
+        font-size: 18px;
+        color: #4b3f35;
+    }
+}
+
+
+/* Acima de 1024px (desktops e telas grandes) */
+@media (min-width: 1025px) {
+    .acontecimentos {
+        padding: 80px;
+    }
+
+    .item img {
+        height: 300px;
+    }
+
+
+    .evento img {
+        width: 40%;
+        margin-left: 20px;
+    }
+
+    .evento-text {
+        width: 55%;
+    }
+
+    .evento h3 {
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .evento p {
+        font-size: 16px;
+    }
 }
