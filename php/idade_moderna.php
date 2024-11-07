@@ -76,40 +76,34 @@ if (!isset($_SESSION['nome_sessao'])) {
             </div>
         </section>
 
-        <section id="caracteristicas">
-        <h1 id="titulo-caracteristicas">PRINCIPAIS CARACTERÍSTICAS</h1>
-            <div class="carrossel-container">
-                <div class="carrossel">
-                    <div class="item">
-                        <img src="../img/descobrimento.webp" alt="">
-                        <div class="conteudo">
-                            <h1>Descobrimentos Marítimos</h1>
-                            <p>Durante os séculos XV e XVI, Portugal e Espanha lideraram grandes expedições marítimas, explorando novos continentes e rotas comerciais. Esse período foi marcado pela colonização de terras recém-descobertas e pelo intercâmbio de culturas e produtos entre Europa, África, Américas e Ásia. As grandes navegações expandiram o conhecimento geográfico e iniciaram uma era de globalização comercial.</p>
-                        </div>
+                <section id="caracteristicas">
+            <h1 id="titulo-caracteristicas">PRINCIPAIS CARACTERÍSTICAS</h1>
+            <div class="lista-caracteristicas">
+                <div class="item-caracteristica">
+                    <div class="detalhes">
+                        <h1>Descobrimentos Marítimos</h1>
+                        <p>Durante os séculos XV e XVI, Portugal e Espanha lideraram grandes expedições marítimas, explorando novos continentes e rotas comerciais. Esse período foi marcado pela colonização de terras recém-descobertas e pelo intercâmbio de culturas e produtos entre Europa, África, Américas e Ásia. As grandes navegações expandiram o conhecimento geográfico e iniciaram uma era de globalização comercial.</p>
                     </div>
-                    <div class="item">
-                        <img src="../img/absolutismo.webp" alt="">
-                        <div class="conteudo">
-                            <h1>Absolutismo</h1>
-                            <p>O Absolutismo foi o sistema político e administrativo dos países europeus nos séculos XVI ao XVIII.
-                                Nele, o soberano centralizava todos os poderes do Estado em suas mãos, sem prestar contas à sociedade.
-                                A fim de controlar as revoltas camponesas, parte da nobreza apoia que o rei seja mais poderoso. Igualmente, o monarca recebe auxílio da burguesia, pois a centralização significava a padronização das políticas fiscais e monetárias.
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../img/inquisição.png" alt="">
-                        <div class="conteudo">
-                            <h1>Iniquisição</h1>
-                            <p>A Inquisição foi uma instituição criada pela Igreja Católica na Idade Média com o objetivo de combater heresias e preservar a ortodoxia da fé cristã. Ela foi estabelecida oficialmente em 1231 pelo Papa Gregório IX, mas suas origens datam do século XII, quando começaram a surgir movimentos considerados heréticos pela Igreja, como os cátaros e os valdenses. A Inquisição se tornou famosa pelo uso de julgamentos, interrogatórios e punições para identificar e punir os chamados "hereges" — pessoas que defendiam ideias contrárias às doutrinas oficiais da Igreja. </p>
-                        </div>
+
+                </div>
+
+                <div class="item-caracteristica">
+                    <div class="detalhes">
+                        <h1>Absolutismo</h1>
+                        <p>O Absolutismo foi o sistema político e administrativo dos países europeus nos séculos XVI ao XVIII. Nele, o soberano centralizava todos os poderes do Estado em suas mãos, sem prestar contas à sociedade. A fim de controlar as revoltas camponesas, parte da nobreza apoia que o rei seja mais poderoso. Igualmente, o monarca recebe auxílio da burguesia, pois a centralização significava a padronização das políticas fiscais e monetárias.</p>
                     </div>
                 </div>
-                <div class="controladores">
-                    <button class="setas" onclick="move(-1)" id="prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-                    <button class="setas" onclick="move(1)" id="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+
+                <div class="item-caracteristica">
+                    <div class="detalhes">
+                        <h1>Iniquisição</h1>
+                        <p>A Inquisição foi uma instituição criada pela Igreja Católica na Idade Média com o objetivo de combater heresias e preservar a ortodoxia da fé cristã. Ela foi estabelecida oficialmente em 1231 pelo Papa Gregório IX, mas suas origens datam do século XII, quando começaram a surgir movimentos considerados heréticos pela Igreja, como os cátaros e os valdenses. A Inquisição se tornou famosa pelo uso de julgamentos, interrogatórios e punições para identificar e punir os chamados "hereges" — pessoas que defendiam ideias contrárias às doutrinas oficiais da Igreja.</p>
+                    </div>
                 </div>
             </div>
             <a href="#linhaTempo"><button id="saiba-mais">Saiba Mais</button></a>
+        </section>
+
         </section>
         <section id="linhaTempo">
             <div class="titulo-linhaTempo">

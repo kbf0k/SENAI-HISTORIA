@@ -80,9 +80,11 @@ a {
     padding: 10px;
     transition: color 0.3s;
 }
+
 .menu #logout{
     cursor: pointer;
 }
+
 .menu ul li a:hover {
     color: #d4af37;
 }
@@ -134,17 +136,16 @@ a {
     font-size: 12px;
 }
 
-
 #img-central {
     width: 650px;
     height: 500px;
     float: right;
     margin: 30px;
+    margin-top: 150px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     padding: 30px;
 }
-
 
 .conteudo {
     padding: 50px;
@@ -152,6 +153,13 @@ a {
 
 .hidden {
     display: none;
+}
+
+.civilizations-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .civilization-content h2 {
@@ -181,7 +189,7 @@ a {
 }
 
 .civilization-content img {
-    width: 600px;
+    width: 500px;
     height: 450px;
     border-radius: 8px;
     margin: 20px;
@@ -190,9 +198,10 @@ a {
 
 .civilization-btn {
     display: flex;
+    width: 600px;
+    margin-left: 50px;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
     background: #6b5645;
     color: #fff;
     border-radius: 5px;
@@ -201,6 +210,7 @@ a {
     font-size: 20px;
     font-weight: bold;
     position: relative;
+    margin-bottom: 10px;
 }
 
 .civilization-btn:hover {
@@ -219,14 +229,20 @@ a {
 }
 
 .civilization-content {
-    padding: 50px;
-    margin: 50px 100px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    width: 600px;
+    margin-left: 50px;
+    align-items: center;
+    justify-content: space-between;
+    background: #eee;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
 }
-
-
 
 footer {
     background-color: #4b3f35;
@@ -254,4 +270,139 @@ footer {
 
 .footer-menu ul li a:hover {
     color: #d4af37;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    #img-central {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .container {
+        width: 85%;
+        display: flex;
+        justify-content: center;  /* Centraliza o conteúdo */
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .menu ul {
+        gap: 15px;
+    }
+
+    .civilization-btn {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    .civilization-content {
+        width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .logo-menu {
+        flex-direction: column;
+        align-items: center;  /* Centraliza logo e menu */
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;  /* Alinha o menu centralizado */
+    }
+
+    .menu ul li {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;  /* Centraliza o conteúdo dos itens do menu */
+    }
+
+    .civilization-btn {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .civilization-content {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #img-central {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .conteudo {
+        padding: 20px;
+    }
+
+    footer .footer-menu ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    #img-central {
+        width: 100%;
+        height: auto;
+        margin: 15px 0;
+    }
+
+    .civilization-btn {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 18px;
+    }
+
+    .civilization-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .menu ul li a {
+        font-size: 12px;
+    }
+
+    .civilization-btn {
+        font-size: 16px;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .civilization-content {
+        font-size: 16px;
+        width: 100%;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    footer .footer-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
