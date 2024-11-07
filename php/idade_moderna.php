@@ -28,7 +28,7 @@ if (!isset($_SESSION['nome_sessao'])) {
             <div class="container logo-menu">
                 <div class="logo">
                     <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
-                    <h1>Idade Moderna</h1>
+                    
                 </div>
                 <nav class="menu">
                     <ul class="nav-list">

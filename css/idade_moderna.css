@@ -682,7 +682,7 @@ body {
 }
 
 /* Media Query para telas menores que 480px */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     html {
         font-size: 10px;
     }
