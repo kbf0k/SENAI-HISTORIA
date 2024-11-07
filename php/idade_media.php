@@ -29,7 +29,6 @@ if (!isset($_SESSION['nome_sessao'])) {
         <div class="container logo-menu">
             <div class="logo">
                 <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
-                <h1>Idade Média</h1>
             </div>
             <nav class="menu">
                 <ul class="nav-list">
@@ -290,18 +289,38 @@ if (!isset($_SESSION['nome_sessao'])) {
             </div>
         </section>
     </main>
-    <footer>
-        <div class="container">
-            <p>© 2024 SESI CAÇAPAVA e SENAI TAUBATÉ</p>
-            <p>Desenvolvido por: SOFTDEV</p>
-            <nav class="footer-menu">
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h3>Contato</h3>
+                <p><strong>SESI Caçapava:</strong> (12) 1234-5678</p>
+                <img src="../img/logo-sesi.png" class="logo-footer" alt="">
+                <p><strong>SENAI Taubaté:</strong> (12) 8765-4321</p>
+                <img src="../img/logo-senai.png" class="logo-footer" alt="">
+            </div>
+            <div class="footer-section team">
+                <h3>Equipe Desenvolvedora</h3>
+                <h3>SOFTDEV</h3>
                 <ul>
-                    <li><a href="#">Termos de Uso</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
-                    <li><a href="#">Ajuda</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a></li>
+                    <li><a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">João Gustavo Mota Ramos</a></li>
+                    <li><a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">João Pedro da Cunha Machado</a></li>
+                    <li><a href="https://www.linkedin.com/in/murilo-silva-0377322b7/" target="_blank">Murilo Henrique Souza Silva</a></li>
+                    <li><a href="https://www.linkedin.com/in/yago-moraes-6a09b3326/" target="_blank">Yago Roberto Gomes Moraes</a></li>
                 </ul>
-            </nav>
+            </div>
+            <div class="footer-section links">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="termosDeUso.php">Termos de Uso</a></li>
+                    <li><a href="politica_privacidade.php">Política de Privacidade</a></li>
+                    <li><a href="ajuda.php">Ajuda</a></li>
+                    <li><a href="faq.php">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 História em Foco. Todos os direitos reservados.</p>
         </div>
     </footer>
 </body>

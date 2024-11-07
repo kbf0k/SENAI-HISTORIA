@@ -40,7 +40,7 @@ body {
 }
 
 .logo img {
-    max-width: 150px;
+    max-width: 180px;
     margin: 0 auto;
     cursor: pointer;
     transition: .3s;
@@ -646,30 +646,245 @@ body {
 }
 
 
-footer {
+.footer {
     background-color: #4b3f35;
     color: white;
-    padding: 20px 0;
-    text-align: center;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
 }
 
-.footer p {
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section li {
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
-.footer-menu ul {
+.footer-section ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    padding: 0;
 }
 
-.footer-menu ul li a {
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.footer-menu ul li a:hover {
+.footer-section ul li a:hover {
     color: #d4af37;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.footer img {
+    width: 280px;
+    height: 90px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer-container {
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .footer-section h3 {
+        font-size: 16px;
+    }
+
+    .footer-section p,
+    .footer-section li {
+        font-size: 15px;
+    }
+
+    .footer-bottom {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .footer-container {
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .footer-section h3 {
+        font-size: 18px;
+    }
+
+    .footer-section p,
+    .footer-section li {
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        font-size: 18px;
+    }
+}
+
+/* RESPONSIVIDADE GERAL */
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .logo-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 120px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .intro {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .intro h2 {
+        font-size: 28px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    .periodos .cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .periodo-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .linha-do-tempo .eventos {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .linha-horizontal {
+        display: none;
+    }
+
+    .evento {
+        width: 350px!important;
+        height: 170px;
+        padding: 20px;
+    }
+
+    .atividades-conteudo {
+        flex-direction: column;
+    }
+
+    .atividade {
+        max-width: 100%;
+    }
+
+    .glossario {
+        padding: 40px 20px;
+    }
+
+    .glossario h2 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .intro {
+        height: auto;
+        padding: 80px 20px;
+    }
+    .intro h2 {
+        font-size: 32px;
+    }
+    .intro p {
+        font-size: 18px;
+    }
+
+    .periodos .cards {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .periodo-card {
+        width: 500px;
+    }
+    .periodo-card h3 {
+        font-size: 1em;
+    }
+    .periodo-card p {
+        font-size: 13px;
+    }
+
+    .linha-do-tempo .eventos {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .evento {
+        width: 350px!important;
+        height: 170px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
 }
