@@ -23,24 +23,44 @@ document.getElementById('logout').addEventListener('click', () => {
     });
 });
 
-//carrossel 
 let currentIndex = 0;
 
-function scrollCarousel(direction) {
-    const carousel = document.querySelector('.carousel');
-    const totalEvents = document.querySelectorAll('.event').length;
+const items = document.querySelectorAll('.carrossel .item');
+const totalItems = items.length;
 
-    // Atualiza o índice atual baseado na direção do scroll
+function move(direction) {
+    // Atualiza o índice atual com base na direção
     currentIndex += direction;
 
-    // Restringe o índice para o número total de eventos
+    // Garante que o índice fique dentro do intervalo dos itens
     if (currentIndex < 0) {
-        currentIndex = totalEvents - 1; // Vai para o último evento
-    } else if (currentIndex >= totalEvents) {
-        currentIndex = 0; // Volta para o primeiro evento
+        currentIndex = totalItems - 1; // Vai para o último item se estiver no primeiro
+    } else if (currentIndex >= totalItems) {
+        currentIndex = 0; // Vai para o primeiro item se estiver no último
     }
 
-    // Move o carrossel para o evento atual
-    const offset = -currentIndex * 100; // 100% de largura do evento
-    carousel.style.transform = `translateX(${offset}%)`;
+    // Move o carrossel para o item correto
+    const newTransformValue = -100 * currentIndex + '%'; // Desloca o carrossel para o índice atual
+    document.querySelector('.carrossel').style.transform = `translateX(${newTransformValue})`;
 }
+
+const video = document.getElementById('meuVideo');
+
+        // Define o tempo inicial do vídeo (em segundos) que você quer que comece
+        const tempoInicial = 80; // Início aos 30 segundos
+        const tempoFinal = 110; // Finaliza aos 60 segundos
+
+        video.currentTime = tempoInicial; // Começa no tempo inicial
+
+        // Quando o vídeo atingir o tempo final, ele vai parar ou voltar para o início
+        video.addEventListener('timeupdate', function () {
+            if (video.currentTime >= tempoFinal) {
+                video.currentTime = tempoInicial; // Reseta para o tempo inicial
+            }
+        });
+
+        function toggleMenu() {
+            const navList = document.querySelector('.menu .nav-list');
+            navList.classList.toggle('active');  // Alterna a visibilidade do menu
+        }
+        
