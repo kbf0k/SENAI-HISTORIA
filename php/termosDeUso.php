@@ -70,13 +70,6 @@ if (!isset($_SESSION['nome_sessao'])) {
 
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-section contact-info">
-                <h3>Contato</h3>
-                <p><strong>SESI Caçapava:</strong> (12) 1234-5678</p>
-                <img src="../img/logo-sesi.png" class="logo-footer" alt="">
-                <p><strong>SENAI Taubaté:</strong> (12) 8765-4321</p>
-                <img src="../img/logo-senai.png" class="logo-footer" alt="">
-            </div>
             <div class="footer-section team">
                 <h3>Equipe Desenvolvedora</h3>
                 <h3>SOFTDEV</h3>
