@@ -28,7 +28,7 @@ if (!isset($_SESSION['nome_sessao'])) {
     <header class="header">
         <div class="container logo-menu">
             <div class="logo">
-                <a href="inicio.php"><img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo"></a>
+                <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
                 <h1>Idade Média</h1>
             </div>
             <nav class="menu">
@@ -132,7 +132,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                         <img src="../img/cruzadas.png" alt="">
                         <div class="conteudo">
                             <h1>Cruzadas</h1>
-                            <p>As Cruzadas foram expedições militares promovidas pela Igreja Católica entre os séculos XI e XIII, com o objetivo inicial de reconquistar Jerusalém e a Terra Santa, que estavam sob domínio muçulmano. No entanto, as motivações das Cruzadas iam além da religiosidade e incluíam interesses políticos, econômicos e sociais. As Cruzadas envolveram principalmente a Europa Ocidental e o Oriente Médio e tiveram grandes repercussões na sociedade medieval. A principal motivação das Cruzadas era recuperar lugares sagrados para o cristianismo, como Jerusalém, que era considerada o centro espiritual para os cristãos.</p>
+                            <p>As Cruzadas foram expedições militares promovidas pela Igreja Católica entre os séculos XI e XIII, com o objetivo inicial de reconquistar Jerusalém e a Terra Santa, que estavam sob domínio muçulmano. No entanto, as motivações das Cruzadas iam além da religiosidade e incluíam interesses políticos, econômicos e sociais. As Cruzadas envolveram principalmente a Europa Ocidental e o Oriente Médio e tiveram grandes repercussões na sociedade medieval. A principal motivação das Cruzadas era recuperar lugares sagrados para o cristianismo.</p>
                         </div>
                     </div>
                     <div class="item">
