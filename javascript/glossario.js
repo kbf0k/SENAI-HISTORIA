@@ -498,6 +498,7 @@ function carregarGlossario(letra) {
       if (xhr.status === 200) {
           document.getElementById('page-content').innerHTML = xhr.responseText;
           adicionarEventosEditar(); // Adiciona eventos para os botões de edição
+          document.getElementById("result-pesq").style.display = "none";
       } else {
           console.error('Erro ao carregar o glossário');
       }

@@ -254,9 +254,23 @@ a {
     padding: 20px;
     border: 1px solid #ddd;
     width: 80%;
-    text-align: center;
+    text-align: justify;
     border-radius: 5px;
     background-color: #f9f9f9;
+  }
+
+  #result-pesq {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 80%;
+    text-align: justify;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  .item_adm {
+    display: flex;
   }
 
   .page-1 {  } /* Amarelo */
@@ -326,7 +340,7 @@ a {
 
 /* Estilo para o botão de abrir o modal */
 .botao-inserir {
-  background-color: #4b3f35;
+  background-color: #d4af37;
   color: white;
   padding: 10px 20px;
   font-weight: bold;
@@ -338,7 +352,7 @@ a {
 }
 
 .botao-inserir:hover {
-  background-color: #665d50;
+  background-color: #b3962b;
 }
 
 /* Estilos para o modal */
@@ -470,19 +484,27 @@ a {
 }
 
 .editar {
-  background-color: #d4af37;
   padding: 2px;
-  border-radius: 3px;
-  color: black;
+  border: none;
+  background-color: #f9f9f9;
   cursor: pointer;
 }
 
+.editar img {
+  height: 20px;
+  width: 20px;
+}
+
 .excluir {
-  background-color: #f91f1f;
+  background-color: #f9f9f9;
   padding: 2px;
-  border-radius: 3px;
-  color: black;
+  border: none;
   cursor: pointer;
+}
+
+.excluir img {
+  height: 20px;
+  width: 20px;
 }
 
 /* Responsividade para dispositivos móveis */
@@ -706,5 +728,22 @@ a {
   margin-top: 20px;
   font-size: 18px;
   color: #f9f4e1;;
+}
+
+
+#voltar-glossario {
+  background-color: #d4af37;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+#voltar-glossario:hover {
+  background-color: #b3962b;
 }
 

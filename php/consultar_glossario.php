@@ -14,14 +14,16 @@ $result = $conexao->query($sql);
 
 if ($result->num_rows > 0) {
     while ($linha = $result->fetch_assoc()) {
-        echo "<p class='conceitos'><b>" . $linha['titulo_glossario'] . ":</b> " . $linha['descricao_glossario'] . "</p>";
         if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
-            echo "<button class='botao-extra editar' data-id='" . $linha['id_glossario'] . "'>Editar</button>";
+            echo "<div class='item_adm'>";
+            echo "<button class='botao-extra editar' data-id='" . $linha['id_glossario'] . "'><img src='../img/lapis_icon.png' alt='Editar'></button>";
             // Formulário de exclusão
             echo "<a href='excluir.php?id_glossario=" . $linha['id_glossario'] . "'>
-                <button class='botao-extra excluir'>Excluir</button>
+                <button class='botao-extra excluir'><img src='../img/lixeira_icon.png' alt='Excluir'></button>
                 </a>";
         }
+        echo "<p class='conceitos'><b>" . $linha['titulo_glossario'] . ":</b> " . $linha['descricao_glossario'] . "</p>";
+        echo "</div>";
     }
 } else {
     echo "<p>Nenhum termo encontrado para a letra $letra.</p>";

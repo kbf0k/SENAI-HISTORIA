@@ -81,6 +81,17 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
 
     <h1 id="tt-gloss">Glossário Historico</h1>
 
+    <div class="search-bar">
+    <form action="" method="post">
+        <input type="text" name="termo" id="barra-pesquisa" placeholder="Que termo você procura?">
+        <button type="submit">
+            <img id="botao-pesquisa" src="../img/lupa_glossario.png" alt="Buscar">
+        </button>
+    </form>
+  </div>
+
+  <p class="search-hint">O uso de acentos e caracteres especiais não interfere no resultado de busca.</p>
+
   <div class="alphabet-container">
     <!-- Alfabeto de A a Z -->
     <a class="botaoABC" id="botaoA" href="#" onclick="carregarGlossario('A')">A</a>
@@ -110,6 +121,65 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
     <a class="botaoABC" id="botaoY" href="#" onclick="carregarGlossario('Y')">Y</a>
     <a class="botaoABC" id="botaoZ" href="#" onclick="carregarGlossario('Z')">Z</a>
   </div>
+
+  <div id="result-pesq">
+
+  <?php
+  $pesquisa = '';
+
+  if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['termo'])) {
+      $pesquisa = $_POST['termo'];
+  }
+  ?>
+
+  <script>
+// JavaScript para esconder o conteúdo do #page-content
+    document.addEventListener("DOMContentLoaded", function() {
+    <?php if (!empty($pesquisa)) { ?>
+        document.getElementById('page-content').style.display = 'none';
+    <?php } ?>
+});
+</script>
+
+    <?php
+    if(!empty($pesquisa)) {
+        $sql_pesquisa = "SELECT glossario.titulo_glossario, glossario.descricao_glossario, glossario.id_glossario FROM glossario WHERE glossario.titulo_glossario LIKE ?";
+
+        $busca = "%".$pesquisa."%";
+        $stmt = $conexao->prepare($sql_pesquisa);
+        $stmt->bind_param('s', $busca);
+        $stmt->execute();
+        $resultado_pesquisa = $stmt->get_result();
+
+        if($resultado_pesquisa->num_rows > 0) {
+            while ($linha_pesq = $resultado_pesquisa->fetch_assoc()) {
+                if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
+                    echo "<div class='item_adm'>";
+                    echo "<button class='botao-extra editar' data-id='" . $linha_pesq['id_glossario'] . "'><img src='../img/lapis_icon.png' alt='Editar'></button>";
+                    echo "<a href='excluir.php?id_glossario=" . $linha_pesq['id_glossario'] . "'>
+                        <button class='botao-extra excluir'><img src='../img/lixeira_icon.png' alt='Excluir'></button>
+                        </a>";
+                }
+                echo "<p class='conceitos'><b>" . $linha_pesq['titulo_glossario'] . ":</b> " . $linha_pesq['descricao_glossario'] . "</p>";
+                echo "</div>";
+            }
+        } else {
+            echo "<h4><b>Nenhum conceito encontrado com o termo: </b>". '"' .$pesquisa. '"'  . "</h4>";
+        }
+        $stmt->close();
+    }
+    ?>
+
+  </div>
+
+  <?php
+
+    if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
+        // Exibe o botão apenas para administradores
+        echo '<button id="voltar-glossario" class="">Sair de Pesquisa por Nome</button>';
+    }
+
+  ?>
 
   <div class="page-content" id="page-content">
     <?php
