@@ -41,8 +41,8 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
     <header class="header">
         <div class="container logo-menu">
             <div class="logo">
-                <a href="inicio.php"><img src="../img/LOGO-HISTORIA-INICIO-SEM-FUNDO.png" alt="Logo"></a>
-                <h1>Glossário</h1>
+            <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
+
             </div>
             <nav class="menu">
                 <ul>
@@ -70,7 +70,7 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
                             <?=$_SESSION['tipo_sessao'] ?>
                         </p>
                     </div>
-                    <li><a href="index.php" id="logout">SAIR</a></li>
+                    <li><a id="logout">SAIR</a></li>
                     <?php else: ?>
                     <li><a href="index.php">LOGIN</a></li>
                     <?php endif; ?>
@@ -79,16 +79,7 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
         </div>
     </header>
 
-  <div class="search-bar">
-    <form action="" method="post">
-        <input type="text" name="termo" id="barra-pesquisa" placeholder="Que termo você procura?">
-    </form>
-    <button type="submit">
-      <img id="botao-pesquisa" src="../img/lupa_glossario.png" alt="Buscar">
-    </button>
-  </div>
-
-  <p class="search-hint">O uso de acentos e caracteres especiais não interfere no resultado de busca.</p>
+    <h1 id="tt-gloss">Glossário Historico</h1>
 
   <div class="alphabet-container">
     <!-- Alfabeto de A a Z -->
@@ -125,6 +116,35 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
     $sql = "SELECT id_glossario, titulo_glossario, descricao_glossario FROM glossario ORDER BY titulo_glossario ASC LIMIT 5";
     $result = $conexao->query($sql);
 
+    // $pesquisa = '';
+
+    //         if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['termo'])) {
+    //             $pesquisa = $_POST['termo'];
+    //         }
+
+    //         if(!empty($pesquisa)) {
+    //             $sql_pesquisa = "SELECT glossario.titulo_glossario FROM glosario WHERE glossario.titulo_glossario LIKE ?";
+
+    //             $busca = "%".$pesquisa."%";
+    //             $stmt = $conexao->prepare($sql_pesquisa);
+    //             $stmt->bind_param('s', $busca);
+    //             $stmt->execute();
+    //             $resultado_pesquisa = $stmt->get_result();
+
+    //             if($resultado_pesquisa->num_rows > 0) {
+    //                 while ($linha_pesq = $resultado_pesquisa->fetch_assoc()) {
+    //                     echo "<h4>" . $linha_pesq['titulo_glossario'] . "</h4>";
+    //                     echo "<p>" . $linha_pesq['descricao_glossario'] . "</p>";
+    //                 }
+    //             } else {
+    //                 echo "<h4>Nenhum conceito encontrado com o termo: ". '"' .$pesquisa. '"'  . "</h4>";
+    //             }
+    //             $stmt->close();
+
+    //         }
+
+
+
     // if ($result->num_rows > 0) {
     //     // Exibe os conceitos
     //     while($row = $result->fetch_assoc()) {
@@ -153,6 +173,43 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
     // }
     
     ?>
+  </div>
+
+  <!-- <div>
+    <?php
+        // $pesquisa = '';
+
+        // if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['termo'])) {
+        //     $pesquisa = $_POST['termo'];
+        // }
+
+    ?>
+
+    
+
+    <?php
+
+        // if(!empty($pesquisa)) {
+        //     $sql_pesquisa = "SELECT glossario.titulo_glossario, glossario.descricao_glossario FROM glossario WHERE glossario.titulo_glossario LIKE ?";
+
+        //     $busca = "%".$pesquisa."%";
+        //     $stmt = $conexao->prepare($sql_pesquisa);
+        //     $stmt->bind_param('s', $busca);
+        //     $stmt->execute();
+        //     $resultado_pesquisa = $stmt->get_result();
+
+        //     if($resultado_pesquisa->num_rows > 0) {
+        //         while ($linha_pesq = $resultado_pesquisa->fetch_assoc()) {
+        //             echo "<h4>" . $linha_pesq['titulo_glossario'] . "</h4>";
+        //             echo "<p>" . $linha_pesq['descricao_glossario'] . "</p>";
+        //         }
+        //     } else {
+        //         echo "<h4>Nenhum conceito encontrado com o termo: ". '"' .$pesquisa. '"'  . "</h4>";
+        //     }
+        //     $stmt->close();
+
+        // }
+    ?> -->
   </div>
 <!-- 
   <div class="pagination" id="navPags">
@@ -213,6 +270,27 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
 
 
   <div id="navLetras"></div>
+
+  <footer class="footer">
+        <h3>Equipe Desenvolvedora SOFTDEV</h3>
+        <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a>
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">João Gustavo Mota Ramos</a>
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">João Pedro da Cunha Machado</a>
+        <a href="https://www.linkedin.com/in/murilo-silva-0377322b7/" target="_blank">Murilo Henrique Souza Silva</a>
+        <a href="https://www.linkedin.com/in/yago-moraes-6a09b3326/" target="_blank">Yago Roberto Gomes Moraes</a>
+
+        <h3 id="link">Links Úteis</h3>
+
+        <a href="termosDeUso.php">Termos de Uso</a></li>
+        <a href="politica_privacidade.php">Política de Privacidade</a></li>
+        <a href="ajuda.php">Ajuda</a></li>
+        <a href="faq.php">FAQ</a></li>
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 História em Foco. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

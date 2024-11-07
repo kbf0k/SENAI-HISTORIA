@@ -151,7 +151,7 @@ a {
     align-items: center;
     width: 50%;
     margin-bottom: 10px;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   .search-bar form {
@@ -193,6 +193,7 @@ a {
     justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
+    margin-top: 10px;
   }
 
   .alphabet-container a {
@@ -482,4 +483,235 @@ a {
   border-radius: 3px;
   color: black;
   cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 768px) {
+
+  /* Logo */
+  .logo img {
+      max-width: 120px; /* Diminui o tamanho do logo */
+  }
+
+  .logo h1 {
+      font-size: 20px; /* Reduz o tamanho da fonte */
+  }
+
+  /* Menu */
+  .menu ul {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .menu ul li {
+      margin-bottom: 10px;
+  }
+
+  .menu ul li a {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  /* Barra de pesquisa */
+  .search-bar {
+      width: 80%;
+      margin-top: 20px;
+  }
+
+  .search-bar input[type="text"] {
+      padding: 8px;
+      font-size: 14px;
+  }
+
+  .search-bar button img {
+      width: 30px;
+      height: 30px;
+  }
+
+  /* Alphabet container */
+  .alphabet-container {
+      width: 100%;
+      justify-content: center;
+  }
+
+  .alphabet-container a {
+      width: 25px;
+      height: 25px;
+      font-size: 14px;
+  }
+
+  /* Paginação */
+  .pagination {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .pagination a {
+      padding: 8px;
+      margin: 5px 0;
+  }
+
+  /* Modal */
+  .modal-content {
+      width: 90%;
+      padding: 15px;
+  }
+
+  .modal-content h2 {
+      font-size: 18px;
+  }
+
+  /* Botões */
+  .botao-inserir,
+  .botao-salvar {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+  }
+
+  .botao-inserir {
+      margin-top: 20px;
+  }
+}
+
+/* Responsividade para telas menores (smartphones) */
+@media screen and (max-width: 480px) {
+
+  /* Logo */
+  .logo img {
+      max-width: 100px; /* Diminui ainda mais o logo */
+  }
+
+  .logo h1 {
+      font-size: 18px;
+  }
+
+  /* Menu */
+  .menu ul li {
+      margin-bottom: 8px;
+  }
+
+  .menu ul li a {
+      font-size: 12px;
+      padding: 6px;
+  }
+
+  /* Barra de pesquisa */
+  .search-bar {
+      width: 90%;
+  }
+
+  .search-bar input[type="text"] {
+      padding: 6px;
+      font-size: 12px;
+  }
+
+  .search-bar button img {
+      width: 25px;
+      height: 25px;
+  }
+
+  /* Alphabet container */
+  .alphabet-container {
+      width: 100%;
+      justify-content: center;
+      margin-top: 10px;
+  }
+
+  .alphabet-container a {
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+  }
+
+  /* Paginação */
+  .pagination {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .pagination a {
+      padding: 6px;
+      margin: 3px 0;
+  }
+
+  /* Modal */
+  .modal-content {
+      width: 95%;
+  }
+
+  .modal-content h2 {
+      font-size: 16px;
+  }
+
+  /* Botões */
+  .botao-inserir,
+  .botao-salvar {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .logo-menu {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .menu ul {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+  }
+}
+
+
+#tt-gloss {
+  margin-top: 30px;
+}
+
+
+
+.footer {
+  background-color: #4b3f35;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.footer h3{
+  color: #f9f4e1;
+}
+
+.footer a{
+  color: white;
+  transition: .3s ease-in-out;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.footer #link{
+  margin-top: 10px;
+}
+.footer a:hover{
+  color: #d4af37;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #f9f4e1;;
 }

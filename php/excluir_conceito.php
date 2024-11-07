@@ -10,7 +10,7 @@ if (!isset($_SESSION['nome_sessao']) || $_SESSION['tipo_sessao'] !== 'Administra
 
 // Verifica se o ID do conceito foi passado
 if (isset($_POST['id_glossario'])) {
-    $id_glossario = $_POST['id_glossario'];
+    $id_glossario = intval($_POST['id_glossario']);
 
     // Prepara e executa a consulta para excluir o conceito
     $sql = "DELETE FROM glossario WHERE id_glossario = ?";

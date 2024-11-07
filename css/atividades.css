@@ -417,6 +417,7 @@ footer {
 .footer-menu ul li a:hover {
     color: #d4af37;
 }
+
 /* Tablet */
 @media (max-width: 768px) {
     .logo-menu {
