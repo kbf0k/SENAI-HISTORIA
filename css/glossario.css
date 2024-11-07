@@ -485,13 +485,6 @@ a {
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
 /* Responsividade para dispositivos móveis */
 @media screen and (max-width: 768px) {
 
@@ -686,7 +679,6 @@ a {
 .footer {
   background-color: #4b3f35;
   padding: 30px 20px;
-  font-family: Arial, sans-serif;
   text-align: center;
   width: 100%;
   margin-top: 50px;
