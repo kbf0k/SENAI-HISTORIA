@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Resets e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', serif;
+    background-color: #f9f4e1;
+    color: #3a3a3a;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Containers e layouts */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #4b3f35;
+    padding: 20px 0;
+    color: white;
+    position: static;
+}
+
+.logo-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a img {
+    max-width: 180px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.logo img:hover {
+    filter: drop-shadow(5px 5px 3.5px rgb(128, 115, 92));
+    transform: scale(1.05);
+}
+
+
+/* Menu */
+.menu ul {
+    list-style: none;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu ul li a:hover,
+.menu #logout:hover {
+    color: #d4af37;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    margin-top: 9px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4b3f35;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    border-radius: 5px;
+    width: 210px;
+    z-index: 3;
+}
+
+.dropdown-menu a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #665d50;
+    color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.user-vector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-vector #logo-vector{
+    max-width: 50px;
+}
+
+.user-vector p{
+    font-size: 12px;
+}
+#pagetitle {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 20px;
+}
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+article {
+    flex: 1 1 200px;
+    max-width: 460px;
+    border-radius: 16px;
+    background: rgb(247, 240, 224);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 105%;
+}
+
+article:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+article h2 {
+    font-size: 21px;
+    margin-bottom: 5px;
+    color: #28666e;
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+article p {
+    margin-bottom: 6px;
+    font-size: 15px;
+    margin-top: 5px;
+    flex-grow: 1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.read-more {
+    color: #28666e;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+}
+
+.read-more:hover {
+    color: #d4af37;
+}
+/* Estilo Geral da Seção */
+.conteudos-vestibulares {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgb(247, 240, 224);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    margin-left: 55px;
+    margin-top: 20px;
+  }
+  
+  /* Título Principal da Seção */
+  .conteudos-vestibulares h2 {
+    font-size: 28px;
+    color: #4b3f35;
+    text-align: center;
+    border-bottom: 2px solid #4b3f35;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Parágrafo Introdutório */
+  .conteudos-vestibulares p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Títulos das Sub-seções */
+  .periodos h3, .temas h3, .dicas-estudo h3 {
+    font-size: 22px;
+    color: #4b3f35;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    text-align: left; /* Alinhamento à esquerda */
+
+  }
+  
+  /* Listas dos Conteúdos */
+  .conteudos-vestibulares ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left; /* Alinhamento à esquerda */
+
+  }
+  
+  .conteudos-vestibulares li {
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 16px;
+    text-align: left; /* Alinhamento à esquerda */
+
+  }
+  
+  /* Destaque para os Itens de Lista */
+  .conteudos-vestibulares li strong {
+    color: #4b3f35;
+    text-align: left; /* Alinhamento à esquerda */
+
+  }
+  
+  /* Estilo para as Dicas de Estudo */
+  .dicas-estudo p {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: left; /* Alinhamento à esquerda */
+
+  }
+  
+  .dicas-estudo ul li {
+    padding: 10px;
+    border-left: 4px solid #4b3f35;
+    margin-bottom: 10px;
+    text-align: left; /* Alinhamento à esquerda */
+
+  }
+  
+footer {
+    background-color: #4b3f35;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-menu ul li a:hover {
+    color: #d4af37;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .logo-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .article-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .atividades_news {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .conteudo-atividades {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .atividades_pdf {
+        grid-template-columns: 1fr 1fr;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 120px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    article {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .atividades_news {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .img-legend {
+        width: 100%;
+    }
+
+    .atividades_pdf {
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.footer {
+    background-color: #4b3f35;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.footer h3{
+    color: #f9f4e1;
+}
+
+.footer a{
+    color: white;
+    transition: .3s ease-in-out;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.footer #link{
+    margin-top: 10px;
+}
+.footer a:hover{
+    color: #d4af37;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #f9f4e1;;
+}
