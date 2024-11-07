@@ -122,8 +122,7 @@ if(!isset($_SESSION['nome_sessao'])){
         </li>
     </ul>
 </div>
-
-        <section id="acontecimentos" class="acontecimentos">
+<section id="acontecimentos" class="acontecimentos">
   <div class="container">
     <h2>Fatos Marcantes da Idade Antiga</h2>
     <div class="itens-grid">
@@ -158,6 +157,7 @@ if(!isset($_SESSION['nome_sessao'])){
     </div>
   </div>
 </section>
+
 
     </main>
     <footer class="footer">

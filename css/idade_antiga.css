@@ -25,6 +25,9 @@ a {
     max-width: 1200px;
     margin: 0 auto;
 }
+.container h2 {
+    text-shadow: 3px 6px rgba(0, 0, 0, 0.5);
+}
 
 .header {
     background-color: #4b3f35;
