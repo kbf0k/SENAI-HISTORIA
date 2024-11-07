@@ -148,7 +148,7 @@ main {
 }
 
 #cadastrar label {
-    margin-top: 8px;
+    margin-top: 20px;
     color: #3b3832;
 }
 
@@ -175,7 +175,7 @@ main {
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    margin-top: 18px;
+    margin-top: 30px;
     background-color: rgb(128, 115, 92);
     color: white;
     transition: 0.3s;

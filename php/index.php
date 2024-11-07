@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <!-- Formulário de Cadastro -->
             <form action="" method="POST" id="cadastrar">
                 <button id="voltar">Voltar</button>
-                <h1>Cadastrar</h1>
+                <h1>Cadastrar Aluno</h1>
 
                 <label for="nome">Nome</label>
                 <input type="text" name="nome_cadastro" id="nome" required>
@@ -96,11 +96,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label for="sobrenome">Sobrenome</label>
                 <input type="text" name="sobrenome_cadastro" id="sobrenome" required>
 
-                <label for="tipo">Tipo</label>
-                <select name="tipo_cadastro" id="tipo">
-                    <option value="administrador">Administrador</option>
-                    <option value="aluno">Aluno</option>
-                </select>
 
                 <label for="email_cadastro">Email</label>
                 <input type="email" name="email_cadastro" id="email_cadastro" required placeholder="@email.com">
