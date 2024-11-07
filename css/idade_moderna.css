@@ -593,6 +593,7 @@ body {
     padding: 30px 20px;
     font-family: Arial, sans-serif;
     text-align: center;
+    text-decoration: none;
 }
 
 .footer h3{
@@ -604,6 +605,7 @@ body {
     transition: .3s ease-in-out;
     margin-left: 10px;
     margin-right: 10px;
+    text-decoration: none;
 }
 .footer #link{
     margin-top: 10px;
