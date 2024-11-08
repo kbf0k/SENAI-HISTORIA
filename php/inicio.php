@@ -69,16 +69,18 @@ if(!isset($_SESSION['nome_sessao'])){
         <a id="mobile-logo" href="inicio.php"><img src="../img/Logo Nova Site História.png" class="logo" alt=""></a>
         <div class="user-options">
             <div class="user-vector">
-                <?php if (isset($_SESSION['nome_sessao'])): ?>
-                    <img id="logo-vector" src="../img/user-vector.png" alt="Imagem do usuário">
-                    <div class="user-info">
-                        <p><?= $_SESSION['nome_sessao'] ?></p>
-                        <p><?= $_SESSION['tipo_sessao'] ?></p>
-                    </div>
-                <?php endif; ?>
+                <a href="perfil.php">
+                    <?php if (isset($_SESSION['nome_sessao'])): ?>
+                        <img id="logo-vector" src="../img/user-vector.png" alt="Imagem do usuário">
+                        <div class="user-info">
+                            <p><?= $_SESSION['nome_sessao'] ?></p>
+                            <p><?= $_SESSION['tipo_sessao'] ?></p>
+                        </div>
+                    <?php endif; ?>
+                </a>
             </div>
             <?php if (isset($_SESSION['nome_sessao'])): ?>
-                <a id="logout">SAIR</a>
+                <a id="logout-mobile">SAIR</a>
             <?php else: ?>
                 <a href="index.php">LOGIN</a>
             <?php endif; ?>
