@@ -305,11 +305,23 @@ a {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
+    
     #mobile-menu a:hover {
         background-color: rgba(255, 255, 255, 0.1);
         color: #ffb800;
     }
     
+    #mobile-menu #logout-mobile {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        background-color: rgba(255, 0, 0, 0.6) !important;
+        border-radius: 20px !important;
+        width: 30% !important;
+        padding: 5px !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-left: 135px !important;
+    }
     /* Animação suave ao abrir e fechar o menu */
     #nav {
         transition: transform 0.4s ease;
