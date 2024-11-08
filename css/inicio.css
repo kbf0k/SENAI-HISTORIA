@@ -17,7 +17,7 @@ body {
 
 a {
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
 
 /* Containers e layouts */
@@ -129,6 +129,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     flex-direction: column;
 }
 
@@ -166,9 +167,9 @@ a {
     }
 
     .user-vector {
-        display: flex; /* Flexbox para alinhar a imagem e o texto horizontalmente */
-    align-items: center; /* Alinha a imagem e o texto no centro verticalmente */
-    gap: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
     .user-vector a {
         display: flex;

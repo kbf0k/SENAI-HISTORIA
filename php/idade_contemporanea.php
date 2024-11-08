@@ -16,9 +16,6 @@ if(!isset($_SESSION['nome_sessao'])){
     <script src="../javascript/idade_contemporanea.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <title>Idade Contemporânea</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="header">
@@ -44,6 +41,7 @@ if(!isset($_SESSION['nome_sessao'])){
 
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
                     <div class="user-vector">
+                    <a href="perfil.php">
                         <img id="logo-vector" src="../img/user-vector.png" alt="">
                         <p>
                             <?= $_SESSION['nome_sessao'] ?>
@@ -51,6 +49,7 @@ if(!isset($_SESSION['nome_sessao'])){
                         <p>
                             <?=$_SESSION['tipo_sessao'] ?>
                         </p>
+                    </a>
                     </div>
                     <li><a id="logout">SAIR</a></li>
                     <?php else: ?>
@@ -60,6 +59,41 @@ if(!isset($_SESSION['nome_sessao'])){
             </nav>
         </div>
     </header>
+    <div id="mobile-header" >
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+        <a id="mobile-logo" href="inicio.php"><img src="../img/Logo Nova Site História.png" class="logo" alt=""></a>
+        <div class="user-options">
+            <div class="user-vector">
+                <a href="perfil.php">
+                    <?php if (isset($_SESSION['nome_sessao'])): ?>
+                        <img id="logo-vector" src="../img/user-vector.png" alt="Imagem do usuário">
+                        <div class="user-info">
+                            <p><?= $_SESSION['nome_sessao'] ?></p>
+                            <p><?= $_SESSION['tipo_sessao'] ?></p>
+                        </div>
+                    <?php endif; ?>
+                </a>
+        </div>
+        <?php if (isset($_SESSION['nome_sessao'])): ?>
+            <a id="logout-mobile">SAIR</a>
+        <?php else: ?>
+            <a href="index.php">LOGIN</a>
+        <?php endif; ?>
+    </div>
+    <nav id="nav">
+            <ul id="mobile-menu" role="mobile-menu">
+                <li><a href="pre_historia.php">Pré-História</a></li>
+                <li><a href="idade_antiga.php">Idade Antiga</a></li>
+                <li><a href="idade_media.php">Idade Média</a></li>
+                <li><a href="idade_moderna.php">Idade Moderna</a></li>
+                <li><a href="idade_contemporanea.php">Idade Contemporânea</a></li></li>
+                <li><a href="glossario.php">Glossário</a></li>
+                <li><a href="atividades.php">Atividades Complementares</a></li>
+            </ul>
+        </nav>
+    </div>
     <main>
         <section class="intro">
             <div class="container">

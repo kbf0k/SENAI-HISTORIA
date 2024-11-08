@@ -46,11 +46,6 @@ document.getElementById('logout-mobile').addEventListener('click', () => {
         }
     });
 });
-document.getElementById('btn-mobile').addEventListener('click', function() {
-    document.getElementById('nav').classList.toggle('active');
-    this.classList.toggle('open'); // Adiciona classe para o botão hambúrguer
-});
-
 
 // Função para observar os elementos e adicionar a classe 'is-visible' quando visíveis
 const observer = new IntersectionObserver((entries, observer) => {

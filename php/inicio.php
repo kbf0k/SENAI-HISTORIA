@@ -18,8 +18,6 @@ if(!isset($_SESSION['nome_sessao'])){
     <link rel="stylesheet" href="../css/inicio.css">
     <script src="../javascript/inicio.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-
-
 </head>
 
 <body>
@@ -45,14 +43,17 @@ if(!isset($_SESSION['nome_sessao'])){
                     <li><a href="atividades.php">Atividades Complementares</a></li>
 
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
+                    
                     <div class="user-vector">
-                        <img id="logo-vector" src="../img/user-vector.png" alt="">
-                        <p>
-                            <?= $_SESSION['nome_sessao'] ?>
-                        </p>
-                        <p>
-                            <?=$_SESSION['tipo_sessao'] ?>
-                        </p>
+                        <a href="perfil.php">
+                            <img id="logo-vector" src="../img/user-vector.png" alt="">
+                            <p>
+                                <?= $_SESSION['nome_sessao'] ?>
+                            </p>
+                            <p>
+                                <?=$_SESSION['tipo_sessao'] ?>
+                            </p>
+                        </a>
                     </div>
                     <li><a id="logout">SAIR</a></li>
                     <?php else: ?>
