@@ -14,14 +14,16 @@ if(!isset($_SESSION['nome_sessao'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pré-História</title>
+    <title>Início</title>
     <link rel="stylesheet" href="../css/pre_historia.css">
-    <script src="../javascript/pre_historia.js" defer></script>
+    <script src="../javascript/inicio.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
+
 </head>
 
 <body>
-<header class="header">
+    <header class="header">
         <div class="container logo-menu">
             <div class="logo">
                 <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
@@ -60,15 +62,54 @@ if(!isset($_SESSION['nome_sessao'])){
             </nav>
         </div>
     </header>
+    <div id="mobile-header" >
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+        <a id="mobile-logo" href="inicio.php"><img src="../img/Logo Nova Site História.png" class="logo" alt=""></a>
+        <div class="user-options">
+            <div class="user-vector">
+                <a href="perfil.php">
+                    <?php if (isset($_SESSION['nome_sessao'])): ?>
+                        <img id="logo-vector" src="../img/user-vector.png" alt="Imagem do usuário">
+                        <div class="user-info">
+                            <p><?= $_SESSION['nome_sessao'] ?></p>
+                            <p><?= $_SESSION['tipo_sessao'] ?></p>
+                        </div>
+                    <?php endif; ?>
+                </a>
+            </div>
+            <?php if (isset($_SESSION['nome_sessao'])): ?>
+                <a id="logout-mobile">SAIR</a>
+            <?php else: ?>
+                <a href="index.php">LOGIN</a>
+            <?php endif; ?>
+        </div>
+        <nav id="nav">
+            <ul id="mobile-menu" role="mobile-menu">
+                <li><a href="pre_historia.php">Pré-História</a></li>
+                <li><a href="idade_antiga.php">Idade Antiga</a></li>
+                <li><a href="idade_media.php">Idade Média</a></li>
+                <li><a href="idade_moderna.php">Idade Moderna</a></li>
+                <li><a href="idade_contemporanea.php">Idade Contemporânea</a></li></li>
+                <li><a href="glossario.php">Glossário</a></li>
+                <li><a href="atividades.php">Atividades Complementares</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
 
     <main>
-    <section class="intro">
-            <div class="container">
-                <h2>Pré-História</h2>
-                <p>A pré-história é o período da história humana que precede o surgimento da escrita e abrange desde o aparecimento dos primeiros hominídeos, cerca de 2,5 milhões de anos atrás, até o advento das primeiras civilizações. Esse período é dividido em três fases principais: a Idade da Pedra (Paleolítico, Mesolítico e Neolítico), a Idade dos Metais e o início das primeiras sociedades urbanas. Durante a pré-história, os seres humanos passaram por diversas transformações, como o desenvolvimento de ferramentas, a domesticação de animais, a invenção da agricultura e a criação das primeiras formas de arte e cultura.</p>
-                    <a href="#acontecimentos" class="btn">Saiba mais</a>
-                </div>
-    </section>
+    <section id="introducao">
+            <div class="video">
+                <video src="../video/pre_historia.mp4" autoplay loop muted></video>
+            </div>
+            <div class="titulo">
+                <h1>PRÉ-HISTÓRIA</h1>
+                <p>A pré-história é o período da história humana que precede o surgimento da Escrita</p>
+                <a href="#acontecimentos"><button id="saiba-mais">Saiba Mais</button></a>
+            </div>
+        </section>
     <section id="acontecimentos" class="acontecimentos">
                 <div class="container">
                     <h2>Fatos Marcantes da Pré História</h2>

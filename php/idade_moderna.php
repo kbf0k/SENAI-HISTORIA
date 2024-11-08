@@ -63,7 +63,7 @@ if (!isset($_SESSION['nome_sessao'])) {
         <main>
             <section id="introducao">
                 <div class="video">
-                    <video id="meuVideo" src="../video/videoIdadeMedia.mp4" autoplay loop muted></video>
+                    <video id="meuVideo" src="../video/idade_moderna.mp4" autoplay loop muted></video>
                 </div>
                 <div class="titulo">
                     <h1>IDADE MODERNA</h1>
@@ -77,14 +77,14 @@ if (!isset($_SESSION['nome_sessao'])) {
                 <div class="carrossel-container">
                     <div class="carrossel">
                         <div class="item">
-                            <img src="../img/feudalismo.png" alt="">
+                            <img src="../img/renascimento.jfif" alt="">
                             <div class="conteudo">
                                 <h1>Renascimento</h1>
                                 <p>Movimento cultural e artístico que ressurgiu na Europa, caracterizado pelo retorno aos valores clássicos da Antiguidade e pela valorização do conhecimento, da ciência e da arte.</p>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../img/cruzadas.png" alt="">
+                            <img src="../img/reformapt.jfif" alt="">
                             <div class="conteudo">
                                 <h1>Reformas Religiosas</h1>
                                 <p>Movimentos como a Reforma Protestante desafiaram a autoridade da Igreja Católica e levaram a mudanças significativas nas práticas e crenças religiosas da Europa.</p>

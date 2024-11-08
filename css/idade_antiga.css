@@ -14,6 +14,10 @@ body {
     line-height: 1.6;
 }
 
+main {
+    background-color: #7e7261;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -136,21 +140,108 @@ a {
     font-size: 12px;
 }
 
+
+#introducao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85vh;
+    background-color: black;
+    position: relative;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.4) blur(5px);
+}
+
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    text-align: center;
+}
+
+.titulo h1 {
+    color: white;
+    font-size: 85px;
+    transition: .3s ease-in-out;
+}
+
+.titulo h1:hover {
+    letter-spacing: 5px;
+    text-shadow: 0 0 60px white;
+}
+
+.titulo p {
+    color: white;
+    font-size: 25px;
+    transition: .3s ease-in-out;
+}
+
+.titulo p:hover {
+    text-shadow: 0 0 10px white;
+}
+
+.titulo #saiba-mais {
+    margin-top: 40px;
+    font-size: 20px;
+    padding: 20px 50px;
+    border-radius: 30px;
+    background-color: #665d50;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.titulo #saiba-mais:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #948171;
+}
+
 #img-central {
     width: 650px;
     height: 500px;
     float: right;
     margin: 30px;
-    margin-top: 150px;
+    margin-top: 200px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     padding: 30px;
 }
 
 .conteudo {
-    padding: 50px;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    background-color: #6b5645;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
 }
 
+.conteudo:hover {
+    transform: scale(1.01);
+    box-shadow: #6b5645;
+    color: #f9f4e1;
+}
 .hidden {
     display: none;
 }
@@ -198,7 +289,7 @@ a {
 
 .civilization-btn {
     display: flex;
-    width: 600px;
+    width: 650px;
     margin-left: 50px;
     align-items: center;
     justify-content: space-between;
@@ -210,7 +301,7 @@ a {
     font-size: 20px;
     font-weight: bold;
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .civilization-btn:hover {
@@ -244,7 +335,7 @@ a {
     position: relative;
 }
 .acontecimentos {
-    background-color: #7e7261;
+    background-color: white;
     padding: 80px;
     color: white;
     text-align: center;
@@ -298,6 +389,7 @@ a {
 .footer {
     background-color: #4b3f35;
     padding: 30px 20px;
+    font-family: Arial, sans-serif;
     text-align: center;
 }
 
@@ -612,4 +704,7 @@ a {
         font-size: 15px;
     }
 }
+
+
+
 
