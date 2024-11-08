@@ -81,7 +81,9 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
 
     <h1 id="tt-gloss">Glossário Historico</h1>
 
-    <div class="search-bar">
+    <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+
+    <!-- <div class="search-bar">
     <form action="" method="post">
         <input type="text" name="termo" id="barra-pesquisa" placeholder="Que termo você procura?">
         <button type="submit">
@@ -90,7 +92,9 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
     </form>
   </div>
 
-  <p class="search-hint">O uso de acentos e caracteres especiais não interfere no resultado de busca.</p>
+  <p class="search-hint">O uso de acentos e caracteres especiais não interfere no resultado de busca.</p> -->
+
+  <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
 
   <div class="alphabet-container">
     <!-- Alfabeto de A a Z -->
@@ -172,14 +176,18 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
 
   </div>
 
+  <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+
   <?php
 
-    if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
-        // Exibe o botão apenas para administradores
-        echo '<button id="voltar-glossario" class="">Sair de Pesquisa por Nome</button>';
-    }
+    // if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
+    //     // Exibe o botão apenas para administradores
+    //     echo '<button id="voltar-glossario" class="">Sair de Pesquisa por Nome</button>';
+    // }
 
   ?>
+
+  <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
 
   <div class="page-content" id="page-content">
     <?php

@@ -15,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 120vh;                          /*tirar depois provavelmente*/
 }
 
 a {
@@ -703,7 +704,7 @@ a {
   padding: 30px 20px;
   text-align: center;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 320px;
 }
 
 .footer h3{
@@ -747,3 +748,63 @@ a {
   background-color: #b3962b;
 }
 
+
+
+
+
+
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+  }
+
+  .footer-section {
+      text-align: center;
+  }
+
+  .footer-bottom {
+      font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer-container {
+      justify-content: space-around;
+      gap: 20px;
+  }
+
+  .footer-section h3 {
+      font-size: 16px;
+  }
+
+  .footer-section p,
+  .footer-section li {
+      font-size: 15px;
+  }
+
+  .footer-bottom {
+      font-size: 16px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .footer-container {
+      justify-content: space-between;
+      gap: 40px;
+  }
+
+  .footer-section h3 {
+      font-size: 18px;
+  }
+
+  .footer-section p,
+  .footer-section li {
+      font-size: 16px;
+  }
+
+  .footer-bottom {
+      font-size: 18px;
+  }
+}
