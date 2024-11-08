@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08/11/2024 às 02:54
+-- Tempo de geração: 08/11/2024 às 03:36
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -140,7 +140,8 @@ INSERT INTO `glossario` (`id_glossario`, `titulo_glossario`, `descricao_glossari
 (90, 'Roma Antiga', 'Civilização que surgiu na Península Itálica e se expandiu de uma cidade para um vasto império. Fundada no século VIII a.C., passou de reino a república e, depois, a império, influenciando profundamente a cultura, política, direito e arquitetura ocidentais. Sua queda em 476 d.C. marcou o fim da Antiguidade Clássica.'),
 (91, 'União Europeia', 'Bloco econômico e político formado por países europeus com o objetivo de promover a integração econômica, social e política, facilitando o comércio e a circulação de pessoas entre os países membros.'),
 (92, 'União Soviética', 'Estado socialista criado em 1922 que reunia várias repúblicas sob um governo centralizado, liderado pelo Partido Comunista. Foi uma das superpotências mundiais durante a Guerra Fria, existindo até sua dissolução em 1991.'),
-(94, 'Guerra Civil', 'Conflito interno em que facções de um mesmo país ou nação lutam pelo controle do governo, mudanças políticas ou independência. Pode ocorrer por motivos ideológicos, étnicos, regionais ou econômicos.');
+(94, 'Guerra Civil', 'Conflito interno em que facções de um mesmo país ou nação lutam pelo controle do governo, mudanças políticas ou independência. Pode ocorrer por motivos ideológicos, étnicos, regionais ou econômicos.'),
+(122, 'Aristocracia', 'Sistema de governo ou classe social composta por indivíduos que pertencem a famílias nobres ou de alta posição social, com privilégios hereditários. Historicamente, a aristocracia exercia grande influência política, econômica e social, muitas vezes governando ou tendo controle sobre vastas terras e recursos.');
 
 -- --------------------------------------------------------
 
@@ -176,12 +177,6 @@ ALTER TABLE `ajuda`
   ADD PRIMARY KEY (`id_ajuda`);
 
 --
--- Índices de tabela `glossario`
---
-ALTER TABLE `glossario`
-  ADD PRIMARY KEY (`id_glossario`);
-
---
 -- Índices de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -196,12 +191,6 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `ajuda`
   MODIFY `id_ajuda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT de tabela `glossario`
---
-ALTER TABLE `glossario`
-  MODIFY `id_glossario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
