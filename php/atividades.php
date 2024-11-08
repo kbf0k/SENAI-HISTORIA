@@ -405,10 +405,8 @@ Desafie-se a encontrar todas as palavras escondidas enquanto aprimora ainda mais
      <h2>Atividades por Período</h2>
      <h3>Nessa seção encontre todas as nossas atividades separadas pelo período histórico!</h3>
 </div>
-
-<section class="atividades_pdf">
-    <h2>Atividades da Pré-História</h2>
-    
+<section class="atividades_pdf" id="pre-historia">
+    <h2>Atividades da Pré-História</h2>   
     <figure class="img-legend">
         <div class="img-container">
             <img src="../img/prehistoriacuz.png" alt="Cruzadinha Pré-História" class="imagem">

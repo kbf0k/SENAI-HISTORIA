@@ -1,27 +1,29 @@
-<?php
+<!-- <?php
 include_once('conexao.php');
 session_start();
 
-if (!isset($_SESSION['nome_sessao'])) {
+if(!isset($_SESSION['nome_sessao'])){
     header('Location: index.php');
     exit();
-}
-?>
+} 
+?> -->
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="Pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
     <link rel="stylesheet" href="../css/enem.css">
-    <script src="../javascript/atividades.js" defer></script>
+    <script src="../javascript/inicio.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <title>ENEM e Vestibulares</title>
 </head>
+
 <body>
-<header class="header">
+    <header class="header">
         <div class="container logo-menu">
             <div class="logo">
-            <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
+                <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
             </div>
             <nav class="menu">
                 <ul>
@@ -38,18 +40,19 @@ if (!isset($_SESSION['nome_sessao'])) {
                     </li>
                     <li><a href="glossario.php">Glossário</a></li>
                     <li><a href="atividades.php">Atividades Complementares</a></li>
-                    <li><a href="atividades.php">ENEM</a></li>
-
 
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
+                    
                     <div class="user-vector">
-                        <img id="logo-vector" src="../img/user-vector.png" alt="">
-                        <p>
-                            <?= $_SESSION['nome_sessao'] ?>
-                        </p>
-                        <p>
-                            <?=$_SESSION['tipo_sessao'] ?>
-                        </p>
+                        <a href="perfil.php">
+                            <img id="logo-vector" src="../img/user-vector.png" alt="">
+                            <p>
+                                <?= $_SESSION['nome_sessao'] ?>
+                            </p>
+                            <p>
+                                <?=$_SESSION['tipo_sessao'] ?>
+                            </p>
+                        </a>
                     </div>
                     <li><a id="logout">SAIR</a></li>
                     <?php else: ?>
@@ -59,6 +62,41 @@ if (!isset($_SESSION['nome_sessao'])) {
             </nav>
         </div>
     </header>
+    <div id="mobile-header" >
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+        <a id="mobile-logo" href="inicio.php"><img src="../img/Logo Nova Site História.png" class="logo" alt=""></a>
+        <div class="user-options">
+            <div class="user-vector">
+                <a href="perfil.php">
+                    <?php if (isset($_SESSION['nome_sessao'])): ?>
+                        <img id="logo-vector" src="../img/user-vector.png" alt="Imagem do usuário">
+                        <div class="user-info">
+                            <p><?= $_SESSION['nome_sessao'] ?></p>
+                            <p><?= $_SESSION['tipo_sessao'] ?></p>
+                        </div>
+                    <?php endif; ?>
+                </a>
+            </div>
+            <?php if (isset($_SESSION['nome_sessao'])): ?>
+                <a id="logout-mobile">SAIR</a>
+            <?php else: ?>
+                <a href="index.php">LOGIN</a>
+            <?php endif; ?>
+        </div>
+        <nav id="nav">
+            <ul id="mobile-menu" role="mobile-menu">
+                <li><a href="pre_historia.php">Pré-História</a></li>
+                <li><a href="idade_antiga.php">Idade Antiga</a></li>
+                <li><a href="idade_media.php">Idade Média</a></li>
+                <li><a href="idade_moderna.php">Idade Moderna</a></li>
+                <li><a href="idade_contemporanea.php">Idade Contemporânea</a></li></li>
+                <li><a href="glossario.php">Glossário</a></li>
+                <li><a href="atividades.php">Atividades Complementares</a></li>
+            </ul>
+        </nav>
+    </div>
     <main>
     <section class="articles">
             <div id="pagetitle">
@@ -75,7 +113,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                             <h2>Principais Conteúdos</h2>
                             <p>Descubra os principais temas de história que caem no ENEM. Nesta seção, focamos nos assuntos essenciais para o exame, com uma visão detalhada dos conteúdos mais recorrentes e dicas de estudo para cada um, para que você consiga arrasar na prova.
                             </p>
-                            <a href="#pre-historia" class="read-more"><span class="sr-only">Ver Mais</span></a>
+                            <a href="#dire_conteudo" class="read-more"><span class="sr-only">Ver Mais</span></a>
                         </div>
                     </div>
                 </article>
@@ -105,7 +143,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                 </article>
             </div>
         </section>
-         <section class="conteudos-vestibulares">
+         <section class="conteudos-vestibulares" id="dire_conteudo">
   <h2>Como Estudar para Vestibulares de História</h2>
   <p>Para garantir uma boa preparação, concentre-se nos tópicos mais recorrentes nas provas de vestibulares e ENEM. Confira abaixo os principais períodos que você deve estudar com profundidade.</p>
 
@@ -135,7 +173,40 @@ if (!isset($_SESSION['nome_sessao'])) {
       <li><strong>Interpretação de Contexto:</strong> Entenda como os eventos se conectam e influenciam uns aos outros ao longo da história.</li>
     </ul>
   </div>
-        </section>
+</section>
+<section id="estudos-enem" class="enem-section">
+    <h2>Estudos para o ENEM - História</h2>
+    <p>Explore os vídeos e mapas mentais sobre os temas que mais caem no ENEM.</p>
+
+    <div class="content-grid">
+        <!-- Seção de vídeos -->
+        <div class="video-section">
+            <h3>Vídeos Principais</h3>
+            <div class="videos">
+            <iframe src="https://www.youtube.com/embed/LxuTxkHAXeQ?si=qdzszvuVSPBj_daI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
+            <iframe src="https://www.youtube.com/embed/zyMumTbX7Cg?si=Ld7MUB3c_ENmVJCe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
+            <iframe src="URL_DO_VIDEO3" title="Vídeo 3"></iframe>
+            <iframe src="URL_DO_VIDEO4" title="Vídeo 4"></iframe>
+            <iframe src="URL_DO_VIDEO5" title="Vídeo 5"></iframe>
+            <iframe src="URL_DO_VIDEO6" title="Vídeo 6"></iframe>
+            </div>
+        </div>
+
+        <!-- Seção de Mapas Mentais -->
+        <div class="mapa-mental-section">
+            <h3>Mapas Mentais</h3>
+            <div class="mapas">
+                <img src="URL_MAPA_MENTAL1" alt="Mapa Mental 1">
+                <img src="URL_MAPA_MENTAL2" alt="Mapa Mental 2">
+                <img src="URL_MAPA_MENTAL3" alt="Mapa Mental 3">
+                <img src="URL_MAPA_MENTAL4" alt="Mapa Mental 4">
+                <img src="URL_MAPA_MENTAL5" alt="Mapa Mental 5">
+                <img src="URL_MAPA_MENTAL6" alt="Mapa Mental 6">
+            </div>
+        </div>
+    </div>
+</section>
+
 
     </main>
     <footer class="footer">
