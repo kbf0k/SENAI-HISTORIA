@@ -2,17 +2,6 @@
 include_once('conexao.php');
 session_start();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $assunto = $_POST['assunto'];
-    $mensagem = $_POST['mensagem'];
-
-    $stmt = $conexao->prepare('INSERT INTO ajuda (nome_ajuda, email_ajuda, assunto_ajuda, mensagem_ajuda) VALUES (?, ?, ?, ?)');
-    $stmt->bind_param('ssss', $nome, $email, $assunto, $mensagem);
-    $stmt->execute();
-    echo '<script>alert("Mensagem enviada com sucesso")</script>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajuda</title>
-    <link rel="stylesheet" href="../css/ajuda.css">
+    <title>Desenvolvedores do Projeto</title>
+    <link rel="stylesheet" href="../css/desenvolvedores.css">
     <script src="../javascript/inicio.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 </head>
@@ -84,27 +73,58 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </nav>
     </div>
 
-    <main>
-        <section class="termos">
-            <h2>Entre em Contato Conosco</h2>
-            <form action="#" method="POST" class="contact-form">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+    <main> 
+        <h1>Desenvolvedores do Projeto</h1>
+        <div class="flex-box">
+            <div class="membros">
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">
+                 <img src="../img/joaoG-copia.JPG" alt="João Gustavo">
+                </a>
+                 <h2>João Gustavo</h2>
+                 <p>Email: joaogustavo2202@gmail.com</p>
+                 <p>Telefone: (12) 99220-2489 </p>
+                 <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">Linkedin</a>
+             </div>
+             <div class="membros">
+                 <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">
+                     <img src="../img/joaoP-copia.JPG" alt="João Pedro">
+                 </a>
+                 <h2>João Pedro</h2>
+                 <p>Email: jotapepe.machado@gmail.com</p>
+                 <p>Telefone: (12) 98898-2050</p>
+                 <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">Linkedin</a>
+             </div>
+             <div class="membros">
+                 <a href="https://www.linkedin.com/in/kaiqueferreira0k/" target="_blank">
+                     <img src="../img/kaique-copia.JPG" alt="Kaique">
+                 </a>
+                 <h2>Kaique</h2>
+                 <p>Email: kaique1245br@gmail.com</p>
+                 <p>Telefone: (12) 99649-9582</p>
+                 <a href="https://www.linkedin.com/in/kaiqueferreira0k/" target="_blank">Linkedin</a>
+             </div>
+             <div class="membros">
+                 <a href="https://www.linkedin.com/in/yago-moraes-6a09b3326/" target="_blank">
+                     <img src="../img/yago-copia.JPG" alt="Yago">
+                 </a>
+                 <h2>Yago</h2>
+                 <p>Email: yago.roberto2008@gmail.com</p>
+                 <p>Telefone: (12) 99781-5465</p>
+                 <a href="https://www.linkedin.com/in/yago-moraes-6a09b3326/" target="_blank">Linkedin</a>
+             </div>
 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="assunto">Assunto:</label>
-                <input type="text" id="assunto" name="assunto" required>
-
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-
-                <button type="submit">Enviar Mensagem</button>
-            </form>
-        </section>
+             <div class="membros">
+                 <a href="https://www.linkedin.com/in/murilo-silva-0377322b7/" target="_blank">
+                     <img src="../img/murilo-copia.jpg" alt="Yago">
+                 </a>
+                 <h2>Murilo Henrique</h2>
+                 <p>Email: timao.alenda@gmail.com</p>
+                 <p>Telefone: (12) 99219-5842</p>
+                 <a href="https://www.linkedin.com/in/murilo-silva-0377322b7/" target="_blank">Linkedin</a>
+             </div>
+        </div>
+        
     </main>
-
 
     <footer class="footer">
         <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SOFTDEV</a>

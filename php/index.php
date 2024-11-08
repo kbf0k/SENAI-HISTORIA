@@ -3,18 +3,16 @@ session_start();
 include 'conexao.php';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    if(isset($_POST['nome_cadastro']) && isset($_POST['sobrenome_cadastro']) && isset($_POST['tipo_cadastro']) && isset($_POST['email_cadastro']) && isset($_POST['senha_cadastro'])){
+    if(isset($_POST['nome_cadastro']) && isset($_POST['sobrenome_cadastro']) && isset($_POST['email_cadastro']) && isset($_POST['senha_cadastro'])){
 
         $nome_cadastro_digitado = $_POST['nome_cadastro'];
         $sobrenome_cadastro_digitado = $_POST['sobrenome_cadastro'];
-        $tipo_cadastro_digitado = $_POST['tipo_cadastro'];
         $email_cadastro_digitado = $_POST['email_cadastro'];
         $senha_cadastro_digitado = md5($_POST['senha_cadastro']);
 
-        $sql1 = "INSERT INTO usuarios(nome_usuario,sobrenome_usuario,tipo_usuario,email_usuario,senha_usuario) VALUES(?,
-        ?,?,?,?)";
+        $sql1 = "INSERT INTO usuarios(nome_usuario,sobrenome_usuario,email_usuario,senha_usuario) VALUES(?,?,?,?)";
         $stmt1 = $conexao->prepare($sql1);
-        $stmt1->bind_param('sssss',$nome_cadastro_digitado,$sobrenome_cadastro_digitado,$tipo_cadastro_digitado,$email_cadastro_digitado,$senha_cadastro_digitado);
+        $stmt1->bind_param('ssss',$nome_cadastro_digitado,$sobrenome_cadastro_digitado,$email_cadastro_digitado,$senha_cadastro_digitado);
         $stmt1->execute();
         $result1 = $stmt1->get_result();
         echo '<script>
@@ -95,7 +93,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 <label for="sobrenome">Sobrenome</label>
                 <input type="text" name="sobrenome_cadastro" id="sobrenome" required>
-
 
                 <label for="email_cadastro">Email</label>
                 <input type="email" name="email_cadastro" id="email_cadastro" required placeholder="@email.com">

@@ -45,6 +45,37 @@ if (!isset($_SESSION['nome_sessao'])) {
             </nav>
         </div>
     </header>
+    <div id="mobile-header">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+        <a id="mobile-logo" href="inicio.php"><img src="../img/Logo Nova Site História.png" class="logo" alt=""></a>
+        <div class="user-options">
+            <div class="user-vector">
+                <a href="perfil.php">
+                    <?php if (isset($_SESSION['nome_sessao'])): ?>
+                        <img id="logo-vector" src="../img/user-vector.png" alt="Imagem do usuário">
+                        <div class="user-info">
+                            <p><?= $_SESSION['nome_sessao'] ?></p>
+                            <p><?= $_SESSION['tipo_sessao'] ?></p>
+                        </div>
+                    <?php endif; ?>
+                </a>
+            </div>
+        </div>
+        <nav id="nav">
+            <ul id="mobile-menu" role="mobile-menu">
+                <li><a href="inicio.php">Início</a></li>
+                <li><a href="glossario.php">Glossário</a></li>
+                <li><a href="atividades.php">Atividades Complementares</a></li>
+                <?php if (isset($_SESSION['nome_sessao'])): ?>
+                    <a id="logout-mobile">SAIR</a>
+                <?php else: ?>
+                    <a href="index.php">LOGIN</a>
+                <?php endif; ?>
+            </ul>
+        </nav>
+    </div>
 
     <main>
         <section class="faq">
@@ -59,13 +90,13 @@ if (!isset($_SESSION['nome_sessao'])) {
             </div>
             <div class="faq-item">
                 <h3>Como posso entrar em contato com a equipe de suporte?</h3>
-                <p>Você pode nos contatar através das informações na seção "Contato" no rodapé da página.</p>
+                <p>Você pode nos contatar através das informações na seção "Ajuda" no rodapé da página.</p>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <h3>Equipe Desenvolvedora SOFTDEV</h3>
+        <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SOFTDEV</a>
         <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a>
         <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">João Gustavo Mota Ramos</a>
         <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">João Pedro da Cunha Machado</a>

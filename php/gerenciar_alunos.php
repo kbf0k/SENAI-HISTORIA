@@ -2,13 +2,18 @@
 include_once('conexao.php');
 session_start();
 
+if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === "Aluno") {
+    header('Location: inicio.php');
+    exit();
+}
+
 if (!isset($_SESSION['nome_sessao'])) {
     header('Location: index.php');
     exit();
 }
 
-$sql_alunos = 'SELECT * FROM usuarios ORDER BY tipo_usuario= "Aluno"';
 
+$sql_alunos = 'SELECT * FROM usuarios ORDER BY tipo_usuario= "Aluno"';
 $resultado_alunos = $conexao->query($sql_alunos);
 
 ?>
@@ -50,6 +55,37 @@ $resultado_alunos = $conexao->query($sql_alunos);
             </nav>
         </div>
     </header>
+    <div id="mobile-header">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+        </button>
+        <a id="mobile-logo" href="inicio.php"><img src="../img/Logo Nova Site História.png" class="logo" alt=""></a>
+        <div class="user-options">
+            <div class="user-vector">
+                <a href="perfil.php">
+                    <?php if (isset($_SESSION['nome_sessao'])): ?>
+                        <img id="logo-vector" src="../img/user-vector.png" alt="Imagem do usuário">
+                        <div class="user-info">
+                            <p><?= $_SESSION['nome_sessao'] ?></p>
+                            <p><?= $_SESSION['tipo_sessao'] ?></p>
+                        </div>
+                    <?php endif; ?>
+                </a>
+            </div>
+        </div>
+        <nav id="nav">
+            <ul id="mobile-menu" role="mobile-menu">
+                <li><a href="inicio.php">Início</a></li>
+                <li><a href="glossario.php">Glossário</a></li>
+                <li><a href="atividades.php">Atividades Complementares</a></li>
+                <?php if (isset($_SESSION['nome_sessao'])): ?>
+                    <a id="logout-mobile">SAIR</a>
+                <?php else: ?>
+                    <a href="index.php">LOGIN</a>
+                <?php endif; ?>
+            </ul>
+        </nav>
+    </div>
 
     <main>
         <div id="container">
@@ -73,8 +109,7 @@ $resultado_alunos = $conexao->query($sql_alunos);
                                 echo "<td>" . $linha['sobrenome_usuario'] . "</td>";
                                 echo "<td>" . $linha['tipo_usuario'] . "</td>";
                                 echo "<td>" . $linha['email_usuario'] . "</td>";
-                                echo "<td><button class='editar'>Editar</button>";
-                                echo "<td><button class='excluir' data-id='" . $linha['id_usuario'] . "'>Excluir</button></td>";
+                                echo "<td><button class='editar' data-id='" . $linha['id_usuario'] . "', userNome='" . $linha['nome_usuario'] . "', userSobrenome='" . $linha['sobrenome_usuario'] . "', userEmail='" . $linha['email_usuario'] . "'>Editar</button> <button class='excluir' data-id='" . $linha['id_usuario'] . "'>Excluir</button></td>";
                                 echo "</tr>";
                             }
                         } ?>
@@ -85,7 +120,7 @@ $resultado_alunos = $conexao->query($sql_alunos);
     </main>
 
     <footer class="footer">
-        <h3>Equipe Desenvolvedora SOFTDEV</h3>
+        <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SOFTDEV</a>
         <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a>
         <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">João Gustavo Mota Ramos</a>
         <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">João Pedro da Cunha Machado</a>
