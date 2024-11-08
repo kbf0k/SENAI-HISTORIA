@@ -367,8 +367,8 @@ main h1{
 }
 
 .membros img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     box-shadow: 0 0 5px black;
 }
@@ -498,5 +498,68 @@ main h1{
     .menu ul {
         flex-direction: column;
         gap: 10px;
+    }
+}
+/* Ajustes para telas menores */
+@media (max-width: 1024px) {
+    main h1 {
+        font-size: 35px;
+    }
+
+    .membros img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .membros {
+        margin-top: 30px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        height: auto;
+        padding: 20px;
+    }
+
+    main h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .flex-box {
+        flex-direction: column;
+    }
+
+    .membros img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .membros {
+        margin-top: 20px;
+        padding: 10px;
+        box-shadow: 0 0 3px #665d50;
+    }
+}
+
+@media (max-width: 480px) {
+    main h1 {
+        font-size: 24px;
+    }
+
+    .membros {
+        margin-top: 15px;
+        padding: 8px;
+    }
+
+    .membros img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .membros a {
+        font-size: 14px;
     }
 }

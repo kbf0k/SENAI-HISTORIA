@@ -389,24 +389,34 @@ a {
 .footer {
     background-color: #4b3f35;
     padding: 30px 20px;
-    font-family: Arial, sans-serif;
     text-align: center;
 }
 
-.footer h3{
+.footer #titulo {
+    font-weight: 600;
     color: #f9f4e1;
+    font-size: 18px;
+    display: block;
+    transition: .3s ease-in-out;
 }
 
-.footer a{
+.footer #titulo:hover {
+    color: #d4af37;
+}
+
+.footer a {
     color: white;
     transition: .3s ease-in-out;
     margin-left: 10px;
     margin-right: 10px;
 }
-.footer #link{
+
+.footer #link {
     margin-top: 10px;
+    color: white;
 }
-.footer a:hover{
+
+.footer a:hover {
     color: #d4af37;
 }
 
@@ -414,65 +424,9 @@ a {
     text-align: center;
     margin-top: 20px;
     font-size: 18px;
-    color: #f9f4e1;;
+    color: #f9f4e1;
+    ;
 }
-
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .footer-section {
-        text-align: center;
-    }
-
-    .footer-bottom {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .footer-container {
-        justify-content: space-around;
-        gap: 20px;
-    }
-
-    .footer-section h3 {
-        font-size: 16px;
-    }
-
-    .footer-section p,
-    .footer-section li {
-        font-size: 15px;
-    }
-
-    .footer-bottom {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 1025px) {
-    .footer-container {
-        justify-content: space-between;
-        gap: 40px;
-    }
-
-    .footer-section h3 {
-        font-size: 18px;
-    }
-
-    .footer-section p,
-    .footer-section li {
-        font-size: 16px;
-    }
-
-    .footer-bottom {
-        font-size: 18px;
-    }
-}
-
 /* RESPONSIVIDADE GERAL */
 
 @media (max-width: 768px) {
@@ -650,25 +604,6 @@ a {
     }
 }
 
-/* Responsividade para .footer */
-@media (max-width: 480px) {
-    .footer-container {
-        flex-direction: column;
-    }
-
-    .footer-section h3 {
-        font-size: 16px;
-    }
-
-    .footer-section p,
-    .footer-section li {
-        font-size: 14px;
-    }
-
-    .footer-bottom {
-        font-size: 14px;
-    }
-}
 
 /* Responsividade para .user-vector */
 @media (max-width: 768px) {
