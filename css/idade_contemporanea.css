@@ -87,9 +87,6 @@ a {
 .menu #logout {
     cursor: pointer;
 }
-#mobile-header {
-    display: none;
-}
 
 /* Dropdown */
 .dropdown-menu {

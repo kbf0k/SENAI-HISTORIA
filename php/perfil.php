@@ -2,13 +2,12 @@
 include_once('conexao.php');
 session_start();
 
-if(!isset($_SESSION['nome_sessao'])){
+if (!isset($_SESSION['nome_sessao'])) {
     header('Location: index.php');
     exit();
 }
 
-
-$id_usuario = $_SESSION['id_usuario'];
+$id_usuario = $_SESSION['id_sessao'];
 
 // Busca informações do usuário no banco de dados
 $sql = "SELECT nome_usuario, sobrenome_usuario, email_usuario, tipo_usuario FROM usuarios WHERE id_usuario = ?";
@@ -25,12 +24,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
     $novo_sobrenome = $_POST['sobrenome'];
     $novo_email = $_POST['email'];
 
-    $sql_update = "UPDATE usuarios SET nome_usuario = ?, sobrenome_usuario = ?, email_usuario = ? WHERE id_usuario = $id_usuario";
+    $sql_update = "UPDATE usuarios SET nome_usuario = ?, sobrenome_usuario = ?, email_usuario = ? WHERE id_usuario = ?";
     $stmt = $conexao->prepare($sql_update);
+
+    if (!$stmt) {
+        die("Erro na preparação da consulta: " . $conexao->error);
+    }
+
     $stmt->bind_param("sssi", $novo_nome, $novo_sobrenome, $novo_email, $id_usuario);
 
     if ($stmt->execute()) {
-        echo "Perfil atualizado com sucesso!";
+        // Definir a variável de sucesso na sessão
+        $_SESSION['success_message'] = 'editado';
     } else {
         echo "Erro ao atualizar o perfil.";
     }
@@ -45,25 +50,59 @@ if (isset($_POST['delete'])) {
 
     if ($stmt->execute()) {
         session_destroy();
-        header("Location: inicio.php");
+        // Definir a variável de sucesso na sessão
+        $_SESSION['success_message'] = 'deletado';
+        header("Location: inicio.php"); // Redireciona após deletar
         exit();
     } else {
         echo "Erro ao deletar a conta.";
     }
     $stmt->close();
 }
+
 $conexao->close();
 ?>
+
 <!DOCTYPE html>
 <html lang="Pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
     <link rel="stylesheet" href="../css/perfil.css">
-    <script src="../javascript/inicio.js" defer></script>
+    <script src="../javascript/perfil.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Passando o valor da variável PHP para o JavaScript
+        var successMessage = "<?php echo isset($_SESSION['success_message']) ? $_SESSION['success_message'] : ''; ?>";
+
+        if (successMessage === "editado") {
+            Swal.fire({
+                title: "Usuário editado!",
+                text: "O usuário foi editado com sucesso.",
+                icon: "success",
+                confirmButtonColor: "#4b3f35"
+            }).then(() => {
+                // Limpar a variável de sessão após o alerta
+                <?php unset($_SESSION['success_message']); ?>
+                location.href = location.href; // Redireciona para recarregar a página
+            });
+
+        } else if (successMessage === "deletado") {
+            Swal.fire({
+                title: "Conta deletada!",
+                text: "Sua conta foi deletada com sucesso.",
+                icon: "success",
+                confirmButtonColor: "#4b3f35"
+            }).then(() => {
+                // Limpar a variável de sessão após o alerta
+                <?php unset($_SESSION['success_message']); ?>
+                window.location.href = 'inicio.php'; // Redireciona após o alerta
+            });
+        }
+    });
+    </script>
 </head>
 <header class="header">
         <div class="container logo-menu">
@@ -146,7 +185,8 @@ $conexao->close();
 <body>
 <main class="conteudo">
     <section class="politica">
-        <h2>Editar Perfil</h2>
+        <a id="voltar" href="../php/index.php">Voltar</a>
+        <h2 id="editar">Editar Perfil</h2>
         <form method="POST" action="perfil.php">
             <div class="form-group">
                 <label for="nome">Nome:</label>
@@ -162,20 +202,22 @@ $conexao->close();
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($email); ?>" required>
             </div>
-
-            <button type="submit" name="update" class="btn">Atualizar Perfil</button>
+            <div class="form-group">
+                <button type="" name="update" class="btn"><a href="esqueciSenha.php">Redefinir senha</a></button>
+            </div>
+            <button type="submit" name="update" class="btn">Atualizar perfil</button>
         </form>
 
-        <h2>Excluir Conta</h2>
+        <h2>Excluir conta</h2>
         <form method="POST" action="perfil.php">
-            <button type="submit" name="delete" class="btn delete" onclick="return confirm('Tem certeza que deseja excluir sua conta?')">Excluir Conta</button>
+            <button type="submit" name="delete" class="btn delete" onclick="return confirm('Tem certeza que deseja excluir sua conta?')">Excluir conta</button>
         </form>
 
         <!-- Exibe botões extras se o usuário for administrador -->
         <?php if ($_SESSION['tipo_sessao'] === 'Administrador'): ?>
             <h2>Opções do Administrador</h2>
-            <button class="btn admin-btn" onclick="location.href='gerenciar_alunos.php'">Gerenciar Alunos</button>
-            <button class="btn admin-btn" onclick="location.href='criar_adm.php'">Criar Administrador</button>
+            <button class="btn admin-btn" onclick="location.href='gerenciar_alunos.php'">Gerenciar alunos</button>
+            <button class="btn admin-btn" onclick="location.href='criar_adm.php'">Criar administrador</button>
         <?php endif; ?>
     </section>
 </main>

@@ -140,10 +140,12 @@ a {
 .header .user-vector p {
     font-size: 12px;
 }
-
+/* MENU MOBILE */
+#mobile-header {
+    display: none;
+}
 
 @media (max-width: 768px) {
-    /* MENU MOBILE */
     .header {
         display: none;
     }

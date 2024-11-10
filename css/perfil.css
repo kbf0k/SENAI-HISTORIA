@@ -327,18 +327,39 @@ a {
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .politica {
     margin-top: 20px;
 }
 
+#voltar {
+    font-size: 16px;
+    padding: 12px;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-top: 25px;
+    background-color: rgb(128, 115, 92);
+    color: white;
+    transition: 0.3s;
+    z-index: 5;
+}
+
+#voltar:hover {
+    transform: scale(1.02);
+}
 /* Títulos */
 h2 {
-    font-size: 1.3rem;
-    color: #333;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+#editar {
+    margin-bottom: 20px!important;
+    text-align: center;
+    font-size: 30px;
 }
 
 /* Formulário */

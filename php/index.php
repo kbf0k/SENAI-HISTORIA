@@ -41,6 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $usuario_logado = $result2->fetch_assoc();
             $_SESSION['nome_sessao'] = $usuario_logado['nome_usuario'];
             $_SESSION['tipo_sessao'] = $usuario_logado['tipo_usuario'];
+            $_SESSION['id_sessao'] = $usuario_logado['id_usuario'];
             header('location: inicio.php');
             exit();
         }
@@ -67,7 +68,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <form action="" method="POST" id="login">
                 <img src="../img/../img/LOGO PARA LOGIN.png" alt="">
                 <h1>Login</h1>
-                <p>Insira suas informações necessárias para realizar o LOGIN</p>
                 <label for="email">Email</label>
                 <input type="email" name="email-login" id="email" required placeholder="@email.com">
 

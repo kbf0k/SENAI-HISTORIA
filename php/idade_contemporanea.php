@@ -14,8 +14,8 @@ if(!isset($_SESSION['nome_sessao'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pré-História</title>
-    <link rel="stylesheet" href="../css/pre_historia.css">
+    <title>Idade Contemporânea</title>
+    <link rel="stylesheet" href="../css/idade_contemporanea.css">
     <script src="../javascript/pre_historia.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 </head>
