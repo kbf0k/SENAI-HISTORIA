@@ -79,7 +79,7 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
         </div>
     </header>
 
-    <h1 id="tt-gloss">Glossário Historico</h1>
+    <h1 id="tt-gloss">Glossário Histórico</h1>
 
     <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
 
