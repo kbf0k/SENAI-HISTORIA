@@ -64,14 +64,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <li><a href="atividades.php">Atividades Complementares</a></li>
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
                         <div class="user-vector">
-                            <img id="logo-vector" src="../img/user-vector.png" alt="">
-                            <p><?= $_SESSION['nome_sessao'] ?></p>
-                            <p><?= $_SESSION['tipo_sessao'] ?></p>
+                            <a href="perfil.php">
+                                <img id="logo-vector" src="../img/user-vector.png" alt="">
+                                <p>
+                                    <?= $_SESSION['nome_sessao'] ?>
+                                </p>
+                                <p>
+                                    <?= $_SESSION['tipo_sessao'] ?>
+                                </p>
                         </div>
-                        <li><a id="logout">SAIR</a></li>
+                        <li><img id="logout" src="../img/logout.png" alt=""></li>
                     <?php else: ?>
                         <li><a href="index.php">LOGIN</a></li>
                     <?php endif; ?>
+                    </a>
                 </ul>
             </nav>
         </div>

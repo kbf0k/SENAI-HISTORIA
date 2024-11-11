@@ -65,6 +65,7 @@ $conexao->close();
 
 <!DOCTYPE html>
 <html lang="Pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,60 +74,60 @@ $conexao->close();
     <script src="../javascript/perfil.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Passando o valor da variável PHP para o JavaScript
-        var successMessage = "<?php echo isset($_SESSION['success_message']) ? $_SESSION['success_message'] : ''; ?>";
+        document.addEventListener('DOMContentLoaded', function() {
+            // Passando o valor da variável PHP para o JavaScript
+            var successMessage = "<?php echo isset($_SESSION['success_message']) ? $_SESSION['success_message'] : ''; ?>";
 
-        if (successMessage === "editado") {
-            Swal.fire({
-                title: "Usuário editado!",
-                text: "O usuário foi editado com sucesso.",
-                icon: "success",
-                confirmButtonColor: "#4b3f35"
-            }).then(() => {
-                // Limpar a variável de sessão após o alerta
-                <?php unset($_SESSION['success_message']); ?>
-                location.href = location.href; // Redireciona para recarregar a página
-            });
+            if (successMessage === "editado") {
+                Swal.fire({
+                    title: "Usuário editado!",
+                    text: "O usuário foi editado com sucesso.",
+                    icon: "success",
+                    confirmButtonColor: "#4b3f35"
+                }).then(() => {
+                    // Limpar a variável de sessão após o alerta
+                    <?php unset($_SESSION['success_message']); ?>
+                    location.href = location.href; // Redireciona para recarregar a página
+                });
 
-        } else if (successMessage === "deletado") {
-            Swal.fire({
-                title: "Conta deletada!",
-                text: "Sua conta foi deletada com sucesso.",
-                icon: "success",
-                confirmButtonColor: "#4b3f35"
-            }).then(() => {
-                // Limpar a variável de sessão após o alerta
-                <?php unset($_SESSION['success_message']); ?>
-                window.location.href = 'inicio.php'; // Redireciona após o alerta
-            });
-        }
-    });
+            } else if (successMessage === "deletado") {
+                Swal.fire({
+                    title: "Conta deletada!",
+                    text: "Sua conta foi deletada com sucesso.",
+                    icon: "success",
+                    confirmButtonColor: "#4b3f35"
+                }).then(() => {
+                    // Limpar a variável de sessão após o alerta
+                    <?php unset($_SESSION['success_message']); ?>
+                    window.location.href = 'inicio.php'; // Redireciona após o alerta
+                });
+            }
+        });
     </script>
 </head>
 <header class="header">
-        <div class="container logo-menu">
-            <div class="logo">
-                <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li class="dropdown">
-                        <a href="">Períodos Históricos</a>
+    <div class="container logo-menu">
+        <div class="logo">
+            <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="dropdown">
+                    <a href="">Períodos Históricos</a>
 
-                        <div class="dropdown-menu">
-                            <a href="pre_historia.php">Pré-História</a>
-                            <a href="idade_antiga.php">Idade Antiga</a>
-                            <a href="idade_media.php">Idade Média</a>
-                            <a href="idade_moderna.php">Idade Moderna</a>
-                            <a href="idade_contemporanea.php">Idade Contemporânea</a>
-                        </div>
-                    </li>
-                    <li><a href="glossario.php">Glossário</a></li>
-                    <li><a href="atividades.php">Atividades Complementares</a></li>
+                    <div class="dropdown-menu">
+                        <a href="pre_historia.php">Pré-História</a>
+                        <a href="idade_antiga.php">Idade Antiga</a>
+                        <a href="idade_media.php">Idade Média</a>
+                        <a href="idade_moderna.php">Idade Moderna</a>
+                        <a href="idade_contemporanea.php">Idade Contemporânea</a>
+                    </div>
+                </li>
+                <li><a href="glossario.php">Glossário</a></li>
+                <li><a href="atividades.php">Atividades Complementares</a></li>
 
-                    <?php if (isset($_SESSION['nome_sessao'])): ?>
-                    
+                <?php if (isset($_SESSION['nome_sessao'])): ?>
+
                     <div class="user-vector">
                         <a href="perfil.php">
                             <img id="logo-vector" src="../img/user-vector.png" alt="">
@@ -134,95 +135,96 @@ $conexao->close();
                                 <?= $_SESSION['nome_sessao'] ?>
                             </p>
                             <p>
-                                <?=$_SESSION['tipo_sessao'] ?>
+                                <?= $_SESSION['tipo_sessao'] ?>
                             </p>
                         </a>
                     </div>
-                    <li><a id="logout">SAIR</a></li>
-                    <?php else: ?>
+                    <li><img id="logout" src="../img/logout.png" alt=""></li>
+                <?php else: ?>
                     <li><a href="index.php">LOGIN</a></li>
-                    <?php endif; ?>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div id="mobile-header" >
-        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-            <span id="hamburger"></span>
-        </button>
-        <a id="mobile-logo" href="inicio.php"><img src="../img/Logo Nova Site História.png" class="logo" alt=""></a>
-        <div class="user-options">
-            <div class="user-vector">
-                <a href="perfil.php">
-                    <?php if (isset($_SESSION['nome_sessao'])): ?>
-                        <img id="logo-vector" src="../img/user-vector.png" alt="Imagem do usuário">
-                        <div class="user-info">
-                            <p><?= $_SESSION['nome_sessao'] ?></p>
-                            <p><?= $_SESSION['tipo_sessao'] ?></p>
-                        </div>
-                    <?php endif; ?>
-                </a>
-            </div>
-            <?php if (isset($_SESSION['nome_sessao'])): ?>
-                <a id="logout-mobile">SAIR</a>
-            <?php else: ?>
-                <a href="index.php">LOGIN</a>
-            <?php endif; ?>
-        </div>
-        <nav id="nav">
-            <ul id="mobile-menu" role="mobile-menu">
-                <li><a href="pre_historia.php">Pré-História</a></li>
-                <li><a href="idade_antiga.php">Idade Antiga</a></li>
-                <li><a href="idade_media.php">Idade Média</a></li>
-                <li><a href="idade_moderna.php">Idade Moderna</a></li>
-                <li><a href="idade_contemporanea.php">Idade Contemporânea</a></li></li>
-                <li><a href="glossario.php">Glossário</a></li>
-                <li><a href="atividades.php">Atividades Complementares</a></li>
+                <?php endif; ?>
             </ul>
         </nav>
     </div>
+</header>
+<div id="mobile-header">
+    <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+        <span id="hamburger"></span>
+    </button>
+    <a id="mobile-logo" href="inicio.php"><img src="../img/Logo Nova Site História.png" class="logo" alt=""></a>
+    <div class="user-options">
+        <div class="user-vector">
+            <a href="perfil.php">
+                <?php if (isset($_SESSION['nome_sessao'])): ?>
+                    <img id="logo-vector" src="../img/user-vector.png" alt="Imagem do usuário">
+                    <div class="user-info">
+                        <p><?= $_SESSION['nome_sessao'] ?></p>
+                        <p><?= $_SESSION['tipo_sessao'] ?></p>
+                    </div>
+                <?php endif; ?>
+            </a>
+        </div>
+        <?php if (isset($_SESSION['nome_sessao'])): ?>
+            <a id="logout-mobile">SAIR</a>
+        <?php else: ?>
+            <a href="index.php">LOGIN</a>
+        <?php endif; ?>
+    </div>
+    <nav id="nav">
+        <ul id="mobile-menu" role="mobile-menu">
+            <li><a href="pre_historia.php">Pré-História</a></li>
+            <li><a href="idade_antiga.php">Idade Antiga</a></li>
+            <li><a href="idade_media.php">Idade Média</a></li>
+            <li><a href="idade_moderna.php">Idade Moderna</a></li>
+            <li><a href="idade_contemporanea.php">Idade Contemporânea</a></li>
+            </li>
+            <li><a href="glossario.php">Glossário</a></li>
+            <li><a href="atividades.php">Atividades Complementares</a></li>
+        </ul>
+    </nav>
+</div>
 
 <body>
-<main class="conteudo">
-    <section class="politica">
-        <a id="voltar" href="../php/index.php">Voltar</a>
-        <h2 id="editar">Editar Perfil</h2>
-        <form method="POST" action="perfil.php">
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" value="<?php echo htmlspecialchars($nome); ?>" required>
-            </div>
+    <main class="conteudo">
+        <section class="politica">
+            <a id="voltar" href="../php/index.php">Voltar</a>
+            <h2 id="editar">Editar Perfil</h2>
+            <form method="POST" action="perfil.php">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" value="<?php echo htmlspecialchars($nome); ?>" required>
+                </div>
 
-            <div class="form-group">
-                <label for="sobrenome">Sobrenome:</label>
-                <input type="text" name="sobrenome" id="sobrenome" value="<?php echo htmlspecialchars($sobrenome); ?>" required>
-            </div>
+                <div class="form-group">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" name="sobrenome" id="sobrenome" value="<?php echo htmlspecialchars($sobrenome); ?>" required>
+                </div>
 
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($email); ?>" required>
-            </div>
-            <div class="form-group">
-                <button type="" name="update" class="btn"><a href="esqueciSenha.php">Redefinir senha</a></button>
-            </div>
-            <button type="submit" name="update" class="btn">Atualizar perfil</button>
-        </form>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($email); ?>" required>
+                </div>
+                <div class="form-group">
+                    <button type="" name="update" class="btn"><a href="esqueciSenha.php">Redefinir senha</a></button>
+                </div>
+                <button type="submit" name="update" class="btn">Atualizar perfil</button>
+            </form>
 
-        <h2>Excluir conta</h2>
-        <form method="POST" action="perfil.php">
-            <button type="submit" name="delete" class="btn delete" onclick="return confirm('Tem certeza que deseja excluir sua conta?')">Excluir conta</button>
-        </form>
+            <h2>Excluir conta</h2>
+            <form method="POST" action="perfil.php">
+                <button type="submit" name="delete" class="btn delete" onclick="return confirm('Tem certeza que deseja excluir sua conta?')">Excluir conta</button>
+            </form>
 
-        <!-- Exibe botões extras se o usuário for administrador -->
-        <?php if ($_SESSION['tipo_sessao'] === 'Administrador'): ?>
-            <h2>Opções do Administrador</h2>
-            <button class="btn admin-btn" onclick="location.href='gerenciar_alunos.php'">Gerenciar alunos</button>
-            <button class="btn admin-btn" onclick="location.href='criar_adm.php'">Criar administrador</button>
-        <?php endif; ?>
-    </section>
-</main>
+            <!-- Exibe botões extras se o usuário for administrador -->
+            <?php if ($_SESSION['tipo_sessao'] === 'Administrador'): ?>
+                <h2>Opções do Administrador</h2>
+                <button class="btn admin-btn" onclick="location.href='gerenciar_alunos.php'">Gerenciar alunos</button>
+                <button class="btn admin-btn" onclick="location.href='criar_adm.php'">Criar administrador</button>
+            <?php endif; ?>
+        </section>
+    </main>
 
-    
+
     </section>
     </main>
     <footer class="footer">
@@ -246,4 +248,5 @@ $conexao->close();
         </div>
     </footer>
 </body>
+
 </html>

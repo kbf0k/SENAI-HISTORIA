@@ -46,7 +46,26 @@ document.getElementById('logout-mobile').addEventListener('click', () => {
         }
     });
 });
-document.getElementById('btn-mobile').addEventListener('click', function() {
+
+
+let index = 0;
+function move(direction) {
+    const items = document.querySelectorAll('.item');
+    const totalItems = items.length;
+    index += direction;
+    if (index < 0) {
+        index = totalItems - 1;
+    } else if (index >= totalItems) {
+        index = 0;
+    }
+    const carrossel = document.querySelector('.carrossel');
+    carrossel.style.transform = `translateX(-${index * 25}%)`;
+}
+
+
+
+
+document.getElementById('btn-mobile').addEventListener('click', function () {
     document.getElementById('nav').classList.toggle('active');
     this.classList.toggle('open'); // Adiciona classe para o botão hambúrguer
 });
@@ -80,27 +99,27 @@ function toggleMenu() {
 const btnMobile = document.getElementById('btn-mobile');
 
 function toggleMenu(event) {
-  if (event.type === 'touchstart') event.preventDefault();
-  const nav = document.getElementById('nav');
-  nav.classList.toggle('active');
-  const active = nav.classList.contains('active');
-  event.currentTarget.setAttribute('aria-expanded', active);
-  if (active) {
-    event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
-  } else {
-    event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
-  }
+    if (event.type === 'touchstart') event.preventDefault();
+    const nav = document.getElementById('nav');
+    nav.classList.toggle('active');
+    const active = nav.classList.contains('active');
+    event.currentTarget.setAttribute('aria-expanded', active);
+    if (active) {
+        event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+    } else {
+        event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+    }
 }
 
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
-document.getElementById('btn-mobile').addEventListener('click', function() {
+document.getElementById('btn-mobile').addEventListener('click', function () {
     const nav = document.getElementById('nav');
     const btn = document.getElementById('btn-mobile');
-    
+
     nav.classList.toggle('active');
-    
+
     // Atualizar o aria-expanded para acessibilidade
     const isExpanded = nav.classList.contains('active');
     btn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');

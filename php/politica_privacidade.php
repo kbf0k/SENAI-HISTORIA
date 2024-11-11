@@ -37,7 +37,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                             <p><?= $_SESSION['nome_sessao'] ?></p>
                             <p><?= $_SESSION['tipo_sessao'] ?></p>
                         </div>
-                        <li><a id="logout">SAIR</a></li>
+                        <li><img id="logout" src="../img/logout.png" alt=""></li>
                     <?php else: ?>
                         <li><a href="index.php">LOGIN</a></li>
                     <?php endif; ?>

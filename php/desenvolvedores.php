@@ -65,7 +65,7 @@ session_start();
                 <li><a href="glossario.php">Glossário</a></li>
                 <li><a href="atividades.php">Atividades Complementares</a></li>
                 <?php if (isset($_SESSION['nome_sessao'])): ?>
-                    <a id="logout-mobile">SAIR</a>
+                    <li><img id="logout" src="../img/logout.png" alt=""></li>
                 <?php else: ?>
                     <a href="index.php">LOGIN</a>
                 <?php endif; ?>
@@ -73,57 +73,57 @@ session_start();
         </nav>
     </div>
 
-    <main> 
+    <main>
         <h1>Desenvolvedores do Projeto</h1>
         <div class="flex-box">
             <div class="membros">
                 <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">
-                 <img src="../img/joaoG-copia.JPG" alt="João Gustavo">
+                    <img src="../img/joaoG-copia.JPG" alt="João Gustavo">
                 </a>
-                 <h2>João Gustavo</h2>
-                 <p>Email: joaogustavo2202@gmail.com</p>
-                 <p>Telefone: (12) 99220-2489 </p>
-                 <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">Linkedin</a>
-             </div>
-             <div class="membros">
-                 <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">
-                     <img src="../img/joaoP-copia.JPG" alt="João Pedro">
-                 </a>
-                 <h2>João Pedro</h2>
-                 <p>Email: jotapepe.machado@gmail.com</p>
-                 <p>Telefone: (12) 98898-2050</p>
-                 <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">Linkedin</a>
-             </div>
-             <div class="membros">
-                 <a href="https://www.linkedin.com/in/kaiqueferreira0k/" target="_blank">
-                     <img src="../img/kaique-copia.JPG" alt="Kaique">
-                 </a>
-                 <h2>Kaique</h2>
-                 <p>Email: kaique1245br@gmail.com</p>
-                 <p>Telefone: (12) 99649-9582</p>
-                 <a href="https://www.linkedin.com/in/kaiqueferreira0k/" target="_blank">Linkedin</a>
-             </div>
-             <div class="membros">
-                 <a href="https://www.linkedin.com/in/yago-moraes-6a09b3326/" target="_blank">
-                     <img src="../img/yago-copia.JPG" alt="Yago">
-                 </a>
-                 <h2>Yago</h2>
-                 <p>Email: yago.roberto2008@gmail.com</p>
-                 <p>Telefone: (12) 99781-5465</p>
-                 <a href="https://www.linkedin.com/in/yago-moraes-6a09b3326/" target="_blank">Linkedin</a>
-             </div>
+                <h2>João Gustavo</h2>
+                <p>Email: joaogustavo2202@gmail.com</p>
+                <p>Telefone: (12) 99220-2489 </p>
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">Linkedin</a>
+            </div>
+            <div class="membros">
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">
+                    <img src="../img/joaoP-copia.JPG" alt="João Pedro">
+                </a>
+                <h2>João Pedro</h2>
+                <p>Email: jotapepe.machado@gmail.com</p>
+                <p>Telefone: (12) 98898-2050</p>
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">Linkedin</a>
+            </div>
+            <div class="membros">
+                <a href="https://www.linkedin.com/in/kaiqueferreira0k/" target="_blank">
+                    <img src="../img/kaique-copia.JPG" alt="Kaique">
+                </a>
+                <h2>Kaique</h2>
+                <p>Email: kaique1245br@gmail.com</p>
+                <p>Telefone: (12) 99649-9582</p>
+                <a href="https://www.linkedin.com/in/kaiqueferreira0k/" target="_blank">Linkedin</a>
+            </div>
+            <div class="membros">
+                <a href="https://www.linkedin.com/in/yago-moraes-6a09b3326/" target="_blank">
+                    <img src="../img/yago-copia.JPG" alt="Yago">
+                </a>
+                <h2>Yago</h2>
+                <p>Email: yago.roberto2008@gmail.com</p>
+                <p>Telefone: (12) 99781-5465</p>
+                <a href="https://www.linkedin.com/in/yago-moraes-6a09b3326/" target="_blank">Linkedin</a>
+            </div>
 
-             <div class="membros">
-                 <a href="https://www.linkedin.com/in/murilo-silva-0377322b7/" target="_blank">
-                     <img src="../img/murilo-copia.jpg" alt="Yago">
-                 </a>
-                 <h2>Murilo Henrique</h2>
-                 <p>Email: timao.alenda@gmail.com</p>
-                 <p>Telefone: (12) 99219-5842</p>
-                 <a href="https://www.linkedin.com/in/murilo-silva-0377322b7/" target="_blank">Linkedin</a>
-             </div>
+            <div class="membros">
+                <a href="https://www.linkedin.com/in/murilo-silva-0377322b7/" target="_blank">
+                    <img src="../img/murilo-copia.jpg" alt="Yago">
+                </a>
+                <h2>Murilo Henrique</h2>
+                <p>Email: timao.alenda@gmail.com</p>
+                <p>Telefone: (12) 99219-5842</p>
+                <a href="https://www.linkedin.com/in/murilo-silva-0377322b7/" target="_blank">Linkedin</a>
+            </div>
         </div>
-        
+
     </main>
 
     <footer class="footer">
