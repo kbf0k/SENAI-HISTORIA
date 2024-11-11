@@ -2,7 +2,7 @@
 include_once('conexao.php');
 session_start();
 
-if(!isset($_SESSION['nome_sessao'])){
+if (!isset($_SESSION['nome_sessao'])) {
     header('Location: index.php');
     exit();
 }
@@ -27,7 +27,7 @@ if(!isset($_SESSION['nome_sessao'])){
                 <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
             </div>
             <nav class="menu">
-                <ul>
+                <ul class="nav-list">
                     <li class="dropdown">
                         <a href="">Períodos Históricos</a>
 
@@ -43,27 +43,24 @@ if(!isset($_SESSION['nome_sessao'])){
                     <li><a href="atividades.php">Atividades Complementares</a></li>
 
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
-                    
-                    <div class="user-vector">
-                        <a href="perfil.php">
+                        <div class="user-vector">
                             <img id="logo-vector" src="../img/user-vector.png" alt="">
                             <p>
                                 <?= $_SESSION['nome_sessao'] ?>
                             </p>
                             <p>
-                                <?=$_SESSION['tipo_sessao'] ?>
+                                <?= $_SESSION['tipo_sessao'] ?>
                             </p>
-                        </a>
-                    </div>
-                    <li><a id="logout">SAIR</a></li>
+                        </div>
+                        <li><img id="logout" src="../img/logout.png" alt=""></li>
                     <?php else: ?>
-                    <li><a href="index.php">LOGIN</a></li>
+                        <li><a href="index.php">LOGIN</a></li>
                     <?php endif; ?>
                 </ul>
             </nav>
         </div>
     </header>
-    <div id="mobile-header" >
+    <div id="mobile-header">
         <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
             <span id="hamburger"></span>
         </button>
@@ -80,11 +77,6 @@ if(!isset($_SESSION['nome_sessao'])){
                     <?php endif; ?>
                 </a>
             </div>
-            <?php if (isset($_SESSION['nome_sessao'])): ?>
-                <a id="logout-mobile">SAIR</a>
-            <?php else: ?>
-                <a href="index.php">LOGIN</a>
-            <?php endif; ?>
         </div>
         <nav id="nav">
             <ul id="mobile-menu" role="mobile-menu">
@@ -92,9 +84,15 @@ if(!isset($_SESSION['nome_sessao'])){
                 <li><a href="idade_antiga.php">Idade Antiga</a></li>
                 <li><a href="idade_media.php">Idade Média</a></li>
                 <li><a href="idade_moderna.php">Idade Moderna</a></li>
-                <li><a href="idade_contemporanea.php">Idade Contemporânea</a></li></li>
+                <li><a href="idade_contemporanea.php">Idade Contemporânea</a></li>
+                </li>
                 <li><a href="glossario.php">Glossário</a></li>
                 <li><a href="atividades.php">Atividades Complementares</a></li>
+                <?php if (isset($_SESSION['nome_sessao'])): ?>
+                    <a id="logout-mobile">SAIR</a>
+                <?php else: ?>
+                    <a href="index.php">LOGIN</a>
+                <?php endif; ?>
             </ul>
         </nav>
     </div>
@@ -105,7 +103,7 @@ if(!isset($_SESSION['nome_sessao'])){
             <video autoplay muted loop class="background-video">
                 <source src="../video/teste.mp4" type="video/mp4">
             </video>
-            
+
             <div class="container">
                 <h2 class="animated animated-title">Bem-vindo ao História em Foco!</h2>
                 <p class="animated animated-subtitle">Explore os períodos mais importantes da história e descubra como esses momentos influenciaram o
@@ -124,7 +122,7 @@ if(!isset($_SESSION['nome_sessao'])){
                     <div class="periodo-card animated animated-cards">
                         <a href="pre_historia.php">
                             <h3>Pré História</h3>
-                            <p>Conheça os primeiros passos da humanidade, desde os hominídeos até o desenvolvimento da 
+                            <p>Conheça os primeiros passos da humanidade, desde os hominídeos até o desenvolvimento da
                                 agricultura.</p>
                             <img src="../img/pintura-rupestre.webp" alt="Banner Pré História" class="banner-img">
                         </a>
@@ -132,7 +130,7 @@ if(!isset($_SESSION['nome_sessao'])){
                     <div class="periodo-card animated animated-cards">
                         <a href="idade_antiga.php">
                             <h3>Idade Antiga</h3>
-                            <p>Explore as civilizações antigas, como a Mesopotâmia, Egito e Grécia. Foi quando o ser humano 
+                            <p>Explore as civilizações antigas, como a Mesopotâmia, Egito e Grécia. Foi quando o ser humano
                                 desenvolveu a primeira forma de escrita.</p>
                             <img src="../img/piramide.webp" alt="" class="banner-img">
                         </a>
@@ -206,15 +204,15 @@ if(!isset($_SESSION['nome_sessao'])){
                     </div>
                 </div>
             </div>
-            
+
         </section>
-        
+
         <section class="atividades">
             <div class="container">
                 <h2>Atividades de Prática em História</h2>
                 <p>Desenvolva suas habilidades em história com atividades interativas e desafiadoras!</p>
                 <p>Explore opções para testar seu conhecimento e fixar conteúdos de forma divertida.</p>
-                
+
                 <div class="atividades-conteudo">
                     <div class="atividade questionarios animated">
                         <h3>Questionários</h3>
@@ -229,11 +227,11 @@ if(!isset($_SESSION['nome_sessao'])){
                         <p>Teste sua memória e associe personagens, eventos e datas importantes com nosso jogo da memória histórico!</p>
                     </div>
                 </div>
-                
+
                 <a href="../php/atividades.php" class="btn">Ver Atividades</a>
             </div>
         </section>
-        
+
         <section class="glossario animated">
             <div class="container">
                 <h2>Glossário Histórico</h2>
@@ -244,7 +242,7 @@ if(!isset($_SESSION['nome_sessao'])){
             </div>
         </section>
     </main>
-            
+
 
     <footer class="footer">
         <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SOFTDEV</a>

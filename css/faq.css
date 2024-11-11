@@ -140,6 +140,11 @@ a {
     font-size: 12px;
 }
 
+#logout{
+    max-width: 40px;
+    margin-left: 20px;
+}
+
 
 @media (max-width: 768px) {
     /* MENU MOBILE */

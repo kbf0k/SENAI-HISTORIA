@@ -140,6 +140,12 @@ a {
 .header .user-vector p {
     font-size: 12px;
 }
+
+#logout{
+    max-width: 40px;
+    margin-left: 20px;
+}
+
 /* MENU MOBILE */
 #mobile-header {
     display: none;

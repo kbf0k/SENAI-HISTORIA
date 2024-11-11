@@ -126,7 +126,7 @@
 
 //   function removerNavPags() {
 //             const navPags = document.getElementById('navPags');
-            
+
 //             if (navPags) navPags.remove();
 //         }
 
@@ -149,7 +149,7 @@
 //             letraAnterior.style.textAlign = 'center';
 //             letraAnterior.style.fontSize = '16px';
 //             letraAnterior.style.cursor = 'pointer';
-            
+
 
 //             botaoVoltar = document.createElement('button');
 //             botaoVoltar.textContent = 'Voltar';
@@ -213,7 +213,7 @@
 //     removerNavPags();
 //     atualizarConteudo('A');
 //   });
-  
+
 //   document.getElementById('botaoB').addEventListener('click', function() {
 //     removerNavPags();
 //     atualizarConteudo('B');
@@ -454,26 +454,26 @@
 
 document.getElementById('logout').addEventListener('click', () => {
   Swal.fire({
-      title: "Voce deseja sair?",
-      text: "Você não poderá reverter isso!",
-      icon: "warning",
-      showCancelButton: true,
-      cancelButtonText: "Cancelar",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Sim, Sair",
-      confirmButtonColor: "#4b3f35",
-      backdrop: `rgba(0, 0, 0, 0.5)`
+    title: "Voce deseja sair?",
+    text: "Você não poderá reverter isso!",
+    icon: "warning",
+    showCancelButton: true,
+    cancelButtonText: "Cancelar",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Sim, Sair",
+    confirmButtonColor: "#4b3f35",
+    backdrop: `rgba(0, 0, 0, 0.5)`
   }).then((result) => {
-      if (result.isConfirmed) {
-          fetch('logout.php', {
-              method: 'POST'
-          })
-              .then(response => {
-                  if (response.ok) {
-                      window.location.href = "index.php";
-                  }
-              })
-      }
+    if (result.isConfirmed) {
+      fetch('logout.php', {
+        method: 'POST'
+      })
+        .then(response => {
+          if (response.ok) {
+            window.location.href = "index.php";
+          }
+        })
+    }
   });
 });
 
@@ -486,7 +486,7 @@ document.getElementById('logout').addEventListener('click', () => {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   carregarGlossario('A'); // Carrega inicialmente os conceitos que começam com 'A'
 });
 
@@ -494,14 +494,14 @@ document.addEventListener("DOMContentLoaded", function() {
 function carregarGlossario(letra) {
   const xhr = new XMLHttpRequest();
   xhr.open("GET", "consultar_glossario.php?letra=" + letra, true);
-  xhr.onload = function() {
-      if (xhr.status === 200) {
-          document.getElementById('page-content').innerHTML = xhr.responseText;
-          adicionarEventosEditar(); // Adiciona eventos para os botões de edição
-          document.getElementById("result-pesq").style.display = "none";
-      } else {
-          console.error('Erro ao carregar o glossário');
-      }
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      document.getElementById('page-content').innerHTML = xhr.responseText;
+      adicionarEventosEditar(); // Adiciona eventos para os botões de edição
+      document.getElementById("result-pesq").style.display = "none";
+    } else {
+      console.error('Erro ao carregar o glossário');
+    }
   };
   xhr.send();
 }
@@ -510,10 +510,10 @@ function carregarGlossario(letra) {
 function adicionarEventosEditar() {
   const botoesEditar = document.querySelectorAll('.editar');
   botoesEditar.forEach(botao => {
-      botao.addEventListener('click', function() {
-          const id = this.getAttribute('data-id');
-          abrirModalEdicao(id);
-      });
+    botao.addEventListener('click', function () {
+      const id = this.getAttribute('data-id');
+      abrirModalEdicao(id);
+    });
   });
 }
 
@@ -522,16 +522,16 @@ function abrirModalEdicao(id) {
   // Faz uma requisição para obter os dados do conceito
   const xhr = new XMLHttpRequest();
   xhr.open("GET", "obter_conceito.php?id=" + id, true);
-  xhr.onload = function() {
-      if (xhr.status === 200) {
-          const conceito = JSON.parse(xhr.responseText);
-          document.getElementById("termo").value = conceito.titulo_glossario;
-          document.getElementById("definicao").value = conceito.descricao_glossario;
-          document.getElementById("id_glossario").value = conceito.id_glossario; // Campo oculto para o ID
-          modal.style.display = "block";
-      } else {
-          console.error('Erro ao carregar o conceito para edição');
-      }
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      const conceito = JSON.parse(xhr.responseText);
+      document.getElementById("termo").value = conceito.titulo_glossario;
+      document.getElementById("definicao").value = conceito.descricao_glossario;
+      document.getElementById("id_glossario").value = conceito.id_glossario; // Campo oculto para o ID
+      modal.style.display = "block";
+    } else {
+      console.error('Erro ao carregar o conceito para edição');
+    }
   };
   xhr.send();
 }
@@ -542,22 +542,22 @@ const modal = document.getElementById("modal");
 const fecharModal = document.querySelector(".fechar");
 const formNovoConceito = document.getElementById("formNovoConceito");
 
-abrirModal.addEventListener("click", function() {
+abrirModal.addEventListener("click", function () {
   modal.style.display = "block";
 });
 
-fecharModal.addEventListener("click", function() {
+fecharModal.addEventListener("click", function () {
   modal.style.display = "none";
 });
 
-window.addEventListener("click", function(event) {
+window.addEventListener("click", function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 });
 
 // Função para enviar o formulário via AJAX
-formNovoConceito.addEventListener("submit", function(event) {
+formNovoConceito.addEventListener("submit", function (event) {
   event.preventDefault();
 
   // Captura os valores dos campos de entrada
@@ -569,7 +569,7 @@ formNovoConceito.addEventListener("submit", function(event) {
   const url = id_glossario ? "editar_conceito.php" : "inserir_conceito.php";
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  xhr.onload = function() {
+  xhr.onload = function () {
     if (xhr.status === 200) {
       alert(xhr.responseText);
       modal.style.display = "none";
@@ -588,10 +588,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const editarButtons = document.querySelectorAll('.editar');
 
   editarButtons.forEach(button => {
-      button.addEventListener('click', function () {
-          const id = this.getAttribute('data-id');
-          carregarConceitoParaEditar(id);
-      });
+    button.addEventListener('click', function () {
+      const id = this.getAttribute('data-id');
+      carregarConceitoParaEditar(id);
+    });
   });
 });
 
@@ -600,15 +600,15 @@ function carregarConceitoParaEditar(id) {
   const xhr = new XMLHttpRequest();
   xhr.open("GET", "get_conceito.php?id=" + id, true);
   xhr.onload = function () {
-      if (xhr.status === 200) {
-          const conceito = JSON.parse(xhr.responseText);
-          document.getElementById('termo').value = conceito.titulo_glossario;
-          document.getElementById('definicao').value = conceito.descricao_glossario;
-          document.getElementById('id_glossario').value = conceito.id_glossario;
-          modal.style.display = "block"; // Mostra o modal
-      } else {
-          alert("Erro ao carregar o conceito para edição.");
-      }
+    if (xhr.status === 200) {
+      const conceito = JSON.parse(xhr.responseText);
+      document.getElementById('termo').value = conceito.titulo_glossario;
+      document.getElementById('definicao').value = conceito.descricao_glossario;
+      document.getElementById('id_glossario').value = conceito.id_glossario;
+      modal.style.display = "block"; // Mostra o modal
+    } else {
+      alert("Erro ao carregar o conceito para edição.");
+    }
   };
   xhr.send();
 }
@@ -623,19 +623,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // Evento para o botão de editar
   const editarButtons = document.querySelectorAll('.editar');
   editarButtons.forEach(button => {
-      button.addEventListener('click', function () {
-          const id = this.getAttribute('data-id');
-          carregarConceitoParaEditar(id);
-      });
+    button.addEventListener('click', function () {
+      const id = this.getAttribute('data-id');
+      carregarConceitoParaEditar(id);
+    });
   });
 
   // Evento para o botão de excluir
   const excluirButtons = document.querySelectorAll('.excluir');
   excluirButtons.forEach(button => {
-      button.addEventListener('click', function () {
-          const id = this.getAttribute('data-id');
-          confirmarExclusao(id);
-      });
+    button.addEventListener('click', function () {
+      const id = this.getAttribute('data-id');
+      confirmarExclusao(id);
+    });
   });
 });
 
@@ -644,15 +644,15 @@ function carregarConceitoParaEditar(id) {
   const xhr = new XMLHttpRequest();
   xhr.open("GET", "get_conceito.php?id=" + id, true);
   xhr.onload = function () {
-      if (xhr.status === 200) {
-          const conceito = JSON.parse(xhr.responseText);
-          document.getElementById('termo').value = conceito.titulo_glossario;
-          document.getElementById('definicao').value = conceito.descricao_glossario;
-          document.getElementById('id_glossario').value = conceito.id_glossario;
-          modal.style.display = "block"; // Mostra o modal
-      } else {
-          alert("Erro ao carregar o conceito para edição.");
-      }
+    if (xhr.status === 200) {
+      const conceito = JSON.parse(xhr.responseText);
+      document.getElementById('termo').value = conceito.titulo_glossario;
+      document.getElementById('definicao').value = conceito.descricao_glossario;
+      document.getElementById('id_glossario').value = conceito.id_glossario;
+      modal.style.display = "block"; // Mostra o modal
+    } else {
+      alert("Erro ao carregar o conceito para edição.");
+    }
   };
   xhr.send();
 }
@@ -660,7 +660,7 @@ function carregarConceitoParaEditar(id) {
 // Função para confirmar a exclusão
 function confirmarExclusao(id) {
   if (confirm("Tem certeza que deseja excluir este conceito?")) {
-      excluirConceito(id);
+    excluirConceito(id);
   }
 }
 
@@ -669,12 +669,117 @@ function excluirConceito(id) {
   const xhr = new XMLHttpRequest();
   xhr.open("GET", "excluir_conceito.php?id=" + id, true);
   xhr.onload = function () {
-      if (xhr.status === 200) {
-          alert("Conceito excluído com sucesso!");
-          location.reload();  // Atualiza a página para refletir a exclusão
-      } else {
-          alert("Erro ao excluir o conceito.");
-      }
+    if (xhr.status === 200) {
+      alert("Conceito excluído com sucesso!");
+      location.reload();  // Atualiza a página para refletir a exclusão
+    } else {
+      alert("Erro ao excluir o conceito.");
+    }
   };
   xhr.send();
 }
+
+
+
+document.getElementById('logout').addEventListener('click', () => {
+  Swal.fire({
+    title: "Voce deseja sair?",
+    text: "Você não poderá reverter isso!",
+    icon: "warning",
+    showCancelButton: true,
+    cancelButtonText: "Cancelar",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Sim, Sair",
+    confirmButtonColor: "#4b3f35",
+    backdrop: `rgba(0, 0, 0, 0.5)`
+  }).then((result) => {
+    if (result.isConfirmed) {
+      fetch('logout.php', {
+        method: 'POST'
+      })
+        .then(response => {
+          if (response.ok) {
+            window.location.href = "index.php";
+          }
+        })
+    }
+  });
+});
+document.getElementById('logout-mobile').addEventListener('click', () => {
+  Swal.fire({
+    title: "Voce deseja sair?",
+    text: "Você não poderá reverter isso!",
+    icon: "warning",
+    showCancelButton: true,
+    cancelButtonText: "Cancelar",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Sim, Sair",
+    confirmButtonColor: "#4b3f35",
+    backdrop: `rgba(0, 0, 0, 0.5)`
+  }).then((result) => {
+    if (result.isConfirmed) {
+      fetch('logout.php', {
+        method: 'POST'
+      })
+        .then(response => {
+          if (response.ok) {
+            window.location.href = "index.php";
+          }
+        })
+    }
+  });
+});
+
+// Função para observar os elementos e adicionar a classe 'is-visible' quando visíveis
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target); // Para de observar o elemento depois que ele se tornou visível
+    }
+  });
+}, {
+  threshold: 0.5
+});
+
+const animatedElements = document.querySelectorAll('.animated-title, .animated-subtitle, .animated-btn, .animated-cards, .linha-do-tempo .evento, .atividades .atividade, .glossario');
+
+animatedElements.forEach(element => {
+  observer.observe(element);
+});
+
+function toggleMenu() {
+  document.querySelector('.menu').classList.toggle('show');
+}
+
+
+// MENUMOBILE
+
+const btnMobile = document.getElementById('btn-mobile');
+
+function toggleMenu(event) {
+  if (event.type === 'touchstart') event.preventDefault();
+  const nav = document.getElementById('nav');
+  nav.classList.toggle('active');
+  const active = nav.classList.contains('active');
+  event.currentTarget.setAttribute('aria-expanded', active);
+  if (active) {
+    event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+  } else {
+    event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+  }
+}
+
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);
+
+document.getElementById('btn-mobile').addEventListener('click', function () {
+  const nav = document.getElementById('nav');
+  const btn = document.getElementById('btn-mobile');
+
+  nav.classList.toggle('active');
+
+  // Atualizar o aria-expanded para acessibilidade
+  const isExpanded = nav.classList.contains('active');
+  btn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+});

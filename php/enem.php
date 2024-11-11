@@ -1,12 +1,12 @@
 <!-- <?php
-include_once('conexao.php');
-session_start();
+        include_once('conexao.php');
+        session_start();
 
-if(!isset($_SESSION['nome_sessao'])){
-    header('Location: index.php');
-    exit();
-} 
-?> -->
+        if (!isset($_SESSION['nome_sessao'])) {
+            header('Location: index.php');
+            exit();
+        }
+        ?> -->
 <!DOCTYPE html>
 <html lang="Pt-BR">
 
@@ -26,7 +26,7 @@ if(!isset($_SESSION['nome_sessao'])){
                 <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
             </div>
             <nav class="menu">
-                <ul>
+                <ul class="nav-list">
                     <li class="dropdown">
                         <a href="">Períodos Históricos</a>
 
@@ -42,27 +42,24 @@ if(!isset($_SESSION['nome_sessao'])){
                     <li><a href="atividades.php">Atividades Complementares</a></li>
 
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
-                    
-                    <div class="user-vector">
-                        <a href="perfil.php">
+                        <div class="user-vector">
                             <img id="logo-vector" src="../img/user-vector.png" alt="">
                             <p>
                                 <?= $_SESSION['nome_sessao'] ?>
                             </p>
                             <p>
-                                <?=$_SESSION['tipo_sessao'] ?>
+                                <?= $_SESSION['tipo_sessao'] ?>
                             </p>
-                        </a>
-                    </div>
-                    <li><a id="logout">SAIR</a></li>
+                        </div>
+                        <li><img id="logout" src="../img/logout.png" alt=""></li>
                     <?php else: ?>
-                    <li><a href="index.php">LOGIN</a></li>
+                        <li><a href="index.php">LOGIN</a></li>
                     <?php endif; ?>
                 </ul>
             </nav>
         </div>
     </header>
-    <div id="mobile-header" >
+    <div id="mobile-header">
         <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
             <span id="hamburger"></span>
         </button>
@@ -91,14 +88,15 @@ if(!isset($_SESSION['nome_sessao'])){
                 <li><a href="idade_antiga.php">Idade Antiga</a></li>
                 <li><a href="idade_media.php">Idade Média</a></li>
                 <li><a href="idade_moderna.php">Idade Moderna</a></li>
-                <li><a href="idade_contemporanea.php">Idade Contemporânea</a></li></li>
+                <li><a href="idade_contemporanea.php">Idade Contemporânea</a></li>
+                </li>
                 <li><a href="glossario.php">Glossário</a></li>
                 <li><a href="atividades.php">Atividades Complementares</a></li>
             </ul>
         </nav>
     </div>
     <main>
-    <section class="articles">
+        <section class="articles">
             <div id="pagetitle">
                 <h1>ENEM e Vestibulares</h1>
                 <h3>Prepare-se para os principais vestibulares e o ENEM com conteúdos completos e atualizados sobre a História!</h3>
@@ -143,69 +141,69 @@ if(!isset($_SESSION['nome_sessao'])){
                 </article>
             </div>
         </section>
-         <section class="conteudos-vestibulares" id="dire_conteudo">
-  <h2>Como Estudar para Vestibulares de História</h2>
-  <p>Para garantir uma boa preparação, concentre-se nos tópicos mais recorrentes nas provas de vestibulares e ENEM. Confira abaixo os principais períodos que você deve estudar com profundidade.</p>
+        <section class="conteudos-vestibulares" id="dire_conteudo">
+            <h2>Como Estudar para Vestibulares de História</h2>
+            <p>Para garantir uma boa preparação, concentre-se nos tópicos mais recorrentes nas provas de vestibulares e ENEM. Confira abaixo os principais períodos que você deve estudar com profundidade.</p>
 
-  <div class="periodos">
-    <h3>O que estudar para o ENEM?</h3>
-    <p>Tradicionalmente, as perguntas de História do Exame Nacional do Ensino Médio (Enem) apresentam maior foco em História do Brasil.
-    Apesar do Brasil ser o tema mais cobrado, não esqueça de revisar temas centrais da História Geral, como Revolução Francesa, Revolução Industrial, ideologias como o fascismo e o comunismo, pois também costumam cair no Enem.
-    </p>
-  </div>
-
-  <div class="temas">
-    <h3>Temas Transversais Importantes</h3>
-    <ul>
-      <li><strong>História do Brasil:</strong> Desde o período colonial, passando pelo Império, até o período republicano e contemporâneo, incluindo os principais movimentos sociais e políticos.</li>
-      <li><strong>Movimentos Sociais e Revoluções:</strong> Revoluções que marcaram o mundo, como a Revolução Russa, a Revolução Chinesa e os movimentos de independência na América Latina.</li>
-      <li><strong>História Cultural e Econômica:</strong> Entenda as mudanças culturais e econômicas em cada período, como o mercantilismo, capitalismo e socialismo.</li>
-      <li><strong>Geopolítica Contemporânea:</strong> Guerra Fria, descolonização da África e Ásia, conflitos atuais e o papel de organizações internacionais.</li>
-    </ul>
-  </div>
-
-  <div class="dicas-estudo">
-    <h3>Dicas de Foco nos Estudos</h3>
-    <p>Para cada tema, concentre-se em:</p>
-    <ul>
-      <li><strong>Fatos Relevantes:</strong> Identifique e memorize os acontecimentos mais significativos e suas causas e consequências.</li>
-      <li><strong>Personagens Importantes:</strong> Conheça as figuras históricas que marcaram cada período e seus impactos.</li>
-      <li><strong>Interpretação de Contexto:</strong> Entenda como os eventos se conectam e influenciam uns aos outros ao longo da história.</li>
-    </ul>
-  </div>
-</section>
-<section id="estudos-enem" class="enem-section">
-    <h2>Estudos para o ENEM - História</h2>
-    <p>Explore os vídeos e mapas mentais sobre os temas que mais caem no ENEM.</p>
-
-    <div class="content-grid">
-        <!-- Seção de vídeos -->
-        <div class="video-section">
-            <h3>Vídeos Principais</h3>
-            <div class="videos">
-            <iframe src="https://www.youtube.com/embed/LxuTxkHAXeQ?si=qdzszvuVSPBj_daI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
-            <iframe src="https://www.youtube.com/embed/zyMumTbX7Cg?si=Ld7MUB3c_ENmVJCe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
-            <iframe src="URL_DO_VIDEO3" title="Vídeo 3"></iframe>
-            <iframe src="URL_DO_VIDEO4" title="Vídeo 4"></iframe>
-            <iframe src="URL_DO_VIDEO5" title="Vídeo 5"></iframe>
-            <iframe src="URL_DO_VIDEO6" title="Vídeo 6"></iframe>
+            <div class="periodos">
+                <h3>O que estudar para o ENEM?</h3>
+                <p>Tradicionalmente, as perguntas de História do Exame Nacional do Ensino Médio (Enem) apresentam maior foco em História do Brasil.
+                    Apesar do Brasil ser o tema mais cobrado, não esqueça de revisar temas centrais da História Geral, como Revolução Francesa, Revolução Industrial, ideologias como o fascismo e o comunismo, pois também costumam cair no Enem.
+                </p>
             </div>
-        </div>
 
-        <!-- Seção de Mapas Mentais -->
-        <div class="mapa-mental-section">
-            <h3>Mapas Mentais</h3>
-            <div class="mapas">
-                <img src="URL_MAPA_MENTAL1" alt="Mapa Mental 1">
-                <img src="URL_MAPA_MENTAL2" alt="Mapa Mental 2">
-                <img src="URL_MAPA_MENTAL3" alt="Mapa Mental 3">
-                <img src="URL_MAPA_MENTAL4" alt="Mapa Mental 4">
-                <img src="URL_MAPA_MENTAL5" alt="Mapa Mental 5">
-                <img src="URL_MAPA_MENTAL6" alt="Mapa Mental 6">
+            <div class="temas">
+                <h3>Temas Transversais Importantes</h3>
+                <ul>
+                    <li><strong>História do Brasil:</strong> Desde o período colonial, passando pelo Império, até o período republicano e contemporâneo, incluindo os principais movimentos sociais e políticos.</li>
+                    <li><strong>Movimentos Sociais e Revoluções:</strong> Revoluções que marcaram o mundo, como a Revolução Russa, a Revolução Chinesa e os movimentos de independência na América Latina.</li>
+                    <li><strong>História Cultural e Econômica:</strong> Entenda as mudanças culturais e econômicas em cada período, como o mercantilismo, capitalismo e socialismo.</li>
+                    <li><strong>Geopolítica Contemporânea:</strong> Guerra Fria, descolonização da África e Ásia, conflitos atuais e o papel de organizações internacionais.</li>
+                </ul>
             </div>
-        </div>
-    </div>
-</section>
+
+            <div class="dicas-estudo">
+                <h3>Dicas de Foco nos Estudos</h3>
+                <p>Para cada tema, concentre-se em:</p>
+                <ul>
+                    <li><strong>Fatos Relevantes:</strong> Identifique e memorize os acontecimentos mais significativos e suas causas e consequências.</li>
+                    <li><strong>Personagens Importantes:</strong> Conheça as figuras históricas que marcaram cada período e seus impactos.</li>
+                    <li><strong>Interpretação de Contexto:</strong> Entenda como os eventos se conectam e influenciam uns aos outros ao longo da história.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="estudos-enem" class="enem-section">
+            <h2>Estudos para o ENEM - História</h2>
+            <p>Explore os vídeos e mapas mentais sobre os temas que mais caem no ENEM.</p>
+
+            <div class="content-grid">
+                <!-- Seção de vídeos -->
+                <div class="video-section">
+                    <h3>Vídeos Principais</h3>
+                    <div class="videos">
+                        <iframe src="https://www.youtube.com/embed/LxuTxkHAXeQ?si=qdzszvuVSPBj_daI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/zyMumTbX7Cg?si=Ld7MUB3c_ENmVJCe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe src="URL_DO_VIDEO3" title="Vídeo 3"></iframe>
+                        <iframe src="URL_DO_VIDEO4" title="Vídeo 4"></iframe>
+                        <iframe src="URL_DO_VIDEO5" title="Vídeo 5"></iframe>
+                        <iframe src="URL_DO_VIDEO6" title="Vídeo 6"></iframe>
+                    </div>
+                </div>
+
+                <!-- Seção de Mapas Mentais -->
+                <div class="mapa-mental-section">
+                    <h3>Mapas Mentais</h3>
+                    <div class="mapas">
+                        <img src="URL_MAPA_MENTAL1" alt="Mapa Mental 1">
+                        <img src="URL_MAPA_MENTAL2" alt="Mapa Mental 2">
+                        <img src="URL_MAPA_MENTAL3" alt="Mapa Mental 3">
+                        <img src="URL_MAPA_MENTAL4" alt="Mapa Mental 4">
+                        <img src="URL_MAPA_MENTAL5" alt="Mapa Mental 5">
+                        <img src="URL_MAPA_MENTAL6" alt="Mapa Mental 6">
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
     </main>

@@ -56,7 +56,7 @@ session_start();
                                 <?= $_SESSION['tipo_sessao'] ?>
                             </p>
                         </div>
-                        <li><a id="logout">SAIR</a></li>
+                        <li><img id="logout" src="../img/logout.png" alt=""></li>
                     <?php else: ?>
                         <li><a href="index.php">LOGIN</a></li>
                     <?php endif; ?>
@@ -64,7 +64,7 @@ session_start();
             </nav>
         </div>
     </header>
-    <div id="mobile-header" >
+    <div id="mobile-header">
         <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
             <span id="hamburger"></span>
         </button>
@@ -88,7 +88,8 @@ session_start();
                 <li><a href="idade_antiga.php">Idade Antiga</a></li>
                 <li><a href="idade_media.php">Idade Média</a></li>
                 <li><a href="idade_moderna.php">Idade Moderna</a></li>
-                <li><a href="idade_contemporanea.php">Idade Contemporânea</a></li></li>
+                <li><a href="idade_contemporanea.php">Idade Contemporânea</a></li>
+                </li>
                 <li><a href="glossario.php">Glossário</a></li>
                 <li><a href="atividades.php">Atividades Complementares</a></li>
                 <?php if (isset($_SESSION['nome_sessao'])): ?>

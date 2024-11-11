@@ -52,6 +52,7 @@ main {
 
 #login h1 {
     color: #3b3832;
+    text-align: center;
 }
 
 #login p {

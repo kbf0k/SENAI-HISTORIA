@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <!-- Formulário de Login -->
             <form action="" method="POST" id="login">
                 <img src="../img/../img/LOGO PARA LOGIN.png" alt="">
-                <h1>Login</h1>
+                <h1>Entrar</h1>
                 <label for="email">Email</label>
                 <input type="email" name="email-login" id="email" required placeholder="@email.com">
 
