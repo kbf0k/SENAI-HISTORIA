@@ -839,7 +839,34 @@ a {
     color: #f9f4e1;
     ;
 }
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(197, 172, 127);
+    color: black;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-90deg); /* Rota a seta para cima */
+    padding-left: 0px;
+    padding-bottom: 4px;
+}
 
+#backToTop:hover {
+    opacity: 1;
+    transform: scale(1.1) rotate(-90deg); 
+}
 /* Media Query para telas maiores que 768px */
 @media screen and (max-width: 768px) {
 

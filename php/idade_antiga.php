@@ -102,17 +102,17 @@ if (!isset($_SESSION['nome_sessao'])) {
     <main>
         <section id="introducao">
             <div class="video">
-                <video src="../video/idade_antiga.mp4" autoplay loop muted></video>
+            <video id="meuVideo" src="../video/idade_antiga(teste).mp4" autoplay loop muted></video>
             </div>
             <div class="titulo">
                 <h1>IDADE ANTIGA</h1>
-                <p>Venha Ver Tudo sobre essa época</p>
+                <p>A Idade Antiga é o período em que surgiram as primeiras grandes civilizações e a escrita.</p>
                 <a href="#conteudo"><button id="saiba-mais">Saiba Mais</button></a>
             </div>
         </section>
 
         <img id="img-central" src="../img/civilizacoes-da-idade-antiga.jpg" alt="Civilizações da Idade Antiga">
-        <div class="conteudo">
+        <div id="conteudo">
             <p>A Idade Antiga compreende o período que se inicia com o surgimento da escrita, por volta de 3.500 a.C., e vai até a queda do Império Romano do Ocidente, em 476 d.C.</p>
             <p>Na Idade Antiga, surgiram as primeiras cidades organizadas, impérios e estados centralizados, além das primeiras formas de governo, religião estruturada, escrita e avanços na ciência e nas artes.</p>
             <p>As principais civilizações desse período foram: Egito, Mesopotâmia, Persas, Grécia e Roma, cada uma delas com contribuições marcantes para a história humana.</p>
@@ -205,7 +205,7 @@ if (!isset($_SESSION['nome_sessao'])) {
             </div>
         </section>
 
-
+        <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
     </main>
     <footer class="footer">
         <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SOFTDEV</a>

@@ -21,7 +21,7 @@ if (!isset($_SESSION['nome_sessao'])) {
 </head>
 
 <body>
-    <header class="header">
+<header class="header">
         <div class="container logo-menu">
             <div class="logo">
                 <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
@@ -98,7 +98,6 @@ if (!isset($_SESSION['nome_sessao'])) {
             </ul>
         </nav>
     </div>
-
     <main>
         <?php ?>
         <section class="intro">
@@ -243,6 +242,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                 <a href="../php/glossario.php" class="btn">Acessar Glossário</a>
             </div>
         </section>
+        <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
     </main>
 
 

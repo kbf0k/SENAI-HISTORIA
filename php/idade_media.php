@@ -286,6 +286,7 @@ session_start();
                 </ul>
             </div>
         </section>
+        <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
     </main>
     <footer class="footer">
         <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SOFTDEV</a>

@@ -105,7 +105,7 @@ if (!isset($_SESSION['nome_sessao'])) {
             </div>
             <div class="titulo">
                 <h1>IDADE CONTEMPORÂNEA</h1>
-                <p>A Idade Marcada por rápidas transformações tecnológicas, sociais e culturais </p>
+                <p>A Idade Contemporânea foi marcada por rápidas transformações tecnológicas, sociais e culturais </p>
                 <a href="#acontecimentos"><button id="saiba-mais">Saiba Mais</button></a>
             </div>
         </section>
@@ -205,7 +205,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                 </div>
             </section>
         </div>
-
+        <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
     </main>
     <footer class="footer">
         <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SOFTDEV</a>

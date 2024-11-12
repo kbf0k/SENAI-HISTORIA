@@ -14,9 +14,9 @@ if (!isset($_SESSION['nome_sessao'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
+    <title>Pré História</title>
     <link rel="stylesheet" href="../css/pre_historia.css">
-    <script src="../javascript/inicio.js" defer></script>
+    <script src="../javascript/pre_historia.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 
 
@@ -104,11 +104,11 @@ if (!isset($_SESSION['nome_sessao'])) {
     <main>
         <section id="introducao">
             <div class="video">
-                <video src="../video/pre_historia.mp4" autoplay loop muted></video>
+                <video src="../video/prehistoria.vs.mp4" autoplay loop muted></video>
             </div>
             <div class="titulo">
                 <h1>PRÉ-HISTÓRIA</h1>
-                <p>A pré-história é o período da história humana que precede o surgimento da Escrita</p>
+                <p>A Pré-História é o período da história humana que precede o surgimento da escrita</p>
                 <a href="#acontecimentos"><button id="saiba-mais">Saiba Mais</button></a>
             </div>
         </section>
@@ -201,11 +201,8 @@ if (!isset($_SESSION['nome_sessao'])) {
 
 
         </div>
-
-
-
-
-    </main>
+        <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
+        </main>
     <footer class="footer">
         <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SOFTDEV</a>
         <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a>

@@ -109,7 +109,7 @@ if (!isset($_SESSION['nome_sessao'])) {
             </div>
             <div class="titulo">
                 <h1>IDADE MODERNA</h1>
-                <p>Explore as inovações e transformações dessa era histórica.</p>
+                <p>A Idade Moderna é marcada por grandes mudanças sociais, políticas e culturais.</p>
                 <a href="#caracteristicas"><button id="saiba-mais">Saiba Mais</button></a>
             </div>
         </section>
@@ -282,6 +282,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                 </ul>
             </div>
         </section>
+        <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
     </main>
     <<footer class="footer">
         <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SOFTDEV</a>

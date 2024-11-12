@@ -173,3 +173,9 @@ document.getElementById('btn-mobile').addEventListener('click', function () {
     const isExpanded = nav.classList.contains('active');
     btn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
 });
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
