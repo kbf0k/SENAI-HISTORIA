@@ -454,13 +454,12 @@
 
 document.getElementById('logout').addEventListener('click', () => {
   Swal.fire({
-    title: "Voce deseja sair?",
-    text: "Você não poderá reverter isso!",
+    title: "Você deseja sair?",
     icon: "warning",
     showCancelButton: true,
     cancelButtonText: "Cancelar",
     cancelButtonColor: "#d33",
-    confirmButtonText: "Sim, Sair",
+    confirmButtonText: "Sim, sair",
     confirmButtonColor: "#4b3f35",
     backdrop: `rgba(0, 0, 0, 0.5)`
   }).then((result) => {
