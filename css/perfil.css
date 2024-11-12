@@ -233,6 +233,18 @@ a {
         height: 70px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
+
+    #mobile-menu #logout-mobile {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        background-color: rgba(255, 0, 0, 0.6) !important;
+        border-radius: 20px !important;
+        width: 30% !important;
+        padding: 5px !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-left: 135px !important;
+    }
     
     #btn-mobile {
         display: flex;

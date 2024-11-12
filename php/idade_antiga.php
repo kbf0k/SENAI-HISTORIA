@@ -52,6 +52,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                                 <p>
                                     <?= $_SESSION['tipo_sessao'] ?>
                                 </p>
+                            </a>
                         </div>
                         <li><img id="logout" src="../img/logout.png" alt=""></li>
                     <?php else: ?>
@@ -102,7 +103,7 @@ if (!isset($_SESSION['nome_sessao'])) {
     <main>
         <section id="introducao">
             <div class="video">
-            <video id="meuVideo" src="../video/idade_antiga(teste).mp4" autoplay loop muted></video>
+                <video id="meuVideo" src="../video/idade_antiga(teste).mp4" autoplay loop muted></video>
             </div>
             <div class="titulo">
                 <h1>IDADE ANTIGA</h1>

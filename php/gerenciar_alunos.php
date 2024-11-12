@@ -37,20 +37,37 @@ $resultado_alunos = $conexao->query($sql_alunos);
                 <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
             </div>
             <nav class="menu">
-                <ul>
-                    <li><a href="inicio.php">Início</a></li>
+                <ul class="nav-list">
+                    <li class="dropdown">
+                        <a href="">Períodos Históricos</a>
+
+                        <div class="dropdown-menu">
+                            <a href="pre_historia.php">Pré-História</a>
+                            <a href="idade_antiga.php">Idade Antiga</a>
+                            <a href="idade_media.php">Idade Média</a>
+                            <a href="idade_moderna.php">Idade Moderna</a>
+                            <a href="idade_contemporanea.php">Idade Contemporânea</a>
+                        </div>
+                    </li>
                     <li><a href="glossario.php">Glossário</a></li>
                     <li><a href="atividades.php">Atividades Complementares</a></li>
+
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
                         <div class="user-vector">
-                            <img id="logo-vector" src="../img/user-vector.png" alt="">
-                            <p><?= $_SESSION['nome_sessao'] ?></p>
-                            <p><?= $_SESSION['tipo_sessao'] ?></p>
+                            <a href="perfil.php">
+                                <img id="logo-vector" src="../img/user-vector.png" alt="">
+                                <p>
+                                    <?= $_SESSION['nome_sessao'] ?>
+                                </p>
+                                <p>
+                                    <?= $_SESSION['tipo_sessao'] ?>
+                                </p>
                         </div>
-                        <li><a id="logout">SAIR</a></li>
+                        <li><img id="logout" src="../img/logout.png" alt=""></li>
                     <?php else: ?>
                         <li><a href="index.php">LOGIN</a></li>
                     <?php endif; ?>
+                    </a>
                 </ul>
             </nav>
         </div>
@@ -75,7 +92,12 @@ $resultado_alunos = $conexao->query($sql_alunos);
         </div>
         <nav id="nav">
             <ul id="mobile-menu" role="mobile-menu">
-                <li><a href="inicio.php">Início</a></li>
+                <li><a href="pre_historia.php">Pré-História</a></li>
+                <li><a href="idade_antiga.php">Idade Antiga</a></li>
+                <li><a href="idade_media.php">Idade Média</a></li>
+                <li><a href="idade_moderna.php">Idade Moderna</a></li>
+                <li><a href="idade_contemporanea.php">Idade Contemporânea</a></li>
+                </li>
                 <li><a href="glossario.php">Glossário</a></li>
                 <li><a href="atividades.php">Atividades Complementares</a></li>
                 <?php if (isset($_SESSION['nome_sessao'])): ?>

@@ -55,6 +55,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                                 <p>
                                     <?= $_SESSION['tipo_sessao'] ?>
                                 </p>
+                            </a>
                         </div>
                         <li><img id="logout" src="../img/logout.png" alt=""></li>
                     <?php else: ?>

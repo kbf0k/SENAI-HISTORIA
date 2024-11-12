@@ -48,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <p>
                                     <?= $_SESSION['tipo_sessao'] ?>
                                 </p>
+                            </a>
                         </div>
                         <li><img id="logout" src="../img/logout.png" alt=""></li>
                     <?php else: ?>

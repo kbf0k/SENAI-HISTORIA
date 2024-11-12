@@ -111,7 +111,7 @@ $conexao->close();
             <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
         </div>
         <nav class="menu">
-            <ul>
+            <ul class="nav-list">
                 <li class="dropdown">
                     <a href="">Períodos Históricos</a>
 
@@ -127,7 +127,6 @@ $conexao->close();
                 <li><a href="atividades.php">Atividades Complementares</a></li>
 
                 <?php if (isset($_SESSION['nome_sessao'])): ?>
-
                     <div class="user-vector">
                         <a href="perfil.php">
                             <img id="logo-vector" src="../img/user-vector.png" alt="">
@@ -143,6 +142,7 @@ $conexao->close();
                 <?php else: ?>
                     <li><a href="index.php">LOGIN</a></li>
                 <?php endif; ?>
+                </a>
             </ul>
         </nav>
     </div>
@@ -164,11 +164,6 @@ $conexao->close();
                 <?php endif; ?>
             </a>
         </div>
-        <?php if (isset($_SESSION['nome_sessao'])): ?>
-            <a id="logout-mobile">SAIR</a>
-        <?php else: ?>
-            <a href="index.php">LOGIN</a>
-        <?php endif; ?>
     </div>
     <nav id="nav">
         <ul id="mobile-menu" role="mobile-menu">
@@ -180,6 +175,11 @@ $conexao->close();
             </li>
             <li><a href="glossario.php">Glossário</a></li>
             <li><a href="atividades.php">Atividades Complementares</a></li>
+            <?php if (isset($_SESSION['nome_sessao'])): ?>
+                <a id="logout-mobile">SAIR</a>
+            <?php else: ?>
+                <a href="index.php">LOGIN</a>
+            <?php endif; ?>
         </ul>
     </nav>
 </div>
@@ -187,7 +187,7 @@ $conexao->close();
 <body>
     <main class="conteudo">
         <section class="politica">
-            <a id="voltar" href="../php/index.php">Voltar</a>
+            <a id="voltar">Voltar</a>
             <h2 id="editar">Editar Perfil</h2>
             <form method="POST" action="perfil.php">
                 <div class="form-group">
