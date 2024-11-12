@@ -23,7 +23,7 @@ if (!isset($_SESSION['nome_sessao'])) {
 </head>
 
 <body>
-    <header class="header">
+<header class="header">
         <div class="container logo-menu">
             <div class="logo">
                 <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
@@ -54,6 +54,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                                 <p>
                                     <?= $_SESSION['tipo_sessao'] ?>
                                 </p>
+                            </a>
                         </div>
                         <li><img id="logout" src="../img/logout.png" alt=""></li>
                     <?php else: ?>
