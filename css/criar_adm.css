@@ -85,9 +85,11 @@ a {
 .menu #logout:hover {
     color: #d4af37;
 }
+
 .menu #logout {
     cursor: pointer;
 }
+
 #mobile-header {
     display: none;
 }
@@ -141,52 +143,59 @@ a {
     font-size: 12px;
 }
 
-#logout{
+#logout {
     max-width: 40px;
     margin-left: 20px;
 }
 
 
 @media (max-width: 768px) {
+
     /* MENU MOBILE */
     .header {
         display: none;
     }
+
     #mobile-logo {
         font-size: 1.5rem;
         font-weight: bold;
     }
-    
+
     #btn-mobile {
         display: none;
     }
-    
+
     /* Estilo para alinhar nome e tipo ao lado da imagem */
     .user-options {
         display: flex;
         align-items: center;
         gap: 1rem;
     }
+
     .user-options a {
-        color: #fff;       
+        color: #fff;
     }
 
     .user-vector {
-        display: flex; /* Flexbox para alinhar a imagem e o texto horizontalmente */
-    align-items: center; /* Alinha a imagem e o texto no centro verticalmente */
-    gap: 0.5rem;
+        display: flex;
+        /* Flexbox para alinhar a imagem e o texto horizontalmente */
+        align-items: center;
+        /* Alinha a imagem e o texto no centro verticalmente */
+        gap: 0.5rem;
     }
+
     .user-vector a {
         display: flex;
         text-decoration: none;
         align-items: center;
     }
+
     .user-vector #logo-vector {
         max-width: 50px;
         border-radius: 50%;
         align-items: flex-start;
     }
-    
+
     .user-info {
         display: flex;
         flex-direction: column;
@@ -194,19 +203,19 @@ a {
         text-align: left;
         margin-left: 0.5em;
     }
-    
+
     .user-info p {
         font-size: 12px;
     }
-    
-    
+
+
     .logo {
         max-width: 150px;
         margin: 0 auto;
         cursor: pointer;
         transition: .3s;
     }
-    
+
     #mobile-menu {
         display: flex;
         list-style: none;
@@ -214,11 +223,12 @@ a {
         text-align: center;
         justify-content: center;
     }
+
     /* esconder e mostrar o menu em mobile */
     #mobile-menu {
         display: none;
     }
-    
+
     #mobile-header {
         background: linear-gradient(135deg, #4b3f35, #3b2f25);
         color: #fff;
@@ -229,7 +239,7 @@ a {
         height: 70px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
-    
+
     #btn-mobile {
         display: flex;
         padding: 0.5rem 1rem;
@@ -277,7 +287,7 @@ a {
         transform: rotate(-135deg);
         top: -7px;
     }
-    
+
     /* Menu expandido no mobile */
     #mobile-menu {
         display: block;
@@ -293,13 +303,13 @@ a {
         opacity: 0;
         z-index: 1000;
     }
-    
+
     #nav.active #mobile-menu {
         transform: translateY(0);
         visibility: visible;
         opacity: 1;
     }
-    
+
     #mobile-menu a {
         display: block;
         padding: 1rem;
@@ -310,17 +320,26 @@ a {
         transition: background 0.3s ease, color 0.3s ease;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
+
     #mobile-menu a:hover {
         background-color: rgba(255, 255, 255, 0.1);
         color: #ffb800;
     }
-    
+
     /* Animação suave ao abrir e fechar o menu */
     #nav {
         transition: transform 0.4s ease;
     }
 
+    #container {
+        height: 700px !important;
+        width: 400px !important;
+        padding: 40px !important;
+    }
+
+    main{
+        height: 95vh !important;
+    }
 }
 
 main {
@@ -468,7 +487,7 @@ main {
     color: #d4af37;
 }
 
-.footer a{
+.footer a {
     color: white;
     transition: .3s ease-in-out;
     margin-left: 10px;
@@ -476,11 +495,13 @@ main {
     text-decoration: none;
 
 }
-.footer #link{
+
+.footer #link {
     margin-top: 10px;
     color: white;
 }
-.footer a:hover{
+
+.footer a:hover {
     color: #d4af37;
 }
 
@@ -488,5 +509,6 @@ main {
     text-align: center;
     margin-top: 20px;
     font-size: 18px;
-    color: #f9f4e1;;
+    color: #f9f4e1;
+    ;
 }
