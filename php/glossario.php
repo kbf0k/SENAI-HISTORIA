@@ -128,9 +128,9 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
             <img id="botao-pesquisa" src="../img/lupa_glossario.png" alt="Buscar">
         </button>
     </form>
-  </div>
+  </div>  -->
 
-  <p class="search-hint">O uso de acentos e caracteres especiais não interfere no resultado de busca.</p> -->
+  <p class="search-hint">Clique em uma letra abaixo para ver os conceitos que se iniciam por ela.</p>
 
     <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
 
@@ -201,9 +201,9 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
                         echo "<a href='excluir.php?id_glossario=" . $linha_pesq['id_glossario'] . "'>
                         <button class='botao-extra excluir'><img src='../img/lixeira_icon.png' alt='Excluir'></button>
                         </a>";
+                        echo "</div>";
                     }
                     echo "<p class='conceitos'><b>" . $linha_pesq['titulo_glossario'] . ":</b> " . $linha_pesq['descricao_glossario'] . "</p>";
-                    echo "</div>";
                 }
             } else {
                 echo "<h4><b>Nenhum conceito encontrado com o termo: </b>" . '"' . $pesquisa . '"'  . "</h4>";
@@ -388,7 +388,7 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
     <div id="navLetras"></div>
 
     <footer class="footer">
-        <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SOFTDEV</a>
+        <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SoftDev</a>
         <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a>
         <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">João Gustavo Mota Ramos</a>
         <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">João Pedro da Cunha Machado</a>
