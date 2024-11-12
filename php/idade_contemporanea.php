@@ -206,6 +206,102 @@ if (!isset($_SESSION['nome_sessao'])) {
                 </div>
             </section>
         </div>
+        <section id="linhaTempo">
+            <div class="titulo-linhaTempo">
+                <h1>LINHA DO TEMPO</h1>
+                <hr>
+                <p>Principais Eventos</p>
+            </div>
+            <div class="timeline">
+                <ul>
+                    <li>
+                        <div class="content">
+                            <h3>Revolução Francesa</h3>
+                            <p>Iniciada em 1789, a Revolução Francesa marca o fim da monarquia absolutista na França e inspira movimentos de independência e revoluções democráticas em todo o mundo.</p>
+                        </div>
+                        <div class="time">
+                            <h4>1789</h4>
+                        </div>
+                        <div class="img-direita">
+                            <img src="../img/revolucao-francesa.webp" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Revolução Industrial</h3>
+                            <p>A segunda metade do século XVIII vê o início da Revolução Industrial na Inglaterra, mudando a produção para o uso de máquinas e transformando profundamente a sociedade e a economia.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Final do século XVIII</h4>
+                        </div>
+                        <div class="img-esquerda">
+                            <img src="../img/revolucao-industrial.jpeg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Independência da América Latina</h3>
+                            <p>No início do século XIX, várias colônias latino-americanas se tornaram independentes, influenciadas pela Revolução Francesa e pela independência dos Estados Unidos.</p>
+                        </div>
+                        <div class="time">
+                            <h4>1810 - 1825</h4>
+                        </div>
+                        <div class="img-direita">
+                            <img src="../img/independencia_america_latina.webp" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Primeira Guerra Mundial</h3>
+                            <p>De 1914 a 1918, a Primeira Guerra Mundial envolveu várias nações e causou destruição em massa, mudanças geopolíticas significativas e levou à criação da Liga das Nações.</p>
+                        </div>
+                        <div class="time">
+                            <h4>1914 - 1918</h4>
+                        </div>
+                        <div class="img-esquerda">
+                            <img src="../img/primeira-guerra-mundial.webp" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Segunda Guerra Mundial</h3>
+                            <p>De 1939 a 1945, a Segunda Guerra Mundial foi o maior conflito armado da história, terminando com a criação da ONU e iniciando a Guerra Fria entre EUA e URSS.</p>
+                        </div>
+                        <div class="time">
+                             <h4>1939 - 1945</h4>
+                        </div>
+                        <div class="img-direita">
+                            <img src="../img/segunda_guerra.jfif" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Declaração dos Direitos Humanos</h3>
+                            <p>Em 1948, a ONU proclama a Declaração Universal dos Direitos Humanos, estabelecendo princípios fundamentais de liberdade, justiça e paz.</p>
+                        </div>
+                        <div class="time">
+                            <h4>1948</h4>
+                        </div>
+                        <div class="img-esquerda">
+                            <img src="../img/direitos_humanos.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Queda do Muro de Berlim</h3>
+                            <p>Em 1989, a queda do Muro de Berlim marca o fim da Guerra Fria e simboliza a reunificação da Alemanha e o colapso do bloco socialista na Europa.</p>
+                        </div>
+                        <div class="time">
+                            <h4>1989</h4>
+                        </div>
+                        <div class="img-direita">
+                            <img src="../img/queda_muro.jfif" alt="">
+                        </div>
+                    </li>
+                    <div style="clear:both;"></div>
+                </ul>
+            </div>
+        </section>
         <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
     </main>
     <footer class="footer">
