@@ -443,7 +443,8 @@ a {
 .item h3 {
     font-size: 24px;
     margin-top: 10px;
-    color: #4b3f35;
+    color: #d4af37;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .item p {

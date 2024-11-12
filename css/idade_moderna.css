@@ -780,6 +780,27 @@ a {
     margin-bottom: 50px;
     animation: voar infinite 2s;
 }
+#section-videos {
+    margin: 20px;
+}
+#section-videos h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #d4af37;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.video-estudo {
+    flex: 1 1 calc(33.33% - 10px);
+    box-sizing: border-box;
+}
 
 @keyframes voar {
     0% {

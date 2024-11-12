@@ -103,7 +103,7 @@ if (!isset($_SESSION['nome_sessao'])) {
     <main>
         <section id="introducao">
             <div class="video">
-                <video id="meuVideo" src="../video/idade_antiga(teste).mp4" autoplay loop muted></video>
+                <video id="meuVideo" src="../video/idade_antiga.mp4" autoplay loop muted></video>
             </div>
             <div class="titulo">
                 <h1>IDADE ANTIGA</h1>
@@ -205,7 +205,29 @@ if (!isset($_SESSION['nome_sessao'])) {
                 </div>
             </div>
         </section>
-
+        <section id="section-videos">
+                <h2>Material para estudo</h2>
+                <div class="videos">
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/HU08s_nrOzw" title="Idade Antiga | Introdução" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+		            </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/Hko3IGt-VzA" title="Idade Antiga - 1º ano História, Ensino Médio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/qtCgTTxU4pI" title="Idade Antiga" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/CEMMtJ0xMfs" title="EGITO ANTIGO (ANTIGUIDADE ORIENTAL) | Resumo de História para o Enem" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/4j7WKEXL0tQ?list=PLRwlG59Lv5IyVHPh8ZviJFqzHfohdrA2K" title="HISTÓRIA GERAL #1 MESOPOTÂMIA: (FORMAÇÃO, POLÍTICA E ECONOMIA)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/TNmwlPfSRR0" title="A História do Egito Antigo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    </div>
+        </section>
         <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
     </main>
     <footer class="footer">

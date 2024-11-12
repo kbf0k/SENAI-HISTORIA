@@ -102,7 +102,7 @@ if (!isset($_SESSION['nome_sessao'])) {
     <main>
         <section id="introducao">
             <div class="video">
-                <video src="../video/videobackgroundIdadeMedia.mp4" autoplay loop muted></video>
+                <video id="meuVideo" src="../video/idade-contemporanea.mp4" autoplay loop muted></video>
             </div>
             <div class="titulo">
                 <h1>IDADE CONTEMPORÂNEA</h1>

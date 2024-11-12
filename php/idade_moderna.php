@@ -106,7 +106,7 @@ if (!isset($_SESSION['nome_sessao'])) {
     <main>
         <section id="introducao">
             <div class="video">
-                <video id="meuVideo" src="../video/idade_moderna.mp4" autoplay loop muted></video>
+                <video id="meuVideo" src="../video/video-idade-moderna.mov" autoplay loop muted></video>
             </div>
             <div class="titulo">
                 <h1>IDADE MODERNA</h1>
@@ -282,6 +282,29 @@ if (!isset($_SESSION['nome_sessao'])) {
                     </li>
                 </ul>
             </div>
+        </section>
+        <section id="section-videos">
+                <h2>Material para estudo</h2>
+                <div class="videos">
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/AZH-k7SujXY" title="Idade Moderna | Introdução" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+		            </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/aVQ_1srdzK4" title="Revolução Industrial - Toda Matéria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/eg47cCMcQr0?list=PLZbBkL2AgtqNK84Ucdh80OBYUfSG9Jyzo" title="A REVOLUÇÃO FRANCESA EM 5 MINUTOS! - Débora Aladim" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/rmwH5MJ4hPM" title="IDADE CONTEMPORÂNEA | Revolução Francesa, Neocolonialismo, Guerras Mundiais | História - aula #7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/6P89N-WrnLk" title="PRIMEIRA GUERRA MUNDIAL: RESUMO | HISTÓRIA | QUER QUE DESENHE?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/N6YxYbdvkNg" title="IDADE MÉDIA | HISTÓRIA | QUER QUE DESENHE?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
         </section>
         <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
     </main>
