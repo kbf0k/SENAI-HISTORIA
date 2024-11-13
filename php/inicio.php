@@ -103,7 +103,7 @@ if (!isset($_SESSION['nome_sessao'])) {
         <?php ?>
         <section class="intro">
             <video autoplay muted loop class="background-video">
-                <source src="../video/teste.mp4" type="video/mp4">
+                <source src="../video/video-inicio.mp4" type="video/mp4">
             </video>
 
             <div class="container">

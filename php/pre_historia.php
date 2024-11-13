@@ -150,6 +150,7 @@ if (!isset($_SESSION['nome_sessao'])) {
             </div>
         </section>
         <div id="eventos">
+        <h2 id="titulo-eventos">Períodos da Pré História</h2>
             <section id="rev-francesa" class="evento revolucao-francesa">
                 <div class="evento-conteudo">
                     <div class="evento-text">
@@ -199,6 +200,23 @@ if (!isset($_SESSION['nome_sessao'])) {
                     <img src="../img/neleoloiticos.jpg" alt="aldeias">
                 </div>
             </section>
+            <section id="section-videos">
+                <h2>Material para estudo</h2>
+                <div class="videos">
+                    <div class="video-estudo">
+                    <iframe width="100%" height="330" src="https://www.youtube.com/embed/jcb6VrYNxYc?si=nyYthGL4PLoi6C0t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>		            </div>
+                    <div class="video-estudo">
+                    <iframe width="100%" height="330" src="https://www.youtube.com/embed/Lquvg-WfF_0?si=ngbDJwI4Ei9_nvyU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+                    <div class="video-estudo">
+                    <iframe width="100%" height="330" src="https://www.youtube.com/embed/d-UHmzgjK_I?si=uPmQGRsWj7pCaeRk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+                    <div class="video-estudo">
+                    <iframe width="100%" height="330" src="https://www.youtube.com/embed/1jR9OFmQzL0?si=hs8FCeBbAMq5sW7B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+                    <div class="video-estudo">
+                    <iframe width="100%" height="330" src="https://www.youtube.com/embed/KbRt5CK2Xtk?si=1aXFA4U14O75sylJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+                    <div class="video-estudo">
+                    <iframe width="100%" height="330" src="https://www.youtube.com/embed/drx_qlKVw6o?si=TyOBy0zVDPdmBuuv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+                </div>
+        </section>
             <section id="linhaTempo">
             <div class="titulo-linhaTempo">
                 <h1>LINHA DO TEMPO</h1>

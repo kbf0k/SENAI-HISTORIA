@@ -149,9 +149,31 @@ if (!isset($_SESSION['nome_sessao'])) {
                     </div>
                 </div>
             </div>
-            <a href="#linhaTempo"><button id="saiba-mais">Saiba Mais</button></a>
+            <a href="#section-videos"><button id="saiba-mais">Saiba Mais</button></a>
         </section>
-
+        <section id="section-videos">
+                <h2>Material para estudo</h2>
+                <div class="videos">
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/AZH-k7SujXY" title="Idade Moderna | Introdução" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+		            </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/aVQ_1srdzK4" title="Revolução Industrial - Toda Matéria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/fxqxH5A3Ok8?si=Qklv_S8QWY9ddIhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                    </div>
+                    <div class="video-estudo">
+                         <iframe width="100%" height="330" src="https://www.youtube.com/embed/mH4pewaB_Fo?si=FNvQ7zhgG60VxmKy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/pThrXiEgUl8?si=dM9Hd1nDPuk30kzI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/5jrGMeGYc3w?si=5B67KhqOebLkBww2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                    </div>
+                </div>
+        </section>
         <section id="linhaTempo">
             <div class="titulo-linhaTempo">
                 <h1>LINHA DO TEMPO</h1>
@@ -283,29 +305,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                 </ul>
             </div>
         </section>
-        <section id="section-videos">
-                <h2>Material para estudo</h2>
-                <div class="videos">
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/AZH-k7SujXY" title="Idade Moderna | Introdução" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
-		            </div>
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/aVQ_1srdzK4" title="Revolução Industrial - Toda Matéria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/eg47cCMcQr0?list=PLZbBkL2AgtqNK84Ucdh80OBYUfSG9Jyzo" title="A REVOLUÇÃO FRANCESA EM 5 MINUTOS! - Débora Aladim" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/rmwH5MJ4hPM" title="IDADE CONTEMPORÂNEA | Revolução Francesa, Neocolonialismo, Guerras Mundiais | História - aula #7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/6P89N-WrnLk" title="PRIMEIRA GUERRA MUNDIAL: RESUMO | HISTÓRIA | QUER QUE DESENHE?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/N6YxYbdvkNg" title="IDADE MÉDIA | HISTÓRIA | QUER QUE DESENHE?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-        </section>
+        
         <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
     </main>
     <<footer class="footer">

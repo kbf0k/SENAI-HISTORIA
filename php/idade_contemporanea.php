@@ -205,6 +205,29 @@ if (!isset($_SESSION['nome_sessao'])) {
                     </div>
                 </div>
             </section>
+            <section id="section-videos">
+                <h2>Material para estudo</h2>
+                <div class="videos">
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/D25cxMBC2qk?si=63cbIga7mfzyaR12" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>		           
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/eQ08AS5ZHQQ?si=LGy7HMbGnzJLbaBD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/ZfZAle8CVgg?si=7xqB5pO4wHJtG-zs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/RedndCHHtYc?si=WmgFFi4VJ4R3TYVH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                                             
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/0DdJVUI5U5A?si=WRoFjSwUUJ5liF_1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/eg47cCMcQr0?si=qgrlnZTA6FyeIwTp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                    </div>
+                </div>
+        </section>
         </div>
         <section id="linhaTempo">
             <div class="titulo-linhaTempo">

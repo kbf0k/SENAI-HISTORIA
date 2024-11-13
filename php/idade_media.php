@@ -153,7 +153,30 @@ session_start();
                     <button class="setas" onclick="move(1)" id="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
             </div>
-            <a href="#linhaTempo"><button id="saiba-mais">Saiba Mais</button></a>
+            <a href="#section-videos"><button id="saiba-mais">Saiba Mais</button></a>
+        </section>
+        <section id="section-videos">
+                <h2>Material para estudo</h2>
+                <div class="videos">
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/Q4E3vPl-KkY" title="A Idade Média" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+		            </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/CTIs_RSPr84" title="Resumo de História: IDADE MÉDIA (tudo que você precisa saber!) - Débora Aladim" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/QjoHiK_luxw" title="IDADE MÉDIA E FEUDALISMO - Resumo Desenhado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/YbR1bxtGnMo" title="ALTA E BAIXA IDADE MÉDIA: clero, feudalismo e cruzadas | RESUMO DE HISTÓRIA PARA O ENEM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/TCVacLnerKg?list=PLHtXR-4stWDeHGL0ldriaSAQ_lmVUmYiK" title="As Cruzadas: A Luta pela Terra Santa - História Medieval - Foca na História" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/N6YxYbdvkNg" title="IDADE MÉDIA | HISTÓRIA | QUER QUE DESENHE?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
         </section>
         <section id="linhaTempo">
             <div class="titulo-linhaTempo">
@@ -287,29 +310,7 @@ session_start();
                 </ul>
             </div>
         </section>
-        <section id="section-videos">
-                <h2>Material para estudo</h2>
-                <div class="videos">
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/Q4E3vPl-KkY" title="A Idade Média" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
-		            </div>
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/CTIs_RSPr84" title="Resumo de História: IDADE MÉDIA (tudo que você precisa saber!) - Débora Aladim" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/QjoHiK_luxw" title="IDADE MÉDIA E FEUDALISMO - Resumo Desenhado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/YbR1bxtGnMo" title="ALTA E BAIXA IDADE MÉDIA: clero, feudalismo e cruzadas | RESUMO DE HISTÓRIA PARA O ENEM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/TCVacLnerKg?list=PLHtXR-4stWDeHGL0ldriaSAQ_lmVUmYiK" title="As Cruzadas: A Luta pela Terra Santa - História Medieval - Foca na História" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/N6YxYbdvkNg" title="IDADE MÉDIA | HISTÓRIA | QUER QUE DESENHE?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-        </section>
+    
         <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
     </main>
     <footer class="footer">

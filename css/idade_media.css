@@ -332,7 +332,10 @@ a {
         transition: transform 0.4s ease;
     }
 }
+main{
+    background-color: #7e7261;
 
+}
 #introducao {
     display: flex;
     justify-content: center;
@@ -913,5 +916,26 @@ a {
 
     .titulo-linhaTempo p {
         font-size: 18px !important;
+    }
+}
+@media (max-width: 1024px) {
+    .video-estudo {
+        flex: 1 1 calc(50% - 10px); /* 2 vídeos por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .video-estudo {
+        flex: 1 1 100%; /* 1 vídeo por linha */
+    }
+
+    #section-videos h2 {
+        font-size: 28px; /* Ajuste o tamanho do título para telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    #section-videos h2 {
+        font-size: 24px; /* Título ainda menor em telas extra pequenas */
     }
 }
