@@ -400,7 +400,7 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
         <a href="termosDeUso.php">Termos de Uso</a></li>
         <a href="politica_privacidade.php">Política de Privacidade</a></li>
         <a href="ajuda.php">Ajuda</a></li>
-        <a href="faq.php">FAQ</a></li>
+        <a href="faq.php">Perguntas Frequentes</a></li>
 
 
         <div class="footer-bottom">

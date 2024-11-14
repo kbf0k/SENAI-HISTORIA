@@ -693,7 +693,7 @@ if (!isset($_SESSION['nome_sessao'])) {
 
     </main>
     <footer class="footer">
-        <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SOFTDEV</a>
+        <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SoftDev</a>
         <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a>
         <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">João Gustavo Mota Ramos</a>
         <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">João Pedro da Cunha Machado</a>
@@ -705,7 +705,7 @@ if (!isset($_SESSION['nome_sessao'])) {
         <a href="termosDeUso.php">Termos de Uso</a></li>
         <a href="politica_privacidade.php">Política de Privacidade</a></li>
         <a href="ajuda.php">Ajuda</a></li>
-        <a href="faq.php">FAQ</a></li>
+        <a href="faq.php">Perguntas Frequentes</a></li>
 
 
         <div class="footer-bottom">
