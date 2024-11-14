@@ -78,6 +78,11 @@ a {
     position: relative;
 }
 
+.menu ul li a:hover,
+.menu #logout:hover {
+    color: #d4af37;
+}
+
 .menu ul li a {
     color: white;
     text-decoration: none;

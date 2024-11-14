@@ -187,7 +187,7 @@ $conexao->close();
 <body>
     <main class="conteudo">
         <section class="politica">
-            <a id="voltar">Voltar</a>
+            <a id="voltar"><img src="../img/voltar_seta.png" alt=""></a>
             <h2 id="editar">Editar Perfil</h2>
             <form method="POST" action="perfil.php">
                 <div class="form-group">

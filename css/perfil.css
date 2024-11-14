@@ -353,15 +353,16 @@ a {
     margin-top: 20px;
 }
 
+.politica a img {
+    height: 30px;
+    width: 55px;
+}
+
 #voltar {
     font-size: 16px;
-    padding: 12px;
-    width: 500px;
     border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
     cursor: pointer;
     margin-top: 25px;
-    background-color: rgb(128, 115, 92);
     color: white;
     transition: 0.3s;
     z-index: 5;
