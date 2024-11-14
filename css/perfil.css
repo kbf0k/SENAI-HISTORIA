@@ -353,9 +353,13 @@ a {
     margin-top: 20px;
 }
 
-.politica a img {
+.politica #voltar img {
     height: 30px;
     width: 55px;
+}
+
+.politica #voltar div {
+    margin-left: -5px;
 }
 
 #voltar {
@@ -366,11 +370,19 @@ a {
     color: white;
     transition: 0.3s;
     z-index: 5;
+    color: black;
+    display: flex;
+    align-items: center;
 }
 
 #voltar:hover {
     transform: scale(1.02);
 }
+
+#att-profile {
+    margin-top: -10px;
+}
+
 /* Títulos */
 h2 {
     margin-bottom: 10px;
