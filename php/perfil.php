@@ -187,7 +187,7 @@ $conexao->close();
 <body>
     <main class="conteudo">
         <section class="politica">
-            <a id="voltar"><img src="../img/voltar_seta.png" alt=""></a>
+            <a id="voltar"><img src="../img/voltar_seta.png" alt=""><div>Voltar</div></a>
             <h2 id="editar">Editar Perfil</h2>
             <form method="POST" action="perfil.php">
                 <div class="form-group">
@@ -207,7 +207,7 @@ $conexao->close();
                 <div class="form-group">
                     <button type="" name="update" class="btn"><a href="esqueciSenha.php">Redefinir senha</a></button>
                 </div>
-                <button type="submit" name="update" class="btn">Atualizar perfil</button>
+                <button id="att-profile" type="submit" name="update" class="btn">Atualizar perfil</button>
             </form>
 
             <h2>Excluir conta</h2>
