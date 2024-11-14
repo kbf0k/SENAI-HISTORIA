@@ -555,6 +555,7 @@ main{
     font-size: 36px;
     margin-bottom: 50px;
     color: #e7be36;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .itens-grid {
@@ -579,6 +580,7 @@ main{
     font-size: 24px;
     margin-top: 10px;
     color: #d4af37;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .item p {
@@ -597,6 +599,8 @@ main{
 
 #section-videos {
     margin: 20px;
+    margin-bottom: 0!important;
+    padding: 15px;
 }
 #section-videos h2 {
     font-size: 38px;

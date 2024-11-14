@@ -698,6 +698,8 @@ main{
 }
 #section-videos {
     margin: 20px;
+    margin-bottom: 0!important;
+    padding: 15px;
 }
 #section-videos h2 {
     font-size: 38px;

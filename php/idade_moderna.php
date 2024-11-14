@@ -151,29 +151,6 @@ if (!isset($_SESSION['nome_sessao'])) {
             </div>
             <a href="#section-videos"><button id="saiba-mais">Saiba Mais</button></a>
         </section>
-        <section id="section-videos">
-                <h2>Material para estudo</h2>
-                <div class="videos">
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/AZH-k7SujXY" title="Idade Moderna | Introdução" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
-		            </div>
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/aVQ_1srdzK4" title="Revolução Industrial - Toda Matéria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/fxqxH5A3Ok8?si=Qklv_S8QWY9ddIhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
-                    </div>
-                    <div class="video-estudo">
-                         <iframe width="100%" height="330" src="https://www.youtube.com/embed/mH4pewaB_Fo?si=FNvQ7zhgG60VxmKy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
-                    </div>
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/pThrXiEgUl8?si=dM9Hd1nDPuk30kzI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
-                    </div>
-                    <div class="video-estudo">
-                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/5jrGMeGYc3w?si=5B67KhqOebLkBww2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
-                    </div>
-                </div>
-        </section>
         <section id="linhaTempo">
             <div class="titulo-linhaTempo">
                 <h1>LINHA DO TEMPO</h1>
@@ -305,10 +282,32 @@ if (!isset($_SESSION['nome_sessao'])) {
                 </ul>
             </div>
         </section>
-        
+        <section id="section-videos">
+                <h2>Material para estudo</h2>
+                <div class="videos">
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/AZH-k7SujXY" title="Idade Moderna | Introdução" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/aVQ_1srdzK4" title="Revolução Industrial - Toda Matéria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/fxqxH5A3Ok8?si=Qklv_S8QWY9ddIhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                    </div>
+                    <div class="video-estudo">
+                         <iframe width="100%" height="330" src="https://www.youtube.com/embed/mH4pewaB_Fo?si=FNvQ7zhgG60VxmKy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/pThrXiEgUl8?si=dM9Hd1nDPuk30kzI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                    </div>
+                    <div class="video-estudo">
+                        <iframe width="100%" height="330" src="https://www.youtube.com/embed/5jrGMeGYc3w?si=5B67KhqOebLkBww2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                    </div>
+                </div>
+        </section>
         <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
     </main>
-    <<footer class="footer">
+    <footer class="footer">
         <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SOFTDEV</a>
         <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a>
         <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">João Gustavo Mota Ramos</a>

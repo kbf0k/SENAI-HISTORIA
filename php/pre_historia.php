@@ -200,36 +200,19 @@ if (!isset($_SESSION['nome_sessao'])) {
                     <img src="../img/neleoloiticos.jpg" alt="aldeias">
                 </div>
             </section>
-            <section id="section-videos">
-                <h2>Material para estudo</h2>
-                <div class="videos">
-                    <div class="video-estudo">
-                    <iframe width="100%" height="330" src="https://www.youtube.com/embed/jcb6VrYNxYc?si=nyYthGL4PLoi6C0t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>		            </div>
-                    <div class="video-estudo">
-                    <iframe width="100%" height="330" src="https://www.youtube.com/embed/Lquvg-WfF_0?si=ngbDJwI4Ei9_nvyU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
-                    <div class="video-estudo">
-                    <iframe width="100%" height="330" src="https://www.youtube.com/embed/d-UHmzgjK_I?si=uPmQGRsWj7pCaeRk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
-                    <div class="video-estudo">
-                    <iframe width="100%" height="330" src="https://www.youtube.com/embed/1jR9OFmQzL0?si=hs8FCeBbAMq5sW7B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
-                    <div class="video-estudo">
-                    <iframe width="100%" height="330" src="https://www.youtube.com/embed/KbRt5CK2Xtk?si=1aXFA4U14O75sylJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
-                    <div class="video-estudo">
-                    <iframe width="100%" height="330" src="https://www.youtube.com/embed/drx_qlKVw6o?si=TyOBy0zVDPdmBuuv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
-                </div>
-        </section>
             <section id="linhaTempo">
-            <div class="titulo-linhaTempo">
-                <h1>LINHA DO TEMPO</h1>
-                <hr>
-                <p>Principais Eventos</p>
-            </div>
+                <div class="titulo-linhaTempo">
+                    <h1>LINHA DO TEMPO</h1>
+                    <hr>
+                    <p>Principais Eventos</p>
+                </div>
             <div class="timeline">
                 <ul>
                     <li>
                         <div class="content">
                         <h3>Surgimento do Gênero Homo</h3>
                         <p>Aproximadamente 2,5 milhões de anos atrás, surgiram os primeiros hominídeos do gênero *Homo*, como o *Homo habilis*, que começou a utilizar ferramentas rudimentares de pedra.</p>
-                        </div>
+                    </div>
                         <div class="time">
                             <h4>2,5 milhões de anos atrás</h4>
                         </div>
@@ -241,18 +224,18 @@ if (!isset($_SESSION['nome_sessao'])) {
                         <div class="content">
                         <h3>Homo erectus e o Controle do Fogo</h3>
                         <p>O *Homo erectus*, surgido há cerca de 1,8 milhões de anos, foi provavelmente a primeira espécie a dominar o uso do fogo, essencial para cozinhar alimentos e se proteger.</p>
-                        </div>
-                        <div class="time">
-                            <h4>1,8 milhões de anos atrás</h4>
-                        </div>
-                        <div class="img-esquerda">
-                            <img src="../img/homem_fogo.jpg" alt="">
-                        </div>
-                    </li>
+                    </div>
+                    <div class="time">
+                        <h4>1,8 milhões de anos atrás</h4>
+                    </div>
+                    <div class="img-esquerda">
+                        <img src="../img/homem_fogo.jpg" alt="">
+                    </div>
+                </li>
                     <li>
                         <div class="content">
-                        <h3>Surgimento do Homo sapiens</h3>
-                        <p>Os primeiros *Homo sapiens* apareceram na África há cerca de 300 mil anos. Eles desenvolveram habilidades e ferramentas mais sofisticadas.</p>
+                            <h3>Surgimento do Homo sapiens</h3>
+                            <p>Os primeiros *Homo sapiens* apareceram na África há cerca de 300 mil anos. Eles desenvolveram habilidades e ferramentas mais sofisticadas.</p>
                         </div>
                         <div class="time">
                             <h4>300 mil anos atrás</h4>
@@ -263,8 +246,8 @@ if (!isset($_SESSION['nome_sessao'])) {
                     </li>
                     <li>
                         <div class="content">
-                        <h3>Primeiras Migrações do Homo sapiens</h3>
-                        <p>Cerca de 100 mil anos atrás, o *Homo sapiens* começou a migrar para fora da África, espalhando-se pelo Oriente Médio, Europa e Ásia.</p>
+                            <h3>Primeiras Migrações do Homo sapiens</h3>
+                            <p>Cerca de 100 mil anos atrás, o *Homo sapiens* começou a migrar para fora da África, espalhando-se pelo Oriente Médio, Europa e Ásia.</p>
                         </div>
                         <div class="time">
                             <h4>100 mil anos atrás</h4>
@@ -275,8 +258,8 @@ if (!isset($_SESSION['nome_sessao'])) {
                     </li>
                     <li>
                         <div class="content">
-                        <h3>Primeiras Expressões Artísticas</h3>
-                        <p>Há cerca de 40 mil anos, os humanos começaram a criar arte rupestre, como as pinturas em cavernas, indicando o desenvolvimento da cultura e da simbologia.</p>
+                            <h3>Primeiras Expressões Artísticas</h3>
+                            <p>Há cerca de 40 mil anos, os humanos começaram a criar arte rupestre, como as pinturas em cavernas, indicando o desenvolvimento da cultura e da simbologia.</p>
                         </div>
                         <div class="time">
                             <h4>40 mil anos atrás</h4>
@@ -287,8 +270,8 @@ if (!isset($_SESSION['nome_sessao'])) {
                     </li>
                     <li>
                         <div class="content">
-                        <h3>Início da Revolução Agrícola</h3>
-                        <p>Por volta de 12 mil anos atrás, no período Neolítico, surgem as primeiras práticas de agricultura e domesticação de animais, permitindo o estabelecimento de aldeias.</p>
+                            <h3>Início da Revolução Agrícola</h3>
+                            <p>Por volta de 12 mil anos atrás, no período Neolítico, surgem as primeiras práticas de agricultura e domesticação de animais, permitindo o estabelecimento de aldeias.</p>
                         </div>
                         <div class="time">
                             <h4>12 mil anos atrás</h4>
@@ -300,11 +283,26 @@ if (!isset($_SESSION['nome_sessao'])) {
                     <div style="clear:both;"></div>
                 </ul>
             </div>
+        </section> 
+        <section id="section-videos">
+            <h2>Material para estudo</h2>
+            <div class="videos">
+                <div class="video-estudo">
+                <iframe width="100%" height="330" src="https://www.youtube.com/embed/jcb6VrYNxYc?si=nyYthGL4PLoi6C0t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>		            </div>
+                <div class="video-estudo">
+                <iframe width="100%" height="330" src="https://www.youtube.com/embed/Lquvg-WfF_0?si=ngbDJwI4Ei9_nvyU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+                <div class="video-estudo">
+                <iframe width="100%" height="330" src="https://www.youtube.com/embed/d-UHmzgjK_I?si=uPmQGRsWj7pCaeRk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+                <div class="video-estudo">
+                <iframe width="100%" height="330" src="https://www.youtube.com/embed/1jR9OFmQzL0?si=hs8FCeBbAMq5sW7B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+                <div class="video-estudo">
+                <iframe width="100%" height="330" src="https://www.youtube.com/embed/KbRt5CK2Xtk?si=1aXFA4U14O75sylJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+                <div class="video-estudo">
+                <iframe width="100%" height="330" src="https://www.youtube.com/embed/drx_qlKVw6o?si=TyOBy0zVDPdmBuuv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+            </div>
         </section>
-
-        </div>
         <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
-        </main>
+    </main>
     <footer class="footer">
         <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SoftDev</a>
         <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a>
@@ -312,15 +310,13 @@ if (!isset($_SESSION['nome_sessao'])) {
         <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">João Pedro da Cunha Machado</a>
         <a href="https://www.linkedin.com/in/murilo-silva-0377322b7/" target="_blank">Murilo Henrique Souza Silva</a>
         <a href="https://www.linkedin.com/in/yago-moraes-6a09b3326/" target="_blank">Yago Roberto Gomes Moraes</a>
-
+        
         <h3 id="link">Links Úteis</h3>
-
+        
         <a href="termosDeUso.php">Termos de Uso</a></li>
         <a href="politica_privacidade.php">Política de Privacidade</a></li>
         <a href="ajuda.php">Ajuda</a></li>
         <a href="faq.php">Perguntas Frequentes</a></li>
-
-
         <div class="footer-bottom">
             <p>&copy; 2024 História em Foco. Todos os direitos reservados.</p>
         </div>

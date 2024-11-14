@@ -34,7 +34,10 @@ a {
     color: white;
     position: static;
 }
+main{
+    background-color: #7e7261;
 
+}
 .logo-menu {
     display: flex;
     justify-content: space-between;
@@ -527,7 +530,7 @@ a {
     font-size: 70px;
     color: #333;
     text-align: center;
-    margin-top: 80px;
+    padding-top: 20px;
     transition: .3s ease-in-out;
 }
 
@@ -690,6 +693,8 @@ a {
 }
 #section-videos {
     margin: 20px;
+    margin-bottom: 0!important;
+    padding: 15px;
 }
 #section-videos h2 {
     font-size: 38px;
