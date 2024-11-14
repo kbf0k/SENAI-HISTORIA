@@ -107,7 +107,7 @@ if (!isset($_SESSION['nome_sessao'])) {
             </div>
             <div class="titulo">
                 <h1>IDADE ANTIGA</h1>
-                <p>A Idade Antiga é o período em que surgiram as primeiras grandes civilizações e a escrita.</p>
+                <p>A Idade Antiga é o período em que surgiram as primeiras grandes civilizações e a escrita</p>
                 <a href="#conteudo"><button id="saiba-mais">Saiba Mais</button></a>
             </div>
         </section>

@@ -110,7 +110,7 @@ session_start();
             </div>
             <div class="titulo">
                 <h1>IDADE MÉDIA</h1>
-                <p>Venha descobrir os maiores segredos dessa época e se divirta nessa jornada</p>
+                <p>A Idade Média é o período da história entre a queda do Império Romano e o início da Idade Moderna</p>
                 <a href="#caracteristicas"><button id="saiba-mais">Saiba Mais</button></a>
             </div>
         </section>
