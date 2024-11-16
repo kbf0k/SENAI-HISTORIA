@@ -81,7 +81,7 @@ session_start();
     </div>
 
     <main>
-        <h1>Desenvolvedores do Projeto</h1>
+        <h1>Equipe Desenvolvedora SoftDev</h1>
         <div class="flex-box">
             <div class="membros">
                 <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">

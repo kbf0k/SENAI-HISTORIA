@@ -86,14 +86,14 @@ if (!isset($_SESSION['nome_sessao'])) {
 
     <main>
         <section class="faq">
-            <h2>FAQ - Perguntas Frequentes</h2>
+            <h2>Perguntas Frequentes</h2>
             <div class="faq-item">
                 <h3>Como posso acessar as atividades complementares?</h3>
-                <p>Para acessar as atividades complementares, basta ir ao menu principal e clicar na seção "Atividades Complementares".</p>
+                <p>Para acessar as atividades complementares, basta clicar na seção "Atividades Complementares", na barra de navegação ao topo.</p>
             </div>
             <div class="faq-item">
                 <h3>Preciso de uma conta para usar o site?</h3>
-                <p>Sim, é necessário estar logado para acessar certos conteúdos e funcionalidades exclusivas para membros.</p>
+                <p>Sim, é necessário estar logado para acessar os conteúdos e funcionalidades do nosso site.</p>
             </div>
             <div class="faq-item">
                 <h3>Como posso entrar em contato com a equipe de suporte?</h3>

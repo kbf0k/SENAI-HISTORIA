@@ -151,7 +151,7 @@ if (!isset($_SESSION['nome_sessao'])) {
         </section>
         <div id="eventos">
         <h2 id="titulo-eventos">Períodos da Pré História</h2>
-            <section id="rev-francesa" class="evento revolucao-francesa">
+            <section id="secao-paleolitico" class="evento revolucao-francesa">
                 <div class="evento-conteudo">
                     <div class="evento-text">
                         <h3>Paleolítico</h3>

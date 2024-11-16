@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <form action="" method="POST" id="redefinir-senha">
                 <a id="voltar" href="../php/index.php">Voltar</a>
                 <h1>Redefinir senha</h1>
-                <p>Insira seu e-mail para validar sua identidade e proceder com a alteração da senha</p>
+                <p>Insira seu email para validar sua identidade e proceder com a alteração da senha</p>
                 <label for="email">Email <p style="color:red;"><?php echo $mensagem;?></p></label>
                 <input type="email" name="email" id="email" placeholder="@email.com">
 

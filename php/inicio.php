@@ -147,7 +147,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                     <div class="periodo-card animated animated-cards">
                         <a href="idade_moderna.php">
                             <h3>Idade Moderna</h3>
-                            <p>Analise os avanços nas ciências, a Revolução Industrial e as grandes descobertas. Caracterizou-se por uma fase de grandes transformações.</p>
+                            <p>Analise os avanços científicos, a Revolução Industrial e as grandes descobertas. Caracterizou-se por uma fase de grandes transformações.</p>
                             <img src="../img/idade-moderna.jpeg" alt="" class="banner-img">
                         </a>
                     </div>
@@ -211,8 +211,8 @@ if (!isset($_SESSION['nome_sessao'])) {
 
         <section class="atividades">
             <div class="container">
-                <h2>Atividades de Prática em História</h2>
-                <p>Desenvolva suas habilidades em história com atividades interativas e desafiadoras!</p>
+                <h2>Atividades Práticas</h2>
+                <p>Desenvolva suas habilidades com atividades interativas e desafiadoras!</p>
                 <p>Explore opções para testar seu conhecimento e fixar conteúdos de forma divertida.</p>
 
                 <div class="atividades-conteudo">
