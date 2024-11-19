@@ -373,6 +373,7 @@ a {
     color: black;
     display: flex;
     align-items: center;
+    width: 15%;
 }
 
 #voltar:hover {
@@ -388,6 +389,7 @@ h2 {
     margin-bottom: 10px;
     font-size: 28px;
 }
+
 #editar {
     margin-bottom: 20px!important;
     text-align: center;
@@ -442,6 +444,7 @@ input:focus {
 
 .delete {
     background-color: #d33;
+    margin-top: -10px;
 }
 
 .delete:hover {
@@ -451,6 +454,7 @@ input:focus {
 .admin-btn {
     background-color: #0066cc;
     margin-right: 10px;
+    margin-top: -7px;
 }
 
 .admin-btn:hover {

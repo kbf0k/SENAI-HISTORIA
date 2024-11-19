@@ -80,8 +80,8 @@ $conexao->close();
 
             if (successMessage === "editado") {
                 Swal.fire({
-                    title: "Usuário editado!",
-                    text: "O usuário foi editado com sucesso.",
+                    title: "Perfil atualizado!",
+                    text: "O perfil foi atualizado com sucesso.",
                     icon: "success",
                     confirmButtonColor: "#4b3f35"
                 }).then(() => {
@@ -187,7 +187,7 @@ $conexao->close();
 <body>
     <main class="conteudo">
         <section class="politica">
-            <a id="voltar"><img src="../img/voltar_seta.png" alt=""><div>Voltar</div></a>
+            <a id="voltar"><img src="../img/voltar_seta.png" alt="">Voltar</a>
             <h2 id="editar">Editar Perfil</h2>
             <form method="POST" action="perfil.php">
                 <div class="form-group">
@@ -205,7 +205,7 @@ $conexao->close();
                     <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($email); ?>" required>
                 </div>
                 <div class="form-group">
-                    <button type="" name="update" class="btn"><a href="esqueciSenha.php">Redefinir senha</a></button>
+                    <button type="" class="btn"><a href="esqueciSenha.php">Redefinir senha</a></button>
                 </div>
                 <button id="att-profile" type="submit" name="update" class="btn">Atualizar perfil</button>
             </form>
@@ -218,7 +218,7 @@ $conexao->close();
             <!-- Exibe botões extras se o usuário for administrador -->
             <?php if ($_SESSION['tipo_sessao'] === 'Administrador'): ?>
                 <h2>Opções de Administrador</h2>
-                <button class="btn admin-btn" onclick="location.href='gerenciar_alunos.php'">Gerenciar alunos</button>
+                <button class="btn admin-btn" onclick="location.href='gerenciar_alunos.php'">Gerenciar usuários</button>
                 <button class="btn admin-btn" onclick="location.href='criar_adm.php'">Adicionar administrador</button>
             <?php endif; ?>
         </section>

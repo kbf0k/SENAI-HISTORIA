@@ -148,6 +148,41 @@ a {
     margin-left: 20px;
 }
 
+#voltar img {
+    height: 30px;
+    width: 55px;
+}
+
+#voltar div {
+    margin-left: -5px;
+}
+
+#voltar {
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+    z-index: 5;
+    color: black;
+    display: flex;
+    align-items: center;
+    width: 15%;
+    margin-top: -10px;
+}
+
+#voltar:hover {
+    transform: scale(1.02);
+}
+
+#title-add {
+    /* margin-top: -10px; */
+}
+
+#p-add {
+    margin-top: -50px;
+}
+
 
 @media (max-width: 768px) {
 

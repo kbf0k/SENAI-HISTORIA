@@ -24,7 +24,7 @@ $resultado_alunos = $conexao->query($sql_alunos);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciar Alunos</title>
+    <title>Gerenciar Usuários</title>
     <link rel="stylesheet" href="../css/gerenciar_aluno.css">
     <script src="../javascript/gerenciar_alunos.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
@@ -111,7 +111,8 @@ $resultado_alunos = $conexao->query($sql_alunos);
 
     <main>
         <div id="container">
-            <h1>Gerenciar Usúarios</h1>
+            <a id="voltar" href="perfil.php"><img src="../img/voltar_seta.png" alt="">Voltar</a>
+            <h1 id="title-gerenc">Gerenciar Usúarios</h1>
             <div class="tabela-div">
                 <table>
                     <thead>

@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="../css/esqueciSenha.css">
     <script src="../javascript/esqueciSenha.js" defer></script>
     <link rel="shortcut icon" href="img/hisotoria-logo.png" type="image/x-icon">
-    <title>Login</title>
+    <title>Redefinir Senha</title>
 </head>
 
 <body>
