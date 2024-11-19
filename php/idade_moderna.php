@@ -104,52 +104,183 @@ if (!isset($_SESSION['nome_sessao'])) {
     </div>
 
     <main>
-        <section id="introducao">
+    <section id="introducao">
             <div class="video">
                 <video id="meuVideo" src="../video/video-idade-moderna.mov" autoplay loop muted></video>
             </div>
             <div class="titulo">
                 <h1>IDADE MODERNA</h1>
                 <p>A Idade Moderna é marcada por grandes mudanças sociais, políticas e culturais.</p>
-                <a href="#caracteristicas"><button id="saiba-mais">Saiba Mais</button></a>
+                <a href="#acontecimentos"><button id="saiba-mais">Saiba Mais</button></a>
             </div>
         </section>
 
-        <section id="caracteristicas">
-            <h1 id="titulo-caracteristicas">PRINCIPAIS CARACTERÍSTICAS</h1>
-            <div class="carrossel-container">
-                <div class="carrossel">
-                    <div class="item">
-                        <img src="../img/renascimento.jfif" alt="">
-                        <div class="conteudo">
-                            <h1>Renascimento</h1>
-                            <p>Movimento cultural e artístico que ressurgiu na Europa, caracterizado pelo retorno aos valores clássicos da Antiguidade e pela valorização do conhecimento, da ciência e da arte.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../img/reformapt.jfif" alt="">
-                        <div class="conteudo">
-                            <h1>Reformas Religiosas</h1>
-                            <p>Movimentos como a Reforma Protestante desafiaram a autoridade da Igreja Católica e levaram a mudanças significativas nas práticas e crenças religiosas da Europa.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../img/feudalismo.png" alt="">
-                        <div class="conteudo">
-                            <h1>Grandes Navegações</h1>
-                            <p>Expansão marítima que levou à descoberta de novas rotas comerciais e territórios, impulsionando o intercâmbio cultural e econômico entre os continentes.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../img/iluminismo.png" alt="">
-                        <div class="conteudo">
-                            <h1>Iluminismo</h1>
-                            <p>Movimento intelectual que promovia a razão e o pensamento crítico, questionando as instituições e os valores tradicionais e pavimentando o caminho para a modernidade.</p>
-                        </div>
-                    </div>
+        <section id="acontecimentos" class="acontecimentos">
+    <div class="container">
+        <h2>PRINCIPAIS CARACTERÍSTICAS</h2>
+        <div class="itens-grid">
+            <a>
+                <div class="item">
+                    <img src="../img/renascimento.jfif" alt="Renascimento">
+                    <h3>Renascimento</h3>
+                    <p>Movimento cultural e artístico que ressurgiu na Europa, caracterizado pelo retorno aos valores clássicos da Antiguidade e pela valorização do conhecimento, da ciência e da arte.</p>
                 </div>
+            </a>
+            <a>
+                <div class="item">
+                    <img src="../img/reformapt.jfif" alt="Reformas Religiosas">
+                    <h3>Reformas Religiosas</h3>
+                    <p>Movimentos como a Reforma Protestante desafiaram a autoridade da Igreja Católica e levaram a mudanças significativas nas práticas e crenças religiosas da Europa.</p>
+                </div>
+            </a>
+            <a>
+                <div class="item">
+                    <img src="../img/feudalismo.png" alt="Grandes Navegações">
+                    <h3>Grandes Navegações</h3>
+                    <p>Expansão marítima que levou à descoberta de novas rotas comerciais e territórios, impulsionando o intercâmbio cultural e econômico entre os continentes.</p>
+                </div>
+            </a>
+            <a>
+                <div class="item">
+                    <img src="../img/iluminismo.webp" alt="Iluminismo">
+                    <h3>Iluminismo</h3>
+                    <p>Movimento intelectual que promovia a razão e o pensamento crítico, questionando as instituições e os valores tradicionais e pavimentando o caminho para a modernidade.</p>
+                </div>
+            </a>
+        </div>
+        <a href="#linhaTempo"><button id="saiba-mais">Saiba Mais</button></a>
+    </div>
+        </section>
+        <section id="linhaTempo">
+            <div class="titulo-linhaTempo">
+                <h1>LINHA DO TEMPO</h1>
+                <hr>
+                <p>Principais Eventos</p>
             </div>
-            <a href="#section-videos"><button id="saiba-mais">Saiba Mais</button></a>
+            <div class="timeline">
+                <ul>
+                    <li>
+                        <div class="content">
+                            <h3>Queda de Constantinopla</h3>
+                            <p>O Império Bizantino cai para os turcos otomanos, encerrando a Idade Média e impulsionando a busca por novas rotas comerciais para o Oriente.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Ano 1453</h4>
+                        </div>
+                        <div class="img-direita">
+                            <img src="../img/constantinopla.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Descobrimento da América</h3>
+                            <p>Cristóvão Colombo chega ao continente americano, marcando o início das grandes navegações e do colonialismo europeu nas Américas.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Ano 1492</h4>
+                        </div>
+                        <div class="img-esquerda">
+                            <img src="../img/descoberta-ame.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Reforma Protestante</h3>
+                            <p>Martinho Lutero publica suas 95 Teses na Alemanha, iniciando a Reforma Protestante, que leva a profundas mudanças religiosas e políticas na Europa.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Ano 1517</h4>
+                        </div>
+                        <div class="img-direita">
+                            <img src="../img/reforma.webp" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Publicação de "De revolutionibus orbium coelestium" por Copérnico</h3>
+                            <p>O astrônomo Nicolau Copérnico propõe a teoria heliocêntrica, desafiando o sistema geocêntrico vigente e marcando o início da Revolução Científica.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Ano 1543 </h4>
+                        </div>
+                        <div class="img-esquerda">
+                            <img src="../img/heliocentrismo.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3> Derrota da Armada Invencível</h3>
+                            <p>A derrota da poderosa frota espanhola pela Inglaterra marca o declínio da hegemonia espanhola e o crescimento do poderio naval inglês.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Ano 1588</h4>
+                        </div>
+                        <div class="img-direita">
+                            <img src="../img/derrota-invencivel.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Início do uso do telescópio por Galileu Galilei</h3>
+                            <p>Galileu aperfeiçoa o telescópio e faz observações astronômicas que confirmam a teoria heliocêntrica, contribuindo para a Revolução Científica.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Ano 1609</h4>
+                        </div>
+                        <div class="img-esquerda">
+                            <img src="../img/telescopio-galilei.jpg" alt="Imagem de Galileu Galilei usando o telescópio">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Paz de Vestfália</h3>
+                            <p>Tratados que encerram a Guerra dos Trinta Anos e redefinem as fronteiras e a política europeia, estabelecendo os princípios da soberania nacional.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Ano 1648</h4>
+                        </div>
+                        <div class="img-direita">
+                            <img src="../img/paz-de-vest.jpg" alt="Imagem da assinatura da Paz de Vestfália">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Publicação de "Princípios Matemáticos da Filosofia Natural" por Isaac Newton</h3>
+                            <p>Newton formula as leis do movimento e da gravitação universal, consolidando a Revolução Científica.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Ano 1687</h4>
+                        </div>
+                        <div class="img-esquerda">
+                            <img src="../img/filosofia-newton.jpg" alt="Imagem de Isaac Newton e seu livro Principia">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Declaração de Independência dos Estados Unidos</h3>
+                            <p>A colônia americana declara independência da Grã-Bretanha, inspirando movimentos de liberdade e independência em outras partes do mundo.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Ano 1776</h4>
+                        </div>
+                        <div class="img-direita">
+                            <img src="../img/independencia_eua.jpg" alt="Imagem da Declaração de Independência dos Estados Unidos">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Revolução Francesa</h3>
+                            <p>Movimento revolucionário que transformou radicalmente a sociedade francesa, inspirando mudanças sociais e políticas em todo o mundo.</p>
+                        </div>
+                        <div class="time">
+                            <h4>Ano 1789</h4>
+                        </div>
+                        <div class="img-esquerda">
+                        <img src="../img/revolucao-francesa.webp" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section id="section-videos">
                 <h2>Material para estudo</h2>
@@ -174,141 +305,10 @@ if (!isset($_SESSION['nome_sessao'])) {
                     </div>
                 </div>
         </section>
-        <section id="linhaTempo">
-            <div class="titulo-linhaTempo">
-                <h1>LINHA DO TEMPO</h1>
-                <hr>
-                <p>Principais Eventos</p>
-            </div>
-            <div class="timeline">
-                <ul>
-                    <li>
-                        <div class="content">
-                            <h3>Queda de Constantinopla</h3>
-                            <p>O Império Bizantino cai para os turcos otomanos, encerrando a Idade Média e impulsionando a busca por novas rotas comerciais para o Oriente.</p>
-                        </div>
-                        <div class="time">
-                            <h4>Ano 1453</h4>
-                        </div>
-                        <div class="img-direita">
-                            <img src="../img/descobrimento.webp" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content">
-                            <h3>Descobrimento da América</h3>
-                            <p>Cristóvão Colombo chega ao continente americano, marcando o início das grandes navegações e do colonialismo europeu nas Américas.</p>
-                        </div>
-                        <div class="time">
-                            <h4>Ano 1492</h4>
-                        </div>
-                        <div class="img-esquerda">
-                            <img src="../img/reformapt.jfif" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content">
-                            <h3>Reforma Protestante</h3>
-                            <p>Martinho Lutero publica suas 95 Teses na Alemanha, iniciando a Reforma Protestante, que leva a profundas mudanças religiosas e políticas na Europa.</p>
-                        </div>
-                        <div class="time">
-                            <h4>Ano 1517</h4>
-                        </div>
-                        <div class="img-direita">
-                            <img src="../img/revolucao_cientifica.jpg" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content">
-                            <h3>Publicação de "De revolutionibus orbium coelestium" por Copérnico</h3>
-                            <p>O astrônomo Nicolau Copérnico propõe a teoria heliocêntrica, desafiando o sistema geocêntrico vigente e marcando o início da Revolução Científica.</p>
-                        </div>
-                        <div class="time">
-                            <h4>Ano 1543 </h4>
-                        </div>
-                        <div class="img-esquerda">
-                            <img src="../img/independencia_eua.jpg" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content">
-                            <h3> Derrota da Armada Invencível</h3>
-                            <p>A derrota da poderosa frota espanhola pela Inglaterra marca o declínio da hegemonia espanhola e o crescimento do poderio naval inglês.</p>
-                        </div>
-                        <div class="time">
-                            <h4>Ano 1588</h4>
-                        </div>
-                        <div class="img-direita">
-                            <img src="../img/revolucao_francesa.jpg" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content">
-                            <h3>Início do uso do telescópio por Galileu Galilei</h3>
-                            <p>Galileu aperfeiçoa o telescópio e faz observações astronômicas que confirmam a teoria heliocêntrica, contribuindo para a Revolução Científica.</p>
-                        </div>
-                        <div class="time">
-                            <h4>Ano 1609</h4>
-                        </div>
-                        <div class="img-esquerda">
-                            <img src="../img/galileu_telescopio.jpg" alt="Imagem de Galileu Galilei usando o telescópio">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content">
-                            <h3>Paz de Vestfália</h3>
-                            <p>Tratados que encerram a Guerra dos Trinta Anos e redefinem as fronteiras e a política europeia, estabelecendo os princípios da soberania nacional.</p>
-                        </div>
-                        <div class="time">
-                            <h4>Ano 1648</h4>
-                        </div>
-                        <div class="img-direita">
-                            <img src="../img/paz-de-vest.jpg" alt="Imagem da assinatura da Paz de Vestfália">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content">
-                            <h3>Publicação de "Princípios Matemáticos da Filosofia Natural" por Isaac Newton</h3>
-                            <p>Newton formula as leis do movimento e da gravitação universal, consolidando a Revolução Científica.</p>
-                        </div>
-                        <div class="time">
-                            <h4>Ano 1687</h4>
-                        </div>
-                        <div class="img-esquerda">
-                            <img src="../img/filosofia-newton.png" alt="Imagem de Isaac Newton e seu livro Principia">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content">
-                            <h3>Declaração de Independência dos Estados Unidos</h3>
-                            <p>A colônia americana declara independência da Grã-Bretanha, inspirando movimentos de liberdade e independência em outras partes do mundo.</p>
-                        </div>
-                        <div class="time">
-                            <h4>Ano 1776</h4>
-                        </div>
-                        <div class="img-direita">
-                            <img src="../img/independencia_eua.jpg" alt="Imagem da Declaração de Independência dos Estados Unidos">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content">
-                            <h3>Revolução Francesa</h3>
-                            <p>Movimento revolucionário que transformou radicalmente a sociedade francesa, inspirando mudanças sociais e políticas em todo o mundo.</p>
-                        </div>
-                        <div class="time">
-                            <h4>Ano 1789</h4>
-                        </div>
-                        <div class="img-esquerda">
-                            <img src="../img/revolucao_francesa.jpg" alt="Imagem da Revolução Francesa">
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
         
         <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
     </main>
-    <<footer class="footer">
+    <footer class="footer">
         <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SoftDev</a>
         <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a>
         <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">João Gustavo Mota Ramos</a>

@@ -396,16 +396,6 @@ a {
         padding: 5px 20px;
         border-radius: 10px;
     }
-
-
-    #caracteristicas {
-        min-height: 80vh;
-    }
-
-    #caracteristicas #titulo-caracteristicas {
-        font-size: 30px !important;
-    }
-
     .item .conteudo {
         padding: 20px !important;
         margin-top: 0 !important;
@@ -498,82 +488,62 @@ main{
 /* SEGUNDA SECTION */
 /* SEGUNDA SECTION */
 
-#caracteristicas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 60vw;
-    background: rgb(75, 63, 53);
-    background: linear-gradient(to bottom, rgb(49, 40, 32) 0%, rgba(75, 63, 53, 1) 100%);
-}
+/* Segunda Section*/
 
-#caracteristicas #titulo-caracteristicas {
+.acontecimentos {
+    background-color: #4b3f35;
+    padding: 80px;
     color: white;
-    font-size: 60px;
     text-align: center;
-    transition: .3s ease-in-out;
+}
+
+.acontecimentos h2 {
+    font-size: 50px;
     margin-bottom: 50px;
+    color: #e7be36;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
 }
 
-#caracteristicas #titulo-caracteristicas:hover {
-    letter-spacing: 2px;
-    text-shadow: 0 0 60px white;
-}
-
-.carrossel-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.carrossel {
-    display: flex;
-    width: 200%;
-    transition: 0.3s ease-in-out;
+.itens-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
 }
 
 .item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    position: relative;
+    background-color: #7e7261;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .item img {
-    width: 80%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 20px;
-    transition: 0.3s ease-in-out;
+    width: 100%;
+    height: 300px;
 }
 
+.item h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #d4af37;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
 
-.item .conteudo {
+.item p {
+    font-size: 16px;
+    margin-top: 6px;
+    margin-bottom: 11px;
+    margin-left: 12px;
+    margin-right: 12px;
     color: white;
-    max-width: 80%;
-    position: absolute;
-    border-radius: 10px;
-    padding: 10px;
-    bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Fundo escurecido */
-    transition: 0.3s ease-in-out;
-    opacity: 0;
-    transform: translateY(20px);
-    /* Efeito de subida */
 }
 
-.item:hover .conteudo {
-    opacity: 1;
-    transform: translateY(0);
-    /* Transição suave para a posição original */
+.item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
-
-#caracteristicas #saiba-mais {
+#acontecimentos #saiba-mais {
     font-size: 20px;
     padding: 20px 50px;
     border-radius: 30px;
@@ -585,14 +555,14 @@ main{
     margin-top: 50px;
 }
 
-#caracteristicas #saiba-mais:hover {
+#acontecimentos #saiba-mais:hover {
     transform: scale(1.05);
     box-shadow: 0 0 30px #948171;
 }
 
 #linhaTempo {
     color: white;
-    height: 420vh;
+    height: 470vh;
     background-color: #f9f4e1;
 }
 
@@ -601,8 +571,8 @@ main{
     font-size: 70px;
     color: #333;
     text-align: center;
-    margin-top: 80px;
     transition: .3s ease-in-out;
+    padding-top: 10px;
 }
 
 
@@ -629,7 +599,7 @@ main{
     position: absolute;
     left: 50%;
     width: 2px;
-    height: 380vh;
+    height: 435.5vh;
     background-color: #4b3f35;
 }
 
@@ -897,19 +867,6 @@ main{
         padding: 5px 20px;
         border-radius: 10px;
     }
-
-    #caracteristicas {
-        min-height: 80vh;
-    }
-
-    #caracteristicas #titulo-caracteristicas {
-        font-size: 30px !important;
-    }
-
-    .item .conteudo {
-        padding: 20px !important;
-        margin-top: 0 !important;
-    }
 }
 
 /* Media Query para telas menores que 480px */
@@ -932,21 +889,12 @@ main{
         padding: 15px 30px;
     }
 
-    #caracteristicas {
-        padding: 40px 0;
-    }
-
     .carrossel-container {
         width: 90%;
     }
 
     .carrossel {
         width: 300%;
-    }
-
-    .item img {
-        width: 100%;
-        height: auto;
     }
 }
 
@@ -1080,15 +1028,6 @@ main{
     .img-esquerda {
         display: none !important;
     }
-
-    #caracteristicas #titulo-caracteristicas {
-        font-size: 40px !important;
-    }
-
-    #caracteristicas {
-        height: 60vh !important;
-    }
-
     .timeline ul li h3 {
         font-size: 11px !important;
     }
@@ -1100,21 +1039,6 @@ main{
     #prev {
         left: 70px;
     }
-
-    .item .conteudo {
-        color: white !important;
-        max-width: 70% !important;
-        position: absolute !important;
-        border-radius: 20px !important;
-        padding: 15px !important;
-        margin-top: 0 !important;
-        background-color: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(10px) !important;
-        transition: 0.3s ease-in-out !important;
-        opacity: 0;
-        font-size: 8px !important;
-    }
-
     .content {
         width: 300px !important;
         padding: 10px !important;
@@ -1184,7 +1108,6 @@ main{
     .video-estudo {
         flex: 1 1 100%; /* 1 vídeo por linha */
     }
-
     #section-videos h2 {
         font-size: 28px; /* Ajuste o tamanho do título para telas pequenas */
     }
@@ -1193,5 +1116,57 @@ main{
 @media (max-width: 480px) {
     #section-videos h2 {
         font-size: 24px; /* Título ainda menor em telas extra pequenas */
+    }
+}
+/* Estilo base fornecido */
+
+/* Layout responsivo para dispositivos menores */
+@media (max-width: 1024px) {
+    .itens-grid {
+        grid-template-columns: 1fr; /* Apenas uma coluna em telas menores */
+        gap: 20px;
+    }
+
+    .item img {
+        height: 250px; /* Reduz a altura das imagens */
+    }
+
+    .acontecimentos h2 {
+        font-size: 40px; /* Diminui o tamanho do título */
+    }
+
+    .item h3 {
+        font-size: 20px; /* Diminui o tamanho do subtítulo */
+    }
+
+    .item p {
+        font-size: 14px; /* Reduz o tamanho do texto */
+    }
+
+    #acontecimentos #saiba-mais {
+        font-size: 18px;
+        padding: 15px 40px; /* Ajusta o botão */
+    }
+}
+
+/* Layout responsivo para dispositivos muito pequenos (smartphones) */
+@media (max-width: 768px) {
+    .acontecimentos {
+        padding: 40px; /* Reduz o padding geral */
+    }
+
+    .item img {
+        height: 200px; /* Ainda menor para telas pequenas */
+    }
+
+    .item p {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 12px; /* Ajusta ainda mais o texto */
+    }
+
+    #acontecimentos #saiba-mais {
+        font-size: 16px;
+        padding: 10px 30px;
     }
 }
