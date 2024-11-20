@@ -177,6 +177,7 @@ a {
 
 #title-add {
     /* margin-top: -10px; */
+    margin-bottom: -20px;
 }
 
 #p-add {
@@ -396,6 +397,7 @@ main {
     overflow: hidden;
     transition: 0.5s;
     animation: fade-in .5s ease-in-out;
+    margin-top: -100px;
 }
 
 #cadastrar {
@@ -508,6 +510,7 @@ main {
     padding: 30px 20px;
     font-family: Arial, sans-serif;
     text-align: center;
+    margin-top: -100px;
 }
 
 .footer #titulo {
