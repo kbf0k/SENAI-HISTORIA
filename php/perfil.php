@@ -205,7 +205,7 @@ $conexao->close();
                     <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($email); ?>" required>
                 </div>
                 <div class="form-group">
-                    <button type="" class="btn"><a href="esqueciSenha.php">Redefinir senha</a></button>
+                <a href="esqueciSenha.php"><button type="button" class="btn">Redefinir Senha</button></a>
                 </div>
                 <button id="att-profile" type="submit" name="update" class="btn">Atualizar perfil</button>
             </form>
