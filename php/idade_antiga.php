@@ -101,17 +101,17 @@ if (!isset($_SESSION['nome_sessao'])) {
     </div>
 
     <main>
-        <section id="introducao">
+         <section id="introducao">
             <div class="video">
                 <video id="meuVideo" src="../video/idade_antiga.mp4" autoplay loop muted></video>
             </div>
             <div class="titulo">
                 <h1>IDADE ANTIGA</h1>
                 <p>A Idade Antiga é o período em que surgiram as primeiras grandes civilizações e a escrita</p>
-                <a href="#conteudo"><button id="saiba-mais">Saiba Mais</button></a>
+                <a href="#acontecimentos"><button id="saiba-mais">Saiba Mais</button></a>
             </div>
         </section>
-
+     <!--
         <img id="img-central" src="../img/civilizacoes-da-idade-antiga.jpg" alt="Civilizações da Idade Antiga">
         <div id="conteudo">
             <p>A Idade Antiga compreende o período que se inicia com o surgimento da escrita, por volta de 3.500 a.C., e vai até a queda do Império Romano do Ocidente, em 476 d.C.</p>
@@ -169,7 +169,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                     </div>
                 </li>
             </ul>
-        </div>
+        </div> -->
         <section id="acontecimentos" class="acontecimentos">
             <div class="container">
                 <h2>Fatos Marcantes da Idade Antiga</h2>
@@ -205,6 +205,149 @@ if (!isset($_SESSION['nome_sessao'])) {
                 </div>
             </div>
         </section>
+        <section id="linhaTempo">
+    <div class="titulo-linhaTempo">
+        <h1>LINHA DO TEMPO</h1>
+        <hr>
+        <p>Principais Eventos da Idade Antiga</p>
+    </div>
+    <div class="timeline">
+        <ul>
+            <!-- Evento 1 -->
+            <li>
+                <div class="content">
+                    <h3>Fundação de Roma</h3>
+                    <p>De acordo com a lenda, Roma foi fundada em 753 a.C. por Rômulo e Remo, dando início à civilização romana.</p>
+                </div>
+                <div class="time">
+                    <h4>Ano 753 a.C.</h4>
+                </div>
+                <div class="img-direita">
+                    <img src="../img/fundacao-roma.png" alt="Imagem da fundação de Roma">
+                </div>
+            </li>
+            <!-- Evento 2 -->
+            <li>
+                <div class="content">
+                    <h3>As Guerras Médicas</h3>
+                    <p>Entre 490 e 479 a.C., as cidades-estado gregas lutaram contra o Império Persa, resultando na vitória grega e no fortalecimento da democracia ateniense.</p>
+                </div>
+                <div class="time">
+                    <h4>490 - 479 a.C.</h4>
+                </div>
+                <div class="img-esquerda">
+                    <img src="../img/guerras-medicas.png" alt="Imagem das Guerras Médicas">
+                </div>
+            </li>
+            <!-- Evento 3 -->
+            <li>
+                <div class="content">
+                    <h3>Período de Ouro de Atenas</h3>
+                    <p>Durante o século V a.C., Atenas viveu um período de grande prosperidade cultural, artístico e político, liderado por Pericles.</p>
+                </div>
+                <div class="time">
+                    <h4> 461 - 429 a.C.</h4>
+                </div>
+                <div class="img-direita">
+                    <img src="../img/atenas-ouro.jpg" alt="Imagem de Atenas no período de ouro">
+                </div>
+            </li>
+            <!-- Evento 4 -->
+            <li>
+                <div class="content">
+                    <h3>Conquista de Alexandre, o Grande</h3>
+                    <p>Alexandre, o Grande, conquista vastos territórios, desde a Grécia até o norte da Índia, espalhando a cultura grega pelo mundo conhecido.</p>
+                </div>
+                <div class="time">
+                    <h4>336 - 323 a.C.</h4>
+                </div>
+                <div class="img-esquerda">
+                    <img src="../img/alexandre-grande.jpg" alt="Imagem de Alexandre, o Grande">
+                </div>
+            </li>
+            <!-- Evento 5 -->
+            <li>
+                <div class="content">
+                    <h3>Assassinato de Júlio César</h3>
+                    <p>O ditador romano Júlio César é assassinado por seus próprios senadores, o que marca o fim da República Romana e o início do Império Romano.</p>
+                </div>
+                <div class="time">
+                    <h4>Ano 44 a.C.</h4>
+                </div>
+                <div class="img-direita">
+                    <img src="../img/julio-cesar.png" alt="Imagem do assassinato de Júlio César">
+                </div>
+            </li>
+            <!-- Evento 6 -->
+            <li>
+                <div class="content">
+                    <h3>Augusto torna-se Imperador</h3>
+                    <p>O imperador Augusto se torna o primeiro imperador de Roma, dando início ao Império Romano e a um longo período de paz chamado Pax Romana.</p>
+                </div>
+                <div class="time">
+                    <h4>Ano 27 a.C.</h4>
+                </div>
+                <div class="img-esquerda">
+                    <img src="../img/augusto-imperador.jpg" alt="Imagem de Augusto se tornando imperador">
+                </div>
+            </li>
+            <!-- Evento 7 -->
+            <li>
+                <div class="content">
+                    <h3>Destruição de Pompéia</h3>
+                    <p>O vulcão Vesúvio entra em erupção em 79 d.C., destruindo a cidade romana de Pompéia e preservando-a sob uma camada de cinzas.</p>
+                </div>
+                <div class="time">
+                    <h4>Ano 79 d.C.</h4>
+                </div>
+                <div class="img-direita">
+                    <img src="../img/pompeia.jpg" alt="Imagem de Pompéia destruída">
+                </div>
+            </li>
+            <!-- Evento 8 -->
+            <li>
+                <div class="content">
+                    <h3>Cristianismo se torna religião oficial do Império Romano</h3>
+                    <p>Em 380 d.C., o imperador Teodósio I torna o Cristianismo a religião oficial do Império Romano, marcando a ascensão do cristianismo como força dominante no império.</p>
+                </div>
+                <div class="time">
+                    <h4>Ano 380 d.C.</h4>
+                </div>
+                <div class="img-esquerda">
+                    <img src="../img/cristianismo-império-romano.jpg" alt="Imagem do Cristianismo no Império Romano">
+                </div>
+            </li>
+            <!-- Evento 9 -->
+            <li>
+                <div class="content">
+                    <h3>O Império Romano se divide</h3>
+                    <p>Em 395 d.C., o Império Romano é dividido em duas partes: o Império Romano do Ocidente e o Império Romano do Oriente.</p>
+                </div>
+                <div class="time">
+                    <h4>Ano 395 d.C.</h4>
+                </div>
+                <div class="img-direita">
+                    <img src="../img/divisao-imperio-romano.jpg" alt="Imagem da divisão do Império Romano">
+                </div>
+            </li>
+            <!-- Evento 10 -->
+            <li>
+                <div class="content">
+                    <h3>Início da Idade das Trevas</h3>
+                    <p>Com a queda do Império Romano do Ocidente em 476 d.C., o mundo ocidental entra em um período de instabilidade e declínio cultural conhecido como Idade das Trevas.</p>
+                </div>
+                <div class="time">
+                    <h4>Ano 476 d.C.</h4>
+                </div>
+                <div class="img-esquerda">
+                    <img src="../img/idade-das-trevas.jpg" alt="Imagem representando a Idade das Trevas">
+                </div>
+            </li>
+            <div style="clear:both;"> </div>
+        </ul>
+    </div>
+</section>
+
         <section id="section-videos">
                 <h2>Material para estudo</h2>
                 <div class="videos">

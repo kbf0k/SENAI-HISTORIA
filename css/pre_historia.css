@@ -572,7 +572,7 @@ main{
 
 #linhaTempo {
     color: white;
-    height: 420vh;
+    height: 450vh;
     background-color: #f9f4e1;
 }
 
@@ -581,8 +581,8 @@ main{
     font-size: 70px;
     color: #333;
     text-align: center;
-    padding-top: 20px;
     transition: .3s ease-in-out;
+    padding-top: 10px;
 }
 
 
@@ -609,7 +609,7 @@ main{
     position: absolute;
     left: 50%;
     width: 2px;
-    height: 300vh;
+    height: 413.5vh;
     background-color: #4b3f35;
 }
 
@@ -685,7 +685,7 @@ main{
 .timeline ul li:nth-child(odd) .time {
     position: absolute;
     top: 10px;
-    right: -165px;
+    right: -210px;
     margin: 0;
     padding: 8px 16px;
     background-color: #4b3f35;
@@ -696,7 +696,7 @@ main{
 .timeline ul li:nth-child(even) .time {
     position: absolute;
     top: 12px;
-    left: -165px;
+    left: -200px;
     margin: 0;
     padding: 8px 16px;
     background-color: #4b3f35;
@@ -706,8 +706,8 @@ main{
 
 .img-direita img {
     position: absolute;
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 350px;
+    max-height: 350px;
     top: 20px;
     left: 770px;
     border-radius: 20px;
@@ -718,8 +718,8 @@ main{
 
 .img-esquerda img {
     position: absolute;
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 350px;
+    max-height: 350px;
     top: 20px;
     right: 770px;
     border-radius: 20px;

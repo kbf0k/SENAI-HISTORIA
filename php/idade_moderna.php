@@ -150,8 +150,8 @@ if (!isset($_SESSION['nome_sessao'])) {
         </div>
         <a href="#linhaTempo"><button id="saiba-mais">Saiba Mais</button></a>
     </div>
-        </section>
-        <section id="linhaTempo">
+ </section>
+ <section id="linhaTempo">
             <div class="titulo-linhaTempo">
                 <h1>LINHA DO TEMPO</h1>
                 <hr>
@@ -279,10 +279,11 @@ if (!isset($_SESSION['nome_sessao'])) {
                         <img src="../img/revolucao-francesa.webp" alt="">
                         </div>
                     </li>
+                    <div style="clear:both;"> </div>
                 </ul>
             </div>
         </section>
-        <section id="section-videos">
+ <section id="section-videos">
                 <h2>Material para estudo</h2>
                 <div class="videos">
                     <div class="video-estudo">

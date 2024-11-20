@@ -201,89 +201,137 @@ if (!isset($_SESSION['nome_sessao'])) {
                 </div>
             </section>
             <section id="linhaTempo">
-                <div class="titulo-linhaTempo">
-                    <h1>LINHA DO TEMPO</h1>
-                    <hr>
-                    <p>Principais Eventos</p>
-                </div>
+            <div class="titulo-linhaTempo">
+                <h1>LINHA DO TEMPO</h1>
+                <hr>
+                <p>Principais Eventos</p>
+            </div>
             <div class="timeline">
                 <ul>
-                    <li>
-                        <div class="content">
-                        <h3>Surgimento do Gênero Homo</h3>
-                        <p>Aproximadamente 2,5 milhões de anos atrás, surgiram os primeiros hominídeos do gênero *Homo*, como o *Homo habilis*, que começou a utilizar ferramentas rudimentares de pedra.</p>
-                    </div>
-                        <div class="time">
-                            <h4>2,5 milhões de anos atrás</h4>
-                        </div>
-                        <div class="img-direita">
-                            <img src="../img/homo.jpg" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content">
-                        <h3>Homo erectus e o Controle do Fogo</h3>
-                        <p>O *Homo erectus*, surgido há cerca de 1,8 milhões de anos, foi provavelmente a primeira espécie a dominar o uso do fogo, essencial para cozinhar alimentos e se proteger.</p>
-                    </div>
-                    <div class="time">
-                        <h4>1,8 milhões de anos atrás</h4>
-                    </div>
-                    <div class="img-esquerda">
-                        <img src="../img/homem_fogo.jpg" alt="">
-                    </div>
-                </li>
-                    <li>
-                        <div class="content">
-                            <h3>Surgimento do Homo sapiens</h3>
-                            <p>Os primeiros *Homo sapiens* apareceram na África há cerca de 300 mil anos. Eles desenvolveram habilidades e ferramentas mais sofisticadas.</p>
-                        </div>
-                        <div class="time">
-                            <h4>300 mil anos atrás</h4>
-                        </div>
-                        <div class="img-direita">
-                            <img src="../img/homosapiens.webp" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content">
-                            <h3>Primeiras Migrações do Homo sapiens</h3>
-                            <p>Cerca de 100 mil anos atrás, o *Homo sapiens* começou a migrar para fora da África, espalhando-se pelo Oriente Médio, Europa e Ásia.</p>
-                        </div>
-                        <div class="time">
-                            <h4>100 mil anos atrás</h4>
-                        </div>
-                        <div class="img-esquerda">
-                            <img src="../img/migracoes.png" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content">
-                            <h3>Primeiras Expressões Artísticas</h3>
-                            <p>Há cerca de 40 mil anos, os humanos começaram a criar arte rupestre, como as pinturas em cavernas, indicando o desenvolvimento da cultura e da simbologia.</p>
-                        </div>
-                        <div class="time">
-                            <h4>40 mil anos atrás</h4>
-                        </div>
-                        <div class="img-direita">
-                            <img src="../img/arte_rupestre.jpg" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content">
-                            <h3>Início da Revolução Agrícola</h3>
-                            <p>Por volta de 12 mil anos atrás, no período Neolítico, surgem as primeiras práticas de agricultura e domesticação de animais, permitindo o estabelecimento de aldeias.</p>
-                        </div>
-                        <div class="time">
-                            <h4>12 mil anos atrás</h4>
-                        </div>
-                        <div class="img-esquerda">
-                            <img src="../img/agricultura.jfif" alt="">
-                        </div>
-                    </li>
-                    <div style="clear:both;"></div>
-                </ul>
-            </div>
-        </section> 
+                <li>
+        <div class="content">
+            <h3>Surgimento do Gênero Homo</h3>
+            <p>Aproximadamente 2,5 milhões de anos atrás, surgiram os primeiros hominídeos do gênero <i>Homo</i>, como o <i>Homo habilis</i>, que começou a utilizar ferramentas rudimentares de pedra.</p>
+        </div>
+        <div class="time">
+            <h4>2,5M de anos atrás</h4>
+        </div>
+        <div class="img-direita">
+            <img src="../img/homo.jpg" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="content">
+            <h3>Homo erectus e o Controle do Fogo</h3>
+            <p>O <i>Homo erectus</i>, surgido há cerca de 1,8 milhões de anos, foi provavelmente a primeira espécie a dominar o uso do fogo, essencial para cozinhar alimentos e se proteger.</p>
+        </div>
+        <div class="time">
+            <h4>1,8M de anos atrás</h4>
+        </div>
+        <div class="img-esquerda">
+            <img src="../img/homem_fogo.png" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="content">
+            <h3>Surgimento do Homo sapiens</h3>
+            <p>Os primeiros <i>Homo sapiens</i> apareceram na África há cerca de 300 mil anos. Eles desenvolveram habilidades e ferramentas mais sofisticadas.</p>
+        </div>
+        <div class="time">
+            <h4>300 mil anos atrás</h4>
+        </div>
+        <div class="img-direita">
+            <img src="../img/homosapiens.webp" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="content">
+            <h3>Primeiras Migrações do Homo sapiens</h3>
+            <p>Cerca de 100 mil anos atrás, o <i>Homo sapiens</i> começou a migrar para fora da África, espalhando-se pelo Oriente Médio, Europa e Ásia.</p>
+        </div>
+        <div class="time">
+            <h4>100 mil anos atrás</h4>
+        </div>
+        <div class="img-esquerda">
+            <img src="../img/migracoes.png" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="content">
+            <h3>Primeiras Expressões Artísticas</h3>
+            <p>Há cerca de 40 mil anos, os humanos começaram a criar arte rupestre, como as pinturas em cavernas, indicando o desenvolvimento da cultura e da simbologia.</p>
+        </div>
+        <div class="time">
+            <h4>40 mil anos atrás</h4>
+        </div>
+        <div class="img-direita">
+            <img src="../img/arte_rupestre.png" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="content">
+            <h3>Início da Revolução Agrícola</h3>
+            <p>Por volta de 12 mil anos atrás, no período Neolítico, surgem as primeiras práticas de agricultura e domesticação de animais, permitindo o estabelecimento de aldeias.</p>
+        </div>
+        <div class="time">
+            <h4>12 mil anos atrás</h4>
+        </div>
+        <div class="img-esquerda">
+            <img src="../img/agricultura.jfif" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="content">
+            <h3>Primeiros Povoados Permanentes</h3>
+            <p>Há cerca de 10 mil anos, aldeias como Jericó e Çatalhöyük começaram a surgir, marcando uma transição para a vida sedentária.</p>
+        </div>
+        <div class="time">
+            <h4>10 mil anos atrás</h4>
+        </div>
+        <div class="img-direita">
+            <img src="../img/civi_jerico.png" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="content">
+            <h3>Uso do Bronze</h3>
+            <p>Por volta de 4.000 a.C., o uso do bronze revolucionou ferramentas e armas, dando início à Idade dos Metais.</p>
+        </div>
+        <div class="time">
+            <h4>4.000 a.C.</h4>
+        </div>
+        <div class="img-esquerda">
+            <img src="../img/bronze_desc.png" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="content">
+            <h3>Invenção da Roda</h3>
+            <p>Entre 3.500 e 3.000 a.C., na Mesopotâmia, foi inventada a roda, uma das maiores inovações tecnológicas da humanidade.</p>
+        </div>
+        <div class="time">
+            <h4>3.500 a.C.</h4>
+        </div>
+        <div class="img-direita">
+            <img src="../img/roda_inv.png" alt="">
+        </div>
+    </li>
+    <li>
+        <div class="content">
+            <h3>Surgimento da Escrita</h3>
+            <p>Por volta de 3.200 a.C., na Suméria, a escrita cuneiforme foi desenvolvida, marcando o fim da Pré-História e o início da História.</p>
+        </div>
+        <div class="time">
+            <h4>3.200 a.C.</h4>
+        </div>
+        <div class="img-esquerda">
+            <img src="../img/escrita_inv.png" alt="">
+        </div>
+    </li>
+    <div style="clear:both;"></div>
+  </ul>
+         </div>
+        </section>
         <section id="section-videos">
             <h2>Material para estudo</h2>
             <div class="videos">
