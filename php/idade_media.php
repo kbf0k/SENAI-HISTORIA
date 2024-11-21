@@ -111,12 +111,44 @@ session_start();
             <div class="titulo">
                 <h1>IDADE MÉDIA</h1>
                 <p>A Idade Média é o período da história entre a queda do Império Romano e o início da Idade Moderna</p>
-                <a href="#caracteristicas"><button id="saiba-mais">Saiba Mais</button></a>
+                <a href="#acontecimentos"><button id="saiba-mais">Saiba Mais</button></a>
             </div>
         </section>
-
-        <section id="caracteristicas">
+        <section id="acontecimentos" class="acontecimentos">
+            <div class="container">
             <h1 id="titulo-caracteristicas">PRINCIPAIS CARACTERÍSTICAS</h1>
+                <div class="itens-grid">
+                    <a>
+                        <div class="fato">
+                            <img src="../img/feudalismo.png" alt="Pintura Rupestre">
+                            <h3>Feudalismo</h3>
+                            <p>O feudalismo foi um sistema econômico, político e social que predominou na Europa Ocidental durante a Idade Média.</p>
+                        </div>
+                    </a>
+                    <a>
+                        <div class="fato">
+                            <img src="../img/cruzadas.png" alt="evolucaohumana">
+                            <h3>Cruzadas</h3>
+                            <p>As Cruzadas foram expedições militares promovidas pela Igreja Católica com o objetivo de retomar Jerusalém.</p>
+                        </div>
+                    </a>
+                    <a>
+                        <div class="fato">
+                            <img src="../img/inquisição.png" alt="ferramentas">
+                            <h3>Inquisição</h3>
+                            <p>A Inquisição foi uma instituição criada pela Igreja Católica para combater heresias e preservar a ortodoxia cristã.</p>
+                        </div>
+                    </a>
+                        <div class="fato">
+                            <img src="../img/peste-negra.png" alt="aldeias">
+                            <h3>Peste Negra</h3>
+                            <p>A Peste Negra foi uma pandemia devastadora no século XIV, matando milhões de pessoas.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="caracteristicas">
             <div class="carrossel-container">
                 <div class="carrossel">
                     <div class="item">
