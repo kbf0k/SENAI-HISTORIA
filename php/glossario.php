@@ -123,20 +123,8 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
 
     <h1 id="tt-gloss">Glossário Histórico</h1>
 
-    <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
-
-    <!-- <div class="search-bar">
-    <form action="" method="post">
-        <input type="text" name="termo" id="barra-pesquisa" placeholder="Que termo você procura?">
-        <button type="submit">
-            <img id="botao-pesquisa" src="../img/lupa_glossario.png" alt="Buscar">
-        </button>
-    </form>
-  </div>  -->
 
   <p class="search-hint">Clique em uma letra abaixo para ver os conceitos que se iniciam por ela.</p>
-
-    <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
 
     <div class="alphabet-container">
         <!-- Alfabeto de A a Z -->
@@ -218,128 +206,15 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
 
     </div>
 
-    <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
-
-    <?php
-
-    // if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
-    //     // Exibe o botão apenas para administradores
-    //     echo '<button id="voltar-glossario" class="">Sair de Pesquisa por Nome</button>';
-    // }
-
-    ?>
-
-    <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
-
     <div class="page-content" id="page-content">
         <?php
         $sql = "SELECT id_glossario, titulo_glossario, descricao_glossario FROM glossario ORDER BY titulo_glossario ASC LIMIT 5";
         $result = $conexao->query($sql);
 
-        // $pesquisa = '';
-
-        //         if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['termo'])) {
-        //             $pesquisa = $_POST['termo'];
-        //         }
-
-        //         if(!empty($pesquisa)) {
-        //             $sql_pesquisa = "SELECT glossario.titulo_glossario FROM glosario WHERE glossario.titulo_glossario LIKE ?";
-
-        //             $busca = "%".$pesquisa."%";
-        //             $stmt = $conexao->prepare($sql_pesquisa);
-        //             $stmt->bind_param('s', $busca);
-        //             $stmt->execute();
-        //             $resultado_pesquisa = $stmt->get_result();
-
-        //             if($resultado_pesquisa->num_rows > 0) {
-        //                 while ($linha_pesq = $resultado_pesquisa->fetch_assoc()) {
-        //                     echo "<h4>" . $linha_pesq['titulo_glossario'] . "</h4>";
-        //                     echo "<p>" . $linha_pesq['descricao_glossario'] . "</p>";
-        //                 }
-        //             } else {
-        //                 echo "<h4>Nenhum conceito encontrado com o termo: ". '"' .$pesquisa. '"'  . "</h4>";
-        //             }
-        //             $stmt->close();
-
-        //         }
-
-
-
-        // if ($result->num_rows > 0) {
-        //     // Exibe os conceitos
-        //     while($row = $result->fetch_assoc()) {
-        //         echo "<div class='conceito-item'>";
-        //         echo "<p>" . $row['titulo_glossario'] . "</p>";
-        //         // Verifica se o usuário é administrador antes de mostrar o botão de excluir
-        //         if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
-        //             echo "<a href='excluir_conceito.php?id=" . $row['id_glossario'] . "' class='botao-excluir'>Excluir</a>";
-        //         }
-        //         echo "</div>";
-        //     }
-        // } else {
-        //     echo "Nenhum conceito encontrado!";
-        // }
-
-        // if ($result -> num_rows > 0) {
-        //     while ($linha = $result->fetch_assoc()) {
-        //         echo"<p class='conceitos'><b>" . $linha['titulo_glossario']. ":</b> ". $linha['descricao_glossario']. "<br>";
-
-        //         // Verificar se o usuário é administrador para exibir o botão de excluir
-        //     if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
-        //         echo "<a href='excluir_conceito.php?id=" . $linha['id_glossario'] . "' class='botao-excluir'>Excluir</a>";
-        //     }
-
-        //     }
-        // }
-
         ?>
     </div>
 
-    <!-- <div>
-    <?php
-    // $pesquisa = '';
-
-    // if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['termo'])) {
-    //     $pesquisa = $_POST['termo'];
-    // }
-
-    ?>
-
-    
-
-    <?php
-
-    // if(!empty($pesquisa)) {
-    //     $sql_pesquisa = "SELECT glossario.titulo_glossario, glossario.descricao_glossario FROM glossario WHERE glossario.titulo_glossario LIKE ?";
-
-    //     $busca = "%".$pesquisa."%";
-    //     $stmt = $conexao->prepare($sql_pesquisa);
-    //     $stmt->bind_param('s', $busca);
-    //     $stmt->execute();
-    //     $resultado_pesquisa = $stmt->get_result();
-
-    //     if($resultado_pesquisa->num_rows > 0) {
-    //         while ($linha_pesq = $resultado_pesquisa->fetch_assoc()) {
-    //             echo "<h4>" . $linha_pesq['titulo_glossario'] . "</h4>";
-    //             echo "<p>" . $linha_pesq['descricao_glossario'] . "</p>";
-    //         }
-    //     } else {
-    //         echo "<h4>Nenhum conceito encontrado com o termo: ". '"' .$pesquisa. '"'  . "</h4>";
-    //     }
-    //     $stmt->close();
-
-    // }
-    ?> -->
     </div>
-    <!-- 
-  <div class="pagination" id="navPags">
-    <a href="#" data-page="1" id="inicio">&laquo; Início</a>
-    <a href="#" data-page="prev" id="anterior">&lsaquo; Anterior</a> -->
-    <!-- Botões de páginas serão gerados dinamicamente -->
-    <!-- <a href="#" data-page="next" id="proximo">Próximo &rsaquo;</a> -->
-
-    <!-- <a href="#" data-page="15" id="fim">Fim &raquo;</a>
-  </div> -->
 
     <?php
     // Verifique se o tipo de usuário é administrador
