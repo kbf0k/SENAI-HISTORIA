@@ -424,7 +424,7 @@ article p {
     color: #d4af37;
 }
 
-#atividadestitulo {
+.atividadestitulo {
     text-align: center;
     margin: 30px 0;
     font-size: 20px;
@@ -694,12 +694,6 @@ article p {
         flex-direction: column;
         align-items: center;
     }
-
-    .atividades_pdf {
-        grid-template-columns: 1fr 1fr;
-        width: 90%;
-        margin: 20px auto;
-    }
 }
 
 /* Mobile */
@@ -732,10 +726,22 @@ article p {
     .img-legend {
         width: 100%;
     }
-
+}
+@media (max-width: 768px) {
     .atividades_pdf {
-        grid-template-columns: 1fr;
-        width: 100%;
-        margin: 10px auto;
+        display: none;
+    }
+    #remover-title{
+        display: none;
     }
 }
+
+@media (max-width: 480px) {
+    .atividades_pdf {
+       display: none;
+    }
+    #remover-title{
+        display: none;
+    }
+}
+

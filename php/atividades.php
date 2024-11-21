@@ -169,7 +169,7 @@ if (!isset($_SESSION['nome_sessao'])) {
             </div>
         </section>
         <section id="nossasatividades">
-            <div id="atividadestitulo">
+            <div class="atividadestitulo">
                 <h1>Nossas Atividades</h1>
                 <h3>Aqui você pode conferir todas nossas atividades de acordo com seu interesse!</h3>
             </div>
@@ -442,7 +442,7 @@ if (!isset($_SESSION['nome_sessao'])) {
         </section>
 
         <!-- Seção da Pré-História -->
-        <div id="atividadestitulo">
+        <div class="atividadestitulo" id="remover-title">
             <h2>Atividades por Período</h2>
             <h3>Nessa seção encontre todas as nossas atividades separadas pelo período histórico!</h3>
         </div>
