@@ -354,7 +354,7 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
         <div id="modal" class="modal">
             <div class="modal-content">
                 <span class="fechar">&times;</span>
-                <h2>Inserir Novo Conceito</h2>
+                <h2>Conceito Histórico</h2>
                 <form id="formNovoConceito" action="inserir_conceito.php" method="POST">
                     <label for="termo">Nome do Termo:</label>
                     <input type="text" id="termo" name="termo" required>

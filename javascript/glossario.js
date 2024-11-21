@@ -555,6 +555,34 @@ window.addEventListener("click", function (event) {
   }
 });
 
+
+
+
+
+
+
+
+// const abrirModalEdicao = document.getElementById("abrirModalEdicao");
+// const modalEditar = document.getElementById("modalEditar");
+// const fecharModalEdicao = document.querySelector(".fechar");
+// const formEditarConceito = document.getElementById("formEditarConceito");
+
+// abrirModalEdicao.addEventListener("click", function () {
+//   modalEditar.style.display = "block";
+// });
+
+// fecharModal.addEventListener("click", function () {
+//   modalEditar.style.display = "none";
+// });
+
+// window.addEventListener("click", function (event) {
+//   if (event.target == modalEdicao) {
+//     modalEditar.style.display = "none";
+//   }
+// });
+
+
+
 // Função para enviar o formulário via AJAX
 formNovoConceito.addEventListener("submit", function (event) {
   event.preventDefault();
