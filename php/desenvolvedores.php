@@ -17,7 +17,7 @@ session_start();
 </head>
 
 <body>
-    <header class="header">
+<header class="header">
         <div class="container logo-menu">
             <div class="logo">
                 <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
@@ -74,7 +74,7 @@ session_start();
                 <li><a href="atividades.php">Atividades Complementares</a></li>
                 <li><a href="enem.php">Enem</a></li>
                 <?php if (isset($_SESSION['nome_sessao'])): ?>
-                    <li><img id="logout" src="../img/logout.png" alt=""></li>
+                    <a id="logout-mobile">SAIR</a>
                 <?php else: ?>
                     <a href="index.php">LOGIN</a>
                 <?php endif; ?>
