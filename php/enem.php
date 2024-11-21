@@ -126,7 +126,7 @@
                         <div class="article-body">
                             <h2>Materiais de Estudo</h2>
                             <p>Explore nossa seleção de materiais de estudo para o ENEM em história, incluindo vídeos, sites, e recursos interativos. Aqui você encontra ferramentas práticas para reforçar o aprendizado e tornar a preparação mais dinâmica.</p>
-                            <a href="#idade-antiga" class="read-more"><span class="sr-only">Ver Mais</span></a>
+                            <a href="#estudos-enem" class="read-more"><span class="sr-only">Ver Mais</span></a>
                         </div>
                     </div>
                 </article>
@@ -138,7 +138,7 @@
                         <div class="article-body">
                             <h2>Questões de Prova</h2>
                             <p>Teste seu conhecimento com questões de história do ENEM! Essa seção reúne perguntas de provas passadas, organizadas por tema, para você praticar e se familiarizar com o estilo das questões e o nível de exigência do exame.</p>
-                            <a href="#idade-media" class="read-more"><span class="sr-only">Ver Mais</span></a>
+                            <a href="#secao-questoes" class="read-more"><span class="sr-only">Ver Mais</span></a>
                         </div>
                     </div>
                 </article>
@@ -149,15 +149,17 @@
             <p>Para garantir uma boa preparação, concentre-se nos tópicos mais recorrentes nas provas de vestibulares e ENEM. Confira abaixo os principais períodos que você deve estudar com profundidade.</p>
 
             <div class="periodos">
-                <h3>O que estudar para o ENEM?</h3>
-                <p>Tradicionalmente, as perguntas de História do Exame Nacional do Ensino Médio (Enem) apresentam maior foco em História do Brasil.
+                <h3 id="titulo-oqest">O que estudar para o ENEM?</h3>
+                <p class="aproximar">Tradicionalmente, as perguntas de História do Exame Nacional do Ensino Médio (Enem) apresentam maior foco em História do Brasil.
                     Apesar do Brasil ser o tema mais cobrado, não esqueça de revisar temas centrais da História Geral, como Revolução Francesa, Revolução Industrial, ideologias como o fascismo e o comunismo, pois também costumam cair no Enem.
                 </p>
             </div>
 
             <div class="temas">
+                <div class="centralizar">
                 <h3>Temas Transversais Importantes</h3>
-                <ul>
+                </div>
+                <ul id="lista-temas">
                     <li><strong>História do Brasil:</strong> Desde o período colonial, passando pelo Império, até o período republicano e contemporâneo, incluindo os principais movimentos sociais e políticos.</li>
                     <li><strong>Movimentos Sociais e Revoluções:</strong> Revoluções que marcaram o mundo, como a Revolução Russa, a Revolução Chinesa e os movimentos de independência na América Latina.</li>
                     <li><strong>História Cultural e Econômica:</strong> Entenda as mudanças culturais e econômicas em cada período, como o mercantilismo, capitalismo e socialismo.</li>
@@ -166,8 +168,10 @@
             </div>
 
             <div class="dicas-estudo">
+                <div class="centralizar">
                 <h3>Dicas de Foco nos Estudos</h3>
-                <p>Para cada tema, concentre-se em:</p>
+                </div>
+                <p class="centralizar" id="aproximar">Para cada tema, concentre-se em:</p>
                 <ul>
                     <li><strong>Fatos Relevantes:</strong> Identifique e memorize os acontecimentos mais significativos e suas causas e consequências.</li>
                     <li><strong>Personagens Importantes:</strong> Conheça as figuras históricas que marcaram cada período e seus impactos.</li>
@@ -178,7 +182,7 @@
         <section id="estudos-enem" class="enem-section">
         <div id="videostitle">
         <h2>Estudos para o ENEM - História</h2>
-        <h3>Explore os vídeos e mapas mentais sobre os temas que mais caem no ENEM</h3>
+        <h3>Explore os vídeos sobre os temas que mais caem no ENEM</h3>
         </div>
             
             <div class="content-grid">
@@ -199,19 +203,13 @@
                 <div class="mapa-mental-section">
                     <h3>Mapas Mentais</h3>
                     <div class="mapas">
-                        <img src="URL_MAPA_MENTAL1" alt="Mapa Mental 1">
-
-                        <img src="URL_MAPA_MENTAL2" alt="Mapa Mental 2">
-                        <img src="URL_MAPA_MENTAL3" alt="Mapa Mental 3">
-                        <img src="URL_MAPA_MENTAL4" alt="Mapa Mental 4">
-                        <img src="URL_MAPA_MENTAL5" alt="Mapa Mental 5">
-                        <img src="URL_MAPA_MENTAL6" alt="Mapa Mental 6">
                     </div>
                 </div>
             </div>
         </section>
+        <section id="secao-questoes">
         <div class="question-section">
-    <h1>Questões de História do ENEM</h1>
+    <h1 id="titulo-questao">Questões de História do ENEM</h1>
     
     <!-- Lista de botões para mostrar as perguntas -->
     <ul class="question-list" id="question-list">
@@ -227,6 +225,7 @@
         <li id="question-item-10"><button onclick="showQuestion(10)">Pergunta 10</button></li>
     </ul>
 </div>
+</section>
 
 <!-- Template para renderizar as questões -->
 <template id="question-template">
@@ -250,10 +249,10 @@
         <div id="answer-explanation" class="answer-explanation" style="display:none;"></div>
     </div>
 </template>
-
+<button id="backToTop" onclick="scrollToTop()">&#8250;</button>
     </main>
     <footer class="footer">
-        <h3>Equipe Desenvolvedora SOFTDEV</h3>
+        <a id="titulo" href="desenvolvedores.php" target="_blank">Equipe Desenvolvedora SoftDev</a>
         <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">Kaique Bernardes Ferreira</a>
         <a href="https://www.linkedin.com/in/jo%C3%A3o-gustavo-mota-ramos-9b60242a2/" target="_blank">João Gustavo Mota Ramos</a>
         <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-da-cunha-machado-2089482b7/" target="_blank">João Pedro da Cunha Machado</a>
@@ -265,7 +264,7 @@
         <a href="termosDeUso.php">Termos de Uso</a></li>
         <a href="politica_privacidade.php">Política de Privacidade</a></li>
         <a href="ajuda.php">Ajuda</a></li>
-        <a href="faq.php">FAQ</a></li>
+        <a href="faq.php">Perguntas Frequentes</a></li>
 
 
         <div class="footer-bottom">

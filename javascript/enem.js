@@ -280,3 +280,10 @@ function checkAnswer(button, userAnswer) {
     feedback.style.display = "block";
 }
 
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
