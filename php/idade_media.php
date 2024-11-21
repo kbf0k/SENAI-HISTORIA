@@ -153,7 +153,6 @@ session_start();
                     <button class="setas" onclick="move(1)" id="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
             </div>
-            <a href="#linhaTempo"><button id="saiba-mais">Saiba Mais</button></a>
         </section>
         <section id="linhaTempo">
             <div class="titulo-linhaTempo">
