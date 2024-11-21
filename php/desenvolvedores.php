@@ -24,7 +24,17 @@ session_start();
             </div>
             <nav class="menu">
                 <ul>
-                    <li><a href="inicio.php">Início</a></li>
+                    <li class="dropdown">
+                        <a href="">Períodos Históricos</a>
+
+                        <div class="dropdown-menu">
+                            <a href="pre_historia.php">Pré-História</a>
+                            <a href="idade_antiga.php">Idade Antiga</a>
+                            <a href="idade_media.php">Idade Média</a>
+                            <a href="idade_moderna.php">Idade Moderna</a>
+                            <a href="idade_contemporanea.php">Idade Contemporânea</a>
+                        </div>
+                    </li>
                     <li><a href="glossario.php">Glossário</a></li>
                     <li><a href="atividades.php">Atividades Complementares</a></li>
                     <li><a href="enem.php">Enem</a></li>
@@ -69,7 +79,17 @@ session_start();
         </div>
         <nav id="nav">
             <ul id="mobile-menu" role="mobile-menu">
-                <li><a href="inicio.php">Início</a></li>
+                <li class="dropdown">
+                        <a href="">Períodos Históricos</a>
+
+                        <div class="dropdown-menu">
+                            <a href="pre_historia.php">Pré-História</a>
+                            <a href="idade_antiga.php">Idade Antiga</a>
+                            <a href="idade_media.php">Idade Média</a>
+                            <a href="idade_moderna.php">Idade Moderna</a>
+                            <a href="idade_contemporanea.php">Idade Contemporânea</a>
+                        </div>
+                    </li>
                 <li><a href="glossario.php">Glossário</a></li>
                 <li><a href="atividades.php">Atividades Complementares</a></li>
                 <li><a href="enem.php">Enem</a></li>
