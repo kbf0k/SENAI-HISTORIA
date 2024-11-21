@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ENEM</title>
     <link rel="stylesheet" href="../css/enem.css">
-    <script src="../javascript/inicio.js" defer></script>
+    <script src="../javascript/enem.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 </head>
 
@@ -176,9 +176,11 @@
             </div>
         </section>
         <section id="estudos-enem" class="enem-section">
-            <h2>Estudos para o ENEM - História</h2>
-            <p>Explore os vídeos e mapas mentais sobre os temas que mais caem no ENEM.</p>
-
+        <div id="videostitle">
+        <h2>Estudos para o ENEM - História</h2>
+        <h3>Explore os vídeos e mapas mentais sobre os temas que mais caem no ENEM</h3>
+        </div>
+            
             <div class="content-grid">
                 <!-- Seção de vídeos -->
                 <div class="video-section">
@@ -208,7 +210,46 @@
                 </div>
             </div>
         </section>
+        <div class="question-section">
+    <h1>Questões de História do ENEM</h1>
+    
+    <!-- Lista de botões para mostrar as perguntas -->
+    <ul class="question-list" id="question-list">
+        <li id="question-item-1"><button onclick="showQuestion(1)">Pergunta 1</button></li>
+        <li id="question-item-2"><button onclick="showQuestion(2)">Pergunta 2</button></li>
+        <li id="question-item-3"><button onclick="showQuestion(3)">Pergunta 3</button></li>
+        <li id="question-item-4"><button onclick="showQuestion(4)">Pergunta 4</button></li>
+        <li id="question-item-5"><button onclick="showQuestion(5)">Pergunta 5</button></li>
+        <li id="question-item-6"><button onclick="showQuestion(6)">Pergunta 6</button></li>
+        <li id="question-item-7"><button onclick="showQuestion(7)">Pergunta 7</button></li>
+        <li id="question-item-8"><button onclick="showQuestion(8)">Pergunta 8</button></li>
+        <li id="question-item-9"><button onclick="showQuestion(9)">Pergunta 9</button></li>
+        <li id="question-item-10"><button onclick="showQuestion(10)">Pergunta 10</button></li>
+    </ul>
+</div>
 
+<!-- Template para renderizar as questões -->
+<template id="question-template">
+    <div class="question">
+        <h2 id="question-title"></h2>
+        <p id="question-text"></p>
+        
+        <!-- Opções de resposta -->
+        <ul class="options">
+            <li><button onclick="checkAnswer(this, 'A')">a) Alternativa 1</button></li>
+            <li><button onclick="checkAnswer(this, 'B')">b) Alternativa 2</button></li>
+            <li><button onclick="checkAnswer(this, 'C')">c) Alternativa 3</button></li>
+            <li><button onclick="checkAnswer(this, 'D')">d) Alternativa 4</button></li>
+            <li><button onclick="checkAnswer(this, 'E')">e) Alternativa 5</button></li>
+        </ul>
+        
+        <!-- Área de feedback da resposta -->
+        <div id="feedback" class="feedback" style="display:none;"></div>
+        
+        <!-- Explicação da resposta -->
+        <div id="answer-explanation" class="answer-explanation" style="display:none;"></div>
+    </div>
+</template>
 
     </main>
     <footer class="footer">
