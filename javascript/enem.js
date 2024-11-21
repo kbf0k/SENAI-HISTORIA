@@ -20,13 +20,13 @@ document.getElementById('logout').addEventListener('click', () => {
                 })
         }
     });
-  });
-  document.getElementById('logout-mobile').addEventListener('click', () => {
+});
+document.getElementById('logout-mobile').addEventListener('click', () => {
     Swal.fire({
         title: "Você deseja sair?",
         icon: "warning",
         showCancelButton: true,
-        cancelButtonText: "Cancelar",   
+        cancelButtonText: "Cancelar",
         cancelButtonColor: "#d33",
         confirmButtonText: "Sim, sair",
         confirmButtonColor: "#4b3f35",
@@ -43,7 +43,7 @@ document.getElementById('logout').addEventListener('click', () => {
                 })
         }
     });
-  });
+});
   
   // MENUMOBILE
   const btnMobile = document.getElementById('btn-mobile');
@@ -286,4 +286,3 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
-

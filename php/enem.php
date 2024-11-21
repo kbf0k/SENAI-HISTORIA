@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <header class="header">
+<header class="header">
         <div class="container logo-menu">
             <div class="logo">
                 <a href="inicio.php"><img src="../img/Logo Nova Site História.png" alt="Logo"></a>
@@ -41,6 +41,8 @@
                     <li><a href="glossario.php">Glossário</a></li>
                     <li><a href="atividades.php">Atividades Complementares</a></li>
                     <li><a href="enem.php">Enem</a></li>
+
+
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
                         <div class="user-vector">
                             <a href="perfil.php">
@@ -79,11 +81,6 @@
                     <?php endif; ?>
                 </a>
             </div>
-            <?php if (isset($_SESSION['nome_sessao'])): ?>
-                <a id="logout-mobile">SAIR</a>
-            <?php else: ?>
-                <a href="index.php">LOGIN</a>
-            <?php endif; ?>
         </div>
         <nav id="nav">
             <ul id="mobile-menu" role="mobile-menu">
@@ -97,6 +94,11 @@
                 <li><a href="atividades.php">Atividades Complementares</a></li>
                 <li><a href="enem.php">Enem</a></li>
 
+                <?php if (isset($_SESSION['nome_sessao'])): ?>
+                    <a id="logout-mobile">SAIR</a>
+                <?php else: ?>
+                    <a href="index.php">LOGIN</a>
+                <?php endif; ?>
             </ul>
         </nav>
     </div>
