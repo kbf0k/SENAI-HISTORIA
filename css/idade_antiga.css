@@ -541,6 +541,7 @@ main{
 .textos-civilizacao {
     display: flex;
     flex-direction: column;
+    padding: 30px;
 }
 
 .civilization-btn {
@@ -629,10 +630,9 @@ main{
 }
 #linhaTempo {
     color: white;
-    height: 440vh;
+    height: 410vh;
     background-color: #f9f4e1;
 }
-
 
 .titulo-linhaTempo h1 {
     font-size: 70px;
@@ -641,7 +641,6 @@ main{
     transition: .3s ease-in-out;
     padding-top: 10px;
 }
-
 
 .titulo-linhaTempo h1:hover {
     letter-spacing: 5px;
@@ -666,7 +665,7 @@ main{
     position: absolute;
     left: 50%;
     width: 2px;
-    height: 403.7vh;
+    height: 375.7vh;
     background-color: #4b3f35;
 }
 
@@ -1009,6 +1008,9 @@ main{
 
 /* Responsividade para seção .civilization-content */
 @media (max-width: 768px) {
+    .timeline::before {
+        height: 310.7vh;
+    }
 
     .civilization-content,
     .civilization-btn {

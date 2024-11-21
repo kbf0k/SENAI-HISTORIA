@@ -578,7 +578,7 @@ main{
 
 #linhaTempo {
     color: white;
-    height: 420vh;
+    height: 397vh;
     background-color: #f9f4e1;
 }
 
@@ -615,7 +615,7 @@ main{
     position: absolute;
     left: 50%;
     width: 2px;
-    height: 98%;
+    height: 360vh;
     background-color: #4b3f35;
 }
 
@@ -862,6 +862,9 @@ main{
         padding: 0 !important;
         width: 100% !important;
     }
+    .timeline::before {
+        height: 348vh !important;
+    }
 
     #linhaTempo {
         height: auto !important;
@@ -882,7 +885,7 @@ main{
     }
 
     #caracteristicas {
-        height: 60vh !important;
+        display: none;
     }
 
     .timeline ul li h3 {

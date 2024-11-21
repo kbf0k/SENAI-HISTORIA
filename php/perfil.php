@@ -50,10 +50,7 @@ if (isset($_POST['delete'])) {
 
     if ($stmt->execute()) {
         session_destroy();
-        // Definir a variável de sucesso na sessão
         $_SESSION['success_message'] = 'deletado';
-        header("Location: inicio.php"); // Redireciona após deletar
-        exit();
     } else {
         echo "Erro ao deletar a conta.";
     }
@@ -74,36 +71,54 @@ $conexao->close();
     <script src="../javascript/perfil.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Passando o valor da variável PHP para o JavaScript
-            var successMessage = "<?php echo isset($_SESSION['success_message']) ? $_SESSION['success_message'] : ''; ?>";
+    // SweetAlert para exclusão
+    document.addEventListener('DOMContentLoaded', function () {
+    var successMessage = "<?php echo isset($_SESSION['success_message']) ? $_SESSION['success_message'] : ''; ?>";
 
-            if (successMessage === "editado") {
-                Swal.fire({
-                    title: "Perfil atualizado!",
-                    text: "O perfil foi atualizado com sucesso.",
-                    icon: "success",
-                    confirmButtonColor: "#4b3f35"
-                }).then(() => {
-                    // Limpar a variável de sessão após o alerta
-                    <?php unset($_SESSION['success_message']); ?>
-                    location.href = location.href; // Redireciona para recarregar a página
-                });
-
-            } else if (successMessage === "deletado") {
-                Swal.fire({
-                    title: "Conta deletada!",
-                    text: "Sua conta foi deletada com sucesso.",
-                    icon: "success",
-                    confirmButtonColor: "#4b3f35"
-                }).then(() => {
-                    // Limpar a variável de sessão após o alerta
-                    <?php unset($_SESSION['success_message']); ?>
-                    window.location.href = 'inicio.php'; // Redireciona após o alerta
-                });
+    // SweetAlert para exclusão
+    document.getElementById('delete-account-btn').addEventListener('click', function () {
+        Swal.fire({
+            title: "Tem certeza?",
+            text: "Essa ação não pode ser desfeita. Deseja realmente excluir sua conta?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Sim, excluir!",
+            cancelButtonText: "Cancelar"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Enviar o formulário via JavaScript para excluir a conta
+                document.getElementById('delete-form').submit();
             }
         });
-    </script>
+    });
+
+    // Alerta de sucesso ou edição
+    if (successMessage === "editado") {
+        Swal.fire({
+            title: "Perfil atualizado!",
+            text: "O perfil foi atualizado com sucesso.",
+            icon: "success",
+            confirmButtonColor: "#4b3f35"
+        }).then(() => {
+            <?php unset($_SESSION['success_message']); ?>
+            location.href = location.href;
+        });
+    } else if (successMessage === "deletado") {
+        Swal.fire({
+            title: "Conta deletada!",
+            text: "Sua conta foi deletada com sucesso.",
+            icon: "success",
+            confirmButtonColor: "#4b3f35"
+        }).then(() => {
+            <?php unset($_SESSION['success_message']); ?>
+            window.location.href = 'inicio.php';  // Redireciona após a exclusão
+        });
+    }
+});
+
+</script>
 </head>
 <header class="header">
     <div class="container logo-menu">
@@ -215,9 +230,10 @@ $conexao->close();
             </form>
 
             <h2>Excluir conta</h2>
-            <form method="POST" action="perfil.php">
-                <button type="submit" name="delete" class="btn delete" onclick="return confirm('Tem certeza que deseja excluir sua conta?')">Excluir conta</button>
+            <form id="delete-form" method="POST" action="perfil.php" style="display: none;">
+                <input type="hidden" name="delete" value="true">
             </form>
+            <button type="button" id="delete-account-btn" class="btn delete">Excluir conta</button>
 
             <!-- Exibe botões extras se o usuário for administrador -->
             <?php if ($_SESSION['tipo_sessao'] === 'Administrador'): ?>
@@ -226,9 +242,6 @@ $conexao->close();
                 <button class="btn admin-btn" onclick="location.href='criar_adm.php'">Adicionar administrador</button>
             <?php endif; ?>
         </section>
-    </main>
-
-
     </section>
     </main>
     <footer class="footer">

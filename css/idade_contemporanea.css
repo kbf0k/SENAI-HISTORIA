@@ -521,7 +521,7 @@ main{
 }
 #linhaTempo {
     color: white;
-    height: 470vh;
+    height: 438vh;
     background-color: #f9f4e1;
 }
 
@@ -558,7 +558,7 @@ main{
     position: absolute;
     left: 50%;
     width: 2px;
-    height: 433.7vh;
+    height: 403.5vh;
     background-color: #4b3f35;
 }
 
@@ -950,6 +950,9 @@ main{
     }
 }
 @media screen and (max-width: 768px) {
+    .timeline::before {
+        height: 334vh;
+    }
     .timeline {
         position: relative !important;
         margin: 0 !important;

@@ -789,7 +789,7 @@ h1 {
     margin-top: -10px;
 }
 
-#lista-temas {
+#lista-temas li {
     border-left: 4px solid #4b3f35;
 }
 
@@ -862,4 +862,16 @@ h1 {
         padding-bottom: 4px;
         margin-right: 40px;
     }
+}
+
+#mobile-menu #logout-mobile {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    background-color: rgba(255, 0, 0, 0.6) !important;
+    border-radius: 20px !important;
+    width: 30% !important;
+    padding: 5px !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-left: 135px !important;
 }
