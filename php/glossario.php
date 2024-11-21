@@ -58,6 +58,8 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
                     </li>
                     <li><a href="glossario.php">Glossário</a></li>
                     <li><a href="atividades.php">Atividades Complementares</a></li>
+                    <li><a href="enem.php">Enem</a></li>
+
 
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
                         <div class="user-vector">
@@ -108,6 +110,8 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
                 </li>
                 <li><a href="glossario.php">Glossário</a></li>
                 <li><a href="atividades.php">Atividades Complementares</a></li>
+                <li><a href="enem.php">Enem</a></li>
+
                 <?php if (isset($_SESSION['nome_sessao'])): ?>
                     <a id="logout-mobile">SAIR</a>
                 <?php else: ?>

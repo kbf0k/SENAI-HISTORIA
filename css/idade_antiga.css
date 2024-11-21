@@ -463,9 +463,6 @@ main{
     color: #4b3f35;
 }
 
-#conteudo p {
-    /* margin: 0 20px; */
-}
 
 #conteudo:hover {
     transform: scale(1.01);
@@ -534,8 +531,8 @@ main{
 }
 
 .civilization-content img {
-    width: 500px;
-    height: 450px;
+    height: 270px;
+    width: 400px;
     border-radius: 8px;
     margin: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -544,11 +541,6 @@ main{
 .textos-civilizacao {
     display: flex;
     flex-direction: column;
-}
-
-#img-piramide, #img-escrita, #img-imperio, #img-templo, #img-coliseu {
-    width: 300px;
-    height: 300px;
 }
 
 .civilization-btn {

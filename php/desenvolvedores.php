@@ -27,6 +27,7 @@ session_start();
                     <li><a href="inicio.php">Início</a></li>
                     <li><a href="glossario.php">Glossário</a></li>
                     <li><a href="atividades.php">Atividades Complementares</a></li>
+                    <li><a href="enem.php">Enem</a></li>
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
                         <div class="user-vector">
                             <a href="perfil.php">
@@ -71,6 +72,7 @@ session_start();
                 <li><a href="inicio.php">Início</a></li>
                 <li><a href="glossario.php">Glossário</a></li>
                 <li><a href="atividades.php">Atividades Complementares</a></li>
+                <li><a href="enem.php">Enem</a></li>
                 <?php if (isset($_SESSION['nome_sessao'])): ?>
                     <li><img id="logout" src="../img/logout.png" alt=""></li>
                 <?php else: ?>

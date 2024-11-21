@@ -38,6 +38,8 @@ if(!isset($_SESSION['nome_sessao'])){
                     </li>
                     <li><a href="glossario.php">Glossário</a></li>
                     <li><a href="atividades.php">Atividades Complementares</a></li>
+                    <li><a href="enem.php">Enem</a></li>
+
 
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
                     <div class="user-vector">
@@ -91,6 +93,7 @@ if(!isset($_SESSION['nome_sessao'])){
                 <li><a href="idade_contemporanea.php">Idade Contemporânea</a></li></li>
                 <li><a href="glossario.php">Glossário</a></li>
                 <li><a href="atividades.php">Atividades Complementares</a></li>
+                <li><a href="enem.php">Enem</a></li>
             </ul>
         </nav>
     </div>

@@ -2,35 +2,33 @@
 session_start();
 include 'conexao.php';
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    if(isset($_POST['nome_cadastro']) && isset($_POST['sobrenome_cadastro']) && isset($_POST['email_cadastro']) && isset($_POST['senha_cadastro'])){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Cadastro de usuário
+    if (isset($_POST['nome_cadastro']) && isset($_POST['sobrenome_cadastro']) && isset($_POST['email_cadastro']) && isset($_POST['senha_cadastro'])) {
 
         $nome_cadastro_digitado = $_POST['nome_cadastro'];
         $sobrenome_cadastro_digitado = $_POST['sobrenome_cadastro'];
         $email_cadastro_digitado = $_POST['email_cadastro'];
-        $senha_cadastro_digitado = md5($_POST['senha_cadastro']);
+        $senha_cadastro_digitado = md5($_POST['senha_cadastro']); // NÃO use md5 em produção! Considere usar bcrypt ou outra função mais segura.
 
         $sql1 = "INSERT INTO usuarios(nome_usuario,sobrenome_usuario,email_usuario,senha_usuario) VALUES(?,?,?,?)";
         $stmt1 = $conexao->prepare($sql1);
-        $stmt1->bind_param('ssss',$nome_cadastro_digitado,$sobrenome_cadastro_digitado,$email_cadastro_digitado,$senha_cadastro_digitado);
+        $stmt1->bind_param('ssss', $nome_cadastro_digitado, $sobrenome_cadastro_digitado, $email_cadastro_digitado, $senha_cadastro_digitado);
         $stmt1->execute();
-        $result1 = $stmt1->get_result();
-        echo '<script>
-        alert("Usuário cadastrado com sucesso");
-        setTimeout(function(){
-            window.location.href = "index.php";
-        }, 1000);
-      </script>';
+
+        // Definindo uma variável de sucesso
+        $cadastro_sucesso = true; // Variável que indica sucesso no cadastro
     }
 }
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Login de usuário
     if (isset($_POST['email-login']) && isset($_POST['senha-login'])) {
 
         $email_digitado = $_POST['email-login'];
-        $senha_digitado = md5($_POST['senha-login']);
-        
+        $senha_digitado = md5($_POST['senha-login']); 
+
         $sql2 = "SELECT * FROM usuarios WHERE email_usuario = ? AND senha_usuario = ?";
         $stmt2 = $conexao->prepare($sql2);
         $stmt2->bind_param("ss", $email_digitado, $senha_digitado);
@@ -44,6 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['id_sessao'] = $usuario_logado['id_usuario'];
             header('location: inicio.php');
             exit();
+        } else {
+            // Aqui você pode mostrar um alerta de erro, por exemplo, se o login falhar
         }
     }
 }
@@ -57,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
     <script src="../javascript/login.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="shortcut icon" href="img/hisotoria-logo.png" type="image/x-icon">
     <title>Login</title>
 </head>
@@ -107,6 +108,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </form>
         </div>
     </main>
+    <script>
+        // Verificar se o PHP setou a variável 'cadastro_sucesso'
+        <?php if (isset($cadastro_sucesso) && $cadastro_sucesso): ?>
+            Swal.fire({
+                icon: 'success',
+                title: 'Usuário cadastrado com sucesso!',
+                text: 'Você será redirecionado para a página de login.',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "index.php"; // Redireciona após o OK no alerta
+                }
+            });
+        <?php endif; ?>
+    </script>
 </body>
 
 </html>

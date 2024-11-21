@@ -40,7 +40,7 @@
                     </li>
                     <li><a href="glossario.php">Glossário</a></li>
                     <li><a href="atividades.php">Atividades Complementares</a></li>
-
+                    <li><a href="enem.php">Enem</a></li>
                     <?php if (isset($_SESSION['nome_sessao'])): ?>
                         <div class="user-vector">
                             <a href="perfil.php">
@@ -95,6 +95,8 @@
                 </li>
                 <li><a href="glossario.php">Glossário</a></li>
                 <li><a href="atividades.php">Atividades Complementares</a></li>
+                <li><a href="enem.php">Enem</a></li>
+
             </ul>
         </nav>
     </div>
