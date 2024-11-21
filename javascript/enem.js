@@ -88,7 +88,7 @@ document.getElementById('logout').addEventListener('click', () => {
             "e) a consciência da população sobre os seus direitos adquiridos posteriormente à transferência da Corte para o Rio de Janeiro."
         ],
         correct: "A",
-        explanation: "Esta é uma questão onde se necessita mais conhecimentos de interpretação que de História. O uso de símbolos como festas nacionais, bandeira e hino tem como objetivo formar uma comunidade que se identifique com esses emblemas e assim, uma identidade nacional. As demais opções não são corretas, pois o domínio da elite e a conscientização sobre direitos adquiridos não estavam diretamente relacionados com a construção da identidade nacional na época."
+        explanation: "Resposta Correta: Alternativa A) Esta é uma questão onde se necessita mais conhecimentos de interpretação que de História. O uso de símbolos como festas nacionais, bandeira e hino tem como objetivo formar uma comunidade que se identifique com esses emblemas e assim, uma identidade nacional. As demais opções não são corretas, pois o domínio da elite e a conscientização sobre direitos adquiridos não estavam diretamente relacionados com a construção da identidade nacional na época."
     },
     2: {
         title: "Pergunta 2",
@@ -101,7 +101,7 @@ document.getElementById('logout').addEventListener('click', () => {
             "e) solucionou a crise financeira, em razão das indenizações recebidas."
         ],
         correct: "A",
-        explanation: "O Exército brasileiro saiu fortalecido do conflito e passou a exigir mais participação no cenário político, o que acabaria redundando no golpe republicano. As demais opções não são corretas. Afinal, o Brasil não conquista a hegemonia da Bacia Platina e nem os escravos negros são emancipados."
+        explanation: "Resposta Correta: Alternativa A) O Exército brasileiro saiu fortalecido do conflito e passou a exigir mais participação no cenário político, o que acabaria redundando no golpe republicano. As demais opções não são corretas. Afinal, o Brasil não conquista a hegemonia da Bacia Platina e nem os escravos negros são emancipados."
     },
     3: {
         title: "Pergunta 3",
@@ -114,7 +114,7 @@ document.getElementById('logout').addEventListener('click', () => {
             "e) a contenção das epidemias e doenças."
         ],
         correct: "A",
-        explanation: "No começo da Idade Média, as muralhas tinham função defensiva. No entanto, com o aumento populacional e o deslocamento de pessoas e mercadorias, urgia controlar a entrada e saída nas cidades, além de cobrar os respectivos impostos. As demais opções não são corretas, pois as muralhas não tinham função direta de conter epidemias ou expandir a indústria."
+        explanation: "Resposta Correta: Alternativa A) No começo da Idade Média, as muralhas tinham função defensiva. No entanto, com o aumento populacional e o deslocamento de pessoas e mercadorias, urgia controlar a entrada e saída nas cidades, além de cobrar os respectivos impostos. As demais opções não são corretas, pois as muralhas não tinham função direta de conter epidemias ou expandir a indústria."
     },
     4: {
         title: "Pergunta 4",
@@ -127,7 +127,7 @@ document.getElementById('logout').addEventListener('click', () => {
             "e) reivindicassem as mudanças sociais com base no conhecimento das leis."
         ],
         correct: "E",
-        explanation: "Apesar de ainda ser mais favorável aos patrícios que aos plebeus, a Lei das Doze Tábuas permitiu que as leis estivessem registradas e fossem imutáveis, o que ajudava muito num processo judicial. Também autorizou os plebeus ocupar mais cargos políticos, algo que anteriormente figurava como exceção e não regra. As demais opções não estão corretas."
+        explanation: "Resposta Correta: Alternativa E) Apesar de ainda ser mais favorável aos patrícios que aos plebeus, a Lei das Doze Tábuas permitiu que as leis estivessem registradas e fossem imutáveis, o que ajudava muito num processo judicial. Também autorizou os plebeus ocupar mais cargos políticos, algo que anteriormente figurava como exceção e não regra. As demais opções não estão corretas."
     },
     5: {
         title: "Pergunta 5",
@@ -140,7 +140,7 @@ document.getElementById('logout').addEventListener('click', () => {
             "e) ao direito do cidadão exercer sua vontade de acordo com seus valores pessoais."
         ],
         correct: "B",
-        explanation: "Montesquieu propõe um conceito de liberdade onde o indivíduo seria responsável pelas suas escolhas, mas dentro do limite das leis, para garantir a convivência social. As demais opções falham em entender a liberdade como um conceito condicionado pelas leis."
+        explanation: "Resposta Correta: Alternativa B) Montesquieu propõe um conceito de liberdade onde o indivíduo seria responsável pelas suas escolhas, mas dentro do limite das leis, para garantir a convivência social. As demais opções falham em entender a liberdade como um conceito condicionado pelas leis."
     },
     6: {
         title: "Pergunta 6",
@@ -153,7 +153,7 @@ document.getElementById('logout').addEventListener('click', () => {
             "e) implantação de associações civis como uma estratégia para aproximar as classes médias e o governo."
         ],
         correct: "C",
-        explanation: "Ao mesmo tempo em que promoveu leis que melhoravam a vida dos trabalhadores, o governo de Getúlio Vargas usou os sindicatos para controlá-los. As demais opções não estão corretas porque as opções b) e d) não se aplicam diretamente ao contexto das políticas sociais de Vargas."
+        explanation: "Resposta Correta: Alternativa C) Ao mesmo tempo em que promoveu leis que melhoravam a vida dos trabalhadores, o governo de Getúlio Vargas usou os sindicatos para controlá-los. As demais opções não estão corretas porque as opções b) e d) não se aplicam diretamente ao contexto das políticas sociais de Vargas."
     },
     7: {
         title: "Pergunta 7",
@@ -166,7 +166,7 @@ document.getElementById('logout').addEventListener('click', () => {
             "e) O alto nível de exploração dos trabalhadores industriais ocasionava o surgimento de aglomerados urbanos marcados por péssimas condições de moradia, saúde e higiene."
         ],
         correct: "E",
-        explanation: "A Revolução Industrial trouxe a possibilidade de encontrar mais produtos por preços acessíveis, mas este fenômeno não veio acompanhado da melhoria de vida da classe trabalhadora. Portanto, a opção e) retrata muito bem o que acontecia com a classe trabalhadora neste momento."
+        explanation: "Resposta Correta: Alternativa E) A Revolução Industrial trouxe a possibilidade de encontrar mais produtos por preços acessíveis, mas este fenômeno não veio acompanhado da melhoria de vida da classe trabalhadora. Portanto, a opção e) retrata muito bem o que acontecia com a classe trabalhadora neste momento."
     },
     8: {
         title: "Pergunta 8",
@@ -179,7 +179,7 @@ document.getElementById('logout').addEventListener('click', () => {
             "e) astronomia e religião."
         ],
         correct: "B",
-        explanation: "No Renascimento, os autores buscaram constantemente usar os avanços científicos em suas criações artísticas. Podemos citar o estudo da anatomia que passou a ser obrigatório para desenhar com precisão o corpo humano."
+        explanation: "Resposta Correta: Alternativa B) No Renascimento, os autores buscaram constantemente usar os avanços científicos em suas criações artísticas. Podemos citar o estudo da anatomia que passou a ser obrigatório para desenhar com precisão o corpo humano."
     },
     9: {
         title: "Pergunta 9",
@@ -192,7 +192,7 @@ document.getElementById('logout').addEventListener('click', () => {
             "e) comprar terras para o enfraquecimento das teocracias autóctones."
         ],
         correct: "C",
-        explanation: "O autor expressa sua perplexidade diante da conquista do império asteca, liderada por Hernán Cortés, que foi possível em grande parte devido à aliança estratégica entre os espanhóis e diversos grupos indígenas rivais dos astecas. Esse tipo de aliança ajudou a ampliar o exército de Cortés, tornando possível a derrota de Montezuma e a tomada do Império Asteca. As demais alternativas não correspondem às estratégias reais usadas durante a Conquista."
+        explanation: "Resposta Correta: Alternativa C) O autor expressa sua perplexidade diante da conquista do império asteca, liderada por Hernán Cortés, que foi possível em grande parte devido à aliança estratégica entre os espanhóis e diversos grupos indígenas rivais dos astecas. Esse tipo de aliança ajudou a ampliar o exército de Cortés, tornando possível a derrota de Montezuma e a tomada do Império Asteca. As demais alternativas não correspondem às estratégias reais usadas durante a Conquista."
     },
     10: {
         title: "Pergunta 10",
@@ -205,7 +205,7 @@ document.getElementById('logout').addEventListener('click', () => {
             "e) Aos representantes da pequena e média burguesia e das camadas populares, que desejavam justiça social e direitos políticos."
         ],
         correct: "E",
-        explanation: "Robespierre foi um dos líderes mais radicais da Revolução Francesa porque criticava violentamente setores como o clero, a nobreza e à burguesia. Portanto, neste trecho ele exalta as qualidades daqueles que mais sofriam durante o Antigo Regime: os servos e a pequena e média burguesia."
+        explanation: "Resposta Correta: Alternativa E) Robespierre foi um dos líderes mais radicais da Revolução Francesa porque criticava violentamente setores como o clero, a nobreza e à burguesia. Portanto, neste trecho ele exalta as qualidades daqueles que mais sofriam durante o Antigo Regime: os servos e a pequena e média burguesia."
     }
 };
 
