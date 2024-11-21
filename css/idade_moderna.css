@@ -562,7 +562,7 @@ main{
 
 #linhaTempo {
     color: white;
-    height: 460vh;
+    height: 440vh;
     background-color: #f9f4e1;
 }
 
@@ -599,7 +599,7 @@ main{
     position: absolute;
     left: 50%;
     width: 2px;
-    height: 423.5vh;
+    height: 405.7vh;
     background-color: #4b3f35;
 }
 
@@ -871,6 +871,9 @@ main{
 
 /* Media Query para telas menores que 480px */
 @media screen and (max-width: 768px) {
+    .timeline::before {
+        height: 312.7vh;
+    }
 
     .logo img {
         max-width: 120px;
