@@ -421,32 +421,61 @@ main{
 }
 
 #img-central {
-    width: 650px;
-    height: 500px;
-    float: right;
+    width: 550px;
+    height: 400px;
     margin: 30px;
-    margin-top: 200px;
+    margin-top: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     padding: 30px;
 }
 
+#povos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #conteudo {
+    display: flex;
+    flex-direction: column;
     padding: 30px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     margin-left: 20px;
-    background-color: #6b5645;
-    color: white;
+    background-color: #f9f4e1;
+    color: #3a3a3a;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-width: 700px;
+    width: 80%;
+    justify-content: center;
+}
+
+#conteudo #parte1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#conteudo h2 {
+    color: #4b3f35;
+}
+
+#conteudo p {
+    /* margin: 0 20px; */
 }
 
 #conteudo:hover {
     transform: scale(1.01);
     box-shadow: #6b5645;
-    color: #f9f4e1;
+    color: #2c2c2c;
+}
+
+.civilizations-list {
+    list-style-type: none;
+    margin-top: 50px;
 }
 
 .hidden {
@@ -460,6 +489,23 @@ main{
     margin-bottom: 10px;
     color: white;
     margin-right: 10px;
+}
+
+.civilization-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 93%;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-top: -30px;
+    background: #eee;
+    color: #3a3a3a;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    /* position: relative; */
 }
 
 .civilization-content h2 {
@@ -484,7 +530,6 @@ main{
     font-size: 18px;
     line-height: 1.6;
     max-width: 700px;
-    margin: 0 auto;
     margin-bottom: 10px;
 }
 
@@ -496,9 +541,19 @@ main{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+.textos-civilizacao {
+    display: flex;
+    flex-direction: column;
+}
+
+#img-piramide, #img-escrita, #img-imperio, #img-templo, #img-coliseu {
+    width: 300px;
+    height: 300px;
+}
+
 .civilization-btn {
     display: flex;
-    width: 650px;
+    width: 93%;
     margin-left: 50px;
     align-items: center;
     justify-content: space-between;
@@ -526,22 +581,6 @@ main{
 
 .civilization-btn.active::after {
     content: "-";
-}
-
-.civilization-content {
-    display: flex;
-    width: 600px;
-    margin-left: 50px;
-    align-items: center;
-    justify-content: space-between;
-    background: #eee;
-    color: black;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    position: relative;
 }
 
 .acontecimentos {
@@ -1210,5 +1249,56 @@ main{
 
     .titulo-linhaTempo p {
         font-size: 18px !important;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    #conteudo {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        margin-left: 0px;
+        background-color: #f9f4e1;
+        color: #3a3a3a;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        width: 80%;
+        justify-content: center;
+    }
+    
+    #conteudo #parte1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .civilization-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 93%;
+        margin-bottom: 50px;
+        margin-top: -30px;
+        background: #eee;
+        color: #3a3a3a;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 20px;
+        /* position: relative; */
+    }
+
+    #img-piramide, #img-escrita, #img-imperio, #img-templo, #img-coliseu {
+        width: 200px;
+        height: 200px;
     }
 }

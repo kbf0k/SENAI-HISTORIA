@@ -25,13 +25,13 @@ document.getElementById('logout').addEventListener('click', () => {
 document.querySelectorAll('.civilization-btn').forEach(button => {
     button.addEventListener('click', () => {
         const content = button.nextElementSibling;
-        const isVisible = content.style.display === 'block';
+        const isVisible = content.style.display === 'flex';
 
         document.querySelectorAll('.civilization-content').forEach(div => div.style.display = 'none');
         document.querySelectorAll('.civilization-btn').forEach(btn => btn.classList.remove('active'));
 
         if (!isVisible) {
-            content.style.display = 'block';
+            content.style.display = 'flex';
             button.classList.add('active');
         } else {
             content.style.display = 'none';

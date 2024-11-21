@@ -111,65 +111,7 @@ if (!isset($_SESSION['nome_sessao'])) {
                 <a href="#acontecimentos"><button id="saiba-mais">Saiba Mais</button></a>
             </div>
         </section>
-     <!--
-        <img id="img-central" src="../img/civilizacoes-da-idade-antiga.jpg" alt="Civilizações da Idade Antiga">
-        <div id="conteudo">
-            <p>A Idade Antiga compreende o período que se inicia com o surgimento da escrita, por volta de 3.500 a.C., e vai até a queda do Império Romano do Ocidente, em 476 d.C.</p>
-            <p>Na Idade Antiga, surgiram as primeiras cidades organizadas, impérios e estados centralizados, além das primeiras formas de governo, religião estruturada, escrita e avanços na ciência e nas artes.</p>
-            <p>As principais civilizações desse período foram: Egito, Mesopotâmia, Persas, Grécia e Roma, cada uma delas com contribuições marcantes para a história humana.</p>
 
-        </div>
-
-        <h2 class="civilizations-title">Civilizações da Idade Antiga</h2>
-
-        <div class="civilizations-container">
-            <ul class="civilizations-list">
-                <li>
-                    <button class="civilization-btn">Egito</button>
-                    <div class="civilization-content" style="display: none;">
-                        <h2 class="civilization-name">Civilização Egípcia</h2>
-                        <p>A civilização egípcia, situada ao longo do Nilo, teve uma sociedade hierarquizada sob o comando dos faraós. Desenvolveram as pirâmides como túmulos, a escrita hieroglífica, e uma religião politeísta com forte crença na vida após a morte.</p>
-                        <img src="../img/piramide.webp" alt="Pirâmides do Egito">
-                    </div>
-                </li>
-
-                <li>
-                    <button class="civilization-btn">Mesopotâmia</button>
-                    <div class="civilization-content" style="display: none;">
-                        <h2 class="civilization-name">Civilização Mesopotâmica</h2>
-                        <p>Entre os rios Tigre e Eufrates, surgiram civilizações como os sumérios e babilônios. Inovaram com a escrita cuneiforme, o Código de Hamurabi e zigurates, e tinham uma religião politeísta ligada à natureza.</p>
-                        <img src="../img/escrita-cuneiforme.jpg" alt="Escrita Cuneiforme da Mesopotâmia">
-                    </div>
-                </li>
-
-                <li>
-                    <button class="civilization-btn">Persa</button>
-                    <div class="civilization-content" style="display: none;">
-                        <h2 class="civilization-name">Civilização Persa</h2>
-                        <p>O Império Persa, fundado por Ciro, destacou-se por sua administração eficiente e o Zoroastrismo. Valorizavam a arte e arquitetura, como visto em Persépolis, e mantinham uma política de tolerância com culturas conquistadas.</p>
-                        <img src="../img/5milpersas.jpg" alt="Império Persa">
-                    </div>
-                </li>
-
-                <li>
-                    <button class="civilization-btn">Grécia</button>
-                    <div class="civilization-content" style="display: none;">
-                        <h2 class="civilization-name">Civilização Grega</h2>
-                        <p>A Grécia Antiga contribuiu com a democracia, filosofia, ciência, arte e mitologia. Atenas foi o berço da democracia, enquanto figuras como Sócrates e Aristóteles influenciaram a filosofia ocidental.</p>
-                        <img src="../img/templo-grego.jpeg" alt="Templo Grego">
-                    </div>
-                </li>
-
-                <li>
-                    <button class="civilization-btn">Roma</button>
-                    <div class="civilization-content" style="display: none;">
-                        <h2 class="civilization-name">Civilização Romana</h2>
-                        <p>O Império Romano se destacou pelo direito, conquistas militares e infraestrutura. Construíram uma vasta rede de estradas e aquedutos e, no final, adotaram o cristianismo como religião oficial.</p>
-                        <img src="../img/coliseu.jpg" alt="Coliseu Romano">
-                    </div>
-                </li>
-            </ul>
-        </div> -->
         <section id="acontecimentos" class="acontecimentos">
             <div class="container">
                 <h2>Fatos Marcantes da Idade Antiga</h2>
@@ -205,6 +147,91 @@ if (!isset($_SESSION['nome_sessao'])) {
                 </div>
             </div>
         </section>
+
+        <!-- <img id="img-central" src="../img/civilizacoes-da-idade-antiga.jpg" alt="Civilizações da Idade Antiga"> -->
+        <!-- <div id="conteudo">
+            <p>A Idade Antiga compreende o período que se inicia com o surgimento da escrita, por volta de 3.500 a.C., e vai até a queda do Império Romano do Ocidente, em 476 d.C.</p>
+            <p>Na Idade Antiga, surgiram as primeiras cidades organizadas, impérios e estados centralizados, além das primeiras formas de governo, religião estruturada, escrita e avanços na ciência e nas artes.</p>
+            <p>As principais civilizações desse período foram: Egito, Mesopotâmia, Persas, Grécia e Roma, cada uma delas com contribuições marcantes para a história humana.</p>
+
+        </div> -->
+
+        <section id="povos">
+        <div id="conteudo">
+            <div id="parte1">
+                <img id="img-central" src="../img/civilizacoes-da-idade-antiga.jpg" alt="Civilizações da Idade Antiga">
+                <div>
+                    <h2>Grandes Civilizações</h2>
+                    <p>A Idade Antiga compreende o período que se inicia com o surgimento da escrita, por volta de 3.500 a.C., e vai até a queda do Império Romano do Ocidente, em 476 d.C.<br>Na Idade Antiga, surgiram as primeiras cidades organizadas, impérios e estados centralizados, além das primeiras formas de governo, religião estruturada, escrita e avanços na ciência e nas artes.<br>As principais civilizações desse período foram: Egito, Mesopotâmia, Persas, Grécia e Roma, cada uma delas com contribuições marcantes para a história humana.</p>
+                </div>
+            </div>
+            <div id="parte2">
+            <div class="civilizations-container">
+            <ul class="civilizations-list">
+                <li>
+                    <button class="civilization-btn">Civilização Egípcia</button>
+                    <div class="civilization-content" style="display: none;">
+                        <div class="textos-civilizacao">
+                            <h2 class="civilization-name">Civilização Egípcia</h2>
+                            <p>A civilização egípcia, situada ao longo do Nilo, teve uma sociedade hierarquizada sob o comando dos faraós. Desenvolveram as pirâmides como túmulos, a escrita hieroglífica, e uma religião politeísta com forte crença na vida após a morte.</p>
+                        </div>
+                        <img id="img-piramide" src="../img/piramide.webp" alt="Pirâmides do Egito">
+                    </div>
+                </li>
+
+                <li>
+                    <button class="civilization-btn">Civilização Mesopotâmica</button>
+                    <div class="civilization-content" style="display: none;">
+                    <div class="textos-civilizacao">
+                        <h2 class="civilization-name">Civilização Mesopotâmica</h2>
+                        <p>Entre os rios Tigre e Eufrates, surgiram civilizações como os sumérios e babilônios. Inovaram com a escrita cuneiforme, o Código de Hamurabi e zigurates, e tinham uma religião politeísta ligada à natureza.</p>
+                    </div>
+                        <img id="img-escrita" src="../img/escrita-cuneiforme.jpg" alt="Escrita Cuneiforme da Mesopotâmia">
+                    </div>
+                </li>
+
+                <li>
+                    <button class="civilization-btn">Civilização Persa</button>
+                    <div class="civilization-content" style="display: none;">
+                        <div class="textos-civilizacao">
+                            <h2 class="civilization-name">Civilização Persa</h2>
+                            <p>O Império Persa, fundado por Ciro, destacou-se por sua administração eficiente e o Zoroastrismo. Valorizavam a arte e arquitetura, como visto em Persépolis, e mantinham uma política de tolerância com culturas conquistadas.</p>
+                        </div>
+                        <img id="img-imperio" src="../img/5milpersas.jpg" alt="Império Persa">
+                    </div>
+                </li>
+
+                <li>
+                    <button class="civilization-btn">Civilização Grega</button>
+                    <div class="civilization-content" style="display: none;">
+                        <div class="textos-civilizacao">
+                            <h2 class="civilization-name">Civilização Grega</h2>
+                            <p>A Grécia Antiga contribuiu com a democracia, filosofia, ciência, arte e mitologia. Atenas foi o berço da democracia, enquanto figuras como Sócrates e Aristóteles influenciaram a filosofia ocidental.</p>
+                        </div>
+                        <img id="img-templo" src="../img/templo-grego.jpeg" alt="Templo Grego">
+                    </div>
+                </li>
+
+                <li>
+                    <button class="civilization-btn">Civilização Romana</button>
+                    <div class="civilization-content" style="display: none;">
+                        <div class="textos-civilizacao">
+                            <h2 class="civilization-name">Civilização Romana</h2>
+                            <p>O Império Romano se destacou pelo direito, conquistas militares e infraestrutura. Construíram uma vasta rede de estradas e aquedutos e, no final, adotaram o cristianismo como religião oficial.</p>
+                        </div>
+                        <img id="img-coliseu" src="../img/coliseu.jpg" alt="Coliseu Romano">
+                    </div>
+                </li>
+            </ul>
+        </div>
+            </div>
+        </div>
+
+        <!-- <h2 class="civilizations-title">Civilizações da Idade Antiga</h2> -->
+
+        
+        </section>
+
         <section id="linhaTempo">
     <div class="titulo-linhaTempo">
         <h1>LINHA DO TEMPO</h1>
@@ -349,7 +376,7 @@ if (!isset($_SESSION['nome_sessao'])) {
 </section>
 
         <section id="section-videos">
-                <h2>Material para estudo</h2>
+                <h2>Material de estudo</h2>
                 <div class="videos">
                     <div class="video-estudo">
                         <iframe width="100%" height="330" src="https://www.youtube.com/embed/HU08s_nrOzw" title="Idade Antiga | Introdução" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    

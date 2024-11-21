@@ -117,7 +117,7 @@ if (!isset($_SESSION['nome_sessao'])) {
 
         <section id="acontecimentos" class="acontecimentos">
     <div class="container">
-        <h2>PRINCIPAIS CARACTERÍSTICAS</h2>
+        <h2>Fatos Marcantes da Idade Moderna</h2>
         <div class="itens-grid">
             <a>
                 <div class="item">
@@ -284,7 +284,7 @@ if (!isset($_SESSION['nome_sessao'])) {
             </div>
         </section>
  <section id="section-videos">
-                <h2>Material para estudo</h2>
+                <h2>Material de estudo</h2>
                 <div class="videos">
                     <div class="video-estudo">
                         <iframe width="100%" height="330" src="https://www.youtube.com/embed/AZH-k7SujXY" title="Idade Moderna | Introdução" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    

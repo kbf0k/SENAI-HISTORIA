@@ -333,7 +333,7 @@ if (!isset($_SESSION['nome_sessao'])) {
          </div>
         </section>
         <section id="section-videos">
-            <h2>Material para estudo</h2>
+            <h2>Material de estudo</h2>
             <div class="videos">
                 <div class="video-estudo">
                 <iframe width="100%" height="330" src="https://www.youtube.com/embed/jcb6VrYNxYc?si=nyYthGL4PLoi6C0t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>		            </div>

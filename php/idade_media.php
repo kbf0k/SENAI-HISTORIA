@@ -288,7 +288,7 @@ session_start();
             </div>
         </section>
         <section id="section-videos">
-                <h2>Material para estudo</h2>
+                <h2>Material de estudo</h2>
                 <div class="videos">
                     <div class="video-estudo">
                         <iframe width="100%" height="330" src="https://www.youtube.com/embed/Q4E3vPl-KkY" title="A Idade Média" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    

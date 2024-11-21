@@ -113,7 +113,7 @@ if (!isset($_SESSION['nome_sessao'])) {
         </section>
         <section id="acontecimentos" class="acontecimentos">
             <div class="container">
-                <h2>Acontecimentos Marcantes da Idade Contemporânea</h2>
+                <h2>Fatos Marcantes da Idade Contemporânea</h2>
                 <div class="itens-grid">
                     <a href="#rev-francesa">
                         <div class="item">
@@ -351,7 +351,7 @@ if (!isset($_SESSION['nome_sessao'])) {
 
         <button id="backToTop" onclick="scrollToTop()">&#8250;</button>
         <section id="section-videos">
-            <h2>Material para estudo</h2>
+            <h2>Material de estudo</h2>
             <div class="videos">
                 <div class="video-estudo">
                     <iframe width="100%" height="330" src="https://www.youtube.com/embed/D25cxMBC2qk?si=63cbIga7mfzyaR12" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>		           
