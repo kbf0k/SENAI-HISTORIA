@@ -2,16 +2,10 @@
 include_once('conexao.php');
 session_start();
 
-
-
 if (!isset($_SESSION['nome_sessao'])) {
     header('Location: index.php');
     exit();
 }
-
-// $sql = "SELECT * FROM glossario ORDER BY titulo_glossario ASC LIMIT 5"; 
-// $result = $conexao->query($sql);
-
 
 
 if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
@@ -124,7 +118,7 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
     <h1 id="tt-gloss">Glossário Histórico</h1>
 
 
-  <p class="search-hint">Clique em uma letra abaixo para ver os conceitos que se iniciam por ela.</p>
+    <p class="search-hint">Clique em uma letra abaixo para ver os conceitos que se iniciam por ela.</p>
 
     <div class="alphabet-container">
         <!-- Alfabeto de A a Z -->
@@ -156,60 +150,59 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
         <a class="botaoABC" id="botaoZ" href="#" onclick="carregarGlossario('Z')">Z</a>
     </div>
 
-    <div id="result-pesq">
-
-        <?php
-        $pesquisa = '';
-
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['termo'])) {
-            $pesquisa = $_POST['termo'];
-        }
-        ?>
-
-        <script>
-            // JavaScript para esconder o conteúdo do #page-content
-            document.addEventListener("DOMContentLoaded", function() {
-                <?php if (!empty($pesquisa)) { ?>
-                    document.getElementById('page-content').style.display = 'none';
-                <?php } ?>
-            });
-        </script>
-
-        <?php
-        if (!empty($pesquisa)) {
-            $sql_pesquisa = "SELECT glossario.titulo_glossario, glossario.descricao_glossario, glossario.id_glossario FROM glossario WHERE glossario.titulo_glossario LIKE ?";
-
-            $busca = "%" . $pesquisa . "%";
-            $stmt = $conexao->prepare($sql_pesquisa);
-            $stmt->bind_param('s', $busca);
-            $stmt->execute();
-            $resultado_pesquisa = $stmt->get_result();
-
-            if ($resultado_pesquisa->num_rows > 0) {
-                while ($linha_pesq = $resultado_pesquisa->fetch_assoc()) {
-                    if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
-                        echo "<div class='item_adm'>";
-                        echo "<button class='botao-extra editar' data-id='" . $linha_pesq['id_glossario'] . "'><img src='../img/lapis_icon.png' alt='Editar'></button>";
-                        echo "<a href='excluir.php?id_glossario=" . $linha_pesq['id_glossario'] . "'>
-                        <button class='botao-extra excluir'><img src='../img/lixeira_icon.png' alt='Excluir'></button>
-                        </a>";
-                        echo "</div>";
-                    }
-                    echo "<p class='conceitos'><b>" . $linha_pesq['titulo_glossario'] . ":</b> " . $linha_pesq['descricao_glossario'] . "</p>";
-                }
-            } else {
-                echo "<h4><b>Nenhum conceito encontrado com o termo: </b>" . '"' . $pesquisa . '"'  . "</h4>";
-            }
-            $stmt->close();
-        }
-        ?>
-
-    </div>
-
     <div class="page-content" id="page-content">
         <?php
         $sql = "SELECT id_glossario, titulo_glossario, descricao_glossario FROM glossario ORDER BY titulo_glossario ASC LIMIT 5";
         $result = $conexao->query($sql);
+
+        $letra = isset($_GET['letra']) ? $_GET['letra'] : 'A';
+
+        $sql = "SELECT * FROM glossario WHERE titulo_glossario LIKE '$letra%' ORDER BY titulo_glossario ASC";
+        $result = $conexao->query($sql);
+
+        if ($result->num_rows > 0) {
+            while ($linha = $result->fetch_assoc()) {
+                if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
+                    echo "<div class='item_adm'>";
+                    echo "<button class='botao-extra editar' data-id='" . $linha['id_glossario'] . "'><img id='lapis' src='../img/lapis_icon.png' alt='Editar'></button>";
+                    // Formulário de exclusão
+                    echo "<a href='excluir.php?id_glossario=" . $linha['id_glossario'] . "'>
+                <button class='botao-extra excluir'><img src='../img/lixeira_icon.png' alt='Excluir'></button>
+                </a>";
+                }
+                echo "<p class='conceitos'><b>" . $linha['titulo_glossario'] . ":</b> " . $linha['descricao_glossario'] . "</p>";
+                echo "</div>";
+            }
+        } else {
+            echo "<p>Nenhum termo encontrado para a letra $letra.</p>";
+        }
+
+        // Verifica se o botão de exclusão foi pressionado
+        if (isset($_POST['Excluir'])) {
+            $id_glossario = $_POST['id_glossario'];
+            echo "teste";
+            // Depuração - Verificando se o ID foi recebido corretamente
+
+
+            // Exclui o registro do banco de dados
+            $sql_delete = "DELETE FROM glossario WHERE id_glossario = ?";
+            if ($stmt = $conexao->prepare($sql_delete)) {
+                $stmt->bind_param("i", $id_glossario);
+                echo "<p>ID do glossário a ser excluído: " . $id_glossario . "</p>"; // Exibe o ID para depuração
+                if ($stmt->execute()) {
+
+                    echo "<p>Termo excluído com sucesso!</p>";
+                    // Redireciona para evitar reenvio do formulário após a atualização
+                    header("Location: " . $_SERVER['PHP_SELF']);
+                    exit();
+                } else {
+                    echo "<p>Erro ao excluir o termo.</p>";
+                }
+                $stmt->close();
+            } else {
+                echo "<p>Erro ao preparar a consulta.</p>";
+            }
+        }
 
         ?>
     </div>
@@ -242,26 +235,6 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
             </div>
         </div>
     <?php endif; ?>
-
-    <!-- Modal de Edição -->
-    <div id="modalEditar">
-        <div id="modal" style="display: none;">
-            <div class="modal-content">
-                <span class="fechar">&times;</span>
-                <h2>Editar Conceito</h2>
-                <form id="formEditarConceito" method="POST" action="editar_conceito.php">
-                    <input type="hidden" id="id_glossario" name="id_glossario">
-                    <label for="termo">Termo:</label>
-                    <input type="text" id="termo" name="termo" required>
-                    <label for="definicao">Definição:</label>
-                    <textarea id="definicao" name="definicao" required></textarea>
-                    <button type="submit">Salvar Alterações</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
 
 
     <div id="navLetras"></div>

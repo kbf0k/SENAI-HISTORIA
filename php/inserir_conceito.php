@@ -14,8 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             VALUES ('$titulo_glossario', '$descricao_glossario')";
 
     if ($conexao->query($sql) === TRUE) {
-        echo "Novo conceito inserido com sucesso!";
-        // header("Location: glossario.php"); // Redireciona para a página de glossário após a inserção
+        header("Location: glossario.php");
         exit();
     } else {
         echo "Erro: " . $sql . "<br>" . $conexao->error;
