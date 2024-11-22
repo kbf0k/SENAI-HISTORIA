@@ -2,22 +2,24 @@
 include_once('conexao.php');
 session_start();
 
-// Verifique se o formulário foi enviado via POST
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+$data = json_decode(file_get_contents("php://input"), true);
 
-    // Obtendo os dados do formulário
-    $titulo_glossario = $conexao->real_escape_string($_POST['termo']);
-    $descricao_glossario = $conexao->real_escape_string($_POST['definicao']);
+// Verifica se a sessão do usuário é do tipo "Administrador"
+if ($_SESSION['tipo_sessao'] == "Administrador") {
+    $termo_titulo = $data['termo_titulo'];
+    $termo_descricao = $data['termo_descricao'];
 
-    // Inserção no banco de dados
-    $sql = "INSERT INTO glossario (titulo_glossario, descricao_glossario) 
-            VALUES ('$titulo_glossario', '$descricao_glossario')";
 
-    if ($conexao->query($sql) === TRUE) {
-        header("Location: glossario.php");
-        exit();
+    // Preparação e execução da query SQL
+    $stmt = $conexao->prepare('INSERT INTO glossario (titulo_glossario,descricao_glossario) VALUES(?,?)');
+    $stmt->bind_param('ss', $termo_titulo, $termo_descricao);
+
+    if ($stmt->execute()) {
+        echo json_encode(['success' => true]);
     } else {
-        echo "Erro: " . $sql . "<br>" . $conexao->error;
+        echo json_encode(['success' => false, 'error' => $stmt->error]);
     }
+    $stmt->close();
+} else {
+    echo json_encode(['success' => false, 'error' => 'Permissão negada']);
 }
-?>

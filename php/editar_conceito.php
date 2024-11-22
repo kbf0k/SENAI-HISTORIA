@@ -2,27 +2,25 @@
 include_once('conexao.php');
 session_start();
 
-if (!isset($_SESSION['nome_sessao']) || $_SESSION['tipo_sessao'] !== 'Administrador') {
-    header('Location: index.php');
-    exit();
-}
+$data = json_decode(file_get_contents("php://input"), true);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id_glossario = $_POST['id_glossario'];
-    $titulo_glossario = $conexao->real_escape_string($_POST['termo']);
-    $descricao_glossario = $conexao->real_escape_string($_POST['definicao']);
+// Verifica se a sessão do usuário é do tipo "Administrador"
+if ($_SESSION['tipo_sessao'] == "Administrador") {
+    $termo_id = $data['termo_id'];
+    $termo_titulo = $data['termo_titulo'];
+    $termo_descricao = $data['termo_descricao'];
 
-    $sql = "UPDATE glossario SET titulo_glossario = ?, descricao_glossario = ? WHERE id_glossario = ?";
-    $stmt = $conexao->prepare($sql);
-    $stmt->bind_param("ssi", $titulo_glossario, $descricao_glossario, $id_glossario);
+
+    // Preparação e execução da query SQL
+    $stmt = $conexao->prepare('UPDATE glossario SET titulo_glossario=?, descricao_glossario=? WHERE id_glossario = ?');
+    $stmt->bind_param('ssi', $termo_titulo, $termo_descricao, $termo_id);
 
     if ($stmt->execute()) {
-        echo "Conceito atualizado com sucesso!";
+        echo json_encode(['success' => true]);
     } else {
-        echo "Erro ao atualizar o conceito: " . $conexao->error;
+        echo json_encode(['success' => false, 'error' => $stmt->error]);
     }
-
     $stmt->close();
+} else {
+    echo json_encode(['success' => false, 'error' => 'Permissão negada']);
 }
-$conexao->close();
-?>

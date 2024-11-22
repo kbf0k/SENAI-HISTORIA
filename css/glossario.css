@@ -339,50 +339,6 @@ a {
   }
 }
 
-/* body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-  } */
-
-  .search-bar {
-    display: flex;
-    align-items: center;
-    width: 50%;
-    margin-bottom: 10px;
-    margin-top: 20px;
-  }
-
-  .search-bar form {
-    width: 100%;
-    display: flex;
-  }
-
-  .search-bar input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    font-size: 16px;
-    outline: none;
-    box-sizing: border-box;
-  }
-
-  .search-bar button {
-    background: none;
-    border: none;
-    margin-left: -40px;
-    margin-top: 5px;
-    cursor: pointer;
-  }
-
-  .search-bar button img {
-    width: 35px;
-    height: 35px;
-  }
-
   .search-hint {
     font-size: 16px;
     color: #555;
@@ -416,14 +372,6 @@ a {
     background-color: #555;
   }
 
-  /* .alphabet-container .selected {
-    background-color: #d4af37;
-  }
-
-  .alphabet-container .selected:hover {
-    background-color: #d4af37;
-  } */
-
   .pagination {
     display: flex;
     list-style-type: none;
@@ -439,16 +387,6 @@ a {
     margin: 0 4px;
     border-radius: 5px;
   }
-
-  /* .pagination a.active {
-    background-color: #d4af37; /* Marrom escuro */
-    /* color: white;
-    border: 1px solid #665d50;
-  }
-
-  .pagination a:hover:not(.active) {
-    background-color: #ddd;
-  } */
 
   .page-content {
     margin-top: 20px;
@@ -470,76 +408,10 @@ a {
     background-color: #f9f9f9;
   }
 
-  .item_adm {
+  .item {
     display: flex;
   }
 
-  .page-1 {  } /* Amarelo */
-  .page-2 {  } /* Laranja */
-  .page-3 { background-color: #4caf50; color: white; } /* Verde */
-  .page-4 { border: 2px dashed #2196f3; } /* Borda azul */
-  .page-5 { font-style: italic; } /* Texto em itálico */
-  .page-6 { font-weight: bold; color: #8B0000; } /* Negrito marrom */
-  .page-7 { text-transform: uppercase; } /* Texto em maiúsculas */
-  .page-8 { background-color: #e0f7fa; } /* Azul claro */
-  .page-9 { color: #9c27b0; font-size: 1.2em; } /* Roxo maior */
-  .page-10 { background-image: linear-gradient(to right, #ff758c, #ff7eb3); } /* Gradiente */
-  .page-11 { border: 2px dotted #795548; } /* Borda pontilhada marrom */
-  .page-12 { background-color: #c8e6c9; font-family: "Courier New", Courier, monospace; } /* Verde claro e fonte monoespaçada */
-  .page-13 { font-family: "Georgia", serif; } /* Fonte serifada */
-  .page-14 { color: #e91e63; font-size: 1.4em; } /* Rosa e maior */
-  .page-15 { text-align: left; background-color: #eeeeee; } /* Alinhamento à esquerda */
-
-  #navLetras {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-  }
-
-
-
-
-  #sugestoes {
-    list-style: none;
-    padding: 0;
-    border: 1px solid #ddd;
-    max-width: 300px;
-    position: absolute;
-    z-index: 10;
-    background: white;
-    display: none; /* Oculto por padrão */
-  }
-  .sugestao {
-    padding: 8px;
-    cursor: pointer;
-  }
-  .sugestao:hover {
-    background-color: #f0f0f0;
-  }
-
-
-  .highlighted {
-    background-color: #e0e0e0; /* Cor para o item destacado */
-  }
-
-  #naoEncontrado {
-    color: red;
-    font-size: 18px;
-    display: none; /* Oculto por padrão */
-    margin-top: 10px;
-  }
-
-
-
-
-
-
-  /* .alphabet-container a.ativo {
-    background-color: #d4af37;
-    color: white;
-} */
-
-/* Estilo para o botão de abrir o modal */
 .botao-inserir {
   background-color: #d4af37;
   color: white;
@@ -554,134 +426,6 @@ a {
 
 .botao-inserir:hover {
   background-color: #b3962b;
-}
-
-/* Estilos para o modal */
-.modal {
-  display: none; /* Oculto por padrão */
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: #f9f4e1;
-  margin: 10% auto;
-  padding: 20px;
-  width: 50%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.fechar {
-  float: right;
-  font-size: 24px;
-  cursor: pointer;
-  color: #4b3f35;
-}
-
-.fechar:hover {
-  color: #d4af37;
-}
-
-.modal-content h2 {
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #4b3f35;
-}
-
-.modal-content label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #3a3a3a;
-}
-
-.modal-content input,
-.modal-content textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.botao-salvar {
-  margin-top: 15px;
-  background-color: #4b3f35;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.botao-salvar:hover {
-  background-color: #665d50;
-}
-
-
-.botao-excluir {
-  color: red;
-  font-weight: bold;
-  text-decoration: none;
-  margin-left: 10px;
-}
-
-.botao-excluir:hover {
-  text-decoration: underline;
-}
-
-.botao-extra {
-  margin: 1px 3px;
-  padding: 1px;
-}
-
-
-
-
-
-
-#modalEditar #modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
-}
-
-#modalEditar .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-#modalEditar .fechar {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-#modalEditar .fechar:hover,
-#modalEditar .fechar:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 .editar {
@@ -877,8 +621,6 @@ a {
 }
 
 
-
-
 @media (max-width: 768px) {
   .logo-menu {
       flex-direction: column;
@@ -896,7 +638,6 @@ a {
 #tt-gloss {
   margin-top: 30px;
 }
-
 
 
 .footer {
@@ -957,4 +698,39 @@ a {
 
 #voltar-glossario:hover {
   background-color: #b3962b;
+}
+
+.swal-edit-container .swal2-html-container {
+  overflow: hidden;
+  display: flex !important;
+  justify-content: end !important;
+  align-items: baseline !important;
+  flex-direction: column !important;
+}
+
+.swal-edit-container .swal2-html-container label {
+  font-weight: bold;
+  color: #4b3f35;
+  margin-top: 10px !important;
+}
+
+.swal-edit-container .swal2-html-container .swal2-input {
+  width: 85%;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #4b3f35;
+  margin-top: 0 !important;
+  outline: none;
+  box-shadow: none !important;
+  color: black;
+}
+
+.swal-edit-container .swal2-html-container textarea{
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #4b3f35;
+  margin-top: 0 !important;
+  width: 384px !important;
+  height: 172px !important;
+  outline: none;
 }

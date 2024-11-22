@@ -8,12 +8,7 @@ if (!isset($_SESSION['nome_sessao'])) {
 }
 
 
-if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
-    $modal_visible = true;  // Exibe o modal para administradores
-} else {
-    $modal_visible = false;  // Não exibe o modal para outros tipos de usuário
-}
-
+$modal_visible = isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador';
 
 ?>
 
@@ -117,125 +112,50 @@ if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrad
 
     <h1 id="tt-gloss">Glossário Histórico</h1>
 
-
     <p class="search-hint">Clique em uma letra abaixo para ver os conceitos que se iniciam por ela.</p>
 
     <div class="alphabet-container">
-        <!-- Alfabeto de A a Z -->
-        <a class="botaoABC" id="botaoA" href="#" onclick="carregarGlossario('A')">A</a>
-        <a class="botaoABC" id="botaoB" href="#" onclick="carregarGlossario('B')">B</a>
-        <a class="botaoABC" id="botaoC" href="#" onclick="carregarGlossario('C')">C</a>
-        <a class="botaoABC" id="botaoD" href="#" onclick="carregarGlossario('D')">D</a>
-        <a class="botaoABC" id="botaoE" href="#" onclick="carregarGlossario('E')">E</a>
-        <a class="botaoABC" id="botaoF" href="#" onclick="carregarGlossario('F')">F</a>
-        <a class="botaoABC" id="botaoG" href="#" onclick="carregarGlossario('G')">G</a>
-        <a class="botaoABC" id="botaoH" href="#" onclick="carregarGlossario('H')">H</a>
-        <a class="botaoABC" id="botaoI" href="#" onclick="carregarGlossario('I')">I</a>
-        <a class="botaoABC" id="botaoJ" href="#" onclick="carregarGlossario('J')">J</a>
-        <a class="botaoABC" id="botaoK" href="#" onclick="carregarGlossario('K')">K</a>
-        <a class="botaoABC" id="botaoL" href="#" onclick="carregarGlossario('L')">L</a>
-        <a class="botaoABC" id="botaoM" href="#" onclick="carregarGlossario('M')">M</a>
-        <a class="botaoABC" id="botaoN" href="#" onclick="carregarGlossario('N')">N</a>
-        <a class="botaoABC" id="botaoO" href="#" onclick="carregarGlossario('O')">O</a>
-        <a class="botaoABC" id="botaoP" href="#" onclick="carregarGlossario('P')">P</a>
-        <a class="botaoABC" id="botaoQ" href="#" onclick="carregarGlossario('Q')">Q</a>
-        <a class="botaoABC" id="botaoR" href="#" onclick="carregarGlossario('R')">R</a>
-        <a class="botaoABC" id="botaoS" href="#" onclick="carregarGlossario('S')">S</a>
-        <a class="botaoABC" id="botaoT" href="#" onclick="carregarGlossario('T')">T</a>
-        <a class="botaoABC" id="botaoU" href="#" onclick="carregarGlossario('U')">U</a>
-        <a class="botaoABC" id="botaoV" href="#" onclick="carregarGlossario('V')">V</a>
-        <a class="botaoABC" id="botaoW" href="#" onclick="carregarGlossario('W')">W</a>
-        <a class="botaoABC" id="botaoX" href="#" onclick="carregarGlossario('X')">X</a>
-        <a class="botaoABC" id="botaoY" href="#" onclick="carregarGlossario('Y')">Y</a>
-        <a class="botaoABC" id="botaoZ" href="#" onclick="carregarGlossario('Z')">Z</a>
+        <?php
+        foreach (range('A', 'Z') as $letter) {
+            echo "<a class='botaoABC' href='?letra=$letter'>$letter</a>";
+        }
+        ?>
     </div>
 
     <div class="page-content" id="page-content">
         <?php
-        $sql = "SELECT id_glossario, titulo_glossario, descricao_glossario FROM glossario ORDER BY titulo_glossario ASC LIMIT 5";
-        $result = $conexao->query($sql);
-
-        $letra = isset($_GET['letra']) ? $_GET['letra'] : 'A';
+        // Pega a letra selecionada ou usa 'A' como padrão
+        $letra = $_GET['letra'] ?? 'A';
 
         $sql = "SELECT * FROM glossario WHERE titulo_glossario LIKE '$letra%' ORDER BY titulo_glossario ASC";
         $result = $conexao->query($sql);
 
-        if ($result->num_rows > 0) {
-            while ($linha = $result->fetch_assoc()) {
-                if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
-                    echo "<div class='item_adm'>";
-                    echo "<button class='botao-extra editar' data-id='" . $linha['id_glossario'] . "'><img id='lapis' src='../img/lapis_icon.png' alt='Editar'></button>";
-                    // Formulário de exclusão
-                    echo "<a href='excluir.php?id_glossario=" . $linha['id_glossario'] . "'>
-                <button class='botao-extra excluir'><img src='../img/lixeira_icon.png' alt='Excluir'></button>
-                </a>";
+        if ($result->num_rows > 0):
+            while ($linha = $result->fetch_assoc()):
+                echo "<div class='item'>";
+                if ($modal_visible) {
+                    echo "
+                        <button class='botao-extra editar'  termo_id='" . $linha['id_glossario'] . "', termo_titulo='" . $linha['titulo_glossario'] . "', termo_descricao='" . $linha['descricao_glossario'] . "'><img id='lapis' src='../img/lapis_icon.png' alt='Editar'></button>
+                        <button class='botao-extra excluir' termo_id=" . $linha['id_glossario'] . "'><img src='../img/lixeira_icon.png' alt='Excluir'></button>
+                        ";
                 }
-                echo "<p class='conceitos'><b>" . $linha['titulo_glossario'] . ":</b> " . $linha['descricao_glossario'] . "</p>";
+                echo "<p class='conceitos'><b>" . htmlspecialchars($linha['titulo_glossario']) . ":</b> " . htmlspecialchars($linha['descricao_glossario']) . "</p>";
                 echo "</div>";
-            }
-        } else {
+            endwhile;
+        else:
             echo "<p>Nenhum termo encontrado para a letra $letra.</p>";
-        }
-
-        // Verifica se o botão de exclusão foi pressionado
-        if (isset($_POST['Excluir'])) {
-            $id_glossario = $_POST['id_glossario'];
-            echo "teste";
-            // Depuração - Verificando se o ID foi recebido corretamente
-
-
-            // Exclui o registro do banco de dados
-            $sql_delete = "DELETE FROM glossario WHERE id_glossario = ?";
-            if ($stmt = $conexao->prepare($sql_delete)) {
-                $stmt->bind_param("i", $id_glossario);
-                echo "<p>ID do glossário a ser excluído: " . $id_glossario . "</p>"; // Exibe o ID para depuração
-                if ($stmt->execute()) {
-
-                    echo "<p>Termo excluído com sucesso!</p>";
-                    // Redireciona para evitar reenvio do formulário após a atualização
-                    header("Location: " . $_SERVER['PHP_SELF']);
-                    exit();
-                } else {
-                    echo "<p>Erro ao excluir o termo.</p>";
-                }
-                $stmt->close();
-            } else {
-                echo "<p>Erro ao preparar a consulta.</p>";
-            }
-        }
+        endif;
 
         ?>
     </div>
 
-    </div>
-
-    <?php
-    // Verifique se o tipo de usuário é administrador
-    if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'Administrador') {
-        // Exibe o botão apenas para administradores
-        echo '<button id="abrirModal" class="botao-inserir">Inserir Novo Conceito</button>';
-    }
-    ?>
-
-    <?php if ($modal_visible): ?>
-        <!-- Modal para inserir novo conceito -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="fechar">&times;</span>
-                <h2>Conceito Histórico</h2>
-                <form id="formNovoConceito" action="inserir_conceito.php" method="POST">
-                    <label for="termo">Nome do Termo:</label>
-                    <input type="text" id="termo" name="termo" required>
-
-                    <label for="definicao">Definição:</label>
-                    <textarea id="definicao" name="definicao" rows="4" required></textarea>
-
-                    <button type="submit" class="botao-salvar">Salvar Conceito</button>
-                </form>
-            </div>
-        </div>
-    <?php endif; ?>
-
+    <button id="abrirModal"
+        class="botao-inserir"
+        termo_id="<?php echo $linha['id_glossario']; ?>"
+        termo_titulo="<?php echo htmlspecialchars($linha['titulo_glossario'], ENT_QUOTES, 'UTF-8'); ?>"
+        termo_descricao="<?php echo htmlspecialchars($linha['descricao_glossario'], ENT_QUOTES, 'UTF-8'); ?>">
+        Inserir Novo Conceito
+    </button>
 
     <div id="navLetras"></div>
 
