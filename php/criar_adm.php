@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <form action="" method="POST" id="cadastrar">
             <a id="voltar" href="perfil.php"><img src="../img/voltar_seta.png" alt="">Voltar</a>
                 <h1 id="title-add">Adicionar Administrador</h1>
-                <p id="p-add">Insira as informaçoes para criar uma conta do tipo administrador</p>
+                <p id="p-add">Insira as informações para criar uma conta do tipo administrador</p>
 
 
                 <label for="nome">Nome</label>

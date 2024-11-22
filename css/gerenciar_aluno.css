@@ -581,8 +581,5 @@ th {
     border-radius: 6px;
     border: 1px solid #4b3f35;
     margin-top: 0 !important;
-}
-
-.swal-edit-container .swal2-input::placeholder {
     color: black;
 }
