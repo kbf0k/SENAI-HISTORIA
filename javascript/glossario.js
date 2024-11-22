@@ -48,7 +48,7 @@ document.querySelectorAll('.botao-inserir').forEach(button => {
           if (data.success) {
             Swal.fire({
               title: "Termo adicionado!",
-              text: "O termo foi editado com sucesso.",
+              text: "O termo foi adicionado com sucesso.",
               icon: "success",
               confirmButtonColor: "#4b3f35"
             }).then(() => {
@@ -119,8 +119,8 @@ document.querySelectorAll('.botao-extra.editar').forEach(button => {
         .then(data => {
           if (data.success) {
             Swal.fire({
-              title: "Usuário editado!",
-              text: "O usuário foi editado com sucesso.",
+              title: "Termo editado!",
+              text: "O Termo foi editado com sucesso.",
               icon: "success",
               confirmButtonColor: "#4b3f35"
             }).then(() => {
