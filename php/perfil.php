@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
     $novo_nome = $_POST['nome'];
     $novo_sobrenome = $_POST['sobrenome'];
     $novo_email = $_POST['email'];
+    $_SESSION['nome_sessao'] = $novo_nome;
 
     $sql_update = "UPDATE usuarios SET nome_usuario = ?, sobrenome_usuario = ?, email_usuario = ? WHERE id_usuario = ?";
     $stmt = $conexao->prepare($sql_update);
