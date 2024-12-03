@@ -149,13 +149,15 @@ $modal_visible = isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] ===
         ?>
     </div>
 
-    <button id="abrirModal"
+    <?php if ($_SESSION['tipo_sessao'] === 'Administrador'): ?>
+        <button id="abrirModal"
         class="botao-inserir"
         termo_id="<?php echo $linha['id_glossario']; ?>"
         termo_titulo="<?php echo htmlspecialchars($linha['titulo_glossario'], ENT_QUOTES, 'UTF-8'); ?>"
         termo_descricao="<?php echo htmlspecialchars($linha['descricao_glossario'], ENT_QUOTES, 'UTF-8'); ?>">
         Inserir Novo Conceito
     </button>
+            <?php endif; ?>
 
     <div id="navLetras"></div>
 

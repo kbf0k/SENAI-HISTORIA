@@ -224,10 +224,12 @@ $conexao->close();
                     <label for="email">Email:</label>
                     <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($email); ?>" required>
                 </div>
+                <div id="botoes-perfil">
                 <div class="form-group">
                 <a href="esqueciSenha.php"><button type="button" class="btn">Redefinir Senha</button></a>
                 </div>
                 <button id="att-profile" type="submit" name="update" class="btn">Atualizar perfil</button>
+                </div>
             </form>
 
             <h2>Excluir conta</h2>

@@ -247,7 +247,7 @@ document.getElementById('logout').addEventListener('click', () => {
     showCancelButton: true,
     cancelButtonText: "Cancelar",
     cancelButtonColor: "#d33",
-    confirmButtonText: "Sim, Sair",
+    confirmButtonText: "Sim, sair",
     confirmButtonColor: "#4b3f35",
     backdrop: `rgba(0, 0, 0, 0.5)`
   }).then((result) => {
@@ -271,7 +271,7 @@ document.getElementById('logout-mobile').addEventListener('click', () => {
     showCancelButton: true,
     cancelButtonText: "Cancelar",
     cancelButtonColor: "#d33",
-    confirmButtonText: "Sim, Sair",
+    confirmButtonText: "Sim, sair",
     confirmButtonColor: "#4b3f35",
     backdrop: `rgba(0, 0, 0, 0.5)`
   }).then((result) => {

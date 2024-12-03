@@ -350,7 +350,7 @@ a {
     justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 10px;
+    margin-top: -10px;
   }
 
   .alphabet-container a {

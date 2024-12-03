@@ -381,7 +381,8 @@ a {
 }
 
 #att-profile {
-    margin-top: -10px;
+    /* margin-top: -10px; */
+    height: 43px;
 }
 
 /* Títulos */
@@ -399,6 +400,12 @@ h2 {
 /* Formulário */
 .form-group {
     margin-bottom: 12px;
+}
+
+#botoes-perfil {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 label {
@@ -516,6 +523,10 @@ input:focus {
 }
 
 @media (max-width: 768px) {
+    #att-profile {
+        width: 50%;
+    }
+
     .footer-container {
         flex-direction: column;
         align-items: center;
